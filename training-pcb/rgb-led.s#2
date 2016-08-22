@@ -13358,6 +13358,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0805"/>
 <part name="R6" library="resistor" deviceset="R-US_" device="R0805"/>
 <part name="R7" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="SUPPLY18" library="supply2" deviceset="+5V" device=""/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 <part name="C9" library="rcl" deviceset="C-US" device="C0603" value="100n"/>
 <part name="R9" library="resistor" deviceset="R-US_" device="R0805" value="10K"/>
@@ -13443,6 +13444,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <attribute name="NAME" x="265.2014" y="87.63" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="270.002" y="87.63" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="SUPPLY18" gate="+5V" x="261.62" y="114.3"/>
 <instance part="SUPPLY19" gate="GND" x="157.48" y="60.96"/>
 <instance part="C9" gate="G$1" x="157.48" y="68.58"/>
 <instance part="R9" gate="G$1" x="190.5" y="88.9" smashed="yes" rot="R90">
@@ -13598,6 +13600,10 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <junction x="20.32" y="66.04"/>
 </segment>
 <segment>
+<pinref part="D1" gate="G$1" pin="ANODE"/>
+<pinref part="SUPPLY18" gate="+5V" pin="+5V"/>
+</segment>
+<segment>
 <pinref part="SUPPLY10" gate="+5V" pin="+5V"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="107.95" x2="144.78" y2="102.87" width="0.1524" layer="91"/>
@@ -13616,10 +13622,6 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <pinref part="SUPPLY13" gate="+5V" pin="+5V"/>
 <wire x1="157.48" y1="101.6" x2="157.48" y2="93.98" width="0.1524" layer="91"/>
 <junction x="157.48" y="93.98"/>
-<pinref part="D1" gate="G$1" pin="ANODE"/>
-<wire x1="231.14" y1="93.98" x2="231.14" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="111.76" x2="261.62" y2="111.76" width="0.1524" layer="91"/>
-<junction x="231.14" y="93.98"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -13787,9 +13789,9 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA2(PCINT2/ADC2/AIN01/TOCC1/RXD0/SS')"/>
-<wire x1="226.06" y1="187.96" x2="251.46" y2="187.96" width="0.1524" layer="91"/>
-<label x="241.3" y="187.96" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PB2(PCINT10/ADC8/CLKO/TOCC7/ICP2/RXD0)"/>
+<wire x1="226.06" y1="147.32" x2="251.46" y2="147.32" width="0.1524" layer="91"/>
+<label x="241.3" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">

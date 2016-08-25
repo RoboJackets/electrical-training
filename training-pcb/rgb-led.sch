@@ -13352,7 +13352,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="220"/>
 <part name="C5" library="rcl" deviceset="C-US" device="C0603" value="100n"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
-<part name="U$1" library="adam - ics" deviceset="PCA9533" device=""/>
+<part name="U2" library="adam - ics" deviceset="PCA9533" device=""/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
 <part name="D1" library="rgb-led" deviceset="LED-RGB-CA-THRU" device="CLEAR"/>
 <part name="R5" library="resistor" deviceset="R-US_" device="R0805"/>
@@ -13426,7 +13426,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <instance part="R1" gate="G$1" x="55.88" y="66.04"/>
 <instance part="C5" gate="G$1" x="20.32" y="60.96"/>
 <instance part="SUPPLY9" gate="GND" x="20.32" y="50.8"/>
-<instance part="U$1" gate="G$1" x="241.3" y="68.58"/>
+<instance part="U2" gate="G$1" x="241.3" y="68.58"/>
 <instance part="SUPPLY17" gate="GND" x="231.14" y="60.96"/>
 <instance part="D1" gate="G$1" x="261.62" y="101.6" smashed="yes" rot="R90">
 <attribute name="NAME" x="260.096" y="107.442" size="1.27" layer="95" rot="R90"/>
@@ -13528,7 +13528,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <wire x1="20.32" y1="53.34" x2="20.32" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VSS"/>
+<pinref part="U2" gate="G$1" pin="VSS"/>
 <pinref part="SUPPLY17" gate="GND" pin="GND"/>
 </segment>
 <segment>
@@ -13603,7 +13603,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <wire x1="144.78" y1="107.95" x2="144.78" y2="102.87" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VDD"/>
+<pinref part="U2" gate="G$1" pin="VDD"/>
 <wire x1="157.48" y1="93.98" x2="190.5" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="190.5" y1="93.98" x2="200.66" y2="93.98" width="0.1524" layer="91"/>
@@ -13696,7 +13696,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <label x="246.38" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="SCL"/>
+<pinref part="U2" gate="G$1" pin="SCL"/>
 <wire x1="218.44" y1="81.28" x2="190.5" y2="81.28" width="0.1524" layer="91"/>
 <label x="170.18" y="81.28" size="1.778" layer="95"/>
 <pinref part="R9" gate="G$1" pin="1"/>
@@ -13712,7 +13712,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <label x="246.38" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="SDA"/>
+<pinref part="U2" gate="G$1" pin="SDA"/>
 <label x="170.18" y="76.2" size="1.778" layer="95"/>
 <wire x1="218.44" y1="76.2" x2="200.66" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
@@ -13741,7 +13741,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="LED0"/>
+<pinref part="U2" gate="G$1" pin="LED0"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="246.38" y1="86.36" x2="256.54" y2="86.36" width="0.1524" layer="91"/>
 </segment>
@@ -13750,7 +13750,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="261.62" y1="86.36" x2="261.62" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="LED1"/>
+<pinref part="U2" gate="G$1" pin="LED1"/>
 <wire x1="261.62" y1="81.28" x2="246.38" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13758,7 +13758,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="266.7" y1="86.36" x2="266.7" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="LED2"/>
+<pinref part="U2" gate="G$1" pin="LED2"/>
 <wire x1="266.7" y1="76.2" x2="246.38" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>

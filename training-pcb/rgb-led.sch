@@ -13806,8 +13806,8 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 </sheets>
 <errors>
 <approved hash="104,1,50.8,111.76,J2,VCC,+5V,,,"/>
-<approved hash="104,1,200.66,93.98,U2,VCC,+1.8V,,,"/>
-<approved hash="104,1,127,93.98,U3,IN,+5V,,,"/>
+<approved hash="104,1,231.14,63.5,U$1,VSS,GND,,,"/>
+<approved hash="104,1,231.14,93.98,U$1,VDD,+5V,,,"/>
 <approved hash="113,1,139.596,107.846,FRAME1,,,,,"/>
 </errors>
 </schematic>

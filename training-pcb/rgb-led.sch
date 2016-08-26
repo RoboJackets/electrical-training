@@ -13371,6 +13371,8 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="+5V" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="39K"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="SUPPLY14" library="supply2" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13468,6 +13470,11 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <attribute name="NAME" x="119.38" y="83.5914" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="119.38" y="88.392" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="R4" gate="G$1" x="259.08" y="147.32" smashed="yes" rot="R90">
+<attribute name="NAME" x="257.5814" y="143.51" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="262.382" y="143.51" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY14" gate="+5V" x="259.08" y="154.94"/>
 </instances>
 <busses>
 </busses>
@@ -13621,6 +13628,10 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <wire x1="231.14" y1="111.76" x2="261.62" y2="111.76" width="0.1524" layer="91"/>
 <junction x="231.14" y="93.98"/>
 </segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="SUPPLY14" gate="+5V" pin="+5V"/>
+</segment>
 </net>
 <net name="MOSI" class="0">
 <segment>
@@ -13642,8 +13653,11 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PB3(PCINT11/ADC9/RESET'/DW)"/>
-<wire x1="226.06" y1="142.24" x2="251.46" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="142.24" x2="259.08" y2="142.24" width="0.1524" layer="91"/>
 <label x="241.3" y="142.24" size="1.778" layer="95"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="259.08" y1="142.24" x2="261.62" y2="142.24" width="0.1524" layer="91"/>
+<junction x="259.08" y="142.24"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -13806,8 +13820,8 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 </sheets>
 <errors>
 <approved hash="104,1,50.8,111.76,J2,VCC,+5V,,,"/>
-<approved hash="104,1,231.14,63.5,U$1,VSS,GND,,,"/>
-<approved hash="104,1,231.14,93.98,U$1,VDD,+5V,,,"/>
+<approved hash="104,1,231.14,63.5,U2,VSS,GND,,,"/>
+<approved hash="104,1,231.14,93.98,U2,VDD,+5V,,,"/>
 <approved hash="113,1,139.596,107.846,FRAME1,,,,,"/>
 </errors>
 </schematic>

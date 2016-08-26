@@ -9309,12 +9309,12 @@ by exp-lbrs.ulp</description>
 <smd name="3" x="0" y="2.675" dx="0.4" dy="1.35" layer="1"/>
 <smd name="4" x="0.65" y="2.675" dx="0.4" dy="1.35" layer="1"/>
 <smd name="5" x="1.3" y="2.675" dx="0.4" dy="1.35" layer="1"/>
-<smd name="P$1" x="1.2" y="0" dx="1.9" dy="1.9" layer="1"/>
-<smd name="P$2" x="-1.2" y="0" dx="1.9" dy="1.9" layer="1"/>
-<smd name="P$3" x="3.85" y="0" dx="1.9" dy="1.9" layer="1"/>
-<smd name="P$4" x="-3.85" y="0" dx="1.9" dy="1.9" layer="1"/>
-<smd name="P$10" x="3.1" y="2.55" dx="2.1" dy="1.6" layer="1"/>
-<smd name="P$11" x="-3.1" y="2.55" dx="2.1" dy="1.6" layer="1"/>
+<smd name="5@3" x="1.2" y="0" dx="1.9" dy="1.9" layer="1"/>
+<smd name="5@4" x="-1.2" y="0" dx="1.9" dy="1.9" layer="1"/>
+<smd name="5@2" x="3.85" y="0" dx="1.9" dy="1.9" layer="1"/>
+<smd name="5@6" x="-3.85" y="0" dx="1.9" dy="1.9" layer="1"/>
+<smd name="5@1" x="3.1" y="2.55" dx="2.1" dy="1.6" layer="1"/>
+<smd name="5@7" x="-3.1" y="2.55" dx="2.1" dy="1.6" layer="1"/>
 <polygon width="0.05" layer="21" spacing="4" pour="hatch">
 <vertex x="-3.75" y="3"/>
 <vertex x="3.75" y="3"/>
@@ -12953,7 +12953,7 @@ by exp-lbrs.ulp</description>
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="5" pad="5 5@1 5@2 5@3 5@4 5@6 5@7"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13324,7 +13324,9 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.2032" drill="0">
+</class>
+<class number="1" name="PWR" width="0.254" drill="0">
 </class>
 </classes>
 <parts>
@@ -13334,7 +13336,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <attribute name="TEAM" value="RoboJackets Electrical Training"/>
 </part>
 <part name="U1" library="rgb-led" deviceset="ATTINY441/841" device="SSU/SSUR"/>
-<part name="C1" library="rcl" deviceset="C-US" device="C1206" value="100u"/>
+<part name="C1" library="rcl" deviceset="C-US" device="C1206" value="47u"/>
 <part name="SUPPLY1" library="supply2" deviceset="+5V" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="J2" library="rgb-led" deviceset="AVR_SPI_PROG2" device="PTH2"/>
@@ -13355,23 +13357,23 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <part name="U2" library="adam - ics" deviceset="PCA9533" device=""/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
 <part name="D1" library="rgb-led" deviceset="LED-RGB-CA-THRU" device="CLEAR"/>
-<part name="R5" library="resistor" deviceset="R-US_" device="R0805"/>
-<part name="R6" library="resistor" deviceset="R-US_" device="R0805"/>
-<part name="R7" library="resistor" deviceset="R-US_" device="R0805"/>
+<part name="R5" library="resistor" deviceset="R-US_" device="R0603"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="R0603"/>
+<part name="R7" library="resistor" deviceset="R-US_" device="R0603"/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 <part name="C9" library="rcl" deviceset="C-US" device="C0603" value="100n"/>
-<part name="R9" library="resistor" deviceset="R-US_" device="R0805" value="10K"/>
-<part name="R8" library="resistor" deviceset="R-US_" device="R0805" value="10K"/>
+<part name="R9" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
+<part name="R8" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
 <part name="K1" library="Seeed-OPL-Button" deviceset="SMD-SWITCH-TOP-260GF(4P-D5.2MM)" device="" value="SKQGADE010"/>
 <part name="SUPPLY10" library="supply2" deviceset="+5V" device=""/>
-<part name="R2" library="resistor" deviceset="R-US_" device="R0805" value="10K"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="10K"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-US" device="C0603" value="100n"/>
 <part name="C7" library="rcl" deviceset="C-US" device="C0603" value="100n"/>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="+5V" device=""/>
 <part name="R3" library="resistor" deviceset="R-US_" device="R0805" value="39K"/>
-<part name="R4" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="SUPPLY14" library="supply2" deviceset="+5V" device=""/>
 </parts>
 <sheets>
@@ -13562,7 +13564,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <junction x="104.14" y="67.31"/>
 </segment>
 </net>
-<net name="+5V" class="0">
+<net name="+5V" class="1">
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
 <wire x1="149.86" y1="190.5" x2="144.78" y2="190.5" width="0.1524" layer="91"/>

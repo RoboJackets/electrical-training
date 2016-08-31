@@ -13364,7 +13364,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <part name="C7" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
 <part name="R9" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R8" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="K1" library="Seeed-OPL-Button" deviceset="SMD-SWITCH-TOP-260GF(4P-D5.2MM)" device="" value="SKQGADE010"/>
+<part name="S1" library="Seeed-OPL-Button" deviceset="SMD-SWITCH-TOP-260GF(4P-D5.2MM)" device="" value="SKQGADE010"/>
 <part name="SUPPLY10" library="supply2" deviceset="+5V" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
@@ -13455,7 +13455,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <attribute name="NAME" x="199.1614" y="85.09" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="203.962" y="85.09" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="K1" gate="G$1" x="116.84" y="81.28"/>
+<instance part="S1" gate="G$1" x="116.84" y="81.28"/>
 <instance part="SUPPLY10" gate="+5V" x="99.06" y="101.6"/>
 <instance part="R2" gate="G$1" x="99.06" y="91.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="97.5614" y="87.63" size="1.778" layer="95" rot="R90"/>
@@ -13542,7 +13542,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <wire x1="125.73" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="78.74" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY11" gate="GND" pin="GND"/>
-<pinref part="K1" gate="G$1" pin="B1"/>
+<pinref part="S1" gate="G$1" pin="B1"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -13771,7 +13771,7 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <wire x1="99.06" y1="76.2" x2="99.06" y2="83.82" width="0.1524" layer="91"/>
 <junction x="99.06" y="83.82"/>
 <label x="96.52" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="K1" gate="G$1" pin="A0"/>
+<pinref part="S1" gate="G$1" pin="A0"/>
 <wire x1="99.06" y1="83.82" x2="107.95" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="86.36" x2="99.06" y2="83.82" width="0.1524" layer="91"/>

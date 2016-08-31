@@ -154,6 +154,8 @@
 <wire x1="30" y1="30" x2="30" y2="0" width="0" layer="20"/>
 <wire x1="30" y1="0" x2="0" y2="0" width="0" layer="20"/>
 <text x="11" y="3.5" size="0.9" layer="21">25 Aug 2016</text>
+<text x="1.5" y="23" size="1" layer="25">J1</text>
+<text x="20" y="1" size="1" layer="25" rot="R90">J2</text>
 </plain>
 <libraries>
 <library name="rcl">
@@ -6040,14 +6042,14 @@ Your Eurocircuits Team
 <attribute name="VALUE" x="12.46" y="3.15" size="1.27" layer="27"/>
 </element>
 <element name="U2" library="adam - ics" package="SOIC8" value="PCA9533" x="3.5" y="7" smashed="yes" rot="R180">
-<attribute name="NAME" x="6.3575" y="9.159" size="1" layer="25" ratio="10" rot="R270"/>
+<attribute name="NAME" x="6.3575" y="9.159" size="1" layer="25" rot="R270"/>
 <attribute name="VALUE" x="-0.564" y="9.159" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="D1" library="rgb-led" package="LED-RGB-THRU" value="LED-RGB-CA-THRUCLEAR" x="3.5" y="19.5" smashed="yes">
 <attribute name="PROD_ID" value="DIO-10631" x="3.5" y="19.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R5" library="resistor" package="R0603" value="" x="6" y="14.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="6.635" y="12.615" size="1" layer="25" rot="R180"/>
+<attribute name="NAME" x="6.885" y="12.615" size="1" layer="25" rot="R180"/>
 <attribute name="VALUE" x="7.905" y="13.865" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R6" library="resistor" package="R0603" value="" x="3.75" y="14.5" smashed="yes" rot="R90">
@@ -6055,7 +6057,7 @@ Your Eurocircuits Team
 <attribute name="VALUE" x="5.655" y="13.865" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="R7" library="resistor" package="R0603" value="" x="1.5" y="14.5" smashed="yes" rot="R90">
-<attribute name="NAME" x="2.635" y="12.615" size="1" layer="25" rot="R180"/>
+<attribute name="NAME" x="2.385" y="12.615" size="1" layer="25" rot="R180"/>
 <attribute name="VALUE" x="3.405" y="13.865" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C7" library="rcl" package="C0603" value="0.1uF" x="3.5" y="1.5" smashed="yes" rot="R180">
@@ -6070,9 +6072,9 @@ Your Eurocircuits Team
 <attribute name="NAME" x="7.135" y="3.135" size="1" layer="25" rot="R270"/>
 <attribute name="VALUE" x="5.595" y="5.135" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="K1" library="Seeed-OPL-Button" package="SW4-SMD-5.2X5.2X1.5MM" value="SKQGADE010" x="17.5" y="26.5" smashed="yes" rot="R180">
+<element name="S1" library="Seeed-OPL-Button" package="SW4-SMD-5.2X5.2X1.5MM" value="SKQGADE010" x="17.5" y="26.5" smashed="yes" rot="R180">
 <attribute name="MPN" value="SKQGADE010" x="17.5" y="26.5" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="14.456" y="25.845" size="1" layer="25" ratio="11" rot="R90"/>
+<attribute name="NAME" x="14.456" y="25.845" size="1" layer="25" rot="R90"/>
 <attribute name="VALUE" x="19.405" y="30.183" size="0.889" layer="27" ratio="11" rot="R180"/>
 </element>
 <element name="R2" library="resistor" package="R0603" value="10k" x="11" y="23" smashed="yes" rot="R180">
@@ -6111,7 +6113,7 @@ Your Eurocircuits Team
 </polygon>
 <contactref element="U2" pad="4"/>
 <contactref element="C7" pad="2"/>
-<contactref element="K1" pad="3"/>
+<contactref element="S1" pad="3"/>
 <contactref element="C6" pad="2"/>
 <contactref element="J1" pad="5@1"/>
 <contactref element="J1" pad="5@2"/>
@@ -6345,7 +6347,7 @@ Your Eurocircuits Team
 <contactref element="U1" pad="11"/>
 <wire x1="17.6" y1="9.5" x2="19" y2="9.5" width="0.5" layer="1"/>
 <wire x1="19" y1="9.5" x2="19.5" y2="10" width="0.5" layer="1"/>
-<contactref element="K1" pad="1"/>
+<contactref element="S1" pad="1"/>
 <wire x1="20" y1="23" x2="20.6" y2="23.6" width="0.5" layer="1"/>
 <wire x1="20.6" y1="24.65" x2="20.6" y2="23.6" width="0.5" layer="1"/>
 <contactref element="R2" pad="1"/>

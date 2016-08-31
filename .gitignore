@@ -1,0 +1,65 @@
+# Ignore list for Eagle, a PCB layout tool
+*.lck
+*.scr
+
+*.eup
+
+# Backup files
+*.s#?
+*.b#?
+*.l#?
+
+eagle.epf
+
+# CAM files
+*.$$$
+*.cmp
+*.ly2
+*.l15
+*.sol
+*.plc
+*.stc
+*.sts
+*.crc
+*.crs
+
+*.dri
+*.drl
+*.gpi
+*.pls
+
+*.drd
+*.drd.*
+
+*.info
+
+*.eps
+
+#exclude datasheets
+datasheets/
+
+#exclude gerbers
+*.ger
+*.nc
+*.do
+*.GBL
+*.GBO
+*.GBP
+*.GBS
+*.GML
+*.GTL
+*.GTO
+*.GTP
+*.GTS
+
+# MATLAB autosave file
+*.asv
+
+# OS X
+.DS_Store
+
+# log files
+*.log
+
+# autorouter log files
+*.pro

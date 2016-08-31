@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -13366,11 +13366,11 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <part name="R8" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="K1" library="Seeed-OPL-Button" deviceset="SMD-SWITCH-TOP-260GF(4P-D5.2MM)" device="" value="SKQGADE010"/>
 <part name="SUPPLY10" library="supply2" deviceset="+5V" device=""/>
+<part name="R2" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="+5V" device=""/>
-<part name="R3" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R4" library="resistor" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="SUPPLY14" library="supply2" deviceset="+5V" device=""/>
 </parts>
@@ -13455,13 +13455,16 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <attribute name="NAME" x="199.1614" y="85.09" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="203.962" y="85.09" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="K1" gate="G$1" x="124.46" y="81.28"/>
-<instance part="SUPPLY10" gate="+5V" x="137.16" y="88.9"/>
-<instance part="SUPPLY11" gate="GND" x="137.16" y="73.66"/>
+<instance part="K1" gate="G$1" x="116.84" y="81.28"/>
+<instance part="SUPPLY10" gate="+5V" x="99.06" y="101.6"/>
+<instance part="R2" gate="G$1" x="99.06" y="91.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="97.5614" y="87.63" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="102.362" y="87.63" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY11" gate="GND" x="129.54" y="60.96"/>
 <instance part="C6" gate="G$1" x="99.06" y="73.66"/>
 <instance part="SUPPLY12" gate="GND" x="99.06" y="60.96"/>
 <instance part="SUPPLY13" gate="+5V" x="157.48" y="104.14"/>
-<instance part="R3" gate="G$1" x="106.68" y="83.82" rot="R180"/>
 <instance part="R4" gate="G$1" x="241.3" y="147.32" smashed="yes" rot="R90">
 <attribute name="NAME" x="239.8014" y="143.51" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="244.602" y="143.51" size="1.778" layer="96" rot="R90"/>
@@ -13536,8 +13539,8 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <wire x1="157.48" y1="83.82" x2="157.48" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="133.35" y1="78.74" x2="137.16" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="78.74" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="125.73" y1="78.74" x2="129.54" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="78.74" x2="129.54" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="SUPPLY11" gate="GND" pin="GND"/>
 <pinref part="K1" gate="G$1" pin="B1"/>
 </segment>
@@ -13591,9 +13594,8 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="+5V" pin="+5V"/>
-<wire x1="133.35" y1="83.82" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="K1" gate="G$1" pin="A1"/>
-<wire x1="137.16" y1="86.36" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="99.06" x2="99.06" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VDD"/>
@@ -13765,24 +13767,19 @@ digikey: 568-3372-5-ND, 8-SOIC, $1.92</description>
 <net name="!BTN" class="0">
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="83.82" x2="99.06" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="83.82" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="76.2" x2="99.06" y2="83.82" width="0.1524" layer="91"/>
 <junction x="99.06" y="83.82"/>
 <label x="96.52" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="K1" gate="G$1" pin="A0"/>
+<wire x1="99.06" y1="83.82" x2="107.95" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="86.36" x2="99.06" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PA2(PCINT2/ADC2/AIN01/TOCC1/RXD0/SS')"/>
 <wire x1="226.06" y1="187.96" x2="231.14" y2="187.96" width="0.1524" layer="91"/>
 <label x="231.14" y="187.96" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="K1" gate="G$1" pin="A0"/>
-<wire x1="115.57" y1="83.82" x2="111.76" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

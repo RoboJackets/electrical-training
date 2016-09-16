@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -6337,9 +6337,9 @@ Your Eurocircuits Team
 <signal name="N$13">
 <contactref element="R7" pad="1"/>
 <contactref element="U2" pad="3"/>
-<wire x1="2.875" y1="10.154" x2="2.875" y2="11.625" width="0.5" layer="1"/>
-<wire x1="1.5" y1="13.65" x2="1.5" y2="13" width="0.5" layer="1"/>
-<wire x1="1.5" y1="13" x2="2.875" y2="11.625" width="0.5" layer="1"/>
+<wire x1="2.875" y1="10.154" x2="2.875" y2="11.375" width="0.5" layer="1"/>
+<wire x1="1.5" y1="13.65" x2="1.5" y2="12.75" width="0.5" layer="1"/>
+<wire x1="1.5" y1="12.75" x2="2.875" y2="11.375" width="0.5" layer="1"/>
 </signal>
 <signal name="!BTN">
 <contactref element="C6" pad="1"/>

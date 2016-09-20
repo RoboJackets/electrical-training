@@ -51,6 +51,7 @@ datasheets/
 *.GTO
 *.GTP
 *.GTS
+*.zip
 
 # MATLAB autosave file
 *.asv

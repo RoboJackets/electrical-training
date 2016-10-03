@@ -36,3 +36,7 @@ Yeah
 Yeah
 	Interruptions come from interrupts
 Yeah
+	Itty bitty interrupts
+Yeah
+	Gotta have them interrupts
+Yeah

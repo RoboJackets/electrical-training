@@ -1,42 +1,38 @@
 Files
-ft. Evan P
+ft. Evan P & Jon J
 
 Beat: https://www.youtube.com/watch?v=Bad46A7tvnI
 
-This is a file
-A file is this
-Github is fun
-We aren't done
-RoboJackets
-Makes files
-With 
-	make file
-When the files compile
-Files compiling makes me smile
-And I smile with style
-Because I make my files with proper style
-Those against me are in denial
+This, this right here, is a file
+A file is this, there's no denial
 
-Throwing the circuits into a pile
-All of the bugs will be exiled
-Because I squish them
-Compiler errors I dish them
+We'll teach you stuff in RoboJackets
+Learn to send, radio packets
 
-Synthesized some Verilog for an FPGA
-Making the files made me say "Yay"
-Fools who use VHDL are astray
-Programmable logic all the way
+Learning source control, you'll have fun
+We ditched svn, cause git has won
 
-Made some low pass filters
-Because the high frequency noise causes disruptions
-But the binary files are full of corruption
-And my digital systems require interruptions
-Yeah
-	Interruptions
-Yeah
-	Interruptions come from interrupts
-Yeah
-	Itty bitty interrupts
-Yeah
-	Gotta have them interrupts
-Yeah
+See all about, compiling files
+Just leave out, infinite whiles
+
+Our senior members, know Unix
+Have helped write code, near Munich
+[Watch us lose, against ZJUNlict]
+
+We'll fly you, across the Atlantic
+When you know, our coding semantics
+
+We always code, in proper style
+The extra work, it's worthwile
+
+Code systems with interruptions
+But assemble, with the right instructions
+
+We have circuits, in a pile
+They had bugs, we exhiled
+
+Our HDL, it's synthesized
+The binary, too oversized
+
+It all starts with, a low pass filter
+Before you know it, you're a robot builder!

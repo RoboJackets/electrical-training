@@ -1,6 +1,6 @@
 # Ignore list for Eagle, a PCB layout tool
 *.lck
-*.scr
+#*.scr
 
 *.eup
 

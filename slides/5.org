@@ -132,4 +132,4 @@
 - EEVBlog: [[https://www.youtube.com/playlist?list=PL2862BF3631A5C1AA][Soldering]]
 
 ** Overview
-[[./5_Resources/Do:Don't.jpg]]
+[[./5_Resources/Do and Dont.jpg]]

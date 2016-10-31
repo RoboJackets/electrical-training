@@ -1,0 +1,72 @@
+
+#+TITLE: Soldering
+#+AUTHOR: Evan Peterson
+#+EMAIL: test@gmail.com
+#+REVEAL_THEME: black
+#+REVEAL_TRANS: linear
+#+REVEAL_SPEED: fast
+#+REVEAL_PLUGINS: (notes pdf)
+#+REVEAL_HLEVEL: 1
+#+OPTIONS: toc:nil timestamp:nil reveal_control:t num:nil reveal_history:t tags:nil author:nil
+
+* Basics
+** How Solder Works
+- Wetting
+- Attracts to hottest part
+[[./5_resources/Through hold ex.jpg]]
+** Good Solder Joints 
+** Tools
+   | Soldering Iron                   | Hot Air Gun                   | Reflow Oven                   |
+   | [[./5_resources/Soldering Iron.jpg]] | [[./5_resources/Hot Air Gun.jpg]] | [[./5_resources/Reflow Oven.jpg]] |
+   - Flux
+     - Remove oxides to allow better solder connections
+   - Tweezers
+     - Hold small components when soldering
+* Soldering With Iron
+[[./5_resources/Soldering Iron.jpg]]
+** Safety
+   - Hold the iron like a pencil
+   - Entire metal end gets hot (don't touch)
+   - Always assume iron is hot
+   - When not in use put back in holder
+   #+ATTR_HTML: :height 60%, :width 60%
+   [[./5_resources/Iron Hold.jpg]]
+** Main Tools 
+   | Solder                   | Sponge & Brass Sponge          | Flux                   |   
+   | [[./5_resources/Solder.jpg]] | [[./5_resources/Brass Sponge.jpg]] | [[./5_resources/Flux.jpg]] |
+   | What you are melting     | How you clean your iron        | Removes oxides         |
+** Other Tools
+   - Iron tips 
+     - [[./5_resources/Iron Tips.jpg]]
+     - Bigger tips, more heat
+     - Smaller tips, more precision, easier to break
+   - Exhaust Fan
+     - Filter fumes while working
+   - Desoldering wick
+     - Copper mesh to remove solder
+   - Desoldering pump
+     - Pump to suck solder out of holes
+** How to Heat the Parts
+** How Much Solder to Apply
+** Through Hole Soldering
+   - Bend pins slightly outward to hold in place
+** Surface Mount Soldering
+   - Solder one pin, then opposite pin
+** Cleaning Your Iron
+
+* Soldering With Hot Air Gun
+[[./5_resources/Hot Air Gun.jpg]]
+** Safety
+** Tools
+   - Hot air gun
+   - Solder paste
+
+* Soldering With Reflow Oven
+[[./5_resources/Reflow Oven.jpg]]
+** Safety
+** Tools
+   - Reflow oven
+   - Solder paste
+
+* Other Resources
+- EEVBlog: [[https://www.youtube.com/playlist?list=PL2862BF3631A5C1AA][Soldering]]

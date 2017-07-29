@@ -1,0 +1,3 @@
+ATmega328p has a 10% error range for internal oscillator. Using I2C with
+this is probably fine now, if asynchronous are introduced, additional crystal
+would be required.

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2297,10 +2297,10 @@ W = angled&lt;p&gt;
 <part name="SUPPLY30" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
 <part name="U$2" library="lcd-buzzer" deviceset="LCD-S401C39TR" device=""/>
-<part name="U$3" library="lcd-buzzer" deviceset="TC33X" device=""/>
+<part name="TC33X-2-103E" library="lcd-buzzer" deviceset="TC33X" device=""/>
 <part name="SUPPLY33" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY34" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="U$4" library="lcd-buzzer" deviceset="PS1240P02BT" device=""/>
+<part name="PS1240P02BT" library="lcd-buzzer" deviceset="PS1240P02BT" device=""/>
 <part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-2" device=""/>
 <part name="SUPPLY31" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY32" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -2354,10 +2354,10 @@ W = angled&lt;p&gt;
 <instance part="SUPPLY30" gate="GND" x="226.06" y="120.65"/>
 <instance part="C3" gate="G$1" x="261.62" y="120.65" rot="R90"/>
 <instance part="U$2" gate="G$1" x="220.98" y="73.66"/>
-<instance part="U$3" gate="G$1" x="182.88" y="105.41"/>
+<instance part="TC33X-2-103E" gate="G$1" x="182.88" y="105.41"/>
 <instance part="SUPPLY33" gate="GND" x="172.72" y="100.33"/>
 <instance part="SUPPLY34" gate="+5V" x="172.72" y="113.03"/>
-<instance part="U$4" gate="G$1" x="184.15" y="142.24"/>
+<instance part="PS1240P02BT" gate="G$1" x="191.77" y="147.32"/>
 <instance part="SV1" gate="1" x="269.24" y="99.06" rot="R180"/>
 <instance part="SUPPLY31" gate="+5V" x="280.67" y="106.68"/>
 <instance part="SUPPLY32" gate="GND" x="280.67" y="91.44"/>
@@ -2457,7 +2457,7 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="SUPPLY34" gate="+5V" pin="+5V"/>
-<pinref part="U$3" gate="G$1" pin="CCW"/>
+<pinref part="TC33X-2-103E" gate="G$1" pin="CCW"/>
 <wire x1="172.72" y1="110.49" x2="172.72" y2="105.41" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="105.41" x2="177.8" y2="105.41" width="0.1524" layer="91"/>
 </segment>
@@ -2559,7 +2559,7 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="SUPPLY33" gate="GND" pin="GND"/>
-<pinref part="U$3" gate="G$1" pin="CW"/>
+<pinref part="TC33X-2-103E" gate="G$1" pin="CW"/>
 <wire x1="172.72" y1="102.87" x2="177.8" y2="102.87" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -2569,60 +2569,30 @@ W = angled&lt;p&gt;
 <wire x1="280.67" y1="96.52" x2="280.67" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SHIFT_CLK" class="0">
-<segment>
-<pinref part="U3" gate="A" pin="ST_CP"/>
-<wire x1="55.02" y1="93.9" x2="67.72" y2="93.9" width="0.1524" layer="91"/>
-<label x="55.74" y="93.82" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U4" gate="A" pin="ST_CP"/>
-<wire x1="133.4" y1="93.9" x2="146.1" y2="93.9" width="0.1524" layer="91"/>
-<label x="134.12" y="93.82" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U5" gate="A" pin="ST_CP"/>
-<wire x1="54.46" y1="137.08" x2="67.16" y2="137.08" width="0.1524" layer="91"/>
-<label x="55.18" y="137" size="1.778" layer="95"/>
-</segment>
+<net name="SHIFT_CLK4" class="0">
 <segment>
 <pinref part="U6" gate="A" pin="ST_CP"/>
 <wire x1="132.84" y1="137.08" x2="145.54" y2="137.08" width="0.1524" layer="91"/>
 <label x="133.56" y="137" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PD1_(TXD/PCINT17)"/>
-<wire x1="166.7" y1="53.46" x2="166.7" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="166.7" y1="53.34" x2="180.34" y2="53.34" width="0.1524" layer="91"/>
-<label x="167.64" y="53.34" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT0/CLKO/ICP1)_PB0"/>
+<wire x1="29.54" y1="28.06" x2="17.78" y2="28.06" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="28.06" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
+<label x="9" y="28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="STORAGE_CLK" class="0">
-<segment>
-<pinref part="U3" gate="A" pin="SH_CP"/>
-<wire x1="55.02" y1="91.36" x2="67.72" y2="91.36" width="0.1524" layer="91"/>
-<label x="55.74" y="91.32" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U4" gate="A" pin="SH_CP"/>
-<wire x1="133.4" y1="91.36" x2="146.1" y2="91.36" width="0.1524" layer="91"/>
-<label x="134.12" y="91.32" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U5" gate="A" pin="SH_CP"/>
-<wire x1="54.46" y1="134.54" x2="67.16" y2="134.54" width="0.1524" layer="91"/>
-<label x="55.18" y="134.5" size="1.778" layer="95"/>
-</segment>
+<net name="STORAGE_CLK4" class="0">
 <segment>
 <pinref part="U6" gate="A" pin="SH_CP"/>
 <wire x1="132.84" y1="134.54" x2="145.54" y2="134.54" width="0.1524" layer="91"/>
 <label x="133.56" y="134.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PD0_(RXD/PCINT16)"/>
-<wire x1="166.7" y1="50.92" x2="166.7" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="166.7" y1="50.8" x2="180.34" y2="50.8" width="0.1524" layer="91"/>
-<label x="167.64" y="50.8" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PD1_(TXD/PCINT17)"/>
+<wire x1="166.7" y1="53.46" x2="180.34" y2="53.46" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="53.46" x2="180.34" y2="53.34" width="0.1524" layer="91"/>
+<label x="167.64" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SFT1" class="0">
@@ -2774,9 +2744,9 @@ W = angled&lt;p&gt;
 <label x="289.56" y="138.43" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="VCC"/>
-<wire x1="179.07" y1="137.16" x2="172.72" y2="137.16" width="0.1524" layer="91"/>
-<label x="170.18" y="137.16" size="1.778" layer="95"/>
+<pinref part="PS1240P02BT" gate="G$1" pin="VCC"/>
+<wire x1="186.69" y1="142.24" x2="180.34" y2="142.24" width="0.1524" layer="91"/>
+<label x="172.72" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LRA/ERM-" class="0">
@@ -2786,9 +2756,9 @@ W = angled&lt;p&gt;
 <label x="289.56" y="135.89" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="P2"/>
-<wire x1="179.07" y1="129.54" x2="172.72" y2="129.54" width="0.1524" layer="91"/>
-<label x="170.18" y="129.54" size="1.778" layer="95"/>
+<pinref part="PS1240P02BT" gate="G$1" pin="P2"/>
+<wire x1="186.69" y1="134.62" x2="180.34" y2="134.62" width="0.1524" layer="91"/>
+<label x="172.72" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1A" class="0">
@@ -3157,7 +3127,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="DIVIDED" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="WIPER"/>
+<pinref part="TC33X-2-103E" gate="G$1" pin="WIPER"/>
 <wire x1="204.47" y1="104.14" x2="215.9" y2="104.14" width="0.1524" layer="91"/>
 <label x="210.82" y="104.14" size="1.778" layer="95"/>
 </segment>
@@ -3170,6 +3140,84 @@ W = angled&lt;p&gt;
 <pinref part="U$2" gate="G$1" pin="COMP40"/>
 <wire x1="215.9" y1="71.12" x2="203.2" y2="71.12" width="0.1524" layer="91"/>
 <label x="204.47" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SHIFT_CLK1" class="0">
+<segment>
+<pinref part="U3" gate="A" pin="ST_CP"/>
+<wire x1="55.02" y1="93.9" x2="67.72" y2="93.9" width="0.1524" layer="91"/>
+<label x="55.74" y="93.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="(PCINT21/OC0B/T1)_PD5"/>
+<wire x1="29.54" y1="35.68" x2="17.78" y2="35.68" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="35.68" x2="17.78" y2="35.56" width="0.1524" layer="91"/>
+<label x="9" y="35.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="STORAGE_CLK1" class="0">
+<segment>
+<pinref part="U3" gate="A" pin="SH_CP"/>
+<wire x1="55.02" y1="91.36" x2="67.72" y2="91.36" width="0.1524" layer="91"/>
+<label x="55.74" y="91.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="(PCINT1/OC1A)_PB1"/>
+<wire x1="29.54" y1="25.52" x2="17.78" y2="25.52" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="25.52" x2="17.78" y2="25.4" width="0.1524" layer="91"/>
+<label x="9" y="25.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="STORAGE_CLK2" class="0">
+<segment>
+<pinref part="U4" gate="A" pin="SH_CP"/>
+<wire x1="133.4" y1="91.36" x2="146.1" y2="91.36" width="0.1524" layer="91"/>
+<label x="134.12" y="91.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="(PCINT2/SS/OC1B)_PB2"/>
+<wire x1="29.54" y1="22.98" x2="17.78" y2="22.98" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="22.98" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
+<label x="9" y="23" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SHIFT_CLK2" class="0">
+<segment>
+<pinref part="U4" gate="A" pin="ST_CP"/>
+<wire x1="133.4" y1="93.9" x2="146.1" y2="93.9" width="0.1524" layer="91"/>
+<label x="134.12" y="93.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="(PCINT22/OC0A/AIN0)_PD6"/>
+<wire x1="29.54" y1="33.14" x2="17.78" y2="33.14" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="33.14" x2="17.78" y2="33.02" width="0.1524" layer="91"/>
+<label x="9" y="33" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="STORAGE_CLK3" class="0">
+<segment>
+<pinref part="U5" gate="A" pin="SH_CP"/>
+<wire x1="54.46" y1="134.54" x2="67.16" y2="134.54" width="0.1524" layer="91"/>
+<label x="55.18" y="134.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="PD0_(RXD/PCINT16)"/>
+<wire x1="166.7" y1="50.92" x2="180.34" y2="50.92" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="50.92" x2="180.34" y2="50.8" width="0.1524" layer="91"/>
+<label x="167.64" y="50.8" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SHIFT_CLK3" class="0">
+<segment>
+<pinref part="U5" gate="A" pin="ST_CP"/>
+<wire x1="54.46" y1="137.08" x2="67.16" y2="137.08" width="0.1524" layer="91"/>
+<label x="55.18" y="137" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="(PCINT23/AIN1)_PD7"/>
+<wire x1="29.54" y1="30.6" x2="17.78" y2="30.6" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="30.6" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
+<label x="9" y="30.5" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

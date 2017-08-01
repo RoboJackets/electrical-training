@@ -835,8 +835,8 @@ design rules under a new name.</description>
 </element>
 <element name="U$1" library="rgb-led" package="GS-14-2180" value="MICRO-USB" x="-53.34" y="57.15"/>
 <element name="U$2" library="lcd-buzzer" package="S401C39TR" value="LCD-S401C39TR" x="-63.5" y="1.27"/>
-<element name="U$3" library="lcd-buzzer" package="TC33X-2-103E" value="TC33X" x="-53.34" y="33.02"/>
-<element name="U$4" library="lcd-buzzer" package="PS1240P02BT" value="PS1240P02BT" x="-30.48" y="38.1"/>
+<element name="TC33X-2-103E" library="lcd-buzzer" package="TC33X-2-103E" value="TC33X" x="-53.34" y="33.02"/>
+<element name="PS1240P02BT" library="lcd-buzzer" package="PS1240P02BT" value="PS1240P02BT" x="-30.48" y="38.1"/>
 <element name="U1" library="lcd-buzzer" package="32M1-A" value="ATMEGA328P-MUR" x="-43.18" y="58.42">
 <attribute name="MANUFACTURER_PART_NUMBER" value="ATMEGA328PMUR" x="-43.18" y="58.42" size="1.778" layer="27" display="off"/>
 <attribute name="VENDOR" value="Atmel" x="-43.18" y="58.42" size="1.778" layer="27" display="off"/>
@@ -881,7 +881,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="6"/>
 <contactref element="U1" pad="4"/>
 <contactref element="U1" pad="18"/>
-<contactref element="U$3" pad="CCW"/>
+<contactref element="TC33X-2-103E" pad="CCW"/>
 <contactref element="SV1" pad="2"/>
 <wire x1="-15.24" y1="63" x2="-15.74" y2="64" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.9606" y1="59.425" x2="-15.24" y2="63" width="0" layer="19" extent="1-1"/>
@@ -926,7 +926,7 @@ design rules under a new name.</description>
 <contactref element="U1" pad="5"/>
 <contactref element="U1" pad="3"/>
 <contactref element="U1" pad="21"/>
-<contactref element="U$3" pad="CW"/>
+<contactref element="TC33X-2-103E" pad="CW"/>
 <contactref element="SV1" pad="6"/>
 <wire x1="-15.74" y1="63.5" x2="-14.74" y2="63.5" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.74" y1="63.5" x2="-15.74" y2="63.5" width="0" layer="19" extent="1-1"/>
@@ -953,27 +953,15 @@ design rules under a new name.</description>
 <wire x1="-56.8706" y1="34.614996875" x2="-50.0888" y2="34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="-62.5094" y1="32.015" x2="-56.8706" y2="34.614996875" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="SHIFT_CLK">
-<contactref element="U3" pad="12"/>
-<contactref element="U4" pad="12"/>
-<contactref element="U5" pad="12"/>
+<signal name="SHIFT_CLK4">
 <contactref element="U6" pad="12"/>
-<contactref element="U1" pad="31"/>
-<wire x1="-23.8506" y1="56.825" x2="-14.9606" y2="56.825" width="0" layer="19" extent="1-1"/>
-<wire x1="-32.7406" y1="56.825" x2="-23.8506" y2="56.825" width="0" layer="19" extent="1-1"/>
-<wire x1="-44.43" y1="60.8203" x2="-32.7406" y2="56.825" width="0" layer="19" extent="1-1"/>
-<wire x1="-56.8706" y1="33.965" x2="-44.43" y2="60.8203" width="0" layer="19" extent="1-1"/>
+<contactref element="U1" pad="12"/>
+<wire x1="-43.43" y1="56.0197" x2="-32.7406" y2="56.825" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="STORAGE_CLK">
-<contactref element="U3" pad="11"/>
-<contactref element="U4" pad="11"/>
-<contactref element="U5" pad="11"/>
+<signal name="STORAGE_CLK4">
 <contactref element="U6" pad="11"/>
-<contactref element="U1" pad="30"/>
-<wire x1="-23.8506" y1="56.175" x2="-14.9606" y2="56.175" width="0" layer="19" extent="1-1"/>
-<wire x1="-32.7406" y1="56.175" x2="-23.8506" y2="56.175" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.93" y1="60.8203" x2="-32.7406" y2="56.175" width="0" layer="19" extent="1-1"/>
-<wire x1="-56.8706" y1="33.315" x2="-43.93" y2="60.8203" width="0" layer="19" extent="1-1"/>
+<contactref element="U1" pad="31"/>
+<wire x1="-44.43" y1="60.8203" x2="-32.7406" y2="56.175" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SFT1">
 <contactref element="U3" pad="14"/>
@@ -1034,12 +1022,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="LRA/ERM+">
 <contactref element="U2" pad="A3"/>
-<contactref element="U$4" pad="P$1"/>
+<contactref element="PS1240P02BT" pad="P$1"/>
 <wire x1="-32.98" y1="38.1" x2="-14.74" y2="64" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LRA/ERM-">
 <contactref element="U2" pad="C3"/>
-<contactref element="U$4" pad="P$2"/>
+<contactref element="PS1240P02BT" pad="P$2"/>
 <wire x1="-27.98" y1="38.1" x2="-14.74" y2="63" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="1A">
@@ -1183,11 +1171,41 @@ design rules under a new name.</description>
 <wire x1="-20.32" y1="25.908" x2="-38.3794" y2="55.525003125" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DIVIDED">
-<contactref element="U$3" pad="WIPER"/>
+<contactref element="TC33X-2-103E" pad="WIPER"/>
 <contactref element="U$2" pad="P$1"/>
 <contactref element="U$2" pad="P$40"/>
 <wire x1="-63.5" y1="25.908" x2="-63.5" y2="1.27" width="0" layer="19" extent="1-1"/>
 <wire x1="-51.0794" y1="37.5412" x2="-63.5" y2="25.908" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="SHIFT_CLK1">
+<contactref element="U3" pad="12"/>
+<contactref element="U1" pad="9"/>
+<wire x1="-44.93" y1="56.0197" x2="-56.8706" y2="33.965" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="STORAGE_CLK1">
+<contactref element="U3" pad="11"/>
+<contactref element="U1" pad="13"/>
+<wire x1="-42.93" y1="56.0197" x2="-56.8706" y2="33.315" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="STORAGE_CLK2">
+<contactref element="U4" pad="11"/>
+<contactref element="U1" pad="14"/>
+<wire x1="-42.43" y1="56.0197" x2="-14.9606" y2="56.175" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="SHIFT_CLK2">
+<contactref element="U4" pad="12"/>
+<contactref element="U1" pad="10"/>
+<wire x1="-44.43" y1="56.0197" x2="-14.9606" y2="56.825" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="STORAGE_CLK3">
+<contactref element="U5" pad="11"/>
+<contactref element="U1" pad="30"/>
+<wire x1="-43.93" y1="60.8203" x2="-23.8506" y2="56.175" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="SHIFT_CLK3">
+<contactref element="U5" pad="12"/>
+<contactref element="U1" pad="11"/>
+<wire x1="-43.93" y1="56.0197" x2="-23.8506" y2="56.825" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

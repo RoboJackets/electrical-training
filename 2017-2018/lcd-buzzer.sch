@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -2311,7 +2311,12 @@ W = angled&lt;p&gt;
 <text x="20.74" y="119.82" size="1.778" layer="91">pin 1 to 7 on Shifters will control LCD segments</text>
 <text x="99.06" y="48.26" size="1.778" layer="91">Schematics shows here is !RESET</text>
 <text x="276.86" y="158.75" size="1.778" layer="91">Haptic Driver</text>
-<text x="217.17" y="86.36" size="1.778" layer="91">MicroUSB As Power</text>
+<text x="214.63" y="111.76" size="1.778" layer="91">MicroUSB As Power</text>
+<text x="195.58" y="157.48" size="1.778" layer="91">Buzzer</text>
+<text x="251.46" y="109.22" size="1.778" layer="91">SPI Programming Port</text>
+<text x="218.44" y="78.74" size="1.778" layer="91">LCD</text>
+<text x="55.88" y="162.56" size="1.778" layer="91">4 Shifters</text>
+<text x="185.42" y="116.84" size="1.778" layer="91">Trimmer Potentiometer</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="27" y="56"/>
@@ -2357,7 +2362,7 @@ W = angled&lt;p&gt;
 <instance part="TC33X-2-103E" gate="G$1" x="182.88" y="105.41"/>
 <instance part="SUPPLY33" gate="GND" x="172.72" y="100.33"/>
 <instance part="SUPPLY34" gate="+5V" x="172.72" y="113.03"/>
-<instance part="PS1240P02BT" gate="G$1" x="191.77" y="147.32"/>
+<instance part="PS1240P02BT" gate="G$1" x="194.31" y="152.4"/>
 <instance part="SV1" gate="1" x="269.24" y="99.06" rot="R180"/>
 <instance part="SUPPLY31" gate="+5V" x="280.67" y="106.68"/>
 <instance part="SUPPLY32" gate="GND" x="280.67" y="91.44"/>
@@ -2745,8 +2750,8 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="PS1240P02BT" gate="G$1" pin="VCC"/>
-<wire x1="186.69" y1="142.24" x2="180.34" y2="142.24" width="0.1524" layer="91"/>
-<label x="172.72" y="142.24" size="1.778" layer="95"/>
+<wire x1="189.23" y1="147.32" x2="177.8" y2="147.32" width="0.1524" layer="91"/>
+<label x="172.72" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="LRA/ERM-" class="0">
@@ -2757,8 +2762,8 @@ W = angled&lt;p&gt;
 </segment>
 <segment>
 <pinref part="PS1240P02BT" gate="G$1" pin="P2"/>
-<wire x1="186.69" y1="134.62" x2="180.34" y2="134.62" width="0.1524" layer="91"/>
-<label x="172.72" y="134.62" size="1.778" layer="95"/>
+<wire x1="189.23" y1="139.7" x2="177.8" y2="139.7" width="0.1524" layer="91"/>
+<label x="172.72" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1A" class="0">

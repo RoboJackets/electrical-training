@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.0">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14815,9 +14815,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="133.56" y="137" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PD2_(INT0/PCINT18)"/>
-<wire x1="166.624" y1="55.88" x2="180.34" y2="55.88" width="0.1524" layer="91"/>
-<label x="167.64" y="55.88" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT1/OC1A)_PB1"/>
+<wire x1="29.464" y1="25.4" x2="12.7" y2="25.4" width="0.1524" layer="91"/>
+<label x="12.7" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STORAGE_CLK4" class="0">
@@ -14827,9 +14827,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="133.56" y="134.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PD1_(TXD/PCINT17)"/>
-<wire x1="166.624" y1="53.34" x2="180.34" y2="53.34" width="0.1524" layer="91"/>
-<label x="167.64" y="53.34" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT2/SS/OC1B)_PB2"/>
+<wire x1="29.464" y1="22.86" x2="12.7" y2="22.86" width="0.1524" layer="91"/>
+<label x="12.7" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SFT1" class="0">
@@ -14839,9 +14839,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="55.74" y="99.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT22/OC0A/AIN0)_PD6"/>
-<wire x1="29.464" y1="33.02" x2="12.7" y2="33.02" width="0.1524" layer="91"/>
-<label x="22.86" y="33.02" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PD0_(RXD/PCINT16)"/>
+<wire x1="166.624" y1="50.8" x2="180.34" y2="50.8" width="0.1524" layer="91"/>
+<label x="167.64" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SFT3" class="0">
@@ -14851,9 +14851,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="55.18" y="142.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PC2_(ADC2/PCINT10)"/>
-<wire x1="166.624" y1="38.1" x2="180.34" y2="38.1" width="0.1524" layer="91"/>
-<label x="167.64" y="38.1" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT23/AIN1)_PD7"/>
+<wire x1="29.464" y1="30.48" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
+<label x="12.7" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SFT4" class="0">
@@ -14863,9 +14863,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="133.56" y="142.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT19/OC2B/INT1)_PD3"/>
-<wire x1="29.464" y1="55.88" x2="12.7" y2="55.88" width="0.1524" layer="91"/>
-<label x="22.86" y="55.88" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT0/CLKO/ICP1)_PB0"/>
+<wire x1="29.464" y1="27.94" x2="12.7" y2="27.94" width="0.1524" layer="91"/>
+<label x="8.89" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SFT2" class="0">
@@ -14875,9 +14875,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="134.12" y="99.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT6/XTAL1/TOSC1)_PB6"/>
-<wire x1="29.464" y1="40.64" x2="15.24" y2="40.64" width="0.1524" layer="91"/>
-<label x="22.86" y="40.64" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PC1_(ADC1/PCINT9)"/>
+<wire x1="166.624" y1="35.56" x2="180.34" y2="35.56" width="0.1524" layer="91"/>
+<label x="167.64" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -15372,9 +15372,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="55.74" y="93.82" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT23/AIN1)_PD7"/>
-<wire x1="29.464" y1="30.48" x2="12.7" y2="30.48" width="0.1524" layer="91"/>
-<label x="12.7" y="30.48" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PD1_(TXD/PCINT17)"/>
+<wire x1="166.624" y1="53.34" x2="180.34" y2="53.34" width="0.1524" layer="91"/>
+<label x="167.64" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STORAGE_CLK1" class="0">
@@ -15384,9 +15384,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="55.74" y="91.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT0/CLKO/ICP1)_PB0"/>
-<wire x1="29.464" y1="27.94" x2="12.7" y2="27.94" width="0.1524" layer="91"/>
-<label x="8.89" y="27.94" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PD2_(INT0/PCINT18)"/>
+<wire x1="166.624" y1="55.88" x2="180.34" y2="55.88" width="0.1524" layer="91"/>
+<label x="167.64" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STORAGE_CLK2" class="0">
@@ -15396,9 +15396,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="134.12" y="91.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT21/OC0B/T1)_PD5"/>
-<wire x1="29.464" y1="35.56" x2="12.7" y2="35.56" width="0.1524" layer="91"/>
-<label x="9" y="35.5" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PC3_(ADC3/PCINT11)"/>
+<wire x1="166.624" y1="40.64" x2="180.34" y2="40.64" width="0.1524" layer="91"/>
+<label x="167.64" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SHIFT_CLK2" class="0">
@@ -15408,9 +15408,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="134.12" y="93.82" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT7/XTAL2/TOSC2)_PB7"/>
-<wire x1="29.464" y1="38.1" x2="12.7" y2="38.1" width="0.1524" layer="91"/>
-<label x="12.7" y="38.1" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="PC2_(ADC2/PCINT10)"/>
+<wire x1="166.624" y1="38.1" x2="180.34" y2="38.1" width="0.1524" layer="91"/>
+<label x="167.64" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STORAGE_CLK3" class="0">
@@ -15420,9 +15420,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="55.18" y="134.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PC3_(ADC3/PCINT11)"/>
-<wire x1="166.624" y1="40.64" x2="180.34" y2="40.64" width="0.1524" layer="91"/>
-<label x="167.64" y="40.64" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT21/OC0B/T1)_PD5"/>
+<wire x1="29.464" y1="35.56" x2="12.7" y2="35.56" width="0.1524" layer="91"/>
+<label x="9" y="35.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SHIFT_CLK3" class="0">
@@ -15432,9 +15432,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="55.18" y="137" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="PD0_(RXD/PCINT16)"/>
-<wire x1="166.624" y1="50.8" x2="180.34" y2="50.8" width="0.1524" layer="91"/>
-<label x="167.64" y="50.8" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT22/OC0A/AIN0)_PD6"/>
+<wire x1="29.464" y1="33.02" x2="12.7" y2="33.02" width="0.1524" layer="91"/>
+<label x="10.16" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -15494,9 +15494,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="281.94" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT1/OC1A)_PB1"/>
-<wire x1="29.464" y1="25.4" x2="20.32" y2="25.4" width="0.1524" layer="91"/>
-<label x="20.32" y="25.4" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT7/XTAL2/TOSC2)_PB7"/>
+<wire x1="29.464" y1="38.1" x2="12.7" y2="38.1" width="0.1524" layer="91"/>
+<label x="12.7" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!BTN3" class="0">
@@ -15510,9 +15510,9 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <label x="281.94" y="-38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U1" gate="A" pin="(PCINT2/SS/OC1B)_PB2"/>
-<wire x1="29.464" y1="22.86" x2="20.32" y2="22.86" width="0.1524" layer="91"/>
-<label x="20.32" y="22.86" size="1.778" layer="95"/>
+<pinref part="U1" gate="A" pin="(PCINT19/OC2B/INT1)_PD3"/>
+<wire x1="29.464" y1="55.88" x2="12.7" y2="55.88" width="0.1524" layer="91"/>
+<label x="22.86" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

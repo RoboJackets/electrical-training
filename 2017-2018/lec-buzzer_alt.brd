@@ -6545,16 +6545,19 @@ Your Eurocircuits Team
 <attribute name="VENDOR" value="Atmel" x="48" y="24" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="X3" library="lcd-buzzer" package="2X3SHROUDED" value="2X3SHROUDED" x="14.1" y="36" rot="R90"/>
-<element name="U1" library="lcd-buzzer" package="SOT403-1" value="74HC595PW" x="23.4" y="28.2" rot="R180">
+<element name="U1" library="lcd-buzzer" package="SOT403-1" value="74HC595PW" x="23.4" y="28.2" smashed="yes" rot="R180">
 <attribute name="MANUFACTURER_PART_NUMBER" value="74HC595PW" x="23.4" y="28.2" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="20.0234" y="30.965" size="1" layer="25" ratio="6" rot="SR0"/>
 <attribute name="VENDOR" value="NXP" x="23.4" y="28.2" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U4" library="lcd-buzzer" package="SOT403-1" value="74HC595PW" x="23.4" y="35.4">
+<element name="U4" library="lcd-buzzer" package="SOT403-1" value="74HC595PW" x="23.4" y="35.4" smashed="yes">
 <attribute name="MANUFACTURER_PART_NUMBER" value="74HC595PW" x="23.4" y="35.4" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="20.0234" y="38.065" size="1" layer="25" ratio="6" rot="SR0"/>
 <attribute name="VENDOR" value="NXP" x="23.4" y="35.4" size="1.778" layer="27" display="off"/>
 </element>
-<element name="U5" library="lcd-buzzer" package="SOT403-1" value="74HC595PW" x="37.3" y="24.2">
+<element name="U5" library="lcd-buzzer" package="SOT403-1" value="74HC595PW" x="37.3" y="24.2" smashed="yes">
 <attribute name="MANUFACTURER_PART_NUMBER" value="74HC595PW" x="37.3" y="24.2" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="34.0234" y="26.865" size="1" layer="25" ratio="6" rot="SR0"/>
 <attribute name="VENDOR" value="NXP" x="37.3" y="24.2" size="1.778" layer="27" display="off"/>
 </element>
 </elements>

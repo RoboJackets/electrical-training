@@ -1,7 +1,7 @@
-#include <avr/io.h>
+//#include <avr/io.h>
 //int latchPin = PD2;
 //int clockPin = PD1;
-//int dataPin = PD0;
+//int dataPin = AI0;
 
 
 int main(){

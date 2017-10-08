@@ -6717,6 +6717,10 @@ Your Eurocircuits Team
 <wire x1="59.02" y1="34.98" x2="60.58" y2="34.98" width="0.2" layer="1"/>
 <wire x1="60.58" y1="34.98" x2="60.6" y2="35" width="0.2" layer="1"/>
 <via x="60.6" y="35" extent="1-16" drill="0.35"/>
+<contactref element="DS1" pad="P$28"/>
+<contactref element="DS1" pad="P$16"/>
+<contactref element="DS1" pad="P$12"/>
+<contactref element="DS1" pad="P$8"/>
 </signal>
 <signal name="SHIFT_CLK4">
 <contactref element="U4" pad="12"/>

@@ -18985,6 +18985,8 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="R5" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="150"/>
 <part name="SUPPLY42" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="FRAME2" library="RoboJackets-Frames" deviceset="FRAME_B_L" device=""/>
+<part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19116,6 +19118,8 @@ Potentiometer</text>
 <instance part="SUPPLY42" gate="GND" x="172.72" y="115.57"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="FRAME2" gate="G$2" x="325.12" y="0"/>
+<instance part="SUPPLY6" gate="GND" x="220.98" y="231.14"/>
+<instance part="SUPPLY8" gate="GND" x="294.64" y="243.84"/>
 </instances>
 <busses>
 </busses>
@@ -19368,6 +19372,26 @@ Potentiometer</text>
 <pinref part="SUPPLY42" gate="GND" pin="GND"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="118.11" x2="172.72" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DS1" gate="G$1" pin="COL/P28"/>
+<wire x1="241.3" y1="236.22" x2="226.06" y2="236.22" width="0.1524" layer="91"/>
+<pinref part="DS1" gate="G$1" pin="DP3/P16"/>
+<wire x1="241.3" y1="233.68" x2="226.06" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="236.22" x2="226.06" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="233.68" x2="220.98" y2="233.68" width="0.1524" layer="91"/>
+<junction x="226.06" y="233.68"/>
+<pinref part="SUPPLY6" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="DS1" gate="G$1" pin="DP2/P12"/>
+<wire x1="279.4" y1="246.38" x2="289.56" y2="246.38" width="0.1524" layer="91"/>
+<pinref part="DS1" gate="G$1" pin="DP1/P8"/>
+<wire x1="289.56" y1="246.38" x2="294.64" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="243.84" x2="289.56" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="243.84" x2="289.56" y2="246.38" width="0.1524" layer="91"/>
+<junction x="289.56" y="246.38"/>
+<pinref part="SUPPLY8" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="SHIFT_CLK4" class="0">

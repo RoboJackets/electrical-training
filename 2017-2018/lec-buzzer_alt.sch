@@ -19288,12 +19288,22 @@ Driver</text>
 <wire x1="218.44" y1="226.06" x2="226.06" y2="226.06" width="0.1524" layer="91"/>
 <label x="226.06" y="226.06" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="Q7"/>
+<wire x1="33.02" y1="223.52" x2="30.48" y2="223.52" width="0.1524" layer="91"/>
+<label x="30.48" y="223.52" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="DP1" class="0">
 <segment>
 <pinref part="LCD1" gate="G$1" pin="DP1"/>
 <wire x1="218.44" y1="228.6" x2="226.06" y2="228.6" width="0.1524" layer="91"/>
 <label x="226.06" y="228.6" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="Q7"/>
+<wire x1="91.44" y1="223.52" x2="88.9" y2="223.52" width="0.1524" layer="91"/>
+<label x="88.9" y="223.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="DP2" class="0">
@@ -19302,12 +19312,22 @@ Driver</text>
 <wire x1="218.44" y1="231.14" x2="226.06" y2="231.14" width="0.1524" layer="91"/>
 <label x="226.06" y="231.14" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="Q7"/>
+<wire x1="33.02" y1="180.34" x2="30.48" y2="180.34" width="0.1524" layer="91"/>
+<label x="30.48" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="DP3" class="0">
 <segment>
 <pinref part="LCD1" gate="G$1" pin="DP3"/>
 <wire x1="218.44" y1="233.68" x2="226.06" y2="233.68" width="0.1524" layer="91"/>
 <label x="226.06" y="233.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="Q7"/>
+<wire x1="91.44" y1="180.34" x2="88.9" y2="180.34" width="0.1524" layer="91"/>
+<label x="88.9" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED1" class="0">

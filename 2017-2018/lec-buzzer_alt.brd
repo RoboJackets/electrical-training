@@ -6686,8 +6686,10 @@ Your Eurocircuits Team
 <contactref element="LCD1" pad="9"/>
 <wire x1="35.175" y1="6.1806" x2="35.175" y2="5.075" width="0.3" layer="1"/>
 <wire x1="35.175" y1="5.075" x2="35.5" y2="4.75" width="0.3" layer="1"/>
-<wire x1="35.5" y1="4.75" x2="37.18" y2="4.75" width="0.3" layer="1"/>
-<wire x1="37.18" y1="4.75" x2="38.68" y2="3.25" width="0.3" layer="1"/>
+<wire x1="35.5" y1="4.75" x2="36.75" y2="4.75" width="0.3" layer="1"/>
+<wire x1="36.75" y1="4.75" x2="37.25" y2="4.25" width="0.3" layer="1"/>
+<wire x1="37.25" y1="4.25" x2="37.68" y2="4.25" width="0.3" layer="1"/>
+<wire x1="37.68" y1="4.25" x2="38.68" y2="3.25" width="0.3" layer="1"/>
 </signal>
 <signal name="2F">
 <contactref element="U2" pad="5"/>
@@ -7068,15 +7070,44 @@ Your Eurocircuits Team
 </signal>
 <signal name="COL">
 <contactref element="LCD1" pad="28"/>
+<wire x1="28.52" y1="27.888" x2="28.52" y2="26.48" width="0.3" layer="1"/>
+<wire x1="28.52" y1="26.48" x2="29" y2="26" width="0.3" layer="1"/>
+<via x="29" y="26" extent="1-16" drill="0.35"/>
+<wire x1="29" y1="26" x2="29.25" y2="26" width="0.3" layer="16"/>
+<wire x1="29.25" y1="26" x2="29.5" y2="26.25" width="0.3" layer="16"/>
+<wire x1="29.5" y1="26.25" x2="57.5" y2="26.25" width="0.3" layer="16"/>
+<wire x1="57.5" y1="26.25" x2="58.5" y2="25.25" width="0.3" layer="16"/>
+<wire x1="58.5" y1="25.25" x2="58.5" y2="5.5" width="0.3" layer="16"/>
+<wire x1="58.5" y1="5.5" x2="58" y2="5" width="0.3" layer="16"/>
+<wire x1="58" y1="5" x2="50.75" y2="5" width="0.3" layer="16"/>
+<wire x1="50.75" y1="5" x2="47.75" y2="8" width="0.3" layer="16"/>
+<via x="47.75" y="8" extent="1-16" drill="0.35"/>
+<contactref element="U1" pad="7"/>
+<wire x1="46.124996875" y1="6.1806" x2="46.124996875" y2="7.124996875" width="0.3" layer="1"/>
+<wire x1="46.124996875" y1="7.124996875" x2="47" y2="8" width="0.3" layer="1"/>
+<wire x1="47" y1="8" x2="47.75" y2="8" width="0.3" layer="1"/>
 </signal>
 <signal name="DP1">
 <contactref element="LCD1" pad="8"/>
+<contactref element="U2" pad="7"/>
+<wire x1="37.124996875" y1="6.1806" x2="37.124996875" y2="5.125003125" width="0.3" layer="1"/>
+<wire x1="37.124996875" y1="5.125003125" x2="37.5" y2="4.75" width="0.3" layer="1"/>
+<wire x1="37.5" y1="4.75" x2="39.72" y2="4.75" width="0.3" layer="1"/>
+<wire x1="39.72" y1="4.75" x2="41.22" y2="3.25" width="0.3" layer="1"/>
 </signal>
 <signal name="DP2">
 <contactref element="LCD1" pad="12"/>
+<contactref element="U5" pad="7"/>
+<wire x1="28.624996875" y1="6.1806" x2="28.624996875" y2="4.875003125" width="0.3" layer="1"/>
+<wire x1="28.624996875" y1="4.875003125" x2="29" y2="4.5" width="0.3" layer="1"/>
+<wire x1="29" y1="4.5" x2="29.81" y2="4.5" width="0.3" layer="1"/>
+<wire x1="29.81" y1="4.5" x2="31.06" y2="3.25" width="0.3" layer="1"/>
 </signal>
 <signal name="DP3">
 <contactref element="LCD1" pad="16"/>
+<contactref element="U6" pad="7"/>
+<wire x1="20.124996875" y1="6.1806" x2="20.124996875" y2="4.025003125" width="0.3" layer="1"/>
+<wire x1="20.124996875" y1="4.025003125" x2="20.9" y2="3.25" width="0.3" layer="1"/>
 </signal>
 <signal name="LED1">
 <contactref element="D1" pad="A"/>

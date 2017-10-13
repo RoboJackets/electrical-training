@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -18636,8 +18636,8 @@ Driver</text>
 </segment>
 <segment>
 <wire x1="220.98" y1="55.88" x2="224.79" y2="55.88" width="0.1524" layer="91"/>
-<label x="224.79" y="55.88" size="1.778" layer="95"/>
 <pinref part="X1" gate="G$1" pin="4"/>
+<label x="224.79" y="55.88" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -19085,6 +19085,11 @@ Driver</text>
 <wire x1="292.1" y1="215.9" x2="292.1" y2="218.44" width="0.1524" layer="91"/>
 <junction x="292.1" y="218.44"/>
 </segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="PC1_(ADC1/PCINT9)"/>
+<wire x1="144.78" y1="45.72" x2="149.86" y2="45.72" width="0.1524" layer="91"/>
+<label x="149.86" y="45.72" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="!BTN2" class="0">
 <segment>
@@ -19099,6 +19104,11 @@ Driver</text>
 <wire x1="365.76" y1="218.44" x2="369.57" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="213.36" x2="365.76" y2="218.44" width="0.1524" layer="91"/>
 <junction x="365.76" y="218.44"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="PC0_(ADC0/PCINT8)"/>
+<wire x1="144.78" y1="43.18" x2="149.86" y2="43.18" width="0.1524" layer="91"/>
+<label x="149.86" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">

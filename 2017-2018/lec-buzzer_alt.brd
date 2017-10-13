@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.25" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -6879,7 +6879,22 @@ Your Eurocircuits Team
 <contactref element="R3" pad="1"/>
 <wire x1="41.65" y1="15.5" x2="41.65" y2="17.75" width="0.3" layer="1"/>
 <wire x1="41.65" y1="17.75" x2="41.65" y2="18.9" width="0.3" layer="1"/>
-<wire x1="41.65" y1="18.9" x2="39.9" y2="20.65" width="0.3" layer="1"/>
+<wire x1="39.9" y1="20.65" x2="41.65" y2="18.9" width="0.3" layer="1"/>
+<contactref element="U4" pad="24"/>
+<wire x1="22.5845" y1="23.603" x2="22.5845" y2="23.7845" width="0.3" layer="1"/>
+<wire x1="22.5845" y1="23.7845" x2="23.2" y2="24.4" width="0.3" layer="1"/>
+<via x="23.2" y="24.4" extent="1-16" drill="0.35"/>
+<wire x1="23.2" y1="24.4" x2="23.2" y2="23" width="0.3" layer="16"/>
+<wire x1="23.2" y1="23" x2="23.75" y2="22.45" width="0.3" layer="16"/>
+<wire x1="23.75" y1="22.45" x2="28.10146875" y2="22.45" width="0.3" layer="16"/>
+<wire x1="28.10146875" y1="22.45" x2="28.25146875" y2="22.6" width="0.3" layer="16"/>
+<wire x1="28.74853125" y1="22.6" x2="28.25146875" y2="22.6" width="0.3" layer="16"/>
+<via x="39.4" y="22" extent="1-16" drill="0.35"/>
+<wire x1="39.4" y1="22" x2="39.6" y2="22" width="0.3" layer="1"/>
+<wire x1="39.6" y1="22" x2="39.9" y2="21.7" width="0.3" layer="1"/>
+<wire x1="39.9" y1="21.7" x2="39.9" y2="20.65" width="0.3" layer="1"/>
+<wire x1="39.4" y1="22" x2="29.34853125" y2="22" width="0.3" layer="16"/>
+<wire x1="29.34853125" y1="22" x2="28.74853125" y2="22.6" width="0.3" layer="16"/>
 </signal>
 <signal name="!BTN2">
 <contactref element="C5" pad="1"/>
@@ -6887,7 +6902,17 @@ Your Eurocircuits Team
 <contactref element="R4" pad="1"/>
 <wire x1="31.65" y1="15.5" x2="31.65" y2="17.75" width="0.3" layer="1"/>
 <wire x1="31.65" y1="17.75" x2="31.65" y2="18.4" width="0.3" layer="1"/>
-<wire x1="31.65" y1="18.4" x2="29.4" y2="20.65" width="0.3" layer="1"/>
+<wire x1="29.525" y1="20.525" x2="31.65" y2="18.4" width="0.3" layer="1"/>
+<contactref element="U4" pad="23"/>
+<wire x1="29.525" y1="20.525" x2="29.4" y2="20.65" width="0.3" layer="1"/>
+<wire x1="22.5845" y1="22.803" x2="21.803" y2="22.803" width="0.3" layer="1"/>
+<wire x1="21.803" y1="22.803" x2="21.5" y2="22.5" width="0.3" layer="1"/>
+<via x="21.5" y="22.5" extent="1-16" drill="0.35"/>
+<wire x1="21.5" y1="22.5" x2="22" y2="22" width="0.3" layer="16"/>
+<via x="28.5" y="22" extent="1-16" drill="0.35"/>
+<wire x1="28.5" y1="22" x2="29.525" y2="20.975" width="0.3" layer="1"/>
+<wire x1="29.525" y1="20.975" x2="29.525" y2="20.525" width="0.3" layer="1"/>
+<wire x1="22" y1="22" x2="28.5" y2="22" width="0.3" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>

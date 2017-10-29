@@ -1,0 +1,559 @@
+#+TITLE: Intro to Programming Electrical
+#+AUTHOR: Jason Gibson
+#+EMAIL: jgibson37@gateche.edu
+
+* What are we doing today?
+- Instructor introductions
+- What is programming?
+- Hello World!
+- Variables
+- Control flow
+- Conditionals
+- Functions
+- Classes
+- Arduino set up
+
+* Meet Jason
+#+ATTR_HTML: :width 15%
+[[file:https://i.imgur.com/izC5WWA.jpg]]
+- Jason Gibson
+  - Junior, Computer Science (Threads: Devices, Intelligence)
+  - Inside RoboJackets: Training Chair, IGVC Software Lead
+  - Outside RoboJackets: Avid lover of dad jokes
+  - Master of cringe-worthy pictures
+- How to contact me
+  - Slack: [[https://robojackets.slack.com/messages/@jasongibson/][@jasongibson]]
+  - Email: [[mailto:jgibson37@gatech.edu][jgibson37@gatech.edu]]
+* CodePad
+- Today we will be using CodePad to write and compile code
+  - This is a remote interview tool
+- Go to [[https://codepad.remoteinterview.io]]
+
+** Change to C++ - the superior language
+#+ATTR_HTML: :width 50%
+[[file:https://i.imgur.com/S1PecNy.png]]
+
+** Hello World!
+- Add *World!* to your code
+#+BEGIN_SRC C++ -n :exports both :includes <iostream> :defines cout std::cout
+  #include <iostream>
+  using namespace std;
+
+  int main() {
+    cout << "Hello World!";
+    return 0;
+  }
+#+END_SRC
+
+** Click Run
+#+ATTR_HTML: :width 50%
+[[file:https://i.imgur.com/caYg2AY.png]]
+
+* {}
+- Curly braces define scope of a function in the code
+- Right now, that means that your code goes in the main function
+- All compound or control flow statements have curly braces
+    - inside the *{}* defines the main method
+#+BEGIN_SRC C++ -n
+  int main() {
+    // <==== HERE =====
+  }
+#+END_SRC
+
+* ;
+#+BEGIN_NOTES
+Make sure to note that they will see this error a lot and that it will go away with time.
+#+END_NOTES
+- A semicolon defines the end of a statement of code
+- Think of it like a period in a sentence
+- All expression statements end in a semicolon
+    - Declarations, assignments, function calls, etc
+    - A missing semicolon results in an error message that can point to the wrong line
+#+BEGIN_SRC C++ -n
+    #include <iostream>
+    using namespace std;
+    int main() {
+      cout << "Hello" // <=====
+      cout << "World!";
+      return 0;
+    }
+#+END_SRC
+#+BEGIN_EXAMPLE
+/temp/file.cpp: In function ‘int main()’:
+/temp/file.cpp:5:5: error: expected ‘;’ before ‘cout’
+     cout << "World!";
+     ^
+
+Compilation Failed
+#+END_EXAMPLE
+
+* Looking back at Hello World!
+- Our code is in ={}=
+- =cout= tells the computer to write the letters to the screen
+- =<<= tells the computer what to write out
+- Line 1: includes a header file (covered later)
+- Line 4: defines the main function
+- Line 6: tells the computer that the program ran successfully
+#+BEGIN_SRC C++ -n :exports both :includes <iostream> :defines cout std::cout
+  #include <iostream>
+  using namespace std;
+
+  int main() {
+    cout << "Hello World!";
+    return 0;
+  }
+#+END_SRC
+
+* Most useful program ever
+#+BEGIN_NOTES
+This should naturally lead into why variables are useful. Without them
+all programs would be deterministic.
+#+END_NOTES
+#+BEGIN_SRC C++ -n :exports both :includes <iostream> :defines cout std::cout
+  int main() {
+    cout << 2 + 2;
+    return 0;
+  }
+#+END_SRC
+
+* Variables
+- Alias for a value
+- The value can be changed without changing the alias
+
+** Primitive Variable Types
+| Name     | Description                     |
+|----------+---------------------------------|
+| =bool=   | Can be either *true* or *false* |
+| =char=   | a character like 'c' or '+'     |
+| =int=    | A whole number *bounded         |
+| =double= | a decimal number *bounded       |
+
+** Primitive variables?
+[[file:https://i.imgur.com/Wo0ovX5.jpg]]
+- But actually...it means that it cannot be divided into smaller parts
+- A number is just a number
+
+* Important symbols
+#+BEGIN_NOTES
+No lengthy explanation of << and stdout
+#+END_NOTES
+| Symbol | Meaning                                                              |
+|--------+----------------------------------------------------------------------|
+| =//=   | Signifies a comment - the computer will not try to compile that line |
+| ===    | Assignment operator - value of right is assigned to variable on left |
+| =<<=   | Sends something to the OS which displays it in the terminal          |
+
+* Math operators
+#+BEGIN_NOTES
+explain that the table is in the order of operations
+#+END_NOTES
+| Symbol | Meaning |
+|-------+------|
+| =()= | Groups a statement |
+| =*= | Multiplies two numbers |
+| =/= | Divides a number by another |
+| =+= | Adds two numbers together |
+| =-= | Subtracts two numbers |
+
+* Variables
+#+BEGIN_SRC C++ -n
+  bool var = true;
+  char character = 'c';
+  int intVar = 2;
+  double double_var = 2.2647;
+#+END_SRC
+
+** Variables syntax
+- =my_var= now represents the value 2
+#+BEGIN_SRC C++ -n :exports both :includes <iostream> :defines cout std::cout
+  int main() {
+    int my_var = 2;
+    cout << my_var + my_var;
+    return 0;
+  }
+#+END_SRC
+
+** Declaration vs Definition
+#+BEGIN_SRC C++ -n
+  // creates the variable num of type int and assigns it the value 1
+  int num = 1;
+
+  // the type is already known from above so this line just assigns it the value 4
+  num = 4;
+#+END_SRC
+
+** Values change
+- Variables can have their assigned value changed on the fly
+#+BEGIN_SRC C++ -n :exports both :includes <iostream> :defines cout std::cout
+  int main() {
+    int my_var = 2;
+    cout << my_var + my_var;
+    my_var = 4;
+    cout << my_var + my_var;
+    return 0;
+  }
+#+END_SRC
+
+* Questions?
+#+BEGIN_NOTES
+Write a couple examples of setting up a primitive already described and then
+changing it using only the operators above. like printing numbers 1 - 10 using a var.
+DO NOT use strings, ++, --, or anything else not covered already
+#+END_NOTES
+- Still more to come...
+- Let's write some code
+
+* If statements
+- What *IF* I only want to execute code sometimes?
+
+** If statement syntax
+#+BEGIN_SRC C++ -n
+  int main() {
+    if (true) {
+        // <==== This executes =====
+    }
+    if (false) {
+        // <==== This does *NOT* execute =====
+    }
+  }
+#+END_SRC
+
+** Equivalence operators
+| Symbol | Condition                                                    | True Example | False Example |
+|--------+--------------------------------------------------------------+--------------+---------------|
+| =!=    | opposite of current value                                    | =!false=     | =!true=       |
+| ====   | "equal"                                                      | ~2 == 2~     | ~4 == 2~      |
+| =!==   | *NOT* "equal"                                                | ~2 != 4~     | ~2 != 2~      |
+| =>=    | the number of the left is larger and not equal to the right  | =4 > 2=      | =2 > 4=       |
+| =<=    | the number of the left is smaller and not equal to the right | =2 < 4=      | =4 < 2=       |
+
+** If else syntax
+#+BEGIN_SRC C++ -n
+  int main() {
+    if (2 == 2) {
+        // <==== This executes =====
+    } else {
+        // <==== This does *NOT* execute =====
+    }
+    if (2 != 2) {
+        // <==== This does *NOT* execute =====
+    } else {
+        // <==== This executes =====
+    }
+  }
+#+END_SRC
+
+** Conditional practice 1 question
+#+BEGIN_NOTES
+1
+#+END_NOTES
+- 1 or 2?
+#+BEGIN_SRC C++ -n
+if (2 == 2) {
+    // 1
+} else {
+    // 2
+}
+#+END_SRC
+
+** Conditional practice 2 question
+#+BEGIN_NOTES
+2
+#+END_NOTES
+- 1 or 2?
+#+BEGIN_SRC C++ -n
+if (2 != 2) {
+    // 1
+} else {
+    // 2
+}
+#+END_SRC
+
+** Conditional practice 3 question
+#+BEGIN_NOTES
+2
+#+END_NOTES
+- 1 or 2?
+#+BEGIN_SRC C++ -n
+if (2 < 2) {
+    // 1
+} else {
+    // 2
+}
+#+END_SRC
+
+** Chaining conditionals
+#+BEGIN_NOTES
+Talk about how this is difficult to write at deeper levels, Think 5-6 Conditionals
+#+END_NOTES
+#+BEGIN_SRC C++ -n
+  int main() {
+    if (true) {
+        // <==== This executes =====
+        if (true) {
+            // <==== This executes =====
+        }
+        // <==== This executes =====
+    }
+    // <==== This executes =====
+  }
+#+END_SRC
+
+*** Logical operators - AND
+| a | b | a && b|
+|-------+------|------+------|
+| True | True | True |
+| True | False | False |
+| False | True | False |
+| False | False | False |
+
+*** Logical operators - OR
+| a | b | a \vert\vert b|
+|-------+------|------+------|
+| True | True | True |
+| True | False | True |
+| False | True | True |
+| False | False | False |
+
+*** Logical operators order
+- Statements will be evaluated from left to right
+- No limit to the number you can have
+- Statements can be grouped using =()=
+    - Just like with math, operators =()= are executed first
+    - =1 && (2 || 3)=
+        - =2 || 3= is done first and the result is ANDed with 1
+
+*** Conditional practice 4 question
+#+BEGIN_NOTES
+2
+#+END_NOTES
+- 1 or 2?
+#+BEGIN_SRC C++ -n
+if (2 < 2 && 2 == 2) {
+    // 1
+} else {
+    // 2
+}
+#+END_SRC
+
+*** Conditional practice 4 question
+#+BEGIN_NOTES
+1
+#+END_NOTES
+- 1 or 2?
+#+BEGIN_SRC C++ -n
+if (2 != 2 || 2 == 2) {
+    // 1
+} else {
+    // 2
+}
+#+END_SRC
+
+* Loops!
+- What if I want to do something multiple times?
+
+** While loops syntax
+#+BEGIN_SRC C++ -n
+while (condition == true) {
+    // do something
+}
+#+END_SRC
+
+** For loop syntax
+#+BEGIN_SRC C++ -n
+for (initializer; condition; change condition) {
+    // do something
+}
+#+END_SRC
+
+** Math operators continued
+#+BEGIN_SRC C++ -n
+var = var + 1;
+// equivalent to
+var++;
+
+var = var - 1;
+// equivalent to
+var--;
+#+END_SRC
+
+** Equivalent while and for loop
+#+BEGIN_SRC C++ -n
+int while_counter = 10;
+while (while_counter > 0) {
+    // do something
+    while_counter = while_counter - 1;
+}
+for (int for_counter = 10; for_counter > 0; for_counter++) {
+    // do something
+}
+#+END_SRC
+
+* Let's write some code!
+#+BEGIN_NOTES
+Write a couple examples of code using what has already been covered.
+Multiplication Table
+Converting Time
+s->m->h etc
+Find length of a number
+99 bottles
+#+END_NOTES
+* Functions
+#+BEGIN_NOTES
+After introducing the concept, write a simple example. Don't go into prototypes yet, we'll cover them in a bit.
+
+Open the example code on your display and try to stick to that as much as you can.
+#+END_NOTES
+- A function is a chunk of code with defined inputs and outputs
+ - Minimizes copy-and-paste
+ - Less buggy
+ - Easier to test than a whole program
+- These can be chained together for more complex functionality
+- You want each function to have a single high-level purpose
+
+** Anatomy of a function declaration
+- C++ lets you have multiple functions with the same name, provided their parameter signatures are different
+ - A function's parameter signature is just the ordered list of its parameter types.
+ - =foo(int a, char b)= and =bar(int x, char z)= have the same signature
+ - =fizz(int a, char b)= and =buzz(char x, int z)= don't
+- The compiler will determine which function to actually call depending on the parameters
+- (This will come in handy later!)
+
+** Function overloading
+- These are different
+- =foo(int a)=
+- =foo(int a, int b)=
+
+** Header files
+#+BEGIN_NOTES
+Now you can talk about prototypes!
+#+END_NOTES
+- Only contain /declarations/, also known as prototypes, not definitions
+ - Function name
+ - Arguments
+ - Return type
+ - No functionality
+ - Example: =int add(int a, int b);=
+- This enables a lot of different files to "know" about a function but only have one definition for it
+
+* Classes
+** What are classes?
+- Definitions for objects, i.e. what data and methods they have
+ - In other words, a blueprint for how to create an object
+- An object is called an *instance* of a class
+ - An object has all the functions and data structures defined in its class
+ - Data schema is the same across all instances of a class, but values differ
+ - A method can treat all instances of an object the same
+   - Think of it like a complex, user defined variable type
+** Structure
+#+BEGIN_NOTES
+talk about the structure of a class
+#+END_NOTES
+- Typically declaration in a .h file with implementation in a cpp file
+  - This is not a strict rule
+#+BEGIN_SRC c++
+class NAME {
+    // decleration of variables
+    // method prototypes
+    //   can be declared in this file or a seperate cpp file
+};
+#+END_SRC
+
+** Why bother?
+- Software projects are easier to understand when related data and functions are grouped together
+- Abstracting data behind getters/setters allows you to validate inputs from other parts of your application
+- Abstracting complex tasks into class methods enables simpler, easier to read high-level code
+- Classes can be extended to add functionality with minimal extra code using inheritance
+
+** A simple exampl
+#+BEGIN_NOTES
+A class can have some data and some methods, which can either be public or private. Drop to a terminal and use/modify this class.
+#+END_NOTES
+#+BEGIN_SRC c++
+class example {
+    public:
+        int a;
+        int getA() { return a; }
+};
+#+END_SRC
+** Static members
+#+BEGIN_NOTES
+ Drop to a terminal and use this class.
+#+END_NOTES
+- For when you want data or functions to be part of your class, but they don't need to be "attached" to an instance of the class
+- Static data is shared between all instances of a class
+- Remember the =static= keyword means something else outside of class definitions!
+- Static variables must be initialized before use
+  - accessed by the *::* operator
+#+BEGIN_SRC c++
+class static_example {
+    private:
+        static int a;
+    public:
+        static_example() {a++;}
+        static int getA() { return a; }
+};
+// init in implementing class
+int static_example::a = 0;
+#+END_SRC
+* Arduino
+- We will be using arduino to program our boards
+[[file:https://www.arduino.cc/arduino_logo.png]]
+** What is a byte
+#+BEGIN_NOTES
+They may never have seen binary before. 00101010 = 26, 00010001 = 17 do not talk about how binary works
+#+END_NOTES
+- 8 bits (0,1)
+  - 00101010
+  - 00010001
+- smallest indexable space on your computer
+*** Hex
+- [[http://www.rapidtables.com/convert/number/decimal-to-hex.htm][converter]]
+| number |   binary |  hex |
+|--------+----------+------|
+|      0 | 00000000 |  0x0 |
+|      1 | 00000001 |  0x1 |
+|      2 | 00000010 |  0x2 |
+|     10 | 00001010 |  0xA |
+|     12 | 00001100 |  0xC |
+|     15 | 00001111 |  0XF |
+|     16 | 00010000 | 0x10 |
+** Arduino provided methods
+- Arduino has some useful methods for reading and writing
+| name         | writes | reads |
+|--------------+--------+-------|
+| digitalWrite | HI/LO  | N/A   |
+| digitalRead  | N/A    | HI/LO |
+| analogWrite  | PWM    | N/A   |
+| analogRead   | N/A    | PWM   |
+** Methods
+- All Arduino sketches have two methods
+  - Setup
+    - I set up my pin definitions
+    - Runs first
+  - Loop
+    - What I want to happen all the time
+    - Runs second
+*** Setup
+#+BEGIN_SRC C++ -n
+  void setup() {
+    // pinMode(PIN_NUMBER, OUTPUT/INPUT/...)
+    pinMode(2, OUTPUT);
+  }
+#+END_SRC
+*** Loop
+#+BEGIN_SRC C++ -n
+  void loop() {
+    // digitalWrite(PIN_NUMBER, HIGH/LOW)
+    digitalWrite(2, HIGH);
+    // waits for the amount of time in ms
+    delay(1000);
+  }
+#+END_SRC
+*** Yours
+- You can define your own methods
+  - typically of return type void
+  - break functionality into these methods
+* Questions?
+- A go-to place to ask questions ([[https://piazza.com/gatech/fall2017/rjee/home][Piazza!]])
+- Monitored by highly experienced RoboJackets members

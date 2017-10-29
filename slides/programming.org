@@ -230,12 +230,12 @@ DO NOT use strings, ++, --, or anything else not covered already
 ** If else syntax
 #+BEGIN_SRC C++ -n
   int main() {
-    if (true) {
+    if (2 == 2) {
         // <==== This executes =====
     } else {
         // <==== This does *NOT* execute =====
     }
-    if (false) {
+    if (2 != 2) {
         // <==== This does *NOT* execute =====
     } else {
         // <==== This executes =====
@@ -419,6 +419,11 @@ Open the example code on your display and try to stick to that as much as you ca
 - The compiler will determine which function to actually call depending on the parameters
 - (This will come in handy later!)
 
+** Function overloading
+- These are different
+- =foo(int a)=
+- =foo(int a, int b)=
+
 ** Header files
 #+BEGIN_NOTES
 Now you can talk about prototypes!
@@ -515,12 +520,12 @@ They may never have seen binary before. 00101010 = 26, 00010001 = 17 do not talk
 |     16 | 00010000 | 0x10 |
 ** Arduino provided methods
 - Arduino has some useful methods for reading and writing
-| name         | writes | reads  |
-|--------------+--------+--------|
-| digitalWrite | HI/LO  | N/A    |
-| digitalRead  | N/A    | HI/LO  |
-| analogWrite  | analog | N/A    |
-| analogRead   | N/A    | analog |
+| name         | writes | reads |
+|--------------+--------+-------|
+| digitalWrite | HI/LO  | N/A   |
+| digitalRead  | N/A    | HI/LO |
+| analogWrite  | PWM    | N/A   |
+| analogRead   | N/A    | PWM   |
 ** Methods
 - All Arduino sketches have two methods
   - Setup

@@ -7,6 +7,7 @@ const int led  = 10;
 int ledState = 0;
 
 void setup() {
+  // Set inputs and outputs
   pinMode(btn2, INPUT);
   pinMode(btn3, INPUT);
   pinMode(led, OUTPUT);

@@ -16,13 +16,9 @@ Our board uses a custom configuration, which is different from the standard
 Arduino layout. We will therefore need to configure individual settings for
 programming the ATMega328 chip. To do so, we will load in the MiniCore package:
 1. Open the Arduino IDE
-
 2. Go to **File > Preference**. Paste 
-```text
-https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
-``` 
+`https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json` 
 into **Additional Boards Manager URLs** and press **OK**
-
 3. Go to **Tools > Board > Boards Manager** and search for and install 
 
 

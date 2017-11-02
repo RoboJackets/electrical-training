@@ -35,8 +35,155 @@ into **Additional Boards Manager URLs** and press **OK**
 Congratulations, we're now ready to get started!
 
 ## Basics
+We will now explore different methods of interfacing with the ATmega328
+microcontroller throught the Arduino IDE.
+
+Generally, Arduino programs consist of a `setup()` functions, which run once,
+and a `loop()` funciton, which continuously repeats.
 
 ### Blinky
+In this section, we construct a program to interface with the onboard buttons
+and LED. 
+
+Begin a new sketch by opening the Arduino IDE and clicking **File > New**
+
+A new window will appear with the following skeleton code:
+```C
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+```
+
+We begin by setting the proper pin inputs into the MCU. We assign variables
+`btn2`, `btn3`, and `led` to their corresponding connections, as can be
+determined from the Eagle schematic. 
+
+The buttons are connected pulled down, with an active high input into the MCU:
+![buttons](images/buttons_pinout.PNG)
+
+Likewise, the LED is connected to the MCU in a typical fashion:
+![led](images/led_pinout.PNG)
+
+These connections are then found on the actual ATmega schematic:
+![atmega nobuttons](images/atmega_basics_pinout.PNG)
+
+In order to retrieve the pin names as used in Arduino, we reference an ATmega328
+pinout: ![atmega328](atmega328.png)
+
+Cross-referencing our schematic with the pinout diagram, we find that our pins
+have the following Arduino labels:
+
+| Pin | Arduino Label |
+| --- | --- |
+| btn2 | A0 |
+| btn3 | A1 |
+| led | 10 |
+
+Therefore, we insert constant definitions for the three pins in above 
+`void setup() ...`:
+
+```C
+// Pin definitions
+const int btn2 = A0;
+const int btn3 = A1;
+const int led  = 10;
+```
+
+In this program, we will read the values of both buttons. When no buttons are
+pressed, the LED will be off. When one is pressed, the LED will be on. When both
+buttons are pressed, the LED will flicker at a fast rate.
+
+In order to be able to toggle the LED and to maintain cleaner code, we will have
+an `ledState` variable that will keep track of whether the LED is on or off. By
+setting this variable, we will be able to activate and deactivate the LED as
+desired on every loop.
+
+We thus declare and initialize an LED integer below the pin definitions:
+```C
+// Keep track of whether the LED is on or off at the present moment
+int ledState = 0;
+```
+
+Next, we configure each of the pins as an input or output using Arduino's
+`pinMode(..)` function. Each of these three statements goes in the setup()
+function, which sets the direction of each of the pins:
+
+```C
+void setup() {
+  // Set inputs and outputs
+  pinMode(btn2, INPUT);
+  pinMode(btn3, INPUT);
+  pinMode(led, OUTPUT);
+}
+```
+We're now ready to implement the actual program logic. This code goes in the
+`void loop()` event loop, where it will read the inputs and update the outputs
+in each cycle. We use the `digitalRead(..)` functions to read the values from
+the digtial inputs, and based on these readings update the `ledState`.
+
+Insert the following conditional logic into `loop()`:
+
+```C
+// If either button is pressed, turn LED on
+if (digitalRead(btn2) || digitalRead(btn3))
+  ledState = 1;
+// If both buttons pressed, blink the LED
+else if (digitalRead(btn2) && digitalRead(btn3))
+  ledState = !ledState;
+// Otherwise, turn LED off
+else
+  ledState = 0;
+```
+
+We then write the `ledState` to the LED pin and use the `delay(..)` function to
+stall the program for 50 milliseconds:
+
+```C
+digitalWrite(led, ledState);
+delay(50);
+```
+
+Ultimately, the program will look as follows:
+
+```C
+// Pin definitions
+const int btn2 = A0;
+const int btn3 = A1;
+const int led  = 10;
+
+// Keep track of whether the LED is on or off at the present moment
+int ledState = 0;
+
+void setup() {
+  // Set inputs and outputs
+  pinMode(btn2, INPUT);
+  pinMode(btn3, INPUT);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  // If either button is pressed, turn LED on
+  if (digitalRead(btn2) || digitalRead(btn3))
+    ledState = 1;
+  // If both buttons pressed, blink the LED
+  else if (digitalRead(btn2) && digitalRead(btn3))
+    ledState = !ledState;
+  // Otherwise, turn LED off
+  else
+    ledState = 0;
+
+  digitalWrite(led, ledState);
+  delay(50);
+}
+```
+
+
 ### PWM
 
 ## LCD Buzzer

@@ -183,8 +183,24 @@ void loop() {
 }
 ```
 
+Upload to the Arduino by clicking on **Sketch > Upload Using Programmer**, and
+observe how pressing the buttons changes the LED output.
 
 ### PWM
+We will now use pulse width modulation to control the brightness of the LED. PWM
+works by outputting a square wave at a set frequency, while varying its duty
+cycle (the ratio of the time the wave is HIGH to the total period of the
+waveform). An example of PWM waveforms at different duty cycles is shown below:
+![pwm](images/pwm.png)
+
+Arduino supports a PWM resolution of 256 bits. To output a PWM signal from a
+pin, begin by setting the pin to output with `pinMode( <PIN_NAME>, OUTPUT )`
+and use the `analogWrite(..)` function:
+`analogWrite( <PIN_NAME>, <VALUE_BETWEEN_0_AND_255> )`
+
+We show this by creating a new Arduino project called *pwm*, where we use button
+*btn2* and the LED to toggle the LED between being off and on at brightness
+specified by the PWM duty cycle.
 
 ## LCD Buzzer
 

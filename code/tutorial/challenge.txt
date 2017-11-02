@@ -1,0 +1,30 @@
+Challenge:
+===================================================================
+
+Make an 
+    LCD::writeNumber(int num) {..}
+member function that takes a number of arbitary number and prints it
+on the LCD.
+
+===================================================================
+
+Challenge #2:
+
+In our example, the LCD pins get DC values, which are constantly on or off. 
+LCDs, however, are meant to operate at AC voltages; 
+
+i.e. the pins should be alternating between positive and negative values. We 
+can do so by changing the direction between the COM signal and shift register 
+bits every loop cycle.
+
+ex. to display the digit 8, the signals A-G should change with respect to COM
+    every cycle:
+[A-G] : 1111_1110
+COM   : 0
+
+[A-G] : 0000_0001
+COM   : 1
+
+(then, we repeat)
+
+Implement support for the AC signal in your library.

@@ -20,7 +20,16 @@ programming the ATMega328 chip. To do so, we will load in the MiniCore package:
 `https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json` 
 into **Additional Boards Manager URLs** and press **OK**
 3. Go to **Tools > Board > Boards Manager** and search for and install 
+`MiniCore`
+4. Go to **Tools > Programmer** and select *USBtinyISP* as your programmer
+5. Go to **Tools** and set the following settings:
+| Board | *(MiniCore)* ATmega328 |
+| Variant | 328p/ 328pa |
+| BOD | 2.7V |
+| Clock | 1 MHz Internal |
+| Compiler LTO | Disabled |
 
+Congratulations, we're now ready to get started!
 
 ## Basics
 

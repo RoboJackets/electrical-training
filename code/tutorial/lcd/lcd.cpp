@@ -1,15 +1,22 @@
-#include "Arduino.h"
+#include <Arduino.h>
 
 #include "lcd.h"
 
 LCD::LCD()
 {
-    com = com_i;
-    oe_n = oe_n_i;
-    latch = latch_i;
-    clk = clk_i;
-    reset_n = reset_n_i;
-    data = data_i;
+    com = A2;
+    oe_n = 5;
+    latch = 6;
+    clk = 7;
+    reset_n = 8;
+    data = 9;
+
+    pinMode(com, OUTPUT);
+    pinMode(oe_n, OUTPUT);
+    pinMode(latch, OUTPUT);
+    pinMode(clk, OUTPUT);
+    pinMode(reset_n, OUTPUT);
+    pinMode(data, OUTPUT);
 }
 
 LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i, 
@@ -21,6 +28,13 @@ LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i,
     clk = clk_i;
     reset_n = reset_n_i;
     data = data_i;
+
+    pinMode(com, OUTPUT);
+    pinMode(oe_n, OUTPUT);
+    pinMode(latch, OUTPUT);
+    pinMode(clk, OUTPUT);
+    pinMode(reset_n, OUTPUT);
+    pinMode(data, OUTPUT);
 
     digitalWrite(oe_n, LOW);
 }
@@ -66,16 +80,15 @@ int LCD::getBits(int digit)
         default:
             return 0x00;
     }
-
-
+}
 
 void LCD::clear()
 {
     digitalWrite(com, HIGH);
-    digitalWrite(reset, LOW);
+    digitalWrite(reset_n, LOW);
     clkTick();        
     digitalWrite(com, LOW);
-    digitalWrite(reset, HIGH);
+    digitalWrite(reset_n, HIGH);
 }
 
 void LCD::sendDigit(int digit)
@@ -102,11 +115,12 @@ void LCD::sendDigit(int digit)
 void LCD::writeDigit(int digit)
 {
     clear();
-    sentDigit(digit);
+    sendDigit(digit);
+}
 
 void LCD::writeTwoDigits(int digit1, int digit2)
 {
     clear();
-    sentDigit(digit);
-    sendDigit
+    sendDigit(digit1);
+    sendDigit(digit2);
 }

@@ -29,5 +29,5 @@ class LCD {
     const int BITS_PER_DIGIT = 8;
     const int TOTAL_BITS = 4 * BITS_PER_DIGIT;
     const int DELAY_HALF_PERIOD = 10;
-}
+};
 #endif /* LCD_H_ */

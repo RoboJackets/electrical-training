@@ -1,3 +1,5 @@
+#include "Arduino.h"
+
 #include "lcd.h"
 
 LCD::LCD()
@@ -19,6 +21,8 @@ LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i,
     clk = clk_i;
     reset_n = reset_n_i;
     data = data_i;
+
+    digitalWrite(oe_n, LOW);
 }
 
 // Tick the clock a single time
@@ -85,7 +89,7 @@ void LCD::sendDigit(int digit)
     for (int i=0; i<BITS_PER_DIGIT; ++i) {
         digitalWrite(data, digitBits & 0x1);
         clkTick();
-        digitBits <<= 1;
+        digitBits >>= 1;
     }
 
     digitalWrite(latch, LOW);
@@ -104,4 +108,5 @@ void LCD::writeTwoDigits(int digit1, int digit2)
 {
     clear();
     sentDigit(digit);
+    sendDigit
 }

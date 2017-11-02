@@ -1,14 +1,11 @@
 #include <LCD.h>
 
-
+LCD lcd;
 
 void setup() {
-  // put your setup code here, to run once:
-  LCD lcd();
-
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  lcd.writeDigit(4);
 }

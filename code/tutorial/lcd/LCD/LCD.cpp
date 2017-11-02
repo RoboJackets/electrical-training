@@ -18,8 +18,10 @@ LCD::LCD()
     pinMode(reset_n, OUTPUT);
     pinMode(data, OUTPUT);
 
-    digitalWrite(oe_n, LOW);
     digitalWrite(com, LOW);
+
+    digitalWrite(latch, LOW);
+    digitalWrite(oe_n, HIGH);
 }
 
 LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i, 
@@ -39,8 +41,10 @@ LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i,
     pinMode(reset_n, OUTPUT);
     pinMode(data, OUTPUT);
 
-    digitalWrite(oe_n, LOW);
     digitalWrite(com, LOW);
+
+    digitalWrite(latch, LOW);
+    digitalWrite(oe_n, HIGH);
 }
 
 // Tick the clock a single time
@@ -50,6 +54,17 @@ void LCD::clkTick()
     delay(DELAY_HALF_PERIOD);
     digitalWrite(clk, HIGH);
     delay(DELAY_HALF_PERIOD);
+    digitalWrite(clk, LOW);
+}
+
+// Tick the latch a single time
+void LCD::latchTick()
+{
+    digitalWrite(latch, LOW);
+    delay(DELAY_HALF_PERIOD);
+    digitalWrite(latch, HIGH);
+    delay(DELAY_HALF_PERIOD);
+    digitalWrite(latch, LOW);
 }
 
 // Convert digit into bitwise encoding
@@ -88,33 +103,34 @@ int LCD::getBits(int digit)
 
 void LCD::clear()
 {
-    digitalWrite(com, HIGH);
     digitalWrite(reset_n, LOW);
     clkTick();        
-    digitalWrite(com, LOW);
     digitalWrite(reset_n, HIGH);
+
+    latchTick();
 }
 
 void LCD::sendDigit(int digit)
 {
+    digitalWrite(latch, LOW);
+
     int digitBits = getBits(digit);
 
     digitalWrite(reset_n, HIGH);
-    digitalWrite(latch, HIGH);
 
     for (int i=0; i<BITS_PER_DIGIT; ++i) {
         digitalWrite(data, digitBits & 0x1);
         clkTick();
         digitBits >>= 1;
     }
-
-    digitalWrite(latch, LOW);
 }
 
 void LCD::writeDigit(int digit)
 {
     clear();
     sendDigit(digit);
+    
+    latchTick();
 }
 
 void LCD::writeTwoDigits(int digit1, int digit2)
@@ -122,4 +138,6 @@ void LCD::writeTwoDigits(int digit1, int digit2)
     clear();
     sendDigit(digit1);
     sendDigit(digit2);
+    
+    latchTick();
 }

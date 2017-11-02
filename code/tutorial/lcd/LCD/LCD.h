@@ -21,8 +21,9 @@ class LCD {
         // Get the encoding for a digit between 0 and 9
         int getBits(int);
 
-        // Utility to tick the clock once
+        // Utility to tick once
         void clkTick();
+        void latchTick();
 
         const int BITS_PER_DIGIT = 8;
         const int TOTAL_BITS = 4 * BITS_PER_DIGIT;

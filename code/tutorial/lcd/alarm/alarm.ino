@@ -7,5 +7,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  lcd.writeDigit(4);
+  lcd.writeDigit(8);
 }

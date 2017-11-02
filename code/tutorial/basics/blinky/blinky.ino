@@ -1,3 +1,5 @@
+#define delay _delay_ms
+
 // Pin definitions
 const int btn2 = A0;
 const int btn3 = A1;

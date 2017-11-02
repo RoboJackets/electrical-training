@@ -130,12 +130,12 @@ the digtial inputs, and based on these readings update the `ledState`.
 Insert the following conditional logic into `loop()`:
 
 ```C
+if (digitalRead(btn2) && digitalRead(btn3))
+  ledState = !ledState;
 // If either button is pressed, turn LED on
-if (digitalRead(btn2) || digitalRead(btn3))
+else if (digitalRead(btn2) || digitalRead(btn3))
   ledState = 1;
 // If both buttons pressed, blink the LED
-else if (digitalRead(btn2) && digitalRead(btn3))
-  ledState = !ledState;
 // Otherwise, turn LED off
 else
   ledState = 0;
@@ -168,12 +168,12 @@ void setup() {
 }
 
 void loop() {
-  // If either button is pressed, turn LED on
-  if (digitalRead(btn2) || digitalRead(btn3))
-    ledState = 1;
   // If both buttons pressed, blink the LED
-  else if (digitalRead(btn2) && digitalRead(btn3))
+  if (digitalRead(btn2) && digitalRead(btn3))
     ledState = !ledState;
+  // If either button is pressed, turn LED on
+  else if (digitalRead(btn2) || digitalRead(btn3))
+    ledState = 1;
   // Otherwise, turn LED off
   else
     ledState = 0;

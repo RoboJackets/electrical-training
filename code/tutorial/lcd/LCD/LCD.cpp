@@ -21,7 +21,7 @@ LCD::LCD()
     digitalWrite(com, LOW);
 
     digitalWrite(latch, LOW);
-    digitalWrite(oe_n, HIGH);
+    digitalWrite(oe_n, LOW);
 }
 
 LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i, 
@@ -44,7 +44,7 @@ LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i,
     digitalWrite(com, LOW);
 
     digitalWrite(latch, LOW);
-    digitalWrite(oe_n, HIGH);
+    digitalWrite(oe_n, LOW);
 }
 
 // Tick the clock a single time
@@ -77,7 +77,7 @@ int LCD::getBits(int digit)
      */
     switch (digit) {
         case 0:
-            return 0xFA;
+            return 0xFC;
         case 1:
             return 0x60;
         case 2:
@@ -93,9 +93,9 @@ int LCD::getBits(int digit)
         case 7:
             return 0xE0;
         case 8:
-            return 0xE6;
+            return 0xFE;
         case 9:
-            return 0xFA;
+            return 0xF6;
         default:
             return 0x00;
     }

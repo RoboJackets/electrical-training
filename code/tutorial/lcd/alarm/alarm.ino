@@ -1,11 +1,18 @@
-#include <LCD.h>
+#include "LCD.h"
 
 LCD lcd;
+int iterator = 0;
 
 void setup() {
+  lcd.writeTwoDigits(0, 1);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  lcd.writeDigit(8);
+  if (iterator == 9)
+    iterator = 0;
+  else
+    iterator++;
+
+  lcd.writeDigit(iterator);
+  delay(200);
 }

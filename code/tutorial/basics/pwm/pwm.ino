@@ -36,4 +36,6 @@ void loop() {
     analogWrite(led, dutyCycle);
   else
     analogWrite(led, 0);
+
+  delay(20);
 }

@@ -200,7 +200,104 @@ and use the `analogWrite(..)` function:
 
 We show this by creating a new Arduino project called *pwm*, where we use button
 *btn2* and the LED to toggle the LED between being off and on at brightness
-specified by the PWM duty cycle.
+specified by the PWM duty cycle. The LED output will toggle on each button
+press.
+
+First, we define the button and LED pins above `void setup()`:
+```C
+// Pin definitions
+const int btn2 = A0;
+const int led  = 10;
+```
+
+We will keep track of whether the LED is toggled on or off by using the 
+`pwmState` variable:
+
+```C
+// Keep track of whether PWM is enabled or disabled
+int pwmState = 0;
+```
+
+In order to determine when the button is pressed, we will monitor the state of
+the button on every clock cyle. 
+
+```C
+// Keep track of the current and previous state of the button
+int buttonState, buttonStateOld;
+```
+
+Finally, we set a constant duty cycle we wish to output to the PWM:
+
+```C
+// Duty cycle to write to the LED
+const int dutyCycle = 200;
+```
+
+We now enter the `setup()` function, where we set the button to an input and the
+LED to an output.
+
+```C
+void setup() {
+  // Set inputs and outputs
+  pinMode(btn2, INPUT);
+  pinMode(led, OUTPUT);
+```
+We also initialize the old button state by doing a preliminary reading of the
+pushbutton:
+
+```C
+  // Initialize the old reading of the button before entering main loop
+  buttonStateOld = digitalRead(btn2);
+}
+```
+
+We are now ready to enter the event loop. We begin by reading the current state
+of the button:
+
+```C
+void loop() {
+  // Read the new button input
+  buttonState = digitalRead(btn2);
+```
+
+We then check if the button is different from its previous state. If so, we
+toggle the `pwmState` variable:
+
+```C
+  // If a change is detected in the button, then toggle the PWM state
+  if (!buttonStateOld && buttonState)
+    pwmState = !pwmState;
+```
+
+We then update the old button state, so that the loop can compare with the
+current button value:
+
+```C
+  // Update the old button state
+  buttonStateOld = buttonState;
+```
+
+Finally, depending on whether `pwmState` is toggled or not, we write either
+`dutyCycle` or `0` to the PWM:
+
+```C
+
+  // Depending on PWM state, output either a PWM at the duty cycle or 0
+  if (pwmState)
+    analogWrite(led, dutyCycle);
+  else
+    analogWrite(led, 0);
+  
+  delay(20);
+}
+```
+
+Your button should now toggle every time it is presses. Experiment with changing
+the button brightness by changing the `dutyCycle` value.
+
+
+
+
 
 ## LCD Buzzer
 

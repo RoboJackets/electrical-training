@@ -193,7 +193,7 @@ cycle (the ratio of the time the wave is HIGH to the total period of the
 waveform). An example of PWM waveforms at different duty cycles is shown below:
 ![pwm](images/pwm.png)
 
-Arduino supports a PWM resolution of 256 bits. To output a PWM signal from a
+Arduino supports a PWM resolution of 8 bits. To output a PWM signal from a
 pin, begin by setting the pin to output with `pinMode( <PIN_NAME>, OUTPUT )`
 and use the `analogWrite(..)` function:
 `analogWrite( <PIN_NAME>, <VALUE_BETWEEN_0_AND_255> )`

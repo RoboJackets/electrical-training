@@ -23,11 +23,11 @@ into **Additional Boards Manager URLs** and press **OK**
 `MiniCore`
 4. Go to **Tools > Programmer** and select *USBtinyISP* as your programmer
 5. Go to **Tools** and set the following settings:
-| Board | *(MiniCore)* ATmega328 |
-| Variant | 328p/ 328pa |
-| BOD | 2.7V |
-| Clock | 1 MHz Internal |
-| Compiler LTO | Disabled |
+Board | *(MiniCore)* ATmega328 
+Variant | 328p/ 328pa
+BOD | 2.7V 
+Clock | 1 MHz Internal 
+Compiler LTO | Disabled 
 
 Congratulations, we're now ready to get started!
 

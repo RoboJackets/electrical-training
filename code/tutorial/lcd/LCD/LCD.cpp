@@ -17,6 +17,9 @@ LCD::LCD()
     pinMode(clk, OUTPUT);
     pinMode(reset_n, OUTPUT);
     pinMode(data, OUTPUT);
+
+    digitalWrite(oe_n, LOW);
+    digitalWrite(com, LOW);
 }
 
 LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i, 
@@ -37,6 +40,7 @@ LCD::LCD(int com_i, int oe_n_i, int latch_i, int clk_i,
     pinMode(data, OUTPUT);
 
     digitalWrite(oe_n, LOW);
+    digitalWrite(com, LOW);
 }
 
 // Tick the clock a single time
@@ -95,7 +99,6 @@ void LCD::sendDigit(int digit)
 {
     int digitBits = getBits(digit);
 
-    digitalWrite(com, LOW);
     digitalWrite(reset_n, HIGH);
     digitalWrite(latch, HIGH);
 
@@ -106,10 +109,6 @@ void LCD::sendDigit(int digit)
     }
 
     digitalWrite(latch, LOW);
-
-    digitalWrite(com, HIGH);
-    clkTick();
-    digitalWrite(com, LOW);
 }
 
 void LCD::writeDigit(int digit)

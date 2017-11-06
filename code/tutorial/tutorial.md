@@ -74,7 +74,7 @@ These connections are then found on the actual ATmega schematic:
 ![atmega nobuttons](images/atmega_basics_pinout.PNG)
 
 In order to retrieve the pin names as used in Arduino, we reference an ATmega328
-pinout: ![atmega328](atmega328.png)
+pinout: ![atmega328](images/atmega328.png)
 
 Cross-referencing our schematic with the pinout diagram, we find that our pins
 have the following Arduino labels:
@@ -374,7 +374,7 @@ register is incremented by 1, with the current `data` bit moving into *Q0*. In
 our design, we connect for of the shift registers together, such that toggling
 the clock more than eight times simply feeds the upper bit into the lower bit of
 the next register:
-![shift regs](shift_reg_pinout.PNG)
+![shift regs](images/shift_reg_pinout.PNG)
 
 Once all bits have been shifted in, we toggle the `latch` pin in order to output
 the bits to the actual pins of the chip. Toggling `reset_n` on a `clock` rising

@@ -67,26 +67,88 @@ Wire.begin();                 // Be aware that this only need to happen once whi
 // everytime you try to send an I2C message
 Wire.beginTransmission(0x5A); // 0x5A is the device address of the haptic driver, specified in the datasheet
 Wire.write(0x16);             // 0x16 is the address of the register we want to write to
-Wire.write(0xFF);             // 0xFF is the value we decided to write
+Wire.write(0xA5);             // 0xFF is the value we decided to write
 Wire.endTransmision();        // None of the previous codes actually sends anything. This is the only line of code
 // that sends out the bits
 ```
 
-If this gets correctly sent out, register at 0x16 in haptic driver now has the value of 0xFF.
+If this gets correctly sent out, register at 0x16 in haptic driver now has the value of 0xA5.
+
+**Take additional attention to see how each of the bits in 0xA5 maps to individual bits in the register at 0x16.**
 
 ### Set up the Haptic Driver and Understand how we can interface with it
 However the Haptic driver is not ready to work all the time, everytime we re-power it on, it enters a STANDBY mode that will not do anything. To play with the haptic driver, we need to send an I2C message to get out of STANDBY mode.
 
-Now clear your `void setup()` and `void loop()`,Read the 2nd page of Setup Guide, refer to the register map in datasheet and write a single I2C message that will set the haptic driver out of STANDBY Mode. Remember this only need to be executed once so it should go in `void setup()`
+Now clear your `void setup()` and `void loop()`, Read the 2nd page of Setup Guide, refer to the register map in datasheet and **write a single I2C message that will set the haptic driver out of STANDBY Mode**. Remember this only need to be executed once so it should go in `void setup()`
 
 ### Expand Your Code to a Function
-Now based off what you have just written, write a function that takes in a register address and a data, and transmit that to the **haptic driver**.
+Now based off what you have just written, **write a function that takes in a register address and a data, and transmit that to the *haptic driver***.
 
 ### Mode Selection
-Go to page 20 in the DRV2605 datasheet. It shows that DRV2605 has different modes of operation. Because we have IN/TRIG pin short to ground, both External Trigger modes, Analog Input and PWM mode have become unavailable to us. RTP, Diagnostics and Calibration modes are something we don't want to touch for now. 
+In page 20 of the DRV2605 datasheet, it shows that DRV2605 has different modes of operation. Because we have IN/TRIG pin short to ground, both External Trigger modes, Analog Input and PWM mode have become unavailable to us. RTP, Diagnostics and Calibration modes are something we don't want to touch for now. 
+
+![Mode Selection Table](images/Mode_Selection_Table.png)
 
 Between Internal trigger mode and Audio-to-vibe mode, we will choose Internal trigger mode for the ease of operation.
 
-Internal trigger mode uses the GO bit to fire the playback of the waveform in the waveform sequencer. We will cover waveform library and waveform sequencer momentarily. Right now, refer to the table on P20 of datasheet and Register map to write code that sets the DRV2605 to internal trigger mode. This also only need to happen **once**.
+Internal trigger mode uses the GO bit to fire the playback of the waveform in the waveform sequencer. We will cover waveform library and waveform sequencer momentarily. Right now, refer to the table on P20 of datasheet and Register map to **write code that sets the DRV2605 to internal trigger mode.** This also only need to happen **once**.
 
-### 
+### Waveform Library
+DRV2605 comes with built library of waveforms. Since we cannot use PWM/Analog input, we will instead just use built in libraries. 
+
+On Page 14, the datasheet introduced the libraries and how to select a certain library. **Write code to select one of the appropriate libraries** More information about each library can be found in this table (P21) 
+
+![ERM Library Table](images/ERM_LIBRARY_TABLE.png)
+
+The list of waveforms in the libraries is in page 57 of the DRV2605 datasheet.
+
+### Waveform Sequencer
+Now we're on the verge of letting the buzzer make some noise. All we need to do is to put the waveform into the sequencer and hit the Go button.
+
+We find the type of waveform we'd like to play from p57 and write their *EFFECT ID NO.* to the sequencer. For now, use *Transition Ramp Up Medium Smooth 1 – 0 to 100%* followed by a *Strong Click - 100%*. You end the sequencer by writing 0 to the sequencer register after the last waveform. Find the address of the Waveform sequencer in the register map. **Write a function that puts two arbitrary waveforms into the sequencer** and **a function that set all of the waveform sequencer to 0**, then queue the 2 designated waveform into waveform sequencer using the function you wrote. 
+
+### Hit the GO Button
+As of now, your code should look something like this
+```
+#include <Wire.h>
+
+void setup(){
+    // Some code that initialize DRV2605
+    // Code that change DRV2605 to internal trigger mode
+    // Code that select an appropriate library
+    // Code that queue up 2 designated waveform into the sequencer
+}
+
+void loop(){
+}
+
+void writeRegister(argument_1, argument_2, ...){
+    // Writes data into a register in DRV2605
+}
+
+
+void queueWaveform(argument_1, argument_2){
+    // Queues waveform into waveform sequencer
+}
+
+void clearWaveformSequencer(){
+    // Set all waveform sequencer to 0
+}
+```
+
+in `void loop()`, add a function that set the GO bit so that the waveform may be played as well as a `delay(1000)` so as not to jam up the haptic driver.
+
+### Final Setup
+There are some other registers you want to set before setting the DRV2605 to internal trigger mode. These registers control features that are generally irrelevant to buzzer and they better stayed turned off:
+
+|Register Name|Address|Value|
+|---|---|---|
+|RTP_INPUT|0x02|0x00|
+|ODT|0x0D|0x00|
+|SPT|0x0E|0x00|
+|SNT|0x0F|0x00|
+|BRT|0x10|0x00|
+|ATH_MAX_INPUT|0x13|0xFF|
+|N_ERM_LRA|0x1A|0x36|
+|ERM_OPEN_LOOP|0x1D|0xA0|
+

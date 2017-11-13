@@ -152,3 +152,11 @@ There are some other registers you want to set before setting the DRV2605 to int
 |N_ERM_LRA|0x1A|0x36|
 |ERM_OPEN_LOOP|0x1D|0xA0|
 
+### Upload Your Code!
+You should be able to hear a click every second. This ends this week's meeting. If you want to keep working on it, there are two paths lies in front of you.
+
+1. Combine with the LCD code you had from last week and write out a count down timer.
+
+2. Figure out why the piezo buzzer is so quiet, and find somewhere in the haptic driver to fix that. I can use an ardiuno to demonstrate it can be really loud.
+
+Have fun!

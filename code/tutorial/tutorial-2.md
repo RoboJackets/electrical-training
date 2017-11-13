@@ -144,7 +144,7 @@ There are some other registers you want to set before setting the DRV2605 to int
 |Register Name|Address|Value|
 |---|---|---|
 |RTP_INPUT|0x02|0x00|
-|ODT|0x0D|0x00|
+|ODT|0x0D|0x8E|
 |SPT|0x0E|0x00|
 |SNT|0x0F|0x00|
 |BRT|0x10|0x00|

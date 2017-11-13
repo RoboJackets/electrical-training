@@ -46,9 +46,9 @@ I know it seems intimidating, but we'll tackle it.
 ### Device Address and Register Map
 First we need to figure out what is the address to the haptic driver. We can find this either in the 2nd page of Setup Guide or 23rd page of datasheet. 
 
-However it turns out that haptic driver has more than a device address, there are many more registers (memory storage unit) in the haptic driver that we should write to and customize the haptic driver. A collection of registers can be found in the **Register Map** section in the datasheet. 
+However it turns out that haptic driver is controlled by the many registers(memory storage unit) inside of it. To control the haptic drive we need to write to them. A collection of registers can be found in the **Register Map** section in the datasheet. 
 
-We will cover the function of each register later. As of now, understand that your message need to be **Device address** + **Register Address** + **Data**.
+We will cover the function of each register later. As of now, understand that your message need to be **Device address** + **Register Address** + **Data**. As the I2C message will first identify the slave, which is the haptic driver in this case, and then the register, and finally will transmit the data.
 
 ### How to write a simple I2C message to the Haptic Driver
 I don't want to reinvent wheels therefore we will use a library called Wire.h that helps send I2C message. 
@@ -58,17 +58,32 @@ Now open up a new arduino sketch and add the following at the top
 #include <Wire.h>
 ```
 
-We only concern 4 or the functions in this library for now. `Wire.begin()`, which tells that the 2 data pins are now dedicated for I2C communication, `Wire.beginTransmission(Device Address)`, prepare a series of device address and wait for communication, `Wire.write(address/data)`, prepare more bits, appended to the previous address and `Wire.endTransmision()`, send all bits to the slave device.
+We only concern 4 of the functions in this library for now. `Wire.begin()`, which tells that the 2 data pins are now dedicated for I2C communication, `Wire.beginTransmission(Device Address)`, prepare a series of device address and wait to be sent out, `Wire.write(address/data)`, prepare more bits and append them to the previous data,  `Wire.endTransmision()`, send all bits to the slave device.
 
-Therefore if we want to write a 0xFF value to the register at address 0x16 in Haptic driver, this is what we need to do.
+Therefore if we want to write a 0xFF value to the register at address 0x16 in Haptic driver, this is what we need to do. 
 
 ```
-Wire.begin();                 // Be aware that this only need to happen once while the 
-//following commands must be used everytime you try to send an I2C message
+Wire.begin();                 // Be aware that this only need to happen once while all of the following commands must be used
+// everytime you try to send an I2C message
 Wire.beginTransmission(0x5A); // 0x5A is the device address of the haptic driver, specified in the datasheet
-Wire.write(0x16);             // 0x16 is the address of the register we want to write
-Wire.write(0xFF);             // 0xFF is the value we decided to write to.
-Wire.endTransmision();        // None of the previous codes actually sends anything. This is the only line of code that sends out your transmission
+Wire.write(0x16);             // 0x16 is the address of the register we want to write to
+Wire.write(0xFF);             // 0xFF is the value we decided to write
+Wire.endTransmision();        // None of the previous codes actually sends anything. This is the only line of code
+// that sends out the bits
 ```
 
-### Setting up the Haptic Driver and Understand how we can interface with it
+If this gets correctly sent out, register at 0x16 in haptic driver now has the value of 0xFF.
+
+### Set up the Haptic Driver and Understand how we can interface with it
+However the Haptic driver is not ready to work all the time, everytime we re-power it on, it enters a STANDBY mode that will not do anything. To play with the haptic driver, we need to send an I2C message to get out of STANDBY mode.
+Now clear your `void setup()` and `void loop()`,Read the 2nd page of Setup Guide, refer to the register map in datasheet and write a single I2C message that will set the haptic driver out of STANDBY Mode. Remember this only need to be executed once so it should go in `void setup()`
+
+### Expand Your Code to a Function
+Now based off what you have just written, write a function that takes in a register address and a data, and transmit that to the **haptic driver**.
+
+### Mode Selection
+Go to page 20 in the DRV2605 datasheet. It shows that DRV2605 has different modes of operation. Because we have IN/TRIG pin short to ground, both External Trigger modes, Analog Input and PWM mode have become unavailable to us. RTP, Diagnostics and Calibration modes are something we don't want to touch for now. 
+Between Internal trigger mode and Audio-to-vibe mode, we will choose Internal trigger mode for the ease of operation.
+Internal trigger mode uses the GO bit to fire the playback of the waveform in the waveform sequencer. We will cover waveform library and waveform sequencer momentarily. Right now, refer to the table on P20 of datasheet and Register map to write code that sets the DRV2605 to internal trigger mode. This also only need to happen **once**.
+
+### 

@@ -76,6 +76,7 @@ If this gets correctly sent out, register at 0x16 in haptic driver now has the v
 
 ### Set up the Haptic Driver and Understand how we can interface with it
 However the Haptic driver is not ready to work all the time, everytime we re-power it on, it enters a STANDBY mode that will not do anything. To play with the haptic driver, we need to send an I2C message to get out of STANDBY mode.
+
 Now clear your `void setup()` and `void loop()`,Read the 2nd page of Setup Guide, refer to the register map in datasheet and write a single I2C message that will set the haptic driver out of STANDBY Mode. Remember this only need to be executed once so it should go in `void setup()`
 
 ### Expand Your Code to a Function
@@ -83,7 +84,9 @@ Now based off what you have just written, write a function that takes in a regis
 
 ### Mode Selection
 Go to page 20 in the DRV2605 datasheet. It shows that DRV2605 has different modes of operation. Because we have IN/TRIG pin short to ground, both External Trigger modes, Analog Input and PWM mode have become unavailable to us. RTP, Diagnostics and Calibration modes are something we don't want to touch for now. 
+
 Between Internal trigger mode and Audio-to-vibe mode, we will choose Internal trigger mode for the ease of operation.
+
 Internal trigger mode uses the GO bit to fire the playback of the waveform in the waveform sequencer. We will cover waveform library and waveform sequencer momentarily. Right now, refer to the table on P20 of datasheet and Register map to write code that sets the DRV2605 to internal trigger mode. This also only need to happen **once**.
 
 ### 

@@ -12,6 +12,7 @@ We will use this property to make it generate sound.
 
 ## Haptic Driver
 Haptic driver provides the necessary signal to make a piezo buzzer "buzz". They're the IC right next to the piezo buzzer. 
+
 We will need to talk to the haptic driver via I2C protocol. 
 
 ## I2C
@@ -22,10 +23,12 @@ The following is a standard I2C communication. You can understand this after rea
 
 ### Start Condition
 To initiate a communication, the master device will leave SCL high (since SCL is constantly pulled high) and pull SDA low. This will notify all slave devices that a communication is going to happen. 
-Just for fun fact if more than one master wish to transmit, whichever pulls SDA low first gains the control.
+
+Just for a fun fact, if more than one master wish to transmit, whichever pulls SDA low first gains the control.
 
 ### Address Frame
 After start condition is always the address frame. Usually address frame will have a 7-bit address (note that address is different from address frame), which points to what device and at what register (we'll talk about this later) we want to read/write to. Then it's followed by a R/W bit indicating this is either a read(1) or write(0) action. 
+
 The 9th bit is the NACK/ACK bit. Once the first 8 bits were sent, slave device gain control over SDA line. If slave device did not pull this line low, it means that it either did not get the message or did not know how to interpret it. It is up to the master device to determine what happens next. This applies to both address frame and data frame. 
 
 ### Data Frame
@@ -39,8 +42,11 @@ Now get back to the I2C comm image and see if you understand what it means.
 
 ## Back to Haptic driver
 To control the haptic driver, we need to know where in the haptic driver , and what exactly we need to write into those locations. To figure out all of that, we need the datasheet and Setup Guide
+
 [DRV2605 Setup Guide](http://www.ti.com/lit/an/sloa189/sloa189.pdf)
+
 [DRV2605 Datasheet](http://www.ti.com/lit/ds/symlink/drv2605.pdf)
+
 I know it seems intimidating, but we'll tackle it.
 
 ### Device Address and Register Map
@@ -153,10 +159,12 @@ There are some other registers you want to set before setting the DRV2605 to int
 |ERM_OPEN_LOOP|0x1D|0xA0|
 
 ### Upload Your Code!
-You should be able to hear a click every second. This ends this week's meeting. If you want to keep working on it, there are two paths lies in front of you.
+You should be able to hear a click every second. This ends this week's meeting. If you want to keep working on it, there are three paths lies in front of you.
 
-1. Combine with the LCD code you had from last week and write out a count down timer.
+1. Work with DRV2605 built in library and play different kind of waveforms.
 
-2. Figure out why the piezo buzzer is so quiet, and find somewhere in the haptic driver to fix that. I can use an ardiuno to demonstrate it can be really loud.
+2. Combine with the LCD code you had from last week and write out a count down timer.
 
-Have fun!
+3. Figure out why the piezo buzzer is so quiet, and find somewhere in the haptic driver to fix that. I can use an ardiuno to demonstrate it can be really loud.
+
+Good Work!

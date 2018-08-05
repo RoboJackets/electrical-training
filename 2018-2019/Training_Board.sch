@@ -13081,6 +13081,14 @@ W = angled&lt;p&gt;
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="102,1,-17.78,83.82,VCC,+3V3,,,,"/>
+<approved hash="102,1,-33.02,93.98,VCC,+3V3,,,,"/>
+<approved hash="102,1,78.74,134.62,VCC,+3V3,,,,"/>
+<approved hash="113,1,169.943,55.6539,JP1,,,,,"/>
+<approved hash="113,1,127.237,53.5661,JP2,,,,,"/>
+<approved hash="113,1,63.8435,131.1,PRGRM-HEADER,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

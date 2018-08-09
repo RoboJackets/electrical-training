@@ -7242,6 +7242,12 @@ In this library you will find switches and other mechanical assisted circuit ele
 <pad name="P$3" x="6.5" y="4.5" drill="1" shape="square"/>
 <pad name="P$4" x="6.5" y="0" drill="1" shape="square"/>
 </package>
+<package name="PTS645_SMD">
+<smd name="P$1" x="-3.835" y="1.917" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$2" x="3.835" y="1.917" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$3" x="3.835" y="-1.917" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$4" x="-3.835" y="-1.917" dx="1.27" dy="0.635" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="TS2">
@@ -7272,6 +7278,15 @@ https://www.ckswitches.com/media/1471/pts645.pdf</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$2 P$3"/>
 <connect gate="G$1" pin="2" pad="P$1 P$4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="PTS645_SMD1" package="PTS645_SMD">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1 P$2"/>
+<connect gate="G$1" pin="2" pad="P$3 P$4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -12640,7 +12655,7 @@ W = angled&lt;p&gt;
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:26138/1" value="100 nF"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VCC" device="" value="+3V3"/>
-<part name="S1" library="RoboJackets-Switches" deviceset="PTS645" device=""/>
+<part name="S1" library="RoboJackets-Switches" deviceset="PTS645" device="PTS645_SMD1" value="PTS645PTS645_SMD1"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R1" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:26057/1" value="10k Ohm"/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X12" device="" package3d_urn="urn:adsk.eagle:package:22487/2"/>

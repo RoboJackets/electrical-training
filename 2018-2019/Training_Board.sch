@@ -12847,26 +12847,26 @@ W = angled&lt;p&gt;
 </net>
 <net name="LINE_OUT_1" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="(PCI8/ADC0)PC0"/>
-<wire x1="73.66" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
-<label x="78.74" y="81.28" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="JP2" gate="A" pin="7"/>
 <wire x1="127" y1="55.88" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
 <label x="121.92" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="LINE_OUT_2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="(PCI9/ADC1)PC1"/>
 <wire x1="73.66" y1="78.74" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
 <label x="78.74" y="78.74" size="1.27" layer="95" xref="yes"/>
 </segment>
+</net>
+<net name="LINE_OUT_2" class="0">
 <segment>
 <pinref part="JP2" gate="A" pin="8"/>
 <wire x1="127" y1="53.34" x2="121.92" y2="53.34" width="0.1524" layer="91"/>
 <label x="121.92" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="(PCI8/ADC0)PC0"/>
+<wire x1="73.66" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<label x="78.74" y="81.28" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TICK_LEFT" class="0">
@@ -12924,9 +12924,9 @@ W = angled&lt;p&gt;
 <label x="121.92" y="33.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="(PCI2/SS/OC1B)PB2"/>
-<wire x1="73.66" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
-<label x="78.74" y="27.94" size="1.27" layer="95" xref="yes"/>
+<pinref part="IC1" gate="G$1" pin="(PCI11/ADC3)PC3"/>
+<wire x1="73.66" y1="73.66" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
+<label x="78.74" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LEFT_B" class="0">
@@ -12972,9 +12972,9 @@ W = angled&lt;p&gt;
 <label x="175.26" y="50.8" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="(PCI20/XCK/T0)PD4"/>
-<wire x1="73.66" y1="45.72" x2="78.74" y2="45.72" width="0.1524" layer="91"/>
-<label x="78.74" y="45.72" size="1.27" layer="95" xref="yes"/>
+<pinref part="IC1" gate="G$1" pin="(PCI2/SS/OC1B)PB2"/>
+<wire x1="73.66" y1="27.94" x2="78.74" y2="27.94" width="0.1524" layer="91"/>
+<label x="78.74" y="27.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LIFT_B" class="0">

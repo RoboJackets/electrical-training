@@ -1,5 +1,4 @@
 \documentclass{article}
-
 \usepackage{geometry}
 \geometry{a4paper, portrait, margin=1.5in}
 
@@ -45,20 +44,20 @@ First all parts to go on the board are created in libraries which describe the p
 
 \subsection{Eagle Installation}
 \begin{enumerate}
-    \item Download at \url{www.autodesk.com/products/eagle}
+    \item Download at \url{https://www.autodesk.com/products/eagle/free-download}
     \item Install Eagle using free or educational version
     \begin{itemize}
         \item Free version: 2 Board Layers, 80cm\textsuperscript{2} Board Area
         \item Educational version: 16 Board Layers, Unlimited Board Area
         \begin{itemize}
-            \item \url{www.autodesk.com/education/free-software/eagle}
+            \item \url{https://www.autodesk.com/education/free-software/eagle}
         \end{itemize}
     \end{itemize}
 \end{enumerate}
 
 \section{Libraries}
-Libraries are used to store information about a part which are used in the schematic and the board layout. Eagle has built in libraries for many common parts but very often you have to make your own. \par
-Libraries are split into three parts. The Symbol is what is seen in the schematic and is how you describe the pins on your part which electrical connections go to. The Package is the footprint used for board layout which you will solder the component to on the physical board. The Device brings the Symbol and Package together so what is created in the schematic can be translated into the board layout.
+Libraries are used to store information about a part which are used in the schematic and the board layout. Eagle has built-in libraries for many common parts but very often you have to make your own. \par
+Libraries are split into three parts. Symbol, Footprint and Device. The Symbol is what is seen in the schematic and is how you describe the pins on your part which electrical connections go to. The Footprint is the exposed metal part used for board layout which you will solder the component to on the physical board. The Device brings the Symbol and Footprint together so what is created in the schematic can be translated into the board layout.
 
 \subsection{Create Library} \label{create library}
 \begin{enumerate}
@@ -77,9 +76,9 @@ Libraries are split into three parts. The Symbol is what is seen in the schemati
 \begin{enumerate}
     \item Create new symbol: \textit{\textbf{Library\textrightarrow Symbol}}
     \item Name symbol with part number
-    \item Draw box using \textit{\textbf{wire}}
+    \item Draw box using \textit{\textbf{wire}} (Type into console or select GUI icon from left)
     \begin{itemize}
-        \item This aspect is purely visual so any size/shape is okay, but use standard symbols which are commonly represented in schematics
+        \item This aspect is purely visual so any size/shape is okay, but use standard symbols which are commonly represented in schematics helps everybody understands your work.
     \end{itemize}
     \item Add necessary amount of pins using \textit{\textbf{pin}}
     \begin{itemize}
@@ -104,20 +103,20 @@ Libraries are split into three parts. The Symbol is what is seen in the schemati
 
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item Always keep pins snapped to the 0.1 in grid
-        \item Right click while placing or moving to rotate
-        \item To move a group use \textit{\textbf{group}}, select what you want to move then \textit{\textbf{Right Click\textrightarrow Move:Group}}
-        \item Objects are clickable and selectable from the grey +
+        \item Always keep pins snapped to the 0.1 in grid (Hold option/alt and click components to snap them).
+        \item Right click while placing or moving to rotate.
+        \item To move a group use \textit{\textbf{group}}, select what you want to move then \textit{\textbf{Right Click\textrightarrow Move:Group}}.
+        \item Objects are clickable and selectable from the grey + symbol when they have been inserted into schematics/layout.
     \end{itemize}
 \end{tcolorbox}
 
-\subsection{Library Part: Package}
-This is typically the footprint for the package which is found in the datasheet for the part. In the datasheet you will find all measurements needed to create the package. This package will go on the PCB and is what the component will be soldered to.
+\subsection{Library Part: Footprint}
+This is typically the footprint for the component which is found in the datasheet for the part. In the datasheet you will find all measurements needed to create the foorprint. This footprint will go on the PCB and is what the component will be soldered to. Before version 9.0, Eagle uses 'package' for 'footprint'.  
 \begin{enumerate}
-    \item Create new package: \textit{\textbf{Library\textrightarrow Package}}
-    \item Name package with package name
+    \item Create new footprint: \textit{\textbf{Library\textrightarrow Footprint}}
+    \item Name footprint with package name
     \begin{itemize}
-        \item Common for multiple parts to have the same package
+        \item Common for multiple parts to have the same footprint.
     \end{itemize}
     \item Place first pad
     \begin{itemize}
@@ -151,9 +150,10 @@ This is typically the footprint for the package which is found in the datasheet 
     \begin{itemize}
         \item Change grid size using \textit{\textbf{grid}}
         \begin{itemize}
-            \item Change grid size to whatever is helpful to you
-            \item Use same units as given in datasheet. Values for position and size are in these units
-            \item Recommended: Size = 0.5mm, Alt = 0.25mm
+            \item Change grid size to whatever is helpful to you.
+            \item Use same units as given in datasheet. Values for position and size are in these units.
+            \item Create vias/pads that are bigger than physical component sizes will help you phenomenally.
+            \item Recommended: Size = 0.5mm, Alt = 0.25mm.
         \end{itemize}
         \item Use positions such that (0,0) is at the center of the component
     \end{itemize}
@@ -161,37 +161,37 @@ This is typically the footprint for the package which is found in the datasheet 
 
 \begin{figure}[!h]
     \center
-    \includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{package}
+    \includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{package1}
     \includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{package2}
-    \caption {Example of completed package and how the physical component goes on a package that was created}
+    \caption {Example of completed footprint and how the physical component goes on a footprint that was created}
     \label{img:package1}
 \end{figure}
 
 \subsection{Library Part: Device}
-This is where the Symbol and Package come together to create what will be added to the schematic.
+This is where the Symbol and Footprint come together to create what will be added to the schematic.
 \begin{enumerate}
     \item Create new device: \textit{\textbf{Library\textrightarrow Device}}
     \item Name with general part number
     \begin{itemize}
-        \item Not package specific because a single device can have multiple packages
+        \item Not footprint specific because a single device can have multiple footprint
     \end{itemize}
     \item Add symbol using \textit{\textbf{add}} then select previously created symbol
     \item Place symbol so grey + is in center of component
-    \item Click new button in package window and select previously created package
-    \item Connect pins by clicking connect button in package area
+    \item Click new button in footprint window and select local footprint
+    \item Connect pins by clicking connect button in footprint area
     \item Use datasheet to see what pin names correspond to what pad numbers then connect by selecting pin and pad then click connect. Repeat for each one
     \item Click prefix button to add current prefix to match component type
 \end{enumerate}
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item A wildcard character \textit{\textbf{*}} can be used in Device name to allow you have names for different versions of the part without creating a new device. Example: You have parts A45C and A46C that have the same pins and package, but have some minor internal difference. You can name device A4*C then specify two technologies: 5 and 6.
-        \item You can add multiple packages and set the variant name to specify the package. This variant name is appended to the end of the Device name
+        \item A wildcard character \textit{\textbf{*}} can be used in Device name to allow you have names for different versions of the part without creating a new device. Example: You have parts A45C and A46C that have the same pins and footprint, but have some minor internal difference. You can name device A4*C then specify two technologies: 5 and 6.
+        \item You can add multiple footprints and set the variant name to specify the footprint. This variant name is appended to the end of the Device name
     \end{itemize}
 \end{tcolorbox}
 
 \begin{itemize}
     \item Done with library part and ready to be added to schematic
-    \item Many more parts can be added to this library. Parts that share packages only need package to be created once so check if that package exists first so you don't have to remake it.
+    \item Many more parts can be added to this library. Parts that share footprints only need footprint to be created once so check if that footprint exists first so you don't have to remake it.
 \end{itemize}
 
 \section{Schematic}
@@ -217,7 +217,7 @@ Schematics are used to set up how the board is organized by adding all the parts
     \begin{itemize}
         \item Add a frame to keep schematic organized
         \item Add all components needed for schematic
-        \item Resistors and Capacitors are found in rcl library. R-US and C-US are the parts commonly used and the SMD package 0603 is commonly used (parts named R-US\_R0603 and C-USC0603 respectively)
+        \item Resistors and Capacitors are found in rcl library. R-US and C-US are the parts commonly used and the SMD footprint 0603 is commonly used (parts named R-US\_R0603 and C-USC0603 respectively)
     \end{itemize}
     \item Change value of parts using \textit{\textbf{value}}
     \begin{itemize}
@@ -236,9 +236,9 @@ Schematics are used to set up how the board is organized by adding all the parts
     \begin{itemize}
         \item Components need to be placed in a way so it is easy to read
     \end{itemize}
-    \item Use the net tool draw connections between components
+    \item Use the \textbf{\emph{net}} tool draw connections between components
     \begin{itemize}
-        \item NOT the wire tool. The wire tool is only used for visuals, does not make any actual connections
+        \item NOT the \textbf{\emph{wire}} tool. The wire tool is only used for visuals, does not make any actual connections
     \end{itemize}
     \item Connect power and ground using parts from the supply library. All supply parts that are the same on a schematic are connected together
     \begin{itemize}
@@ -286,7 +286,7 @@ The board file is how you layout the final physical board. All steps up to this 
         \item Substrate (FR4: used to support and separate copper layers)
         \item Bottom Copper
         \item Bottom Soldermask
-        \item Bottom Soldermask
+        \item Bottom Silkscreen
     \end{itemize}
     \item Use \textit{\textbf{layer}} to adjust what layers are currently viewed
 \end{itemize}
@@ -298,7 +298,7 @@ The board file is how you layout the final physical board. All steps up to this 
 
 \begin{figure}[!h]
     \center
-    \includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{layers}
+    \includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{layers1}
     \caption {Sideview of layers that are created when PCB is manufactured}
     \label{img:layers}
 \end{figure}
@@ -342,10 +342,11 @@ The board file is how you layout the final physical board. All steps up to this 
     \begin{itemize}
         \item Use layer dropdown to select signal layer you are routing on
         \item Optional selection for walkaround obstacles to assist you with routing to avoid overlapping based on DRC rules
-        \item Bend style is the angle of wires when routing (good practice to use 45\degree\ angles)
+        \item Bend style is the angle of wires when routing \textbf{(good practice to use 45\degree\ angles)}
         \item Width is how wide the copper trace is (recommended 0.3mm)
         \begin{itemize}
             \item Trace width must be considered for some applications such as power lines
+            \item Signal wire width should be sizable compare to their footprint.
         \end{itemize}
         \item Via settings are for size and shape of via (recommended circle with drill of 0.35mm)
     \end{itemize}
@@ -357,7 +358,7 @@ The board file is how you layout the final physical board. All steps up to this 
         \item Traces on separate layers can overlap
         \item Vias and through hole components (colored in green) are on both layers so traces cannot overlap with these on either layer
     \end{itemize}
-    \item Vias can be added by changing layers while routing (using middle click) or by adding manually with the via tool
+    \item Vias can be added by changing layers while routing (using middle click), or change layer (in top left drop-down list) or by adding manually with the via tool
     \begin{itemize}
         \item Vias added manually do not have the net automatically set so must use \textit{\textbf{name}} to change name of via to same as net you want to connect it to
     \end{itemize}
@@ -381,6 +382,15 @@ The board file is how you layout the final physical board. All steps up to this 
     \includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{routing}
     \caption {Example of allowable routing connections}
     \label{img:routing}
+\end{figure}
+
+\begin{figure}
+	\center
+	\includegraphics[width=0.35\textwidth,height=0.4\textheight,keepaspectratio]{routingvs1}
+	\\
+	\includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{routingvs2}
+	\caption {Example of Good vs Bad Routing Plans}
+	\label{img:routing2}
 \end{figure}
 
 \subsection{Board Layout: Polygons}

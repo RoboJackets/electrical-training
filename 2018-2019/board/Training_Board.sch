@@ -17972,6 +17972,7 @@ Source: www.kingbright.com</description>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="M0805" package3d_urn="urn:adsk.eagle:package:23556/1" value="10k Ohm"/>
 <part name="C6" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:26138/1" value="100 nF"/>
 <part name="C7" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:26138/1" value="10 nF"/>
+<part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -18012,6 +18013,7 @@ Source: www.kingbright.com</description>
 <instance part="R4" gate="G$1" x="-71.12" y="73.66" rot="R90"/>
 <instance part="C6" gate="G$1" x="4.318" y="68.58" rot="R90"/>
 <instance part="C7" gate="G$1" x="-40.64" y="127"/>
+<instance part="C8" gate="G$1" x="-88.9" y="78.74"/>
 </instances>
 <busses>
 </busses>
@@ -18096,6 +18098,10 @@ Source: www.kingbright.com</description>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-81.28" y1="73.66" x2="-81.28" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="66.04" x2="-66.04" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="-88.9" y1="73.66" x2="-88.9" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="66.04" x2="-81.28" y2="66.04" width="0.1524" layer="91"/>
+<junction x="-81.28" y="66.04"/>
 </segment>
 </net>
 <net name="VBAT" class="0">
@@ -18122,6 +18128,9 @@ Source: www.kingbright.com</description>
 <wire x1="-71.12" y1="68.58" x2="-76.2" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-76.2" y1="68.58" x2="-76.2" y2="86.36" width="0.1524" layer="91"/>
 <junction x="-76.2" y="86.36"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="-81.28" y1="86.36" x2="-88.9" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="86.36" x2="-88.9" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="12"/>
@@ -18492,9 +18501,6 @@ Source: www.kingbright.com</description>
 <approved hash="102,1,-17.78,83.82,VCC,+3V3,,,,"/>
 <approved hash="102,1,-33.02,93.98,VCC,+3V3,,,,"/>
 <approved hash="102,1,78.74,134.62,VCC,+3V3,,,,"/>
-<approved hash="113,1,169.943,55.6539,JP1,,,,,"/>
-<approved hash="113,1,127.237,53.5661,JP2,,,,,"/>
-<approved hash="113,1,63.8435,131.1,PRGRM-HEADER,,,,,"/>
 </errors>
 </schematic>
 </drawing>

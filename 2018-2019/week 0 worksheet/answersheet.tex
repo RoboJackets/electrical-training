@@ -33,6 +33,9 @@
 
 \pagebreak
 
+\section{Introduction}
+This is the Answer Key to the Week 0 worksheet. Only look at this sheet after you have given an honest attempt at \textbf{ALL} the questions. If you do not understand something from the worksheet, refer to your training instructors, classmates, and the additional information sheet provided.
+
 \section{Intro to Electricity}
 \begin{enumerate}
 	\item Measured in Ohms ($\ohm$)
@@ -51,24 +54,24 @@
 	\item False. Electrolytic capacitors are easier to achieve a higher capacitance than ceramics.
 	\item Mitigating fluctuation in power supply.
 	\item Henry ($H$)
-	\item True. For example in solenoids.
+	\item True. For example in solenoids and relays.
 	\item False. Inductors are wires wrapped around a coil and display no special characteristics with DC.
 \end{enumerate}
 
 \section{Diodes and FETs}
 \begin{enumerate}
 	\item $5V/20mA=250\ohm$
-	\item True. Lots of motors run at 12V and 24V and draws a lot of current while usual logic circuits runs at 5V and below with minimal current involved. Using FETs enables a logic circuit to use minimal power to control the flow of larger power.
+	\item True. Lots of motors run at 12V and 24V and draw a lot of current while usual logic circuits runs at 5V or 3.3V and below with very low current rating. Using FETs enables a logic circuit to use minimal power to control the flow of larger power.
 	\item Q equals Vss. When A equals Vdd. The upper pFET opens and the lower nFET closes, connecting the output to ground.
 \end{enumerate}
 
 \section{Circuit Analysis}
 \subsection{Parallel and Series}
 	\begin{enumerate}
-		\item $R=1/(1/(1.2+1.2)+1/3.6)=1.44$
-		\item $ECHO\_OUT=91/(91+47)\times ECHO\_5V\approx 3.297$
-		\item $\Sigma C=(10+20+22+100)=152$
-		\item $\Sigma C=1/(1/10+1/20+1/22+1/100)\approx 4.8672$
+		\item $R=1/(1/(1.2\ohm+1.2\ohm)+1/3.6\ohm)=1.44\ohm$
+		\item $ECHO\_OUT=91\ohm/(91\ohm+47\ohm)\times ECHO\_5V\approx 3.297V$
+		\item $\Sigma C=(10\mu F+20\mu F+22\mu F+100\mu F)=152$
+		\item $\Sigma C=1/(1/10\mu F+1/20\mu F+1/22\mu F+1/100\mu F)\approx 4.8672$
 	\end{enumerate}
 \subsection{Kirchoff's Law}
 	\begin{enumerate}
@@ -89,8 +92,8 @@
 \section{Prototyping}
 \begin{enumerate}
 	\item Not connected, Connected, Not connected
-	\item Single core wire, should not. Twisting the wire essentially made the wire into single-core and made metal crimps harder to grab onto the wire.
-	\item To eliminate high impedance.
-	\item False
+	\item Single-core wire, should not. Twisting the wire essentially made the wire into single-core and made metal crimps harder to grab onto the wire.
+	\item Pull-up resistor. To eliminate high impedance.
+	\item False. This is a common joke in electrical engineering. The purpose of the fuse is to break to prevent high current levels from damaging the wires.
 \end{enumerate}
 \end{document}

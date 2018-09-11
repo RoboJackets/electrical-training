@@ -23,7 +23,8 @@
 \newcommand{\ans}{$\rule{1.5cm}{0.15mm}$}
 
 \title{RoboJackets Electrical Training Week 0 Info Sheet}
-\author{Alex Xu}
+\author{Alex Xu \\ Joe Spall}
+\date{\today\\v1.1}
 
 \begin{document}
 \maketitle{}
@@ -37,7 +38,7 @@
 \section{Intro to Electricity}
 \subsection{Voltage}
 
-Voltage is the driving force for most, if not all electrical applications. When people mention voltage, typically they are referring to \textbf{electric field potential difference}. Charged particles naturally move from higher potential to lower potential if there are no other barriers. The value of voltage does not necessarily matter: current may flow from 5V to 3.3V and also from -5V to -12V. \textbf{Charged particles always tend to move if there is a potential difference in place}.
+Voltage is the driving force for most, if not all, electrical applications. When people mention voltage, typically they are referring to \textbf{electric field potential difference}. Charged particles naturally move from higher potential to lower potential if there are no other barriers. The value of voltage does not necessarily matter: current may flow from 5V to 3.3V and also from -5V to -12V. \textbf{Charged particles always tend to move if there is a potential difference in place}.
 
 \begin{figure}[!h]
 	\center
@@ -50,12 +51,12 @@ Voltage is measured by a voltmeter. When measuring the voltage across a componen
 
 \subsection{Current}
 
-Net flow of charged particles is called current (I), measured in Ampere (A). Currents are usually \textbf{induced} by voltages and when there is no voltage, charged particles just move randomly. This means there is not a measurable amount of current. \par
+Net flow of charged particles is called current (I), measured in Ampere (A). Currents are usually \textbf{induced} by voltages, and when there is no voltage, charged particles just move randomly. This means there is not a measurable amount of current. \par
 Amperemeter are used to measure current. Amperemeter need to place in series when measuring current since the current along a single wire segment is always the same. To minimize the influence on the measuring circuit, amperemeter have almost zero resistance and are susceptible to short circuit damage. If the amperemeter does not seem to work, it is very likely the internal fuse was blown from too much current and needs to be replaced.
 
 \subsection{Resistance}
 
-Resistance is a measure of the difficulty to pass a current through the conductor and is measured in Ohm($\ohm$). The resistance can be calculated by dividing V by I, the voltage (V) over a component and current (I) through a component. \par
+Resistance is a measure of the difficulty to pass a current through the conductor and is measured in Ohm($\ohm$). The resistance can be calculated by dividing the voltage (V) over a component by the current (I) through a component. \par
 
 \begin{figure}[!h]
 	\center
@@ -64,7 +65,7 @@ Resistance is a measure of the difficulty to pass a current through the conducto
 	\label{fig:rvi}
 \end{figure}
 
-The power (P) dissipated by a resistor is calculated by $V\times I$, this may further expand to $V^2/R$ and $I^2\times R$, since $R=V/I$. In fact, $P=V\times I$ applies to the power dissipation of nearly all electrical components.
+The power (P) dissipated by a resistor is calculated by $V\times I$. This may further expand to $V^2/R$ and $I^2\times R$, since $R=V/I$. In fact, $P=V\times I$ applies to the power dissipation of nearly all electrical components.
 
 \section{Capacitors and Inductors}
 \subsection{Capacitors}
@@ -79,7 +80,7 @@ Capacitors essentially act as batteries when discharging, so it is useful in dea
 	\label{fig:capacitortype}
 \end{figure}
 
-There are primarily two kinds of capacitors: Ceramic and Electrolytic. In our scope of application, we need to know that electrolytics are easy to obtain high capacitance values with low cost and but are usually much larger, leading most capacitors on PCBs to be ceramic. Electrolytic capacitors also have polarity.
+There are primarily two kinds of capacitors: Ceramic and Electrolytic. In our scope of application, we need to know that electrolytics are easy to obtain high capacitance values with low cost but are usually much larger, leading most capacitors on PCBs to be ceramic. Electrolytic capacitors also have polarity.
 
 \subsection{Inductors}
 
@@ -107,7 +108,7 @@ A light emitting diode (LED) is a special type of diode. When designing a LED ci
 	\label{fig:LEDcct}
 \end{figure}
 
-Value of R depends on the voltage applied and the type of LED. In most cases it should be at least larger than V divided by suggested current shown in Figure \ref{fig:LEDds} for a common green LED. 
+Value of R depends on the voltage applied and the type of LED. In most cases, it should be at least larger than voltage divided by suggested current shown in Figure \ref{fig:LEDds} for a common green LED. 
 
 \begin{figure}[!h]
 	\center
@@ -116,7 +117,7 @@ Value of R depends on the voltage applied and the type of LED. In most cases it 
 	\label{fig:LEDds}
 \end{figure}
 
-Transistors are simple electronic switches. There are primarily two types of transistors: Bipolar Junction Transistor (BJT) and Metal oxide field-effect transistor (MOSFET). They typically have 3 terminals, with one acting as the 'controller'. There exist two types of BJT: NPN and PNP. NPN is normally OFF and when there's positive voltage at its 'controlling' terminal, NPN conducts current. PNP works in the exact opposite way. \par
+Transistors are simple electronic switches. There are primarily two types of transistors: Bipolar Junction Transistor (BJT) and Metal Oxide Field-Effect Transistor (MOSFET). They typically have 3 terminals, with one acting as the ``controller". There exist two types of BJT: NPN and PNP. NPN is normally OFF and when there's positive voltage at its ``controlling" terminal, NPN conducts current. PNP works in the exact opposite way. \par
 MOSFET has nFET and pFET that operates in a similar fashion with NPN and PNP.
 
 \begin{figure}[!h]
@@ -147,7 +148,7 @@ MOSFET has nFET and pFET that operates in a similar fashion with NPN and PNP.
 	L_{total} & = 1/(\Sigma (1/L_i)
 \end{split}
 \end{equation}
-
+\newpage
 \textbf{\large{Kirchhoff's Laws}}\par
 
 Kirchhoff's Current Law: Sum of current flowing into a node (or a junction) must be equal to the sum of current flowing out of it. \par
@@ -156,7 +157,7 @@ Kirchhoff's Voltage Law: The algebraic sum of the voltage (potential) difference
 \begin{figure}[!h]
 	\center
 	\includegraphics[width=0.5\textwidth, keepaspectratio]{kirchof_demo}
-	\caption{Kirchhoff?s Law Demonstration}
+	\caption{Kirchhoff's Law Demonstration}
 	\label{fig:kirchof_demo}
 \end{figure}
 As defined by Kirchhoff's law, in the left diagram $i_2+i_3=i_1+i_4$; in the right figure, $v_1+v_2+v_3+v_4=0$
@@ -165,7 +166,7 @@ As defined by Kirchhoff's law, in the left diagram $i_2+i_3=i_1+i_4$; in the rig
 
 Different wire types are better in different instances. Single or solid core is better for breadboarding because it inserts and stays in the holes better. Single-core is usually less flexible and maintains the shape it is bent. Multi-core wire is harder to use when breadboarding and is also much more flexible. \par
 
-Pull-up and pull-down resistors are needed because it helps eliminate high-impedance in signals. Takes the following circuit as example: when BUTTON is closed, input\_pin would receive a clear ground signal. However, if R1 and VCC does not exist, and BUTTON is open, input\_pin would receive a floating signal, which could be anywhere between GND and VCC, creating uncertainty in signal. Introducing VCC would stabilize the signal to VCC when BUTTON is open, but shorting power to ground when BUTTON is closed. The addition of R1 (in this case a pull-up resistor) solves the shorting issue.
+Pull-up and pull-down resistors are needed because it helps eliminate high-impedance in signals. Take the following circuit as example: when BUTTON is closed, input\_pin would receive a clear ground signal. However, if R1 and VCC does not exist, and BUTTON is open, input\_pin would receive a floating signal, which could be anywhere between GND and VCC. This creates uncertainty in the signal. Introducing VCC would stabilize the signal to VCC when BUTTON is open, but shorting power to ground when BUTTON is closed. The addition of R1 (in this case a pull-up resistor) solves the shorting issue.
 
 \begin{figure}[!h]
 	\center

@@ -22,7 +22,9 @@
 \newcommand{\ans}{$\rule{1.5cm}{0.15mm}$}
 
 \title{RoboJackets Electrical Training Week 0 Worksheet - Answer Key}
-\author{Alex Xu}
+\author{Alex Xu \\ Joe Spall}
+\date{\today\\v1.1}
+
 
 \begin{document}
 \maketitle{}
@@ -61,7 +63,7 @@ This is the Answer Key to the Week 0 worksheet. Only look at this sheet after yo
 \section{Diodes and FETs}
 \begin{enumerate}
 	\item $5V/20mA=250\ohm$
-	\item True. Lots of motors run at 12V and 24V and draw a lot of current while usual logic circuits runs at 5V or 3.3V and below with very low current rating. Using FETs enables a logic circuit to use minimal power to control the flow of larger power.
+	\item True. Lots of motors run at 12V and 24V and draw a lot of current while usual logic circuits runs at 5V or 3.3V and below with a very low current rating. Using FETs enables a logic circuit to use minimal power to control the flow of larger power.
 	\item Q equals Vss. When A equals Vdd. The upper pFET opens and the lower nFET closes, connecting the output to ground.
 \end{enumerate}
 
@@ -70,8 +72,8 @@ This is the Answer Key to the Week 0 worksheet. Only look at this sheet after yo
 	\begin{enumerate}
 		\item $R=1/(1/(1.2\ohm+1.2\ohm)+1/3.6\ohm)=1.44\ohm$
 		\item $ECHO\_OUT=91\ohm/(91\ohm+47\ohm)\times ECHO\_5V\approx 3.297V$
-		\item $\Sigma C=(10\mu F+20\mu F+22\mu F+100\mu F)=152$
-		\item $\Sigma C=1/(1/10\mu F+1/20\mu F+1/22\mu F+1/100\mu F)\approx 4.8672$
+		\item $\Sigma C=(10\mu F+20\mu F+22\mu F+100\mu F)=152\mu F$
+		\item $\Sigma C=1/(1/10\mu F+1/20\mu F+1/22\mu F+1/100\mu F)\approx 4.8672\mu F$
 	\end{enumerate}
 \subsection{Kirchoff's Law}
 	\begin{enumerate}

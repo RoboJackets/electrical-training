@@ -18,8 +18,9 @@
 \usepackage{gensymb}
 \usepackage{indentfirst}
 
-\title{RJ Electrical Training Week 3 Guide}
-\author{Alex Xu}
+\title{RoboJackets Electrical Training Week 3 Worksheet}
+\author{Alex Xu \\ Joe Spall}
+\date{\today\\v1.2}
 \begin{document}
 \maketitle{}
 \setcounter{tocdepth}{2}
@@ -27,26 +28,25 @@
 \pagebreak
 
 \section{Introduction}
-In last week's training, we used Arduino and some separate supporting electrical components to control motors. They exist independently from each other and is cumbersome if they're installed on the robot as in their current state. A PCB that integrates all the components would be a lot more manageable when installed on a robot. That is the eventual goal of this training. \par
-In this week, we will be \textbf{prototyping the PCB by replicating it on a breadboard} so we can verify that the circuit works. \textbf{\emph{Important steps need to be taken are highlighted in bold italic font.}}
+In last week's training, we used Arduinos and some separate supporting electrical components to control motors. The Arduino board and the motor control circuitry exist independently from each other and is cumbersome if they're installed on the robot in their current state. A PCB that integrates all the components would be a lot more manageable when installed on a robot. That is the eventual goal of this training. \par
+In this week, we will be \textbf{prototyping the PCB by replicating it on a breadboard} so we can verify that the circuit works. \textbf{\emph{Important steps that need to be taken are highlighted in bold-italic font.}}
 
 \begin{figure}[!h]
     \center
     \includegraphics[width=0.6\textwidth,height=0.6\textheight,keepaspectratio]{breadboard_to_pcb}
+    \caption {From breadboarding to a custom PCB}
 \end{figure}
 
-\section{IC Packages}
-``The package is what encapsulates the integrated circuit die and splays it out into a device we can more easily connect to. ... There are many different types of packages, each of which has unique dimensions, mounting-types, and/or pin-counts.''  - SparkFun. \par
-All packages can be divided by their mounting types: through-hole or surface-mount (SMD or SMT). Through-hole packages are generally bigger and much easier to work with. They're designed to be stuck through the holes on a board and soldered from the other side. They came exceptionally handy when used with a breadboard since they can be easily reconnected. SMD components are more commonly seen on PCBs.
+\section{Integrated Circuit Packages}
+``The package is what encapsulates the integrated circuit die and splays it out into a device we can more easily connect to... There are many different types of packages, each of which has unique dimensions, mounting-types, and/or pin-counts.''  - SparkFun. \par
+All packages can be divided in to two groups by their mounting types: through-hole or surface-mount (SMD or SMT). Through-hole packages are generally bigger and much easier to hand-solder. They're designed to be stuck through the holes on a board and soldered from the other side. Through-hole components are commonly used with a breadboard since they can be easily connected in the holes. SMD components are more commonly seen on PCBs and are much smaller at a cost of being more difficult to hand-solder. All of the packages to be used today will be through-hole components.
 
 \begin{figure}[!h]
     \center
     \includegraphics[width=0.4\textwidth,keepaspectratio]{throughvssmd}
-    \caption {Through-Hole components vs SMD}
+    \caption {Through-hole components vs SMD}
     \label{img:through_vs_smd}
 \end{figure}
-
-All of the packages to be used today will be through-hole components. Recall breadboard connections and prepare for . 
 
 \begin{figure}[!h]
     \center
@@ -55,36 +55,37 @@ All of the packages to be used today will be through-hole components. Recall bre
     \label{img:bread_connections}
 \end{figure}
 
-
-
 \section{Breadboarding}
 
 \subsection{Placing the Important Chip}
 \begin{table}[!h]
     \center
     \begin{tabular}{c|c|c}
-        Name              & Quantity & Package   \\
+        Name                    & Quantity & Package   \\
         \hline
-        ATMega328         & 1        & DIP      \\
-        Linear Regulator & 1        & TO-220-3  \\
-        Capacitor 0.33uF  & 1        & /       \\
-        Capacitor 0.1uF   & 1        & /      \\
-        Capacitor 22pF    & 2        & /        \\
-        Battery Clip      & 1        & /        \\
-        Crystal 16MHz     & 1        & /     
+        ATmega328               & 1        & DIP       \\
+        DIP Socket              & 1        & DIP       \\
+        Linear Regulator - 3.3V & 1        & TO-220-3  \\
+        Capacitor - 10uF        & 1        & Radial    \\
+        Capacitor - 0.1uF       & 1        & Radial    \\
+        Capacitor - 22pF        & 2        & Radial    \\
+        9V Battery Clip         & 1        & N/A       \\
+        Crystal - 16MHz         & 1        & HC-49     
     \end{tabular}
-    \caption{Component List for Trainii}
+    \caption{Component List for Breadboarding Lab}
     \label{table:componentList}
 \end{table}
 
-Our board is rather simple and we would place our microcontroller(mcu) the \textbf{ATMega328} (See Table \ref{table:componentList}) first. \textbf{\emph{We place the ATMega328 component onto the breadboard}}. It is a Dual Inline Package (DIP), and DIP package need to be placed as shown in Figure \ref{img:dip_breadboard}. \par
+We will place our microcontroller (mcu), the \textbf{ATmega328}, first. \textbf{\emph{We place the ATmega328 component already in the DIP Socket (Ref Figure \ref{img:dip_socket}) into the breadboard}}. It is a Dual Inline Package (DIP), and the package needs to be placed as shown in Figure \ref{img:dip_breadboard}. 
 
-\begin{tcolorbox} [title=Tips \& Tricks]
-    \begin{itemize}
-        \item % During breadboarding, we need to consider the sequence of putting components into the board. There are usually two types of components, the chips that does the work, and the peripheral components that support the important chips. The supporting components would cluster around the functioning chips. To avoid overcrowding the breadboard, it is usually suggested to place important chips first and afar from each other based on how much supporting components they have around them, then adding supporting components. \par
-        \item Power rails does not need to have the same voltage across the entire breadboard and not all voltage lines need to go on power rails. 
-    \end{itemize}
-\end{tcolorbox}
+\begin{figure}[!h]
+    \center
+    \includegraphics[width=0.4\textwidth,keepaspectratio]{dip_socket}
+    \caption {CAD showing the ATmega328 in a DIP Socket}
+    \label{img:dip_socket}
+\end{figure}
+
+\pagebreak
 
 \begin{figure}[!h]
     \center
@@ -94,21 +95,20 @@ Our board is rather simple and we would place our microcontroller(mcu) the \text
 \end{figure}
 
 \subsection{Adding Supporting Components}
-The operation of our ATMega328 requires an external crystal. The operation of crystal requires 2 supporting capacitors. \textbf{\emph{Insert the crystal, 2 22pF capacitors onto the breadboard so it is equivalent to this schematics (Figure \ref{img:crystal}).}} GND means ground and refer to Figure \ref{img:bread_connections} for ground connection. Refer to the notch on one end of ATMega328 package and its datasheet for pin 9 and pin 10 location. \par
+The operation of our ATmega328 requires an external crystal. The operation of a crystal requires two supporting capacitors. \textbf{\emph{Insert the crystal and the two 22pF capacitors into the breadboard so it is equivalent to the schematic in Figure \ref{img:crystal}.}} GND means ground and refer to Figure \ref{img:bread_connections} for ground connections. Refer to the notch on one end of ATmega328 package and its datasheet for pin 9 and pin 10 location. \par
 
 \begin{figure}[!h]
     \center
     \includegraphics[width=0.4\textwidth,keepaspectratio]{crystal}
-    \caption{Crystal Schematics}
+    \caption{The necessary crystal and capacitor connections}
     \label{img:crystal}
 \end{figure}
 
-ATMega328 also requires a decoupling capacitor to operate. \textbf{\emph{Connect a 0.1uF capacitor between the power and ground pin of ATMega.}}
+The ATmega328 also requires a decoupling capacitor to operate. A decoupling capacitor smooths the power input into the Atmega. \textbf{\emph{Connect a 0.1uF capacitor between the power and ground pin of the ATmega.}}
 
 \subsection{Adding Power Supply}
-The next step would be the power supply. We want the ATMega mcu to run at 3.3V. However a 3.3V power supply is not very common therefore we will use a 9V battery and use a linear regulator to transform the voltage to 3.3V. \par
-Connect the blue line of battery clip to the ground connection on breadboard. \emph{\textbf{Connect the linear regulator and 9V battery clip as shown in Figure \ref{img:linear_regulator}}}, $V_{in}$ corresponds to 9V and $V_{out}$ corresponds to 3.3V. Connect the power rail on the breadboard to the $V_{out}$ pin. 
-% Capacitor value?
+The next step would be the power supply. We want the ATmega to run at 3.3V to interface with a later project. However a 3.3V power supply is not very common. Therefore, we will use a 9V battery and use a linear regulator to transform the voltage to 3.3V. \par
+Connect the blue line of battery clip to the ground connection on breadboard. Additionally, more decoupling capacitors are required for the power regulator. \emph{\textbf{Connect the linear regulator, the 9V battery clip, the 100nF capacitor, and 10uF capacitor as shown in Figure \ref{img:linear_regulator}}}. $V_{in}$ corresponds to the 9V from the battery clip and $V_{out}$ corresponds to 3.3V input for the ATmega. Connect the power rail on the breadboard to the $V_{out}$ pin and all of the GND pins together. 
 
 \begin{figure}[!h]
     \center
@@ -119,13 +119,13 @@ Connect the blue line of battery clip to the ground connection on breadboard. \e
 
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item Breadboard has multiple ground and power rails (red and blue). The ground need to be the same and stay 0V and different ground rails \textbf{will} have to be connected via jumper wire should you want to use them as ground.
-        \item Power rails does not need to have the same voltage across the entire breadboard and not all voltage lines need to go on power rails. 
+        \item The breadboard has multiple ground and power rails (red and blue). The ground rails need to be all connected if used and different ground rails \textbf{will} have to be connected via jumper wire.
+        \item Power rails do not need to have the same voltage across the entire breadboard and not all voltage lines need to go on power rails. \textbf{Do not} connect power rails of different voltages together.
     \end{itemize}
 \end{tcolorbox}
 
 \subsection{Completing the Circuit}
-\textbf{\emph{Connect all GND pins to ground rail, all VCC pins to power rail.}} Use a multimeter to test the continuity between power and ground rail to make sure it's not shorted. Check the board connection with the Figure \ref{img:egBBL}.
+\textbf{\emph{Connect all GND pins to the ground rail and all VCC pins to power rail.}} Use a multimeter to test the continuity between power and ground rail to make sure it's not shorted. Check the board connection with the Figure \ref{img:egBBL}.
 
 \begin{figure}[!h]
     \center
@@ -134,7 +134,7 @@ Connect the blue line of battery clip to the ground connection on breadboard. \e
     \label{img:egBBL}
 \end{figure}
 
-\section{Using the Board}
+\section{Programming the Board}
 Congratulations, you have just constructed a small-sized version of Arduino! Program the board to access its I/O pins and use it like an Arduino.
 
 

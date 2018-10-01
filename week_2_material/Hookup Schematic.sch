@@ -531,6 +531,34 @@ In this library the device names are the same as the pin names of the symbols, t
 <junction x="129.54" y="91.44"/>
 </segment>
 </net>
+<net name="PIN_3" class="0">
+<segment>
+<pinref part="Q2" gate="G$1" pin="B"/>
+<wire x1="99.06" y1="76.2" x2="91.44" y2="76.2" width="0.1524" layer="91"/>
+<label x="91.44" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PIN_5" class="0">
+<segment>
+<pinref part="Q3" gate="G$1" pin="B"/>
+<wire x1="160.02" y1="76.2" x2="167.64" y2="76.2" width="0.1524" layer="91"/>
+<label x="167.64" y="76.2" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PIN_9" class="0">
+<segment>
+<pinref part="Q4" gate="G$1" pin="B"/>
+<wire x1="160.02" y1="45.72" x2="167.64" y2="45.72" width="0.1524" layer="91"/>
+<label x="167.64" y="45.72" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PIN_2" class="0">
+<segment>
+<pinref part="Q1" gate="G$1" pin="B"/>
+<wire x1="99.06" y1="45.72" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
+<label x="91.44" y="45.72" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>

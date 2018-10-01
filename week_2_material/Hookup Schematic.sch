@@ -457,6 +457,47 @@ In this library the device names are the same as the pin names of the symbols, t
 </deviceset>
 </devicesets>
 </library>
+<library name="motor">
+<packages>
+<package name="MOTOR">
+<pad name="P$1" x="0" y="0" drill="0.6" shape="square"/>
+<pad name="P$2" x="2.54" y="0" drill="0.6" shape="square"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MOTOR">
+<circle x="-22.86" y="5.08" radius="7.62" width="0.254" layer="94"/>
+<pin name="P$1" x="-38.1" y="5.08" visible="off" length="middle"/>
+<pin name="P$2" x="-7.62" y="5.08" visible="off" length="middle" rot="R180"/>
+<text x="-32.512" y="4.318" size="1.778" layer="94">+</text>
+<wire x1="-33.02" y1="2.54" x2="-33.02" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-33.02" y1="7.62" x2="-30.226" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-33.02" y1="2.54" x2="-30.226" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="7.62" x2="-15.494" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="7.62" x2="-12.7" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="2.54" x2="-15.494" y2="2.54" width="0.254" layer="94"/>
+<text x="-14.732" y="4.318" size="1.778" layer="94">−</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MOTOR">
+<gates>
+<gate name="G$1" symbol="MOTOR" x="22.86" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="MOTOR">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -474,6 +515,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="Q4" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="BJT_NPN" device=""/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VCC" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
+<part name="U$1" library="motor" deviceset="MOTOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -487,6 +529,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="Q4" gate="G$1" x="160.02" y="45.72" rot="MR0"/>
 <instance part="SUPPLY1" gate="G$1" x="129.54" y="99.06"/>
 <instance part="SUPPLY2" gate="G$1" x="129.54" y="25.4"/>
+<instance part="U$1" gate="G$1" x="152.4" y="55.88"/>
 </instances>
 <busses>
 </busses>
@@ -508,14 +551,22 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="Q2" gate="G$1" pin="C"/>
 <pinref part="Q1" gate="G$1" pin="C"/>
-<wire x1="109.22" y1="66.04" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="66.04" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+<wire x1="109.22" y1="60.96" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="60.96" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
+<junction x="109.22" y="60.96"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="MOTOR_NEGATIVE" class="0">
 <segment>
 <pinref part="Q3" gate="G$1" pin="C"/>
 <pinref part="Q4" gate="G$1" pin="C"/>
-<wire x1="149.86" y1="66.04" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="66.04" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
+<wire x1="149.86" y1="60.96" x2="149.86" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="60.96" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
+<junction x="149.86" y="60.96"/>
 </segment>
 </net>
 <net name="VCC" class="0">

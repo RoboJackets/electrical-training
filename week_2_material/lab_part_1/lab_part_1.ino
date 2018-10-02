@@ -24,8 +24,8 @@ void apply_backward(){
 
 void apply_stop(){
   digitalWrite(forward_high, HIGH);
-  digitalWrite(forward_low, HIGH);
-  digitalWrite(backward_high, LOW);
+  digitalWrite(forward_low, LOW);
+  digitalWrite(backward_high, HIGH);
   digitalWrite(backward_low, LOW);
 }
 

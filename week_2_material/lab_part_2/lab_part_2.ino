@@ -4,7 +4,7 @@ int forward_low = 2;
 int backward_low = 9;
 
 int direction_switch = 4;
-int speed_switch = 13;
+int speed_switch = 12;
 
 int pwm_period = 50;
 

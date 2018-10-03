@@ -4,7 +4,7 @@ int forward_low = 2;
 int backward_low = 9;
 
 int direction_switch = 4;
-int enable_switch = 13;
+int enable_switch = 12;
 
 void apply_forward(){
   digitalWrite(forward_high, LOW);

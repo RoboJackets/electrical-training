@@ -1,4 +1,4 @@
 RoboJackets Electrical Training
 ===============================
 
-Electrical training information, schedule, project, and other resources
+Electrical training information, projects, and other resources.

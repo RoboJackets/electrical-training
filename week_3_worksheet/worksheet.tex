@@ -138,12 +138,12 @@ Connect the blue line of battery clip to the ground connection on breadboard. Ad
 Congratulations, you have just constructed a small-sized version of Arduino! Program the board to access its I/O pins and use it like an Arduino. 
 \subsection{Burning the Bootloader}
 Notice: The following two subsections are based from Arduino.cc "From Arduino to a Microcontroller on a Breadboard" tutorial. \par
-On a microcontroller, bootloader is the lower level program that loads your program for execution. If you have a new ATmega328, you'll need to burn the bootloader onto it. You can do this using an Arduino board as an in-system program (ISP). If the microcontroller already has the bootloader on it (e.g. because you took it out of an Arduino board or ordered an already-bootloaded ATmega), you can skip this section. \cite{arduino}
+On a microcontroller, the bootloader is the lower level program that loads your Arduino program for execution. If you have a new ATMega328, you'll need to burn the bootloader onto it. You can do this using an Arduino board as an in-system program (ISP). If the microcontroller already has the bootloader on it (e.g. because you took it out of an Arduino board or ordered an already-bootloaded ATmega), you can skip this section.
 
-To burn the bootloader, follow these steps, refer to Figure \ref{img:breadBoardAVR}:
+To burn the bootloader, follow these steps:
 \begin{enumerate}
     \item Upload the ArduinoISP sketch onto your Arduino board. (You'll need to select the board and serial port from the Tools menu that correspond to your board.)
-    \item Wire up the Arduino board and microcontroller as shown in the diagram to the right.
+    \item Wire up the Arduino board and microcontroller as shown in figure \ref{img:breadBoardAVR}.
     \item Select "Arduino Duemilanove or Nano w/ ATmega328" from the Tools $>$ Board menu. (Or "ATmega328 on a breadboard (8 MHz internal clock)" if using the minimal configuration described below.)
     \item Select "Arduino as ISP" from Tools $>$ Programmer
     \item Run Tools $>$ Burn Bootloader
@@ -160,7 +160,7 @@ You should only need to burn the bootloader once. After you've done so, you can 
 
 
 \subsection{Uploading Using an Arduino Board}
-Once your ATmega328p has the Arduino bootloader on it, you can upload programs to it using the USB-to-serial convertor (FTDI chip) on an Arduino board. \par To do, you remove the microcontroller from the Arduino board so the FTDI chip can talk to the microcontroller on the breadboard instead. The diagram at Figure \ref{img:ArduinoUSBSerial} shows how to connect the RX and TX lines from the Arduino board to the ATmega on the breadboard. To program the microcontroller, select "Arduino Duemilanove or Nano w/ ATmega328" from the the Tools $>$ Board menu. Then upload as usual.
+Once your ATmega328p has the Arduino bootloader on it, you can upload programs to it using the USB-to-serial convertor (FTDI chip) on an Arduino board. \par In order to do this, remove the microcontroller from the Arduino board so the FTDI chip can talk to the microcontroller on the breadboard instead. The diagram at Figure \ref{img:ArduinoUSBSerial} shows how to connect the RX and TX lines from the Arduino board to the ATmega on the breadboard. To program the microcontroller, select ``Arduino Duemilanove or Nano w/ ATmega328" from the the Tools $>$ Board menu. Then upload as usual.
 
 \begin{figure}[!h]
     \center

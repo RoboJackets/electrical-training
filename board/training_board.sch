@@ -14038,17 +14038,6 @@ the event of current spikes</text>
 <label x="116.84" y="38.1" size="1.27" layer="95" ratio="7" xref="yes"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<wire x1="233.68" y1="170.18" x2="233.68" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="V_M"/>
-<wire x1="231.14" y1="170.18" x2="233.68" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="F1" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="177.8" x2="233.68" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="233.68" y1="177.8" x2="236.22" y2="177.8" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$7" class="0">
 <segment>
 <wire x1="233.68" y1="121.92" x2="233.68" y2="129.54" width="0.1524" layer="91"/>
@@ -14173,6 +14162,18 @@ the event of current spikes</text>
 <pinref part="SW1" gate="G$1" pin="C1"/>
 <wire x1="259.08" y1="144.78" x2="261.62" y2="144.78" width="0.1524" layer="91"/>
 <label x="261.62" y="144.78" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="V_M"/>
+<wire x1="231.14" y1="170.18" x2="233.68" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="F1" gate="G$1" pin="2"/>
+<wire x1="218.44" y1="177.8" x2="233.68" y2="177.8" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="233.68" y1="177.8" x2="236.22" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="170.18" x2="233.68" y2="177.8" width="0.1524" layer="91"/>
+<junction x="233.68" y="177.8"/>
 </segment>
 </net>
 </nets>

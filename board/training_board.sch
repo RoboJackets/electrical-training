@@ -13618,7 +13618,7 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="U$2" library="RoboJackets-Switches" deviceset="PTS645" device="">
+<part name="SW2" library="RoboJackets-Switches" deviceset="PTS645" device="">
 <attribute name="FUNCTION" value="RESET"/>
 </part>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -13722,7 +13722,7 @@ the event of current spikes</text>
 <instance part="SUPPLY9" gate="GND" x="35.56" y="43.18" smashed="yes">
 <attribute name="VALUE" x="33.655" y="40.005" size="1.778" layer="96"/>
 </instance>
-<instance part="U$2" gate="G$1" x="22.86" y="58.42" smashed="yes">
+<instance part="SW2" gate="G$1" x="22.86" y="58.42" smashed="yes">
 <attribute name="NAME" x="17.78" y="62.23" size="2.54" layer="95" font="vector"/>
 <attribute name="VALUE" x="22.86" y="57.15" size="2.54" layer="96" font="vector" ratio="15" align="top-center"/>
 <attribute name="FUNCTION" x="22.86" y="54.102" size="1.27" layer="97" ratio="10" align="top-center"/>
@@ -13878,7 +13878,7 @@ the event of current spikes</text>
 <junction x="43.18" y="50.8"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="1"/>
+<pinref part="SW2" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="58.42" x2="15.24" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="58.42" x2="15.24" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
@@ -14182,7 +14182,7 @@ the event of current spikes</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="2"/>
+<pinref part="SW2" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="58.42" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="58.42" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>

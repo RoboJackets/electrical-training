@@ -3,7 +3,7 @@
 <eagle version="9.4.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
@@ -172,13 +172,16 @@
 <wire x1="64.5" y1="53.4" x2="0" y2="53.4" width="0" layer="20"/>
 <wire x1="0" y1="53.4" x2="0" y2="0" width="0" layer="20"/>
 <text x="37" y="22" size="1.5" layer="112">2019 Training Board
-V1.0</text>
+V1.2</text>
 <polygon width="0.1524" layer="112">
 <vertex x="42" y="22"/>
 <vertex x="68" y="22"/>
 <vertex x="68" y="15"/>
 <vertex x="42" y="15"/>
 </polygon>
+<text x="1.4" y="0.6" size="1" layer="21">Fuse Ok</text>
+<text x="4" y="32" size="1" layer="21">Fuse Ok</text>
+<text x="3" y="51" size="1.2" layer="21">POWER</text>
 </plain>
 <libraries>
 <library name="adafruit" urn="urn:adsk.eagle:library:420">
@@ -5516,7 +5519,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="19.445" y="9.095" size="1.27" layer="27" rot="R90" display="off"/>
 </element>
 <element name="J1" library="RoboJackets-Connectors" package="PJ-037A" value="MAIN_PWR" x="4" y="42" smashed="yes"/>
-<element name="U$2" library="RoboJackets-Switches" package="PTS645" value="PTS645" x="36" y="12" smashed="yes">
+<element name="SW2" library="RoboJackets-Switches" package="PTS645" value="PTS645" x="36" y="12" smashed="yes">
 <attribute name="FUNCTION" value="RESET" x="36" y="12" size="1.778" layer="27" display="off"/>
 </element>
 <element name="F1" library="RoboJackets-Fuses" package="F1812" value="350 mA" x="25" y="27" smashed="yes" rot="R270">
@@ -5609,8 +5612,8 @@ design rules under a new name.</description>
 <contactref element="U2" pad="8"/>
 <contactref element="J1" pad="P$1"/>
 <contactref element="Q1" pad="GND1"/>
-<contactref element="U$2" pad="P$2"/>
-<contactref element="U$2" pad="P$1"/>
+<contactref element="SW2" pad="P$2"/>
+<contactref element="SW2" pad="P$1"/>
 <contactref element="U1" pad="8"/>
 <contactref element="LED3" pad="C"/>
 <contactref element="LED4" pad="C"/>
@@ -5892,8 +5895,8 @@ design rules under a new name.</description>
 <wire x1="14.365" y1="21.4" x2="14.365" y2="21" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$4">
-<contactref element="U$2" pad="P$3"/>
-<contactref element="U$2" pad="P$4"/>
+<contactref element="SW2" pad="P$3"/>
+<contactref element="SW2" pad="P$4"/>
 <contactref element="R4" pad="1"/>
 <contactref element="C3" pad="1"/>
 <wire x1="40.025" y1="9.75" x2="36" y2="9.75" width="0.5" layer="1"/>

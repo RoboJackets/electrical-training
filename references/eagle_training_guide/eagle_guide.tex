@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{geometry}
+\usepackage{vhistory}
 \geometry{a4paper, portrait, margin=1.5in}
 
 \usepackage{hyperref}
@@ -18,8 +19,8 @@
 \usepackage{gensymb}
 \usepackage{indentfirst}
 
-\title{Autodesk Eagle CAD Guide}
-\author{Evan Peterson}
+\title{Introduction to Autodesk EAGLE CAD Guide}
+\author{Evan Peterson, Joe Spall}
 \begin{document}
 \maketitle{}
 \setcounter{tocdepth}{2}
@@ -30,67 +31,71 @@
 
 \subsection{What is a PCB}
 A printed circuit board (PCB) is used to mechanically support and electrically connect various electrical components. A PCB is designed and manufactured based on how you want to connect the components then the components are soldered to the PCB. \par
-In its most basic form a PCB consists of a center substrate (typically fr4) with a layer of copper traces on the bottom and top. Pads are portions of the copper layer that are in specific shapes so a component can be soldered to it.
+In its most basic form, a PCB consists of a center substrate (typically fr4) with a layer of copper traces on the bottom and top. Pads are portions of the copper layer that are in specific shapes so a component can be soldered to it.
 
-\subsection{Eagle Intro}
-Eagle is a CAD tool used to design printed circuit boards (PCBs). The program is split up into three sections which build upon one another to result in files that are sent to a PCB manufacturer.\par
-First all parts to go on the board are created in libraries which describe the pins on the part and the footprint of the part for when it is soldered to the board. Then these parts are used in the Schematic design which describes the electrical connections on the board. Then the board is laid out by following the parts and connections made in the schematic to place parts on the physical board then route where the physical connections will go between parts.
+\subsection{EAGLE Intro}
+EAGLE is a CAD tool used to design printed circuit boards (PCBs). The program is split up into three sections which build upon one another to result in files that are sent to a PCB manufacturer.\par
+First, all parts to go on the board are created in libraries which describe the pins on the part and the footprint of the part for when it is soldered to the board. Then these parts are used in the Schematic design which describes the electrical connections on the board. Then the board is laid out by following the parts and connections made in the schematic to place parts on the physical board then route where the physical connections will go between parts.
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item Everything in Eagle can be done through clicking buttons or by using its command line. Design can be done much quicker by learning to use the command line.
-        \item In order to use some Eagle functions such as creating new files or adjusting certain settings you must switch back to Eagle's Control Panel window
+        \item Everything in EAGLE can be done through clicking buttons or by using its command line. Design can be done much quicker by learning to use the command line.
+        \item In order to use some EAGLE functions such as creating new files or adjusting certain settings you must switch back to EAGLE's Control Panel window.
     \end{itemize}
 \end{tcolorbox}
 
-\subsection{Eagle Installation}
+\subsection{EAGLE Installation}
 \begin{enumerate}
-    \item Download at \url{https://www.autodesk.com/products/eagle/free-download}
-    \item Install Eagle using free or educational version
-    \begin{itemize}
-        \item Free version: 2 Board Layers, 80cm\textsuperscript{2} Board Area
-        \item Educational version: 16 Board Layers, Unlimited Board Area
-        \begin{itemize}
-            \item \url{https://www.autodesk.com/education/free-software/eagle}
-        \end{itemize}
-    \end{itemize}
+    \item Go to \url{https://www.autodesk.com/education/free-software/EAGLE} and create an educational Autodesk account if you have not already and sign in
+    \item After being redirected from signing in, download the version of EAGLE appropriate for your operating system
+    \item After EAGLE is installed, sign in using the same educational account 
 \end{enumerate}
 
 \section{Libraries}
-Libraries are used to store information about a part which are used in the schematic and the board layout. Eagle has built-in libraries for many common parts but very often you have to make your own. \par
-Libraries are split into three parts. Symbol, Footprint and Device. The Symbol is what is seen in the schematic and is how you describe the pins on your part which electrical connections go to. The Footprint is the exposed metal part used for board layout which you will solder the component to on the physical board. The Device brings the Symbol and Footprint together so what is created in the schematic can be translated into the board layout.
+Libraries are used to store information about a part which are used in the schematic and the board layout. EAGLE has built-in libraries for many common parts and many are also found online, but sometimes you have to make your own. This section will go about doing this. \par
+Libraries are split into three parts. Symbol, Footprint and Device. The \textbf{Symbol} is what is seen in the schematic and is how you describe the pins on your part which electrical connections go to. The \textbf{Footprint} is the exposed metal part used for board layout which you will solder the component to on the physical board. The \textbf{Device} brings the Symbol and Footprint together so what is created in the schematic can be translated into the board layout. \par
+Please refer to \url{https://wiki.robojackets.org/EAGLE_Style_Guide#Part_Creation} for style requirements when making parts.
 
 \subsection{Create Library} \label{create library}
 \begin{enumerate}
     \item (At Control Panel) \textit{\textbf{File\textrightarrow
     New\textrightarrow Library}}
-    \item Save to a directory where you will keep all Eagle libraries
+    \item Save to a directory where you will keep all EAGLE libraries
 \end{enumerate}
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
         \item Libraries are commonly split up into components types such as resistors or connectors
-        \item Eagle has a default folder it searches for its libraries, but you can have it search additional folders for your libraries by (At Control Panel) \textit{\textbf{File\textrightarrow Options\textrightarrow Directories}} then appending to the Libraries path a colon then the path to your directory
+        \item EAGLE has a default folder it searches for its libraries, but you can have it search additional folders for your libraries by (At Control Panel) \textit{\textbf{File\textrightarrow Options\textrightarrow Directories}} then appending to the Libraries path a semicolon then the path to the additional directory (Example PATH1;PATH2;PATH3 etc.). After adding the paths, look for the sidebar on the left with the \textit{Libraries} dropdown. Navigate down the newly added paths and click on the gray dots next to the Library symbol to make it "active"
     \end{itemize}
 \end{tcolorbox}
 
 \subsection{Library Part: Symbol}
+The symbol is how the part appears in the schematic. It does not need to look like the layout of actual part, but more of an easy way to understand what the part functionally is doing.
 \begin{enumerate}
     \item Create new symbol: \textit{\textbf{Library\textrightarrow Symbol}}
     \item Name symbol with part number
-    \item Draw box using \textit{\textbf{wire}} (Type into console or select GUI icon from left)
+    \item Draw box using \textit{\textbf{Line}} (Type into console or select GUI icon from left)
     \begin{itemize}
-        \item This aspect is purely visual so any size/shape is okay, but use standard symbols which are commonly represented in schematics helps everybody understands your work.
+        \item This aspect is purely visual so any size/shape is okay, but use standard symbols which are commonly represented in schematics to help everybody understand your work.
     \end{itemize}
     \item Add necessary amount of pins using \textit{\textbf{pin}}
     \begin{itemize}
-        \item These pins are what wires are connected to in the schematic
+        \item These pins are what nets are connected to in the schematic
     \end{itemize}
-    \item Name pins corresponding to datasheet using \textit{\textbf{name}} then click on pin
+    \item Name pins corresponding to the datasheet for the part using \textit{\textbf{name}} then click on the pin
+    \begin{itemize}
+        \item For example, 3.3V, GND, etc.
+    \end{itemize}
     \item Clean up Symbol: Adjust part outline so all pins fit and pin names can be seen
-    \item Add Name and Value using \textit{\textbf{text}}
+    \item Add \textgreater NAME and \textgreater VALUE using \textit{\textbf{text}}
     \begin{itemize}
         \item \textgreater NAME and  \textgreater VALUE are keywords for text that are automatically filled out with the name and value when inserted into a schematic.
     \end{itemize}
-    \item Change Layer of Name and Value using \textit{\textbf{info}} then clicking on the part and changing Layer to Name and Value respectivly
+    \item Change the Layer of Name and Value
+    \begin{itemize}
+        \item Select \textit{\textbf{info}}
+        \item Click on text
+        \item Change Layer to Name (\textit{\textbf{95 Names}}) and Value (\textit{\textbf{96 Values}}) respectively
+    \end{itemize}  
     \item Return to Library: \textit{\textbf{Library\textrightarrow Table of Contents}}
 \end{enumerate}
 
@@ -111,7 +116,7 @@ Libraries are split into three parts. Symbol, Footprint and Device. The Symbol i
 \end{tcolorbox}
 
 \subsection{Library Part: Footprint}
-This is typically the footprint for the component which is found in the datasheet for the part. In the datasheet you will find all measurements needed to create the foorprint. This footprint will go on the PCB and is what the component will be soldered to. Before version 9.0, Eagle uses 'package' for 'footprint'.  
+This is typically the footprint for the component which is found in the datasheet for the part. In the datasheet you will find all measurements needed to create the footprint. This footprint will go on the PCB and is what the component will be soldered to. Before version 9.0, EAGLE uses 'package' for 'footprint'.  
 \begin{enumerate}
     \item Create new footprint: \textit{\textbf{Library\textrightarrow Footprint}}
     \item Name footprint with package name
@@ -131,7 +136,7 @@ This is typically the footprint for the component which is found in the datashee
     \begin{itemize}
         \item The tDocu is just for reference to ensure no overlapping parts so it will not appear on the board.
     \end{itemize}
-    \item Adjust part outline to the dimmensions given on the datasheet. Adjust to exact values using \textit{\textbf{info}}
+    \item Adjust part outline to the dimensions given on the datasheet. Adjust to exact values using \textit{\textbf{info}}
     \item Add silkscreen
     \begin{itemize}
         \item Silkscreen gets printed on the board and is used to help place components
@@ -141,7 +146,7 @@ This is typically the footprint for the component which is found in the datashee
     \item Add Name and Value using \textit{\textbf{text}}
     \begin{itemize}
         \item Use \textgreater NAME and  \textgreater VALUE similar to in symbol
-        \item Adjust Layer to Name and Value respectivly
+        \item Adjust Layer to Name and Value respectively
     \end{itemize}
     \item Return to Library: \textit{\textbf{Library\textrightarrow Table
     of Contents}}
@@ -179,8 +184,11 @@ This is where the Symbol and Footprint come together to create what will be adde
     \item Place symbol so grey + is in center of component
     \item Click new button in footprint window and select local footprint
     \item Connect pins by clicking connect button in footprint area
-    \item Use datasheet to see what pin names correspond to what pad numbers then connect by selecting pin and pad then click connect. Repeat for each one
+    \item Use the datasheet to see what pin names correspond to what pad numbers then connect by selecting pin and pad then click \textit{\textbf{Connect}}. If there are duplicate signals (such as GND or Power) click \textit{\textbf{Append}} while highlighting an existing connection. Repeat for each pin.
     \item Click prefix button to add current prefix to match component type
+        \begin{itemize}
+            \item Refer to this \href{https://wiki.robojackets.org/EAGLE_Style_Guide#Prefix}{table} for prefix suggestions
+        \end{itemize}
 \end{enumerate}
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
@@ -195,20 +203,21 @@ This is where the Symbol and Footprint come together to create what will be adde
 \end{itemize}
 
 \section{Schematic}
-Schematics are used to set up how the board is organized by adding all the parts used on the board and making the electrical connections between these parts.
+Schematics are used to set up how the board is organized by adding all the parts used on the board and making the electrical connections between these parts. \par
+Please refer to \url{https://wiki.robojackets.org/EAGLE_Style_Guide#Schematics} for style requirements making schematics.
 \begin{enumerate}
     \item (At Control Panel) \textit{\textbf{File\textrightarrow New\textrightarrow Schematic}}
     \item Save to a directory where you are storing this project
 \end{enumerate}
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item Always keep parts and wires snapped to 0.1 in grid
+        \item Always keep parts and wires snapped to 0.1in grid
     \end{itemize}
 \end{tcolorbox}
 
 \subsection{Schematic: Adding Parts}
 \begin{enumerate}
-    \item Prepare Eagle with necessary libraries
+    \item Prepare EAGLE with necessary libraries
     \begin{itemize}
         \item Libraries can be added by automatically searching a folder as shown in section \ref{create library}
         \item Libraries can also be temporarily added by \textit{\textbf{Library\textrightarrow Use}} then select library you created
@@ -226,7 +235,7 @@ Schematics are used to set up how the board is organized by adding all the parts
 \end{enumerate}
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item When adding components you can search for components but Eagle uses exact matching so you must add wild cards. Example: you want to search for part number containing 0603, search using *0603*
+        \item When adding components you can search for components but EAGLE uses exact matching so you must add wild cards. Example: you want to search for part number containing 0603, search using *0603*
     \end{itemize}
 \end{tcolorbox}
 
@@ -267,14 +276,16 @@ Schematics are used to set up how the board is organized by adding all the parts
 
 \section{Board Layout}
 The board file is how you layout the final physical board. All steps up to this point have been to assist you in the creation of this.
-\begin{enumerate}
-    \item When done with schematic switch to board by
-    \textit{\textbf{File\textrightarrow Use}}
+\par Please refer to \url{https://wiki.robojackets.org/EAGLE_Style_Guide#Boards} for style requirements making boards.
+\begin{itemize}
+    \item When finished with the schematic switch to the board by
+    \textit{\textbf{File\textrightarrow Switch to board}}
     \begin{itemize}
         \item If no board file is found one will be generated
         \item It is generated with parts from the schematic randomly placed and lines showing the connections to be made between parts called airwires
     \end{itemize}
-\end{enumerate}
+    \item You can return to the schematic at any time by \textit{\textbf{File\textrightarrow Switch to schematic}} but note that changes to the schematic may lead to deletion to existing routing on the board 
+\end{itemize}
 
 \subsection{Board Layout: Layers}
 \begin{itemize}
@@ -292,13 +303,19 @@ The board file is how you layout the final physical board. All steps up to this 
 \end{itemize}
 \begin{tcolorbox} [title=Tips \& Tricks]
     \begin{itemize}
-        \item Right click on Layer settings to create a group of currently viewable layers or quickly switch between created groups
+        \item Right click on \textbf{Layer Settings} to create a group of currently viewable layers or quickly switch between created groups
+        \item Useful layer groups include
+        \begin{itemize}
+        \item \textbf{Preset\_Top} includes all elements on the top of the board
+        \item \textbf{Preset\_Bottom} includes all elements on the bottom of the board
+        \item \textbf{Preset\_Standard} includes all elements on both top and bottom
+        \end{itemize}
     \end{itemize}
 \end{tcolorbox}
 
 \begin{figure}[!h]
     \center
-    \includegraphics[width=0.4\textwidth,height=0.4\textheight,keepaspectratio]{layers1}
+    \includegraphics[width=0.8\textwidth,height=0.4\textheight,keepaspectratio]{layers1}
     \caption {Sideview of layers that are created when PCB is manufactured}
     \label{img:layers}
 \end{figure}
@@ -310,9 +327,9 @@ The board file is how you layout the final physical board. All steps up to this 
     \item First consider the requirements of your board
     \begin{itemize}
         \item Consider the maximize size you want your board to be
-        \item Consider Location of specific parts
+        \item Consider location of specific parts
         \begin{itemize}
-            \item Specific locations of connectors and other components that need to be accessible
+            \item Specific locations of connectors and other components that need to be accessible (often preferably on the perimeter of the board)
             \item Decoupling capacitors very close to its IC
             \item Maximum distances parts can be that must communicate
         \end{itemize}
@@ -343,10 +360,13 @@ The board file is how you layout the final physical board. All steps up to this 
         \item Use layer dropdown to select signal layer you are routing on
         \item Optional selection for walkaround obstacles to assist you with routing to avoid overlapping based on DRC rules
         \item Bend style is the angle of wires when routing \textbf{(good practice to use 45\degree\ angles)}
+        \begin{itemize}
+            \item 
+        \end{itemize}
         \item Width is how wide the copper trace is (recommended 0.3mm)
         \begin{itemize}
-            \item Trace width must be considered for some applications such as power lines
-            \item Signal wire width should be sizable compare to their footprint.
+            \item Trace width must be considered for some applications such as power lines \textbf{(checkout this \href{https://www.4pcb.com/trace-width-calculator.html}{calculator} for a rough estimate)}
+            \item Signal wire width should be sizable compared to their footprint
         \end{itemize}
         \item Via settings are for size and shape of via (recommended circle with drill of 0.35mm)
     \end{itemize}
@@ -385,12 +405,12 @@ The board file is how you layout the final physical board. All steps up to this 
 \end{figure}
 
 \begin{figure}
-	\center
-	\includegraphics[width=0.35\textwidth,height=0.4\textheight,keepaspectratio]{routingvs1}
-	\\
-	\includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{routingvs2}
-	\caption {Example of Good vs Bad Routing Plans}
-	\label{img:routing2}
+    \center
+    \includegraphics[width=0.35\textwidth,height=0.4\textheight,keepaspectratio]{routingvs1}
+    \\
+    \includegraphics[width=0.7\textwidth,height=0.6\textheight,keepaspectratio]{routingvs2}
+    \caption {Example of Good vs Bad Routing Plans}
+    \label{img:routing2}
 \end{figure}
 
 \subsection{Board Layout: Polygons}
@@ -423,9 +443,12 @@ Polygons are how large sections of copper (like ground planes) are done. Using a
 \begin{itemize}
     \item Silkscreen is printed on the top and bottom of the board and has no effect on the function of the board. Rather it is used to identify parts on the board and to help with component soldering.
     \item Most of the silkscreen comes from individual parts on Names layer identifying part names
-    \item Often these names for parts are misaligned. Use
-    \textit{\textbf{smash}} on the component to allow you to move these labels
-    \item Add other markings to silkscreen on layers tPlace or bPlace for the top and bottom silkscreen respectively
+    \item Often the names for parts are misaligned. Click on the cross-hairs of the text to move it
+    \item Add other markings to silkscreen on layers tPlace or bPlace for the top and bottom silkscreen
+    respectively
+        \begin{itemize}
+        \item Examples include: team name, version number, LED purpose, etc.
+        \end{itemize}
 \end{itemize}
 
 \subsection{Board Layout: Error Checking}
@@ -437,14 +460,17 @@ Polygons are how large sections of copper (like ground planes) are done. Using a
 \end{itemize}
 
 \subsection{Board Layout: Exporting}
-You must export the board into Gerber files which are sent to the manufacturer to print. This is a set up multiple files, one for each layer
+Once the design is completed, you must export the board into Gerber files for manufacturing the board. Certain layers are grouped for different manufacturing operations when the board is made, such as the silkscreen or drill holes. This section details how to properly export these files. \textit{\textbf{Make sure to run ERC and DRC before exporting}}
 \begin{enumerate}
-    \item Use \textit{\textbf{File\textrightarrow CAM Processor}} then \textit{\textbf{File\textrightarrow Open\textrightarrow Job}} and select gerb274.cam
+    \item Open the board file you wish to export
+    \item Use \textit{\textbf{File\textrightarrow CAM Processor}} then \textit{\textbf{File\textrightarrow Open CAM File...}} and select appropriate CAM
     \begin{itemize}
-        \item There is also a 4 layer version of this CAM
+        \item For default 2 layer \textrightarrow RJ\_2\_layer.cam
+        \item For default 4 layer \textrightarrow RJ\_4\_layer.cam
+        \item Any other as necessary by the board manufacturer
     \end{itemize}
-    \item This exports a file for each layer with the exception of of bottom silkscreen. This can be added if desired by clicking add and selecting Dimension, bPlace, and bNames
-    \item Repeat CAM Processor with excellon.cam job to generate drill file
+    \item Check \textbf{Export as ZIP} if desired (most board manufacturing involves uploading ZIP)
+    \item Click \textbf{Process Job} and select appropriate directory for export
 \end{enumerate}
 % \subsection{Layers}
 % reference Prefixes
@@ -453,4 +479,10 @@ You must export the board into Gerber files which are sent to the manufacturer t
 
 % \section{Ordering}
 % \section{Soldering}
+
+\begin{versionhistory}
+  \vhEntry{1.0}{09/23/2018}{EP}{created}
+  \vhEntry{1.1}{03/29/2020}{JS}{revised CAM, made references to style guide, clarified adding libraries, general fixes}
+\end{versionhistory}
+
 \end{document}

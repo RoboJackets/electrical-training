@@ -64,3 +64,8 @@ eagle.epf
 
 # autorouter log files
 *.pro
+
+# ignore LaTeX files
+*.aux
+*.synctex.gz
+*.out

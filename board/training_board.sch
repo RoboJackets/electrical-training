@@ -13771,7 +13771,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device="">
 <attribute name="AUTHOR" value="Varun Madabushi"/>
-<attribute name="REVISION" value="1.2"/>
+<attribute name="REVISION" value="1.3"/>
 <attribute name="SCH_DESC" value="Arduino Motor Control Shield"/>
 <attribute name="TEAM" value="Electrical Training"/>
 </part>
@@ -14247,7 +14247,7 @@ the transistor's gate and shuts the chip down.</text>
 <approved hash="104,1,213.36,165.1,U1,V_M,N$1,,,"/>
 <approved hash="104,1,213.36,149.86,U1,GND,N$3,,,"/>
 <approved hash="111,1,215.9,110.49,GND,,,,,"/>
-<approved hash="113,1,198.12,133.109,S1,,,,,"/>
+<approved hash="113,1,198.12,133.128,S1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

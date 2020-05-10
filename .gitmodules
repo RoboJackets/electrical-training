@@ -1,3 +1,0 @@
-[submodule "board/eagle-libraries"]
-	path = board/eagle-libraries
-	url = https://github.com/RoboJackets/eagle-libraries.git

@@ -14247,7 +14247,7 @@ the transistor's gate and shuts the chip down.</text>
 <approved hash="104,1,213.36,165.1,U1,V_M,N$1,,,"/>
 <approved hash="104,1,213.36,149.86,U1,GND,N$3,,,"/>
 <approved hash="111,1,215.9,110.49,GND,,,,,"/>
-<approved hash="113,1,198.12,133.128,S1,,,,,"/>
+<approved hash="113,1,198.12,133.109,S1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

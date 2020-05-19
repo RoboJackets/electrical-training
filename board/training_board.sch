@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.1">
+<eagle version="9.5.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -456,51 +456,52 @@
 In this library you will find the larger circuit elements that are used to control many areas of a system. This usually includes microcontrollers, but ICs usually cover a wide range of chips.
 &lt;/p&gt;</description>
 <packages>
-<package name="SOIC-8">
-<description>&lt;b&gt;SMALL OUTLINE INTEGRATED CIRCUIT&lt;/b&gt;&lt;p&gt;
-body 3.9 mm/JEDEC MS-012AA</description>
-<wire x1="-2.9" y1="3.9" x2="2.9" y2="3.9" width="0.1998" layer="39"/>
-<wire x1="2.9" y1="3.9" x2="2.9" y2="-3.9" width="0.1998" layer="39"/>
-<wire x1="2.9" y1="-3.9" x2="-2.9" y2="-3.9" width="0.1998" layer="39"/>
-<wire x1="-2.9" y1="-3.9" x2="-2.9" y2="3.9" width="0.1998" layer="39"/>
-<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
-<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
-<text x="-3.175" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="4.445" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-2.1501" y1="-3.1001" x2="-1.6599" y2="-2" layer="51"/>
-<rectangle x1="-0.8801" y1="-3.1001" x2="-0.3899" y2="-2" layer="51"/>
-<rectangle x1="0.3899" y1="-3.1001" x2="0.8801" y2="-2" layer="51"/>
-<rectangle x1="1.6599" y1="-3.1001" x2="2.1501" y2="-2" layer="51"/>
-<rectangle x1="1.6599" y1="2" x2="2.1501" y2="3.1001" layer="51"/>
-<rectangle x1="0.3899" y1="2" x2="0.8801" y2="3.1001" layer="51"/>
-<rectangle x1="-0.8801" y1="2" x2="-0.3899" y2="3.1001" layer="51"/>
-<rectangle x1="-2.1501" y1="2" x2="-1.6599" y2="3.1001" layer="51"/>
-<circle x="-1.9" y="-0.8" radius="0.22360625" width="0.1524" layer="21"/>
+<package name="SOIC127P600X170-9T240X310N" urn="urn:adsk.eagle:footprint:16996358/1">
+<description>8-SOIC, 1.27 mm pitch, 6.00 mm span, 4.90 X 3.90 X 1.70 mm body, 3.10 X 2.40 mm thermal pad
+&lt;p&gt;8-pin SOIC package with 1.27 mm pitch, 6.00 mm span with body size 4.90 X 3.90 X 1.70 mm and thermal pad size 3.10 X 2.40 mm&lt;/p&gt;</description>
+<circle x="-2.7288" y="2.7086" radius="0.25" width="0" layer="21"/>
+<wire x1="-2" y1="2.4586" x2="-2" y2="2.5" width="0.12" layer="21"/>
+<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.12" layer="21"/>
+<wire x1="2" y1="2.5" x2="2" y2="2.4586" width="0.12" layer="21"/>
+<wire x1="-2" y1="-2.4586" x2="-2" y2="-2.5" width="0.12" layer="21"/>
+<wire x1="-2" y1="-2.5" x2="2" y2="-2.5" width="0.12" layer="21"/>
+<wire x1="2" y1="-2.5" x2="2" y2="-2.4586" width="0.12" layer="21"/>
+<wire x1="2" y1="-2.5" x2="-2" y2="-2.5" width="0.12" layer="51"/>
+<wire x1="-2" y1="-2.5" x2="-2" y2="2.5" width="0.12" layer="51"/>
+<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.12" layer="51"/>
+<wire x1="2" y1="2.5" x2="2" y2="-2.5" width="0.12" layer="51"/>
+<smd name="1" x="-2.4734" y="1.905" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="2" x="-2.4734" y="0.635" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="3" x="-2.4734" y="-0.635" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="4" x="-2.4734" y="-1.905" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="5" x="2.4734" y="-1.905" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="6" x="2.4734" y="-0.635" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="7" x="2.4734" y="0.635" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="8" x="2.4734" y="1.905" dx="1.9685" dy="0.5991" layer="1"/>
+<smd name="9" x="0" y="0" dx="2.4" dy="3.1" layer="1" thermals="no"/>
+<text x="0" y="3.5936" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3.135" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
+<packages3d>
+<package3d name="SOIC127P600X170-9T240X310N" urn="urn:adsk.eagle:package:16996349/1" type="model">
+<description>8-SOIC, 1.27 mm pitch, 6.00 mm span, 4.90 X 3.90 X 1.70 mm body, 3.10 X 2.40 mm thermal pad
+&lt;p&gt;8-pin SOIC package with 1.27 mm pitch, 6.00 mm span with body size 4.90 X 3.90 X 1.70 mm and thermal pad size 3.10 X 2.40 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SOIC127P600X170-9T240X310N"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="ZXBM5210">
-<pin name="V_REF" x="-15.24" y="2.54" length="middle" direction="in"/>
-<pin name="FWD" x="-15.24" y="-2.54" length="middle" direction="in"/>
-<pin name="REV" x="-15.24" y="-7.62" length="middle" direction="in"/>
-<pin name="V_DD" x="-15.24" y="7.62" length="middle" direction="pwr"/>
-<pin name="V_M" x="15.24" y="7.62" length="middle" direction="pwr" rot="R180"/>
-<pin name="OUT1" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
-<pin name="OUT2" x="15.24" y="-2.54" length="middle" direction="out" rot="R180"/>
-<pin name="GND" x="15.24" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<symbol name="DRV8871">
+<pin name="VM" x="-15.24" y="7.62" length="middle" direction="pwr"/>
+<pin name="GND" x="-15.24" y="-7.62" length="middle" direction="pwr"/>
+<pin name="IN1" x="-15.24" y="2.54" length="middle" direction="in"/>
+<pin name="IN2" x="-15.24" y="-2.54" length="middle" direction="in"/>
+<pin name="ILIM" x="15.24" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="PGND" x="15.24" y="-7.62" length="middle" direction="pwr" rot="R180"/>
+<pin name="OUT2" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="OUT1" x="15.24" y="7.62" length="middle" direction="out" rot="R180"/>
 <wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
@@ -510,27 +511,29 @@ body 3.9 mm/JEDEC MS-012AA</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ZXBM5210-S-13" prefix="U">
-<description>IC MOTOR DRIVER 3V-18V 8SO 
-&lt;p&gt;DKPN: ZXBM5210-S-13DICT-ND&lt;/p&gt;</description>
+<deviceset name="DRV8871" prefix="U">
+<description>3.6-A Brushed DC Motor Driver With Internal Current Sense and PWM Control</description>
 <gates>
-<gate name="G$1" symbol="ZXBM5210" x="10.16" y="10.16"/>
+<gate name="G$1" symbol="DRV8871" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SOIC-8">
+<device name="HSOP-8" package="SOIC127P600X170-9T240X310N">
 <connects>
-<connect gate="G$1" pin="FWD" pad="4"/>
-<connect gate="G$1" pin="GND" pad="8"/>
-<connect gate="G$1" pin="OUT1" pad="1"/>
-<connect gate="G$1" pin="OUT2" pad="7"/>
-<connect gate="G$1" pin="REV" pad="5"/>
-<connect gate="G$1" pin="V_DD" pad="3"/>
-<connect gate="G$1" pin="V_M" pad="2"/>
-<connect gate="G$1" pin="V_REF" pad="6"/>
+<connect gate="G$1" pin="GND" pad="1 9"/>
+<connect gate="G$1" pin="ILIM" pad="4"/>
+<connect gate="G$1" pin="IN1" pad="3"/>
+<connect gate="G$1" pin="IN2" pad="2"/>
+<connect gate="G$1" pin="OUT1" pad="6"/>
+<connect gate="G$1" pin="OUT2" pad="8"/>
+<connect gate="G$1" pin="PGND" pad="7"/>
+<connect gate="G$1" pin="VM" pad="5"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:16996349/1"/>
+</package3dinstances>
 <technologies>
 <technology name="">
-<attribute name="DKPN" value="ZXBM5210-S-13DICT-ND"/>
+<attribute name="DKPN" value="296-43024-1-ND"/>
 </technology>
 </technologies>
 </device>
@@ -5844,7 +5847,7 @@ Source: AVX .. aphvc.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="R-US_" urn="urn:adsk.eagle:component:23792/21" prefix="R" uservalue="yes" library_version="10">
+<deviceset name="R-US_" urn="urn:adsk.eagle:component:23792/22" prefix="R" uservalue="yes" library_version="11">
 <description>&lt;B&gt;RESISTOR&lt;/B&gt;, American symbol</description>
 <gates>
 <gate name="G$1" symbol="R-US" x="0" y="0"/>
@@ -5860,6 +5863,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="34" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5874,6 +5878,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="77" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5888,6 +5893,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="85" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5902,6 +5908,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5916,6 +5923,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="19" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5930,6 +5938,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5944,6 +5953,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5958,6 +5968,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5972,6 +5983,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -5986,6 +5998,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6000,6 +6013,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6014,6 +6028,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6028,6 +6043,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6042,6 +6058,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6056,6 +6073,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6070,6 +6088,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6084,6 +6103,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6098,6 +6118,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6112,6 +6133,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6126,6 +6148,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6140,6 +6163,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6154,6 +6178,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6168,6 +6193,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="45" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6182,6 +6208,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="22" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6196,6 +6223,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6210,6 +6238,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6224,6 +6253,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6238,6 +6268,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6252,6 +6283,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6266,6 +6298,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6280,6 +6313,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="18" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6294,6 +6328,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="48" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6308,6 +6343,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="36" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6322,6 +6358,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6336,6 +6373,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6350,6 +6388,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6364,6 +6403,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6378,6 +6418,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="22" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6392,6 +6433,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6406,6 +6448,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="8" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6420,6 +6463,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6434,6 +6478,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6448,6 +6493,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6462,6 +6508,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6476,6 +6523,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6490,6 +6538,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6504,6 +6553,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6518,6 +6568,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6532,6 +6583,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6546,6 +6598,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6560,6 +6613,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6574,6 +6628,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6588,6 +6643,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6602,6 +6658,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6616,6 +6673,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6630,6 +6688,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6644,6 +6703,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6658,6 +6718,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6672,6 +6733,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6686,6 +6748,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6700,6 +6763,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6714,6 +6778,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6728,6 +6793,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6742,6 +6808,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6756,6 +6823,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6770,6 +6838,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6784,6 +6853,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6798,6 +6868,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6812,6 +6883,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6826,6 +6898,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6840,6 +6913,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6854,6 +6928,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6868,6 +6943,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6882,6 +6958,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6896,6 +6973,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6910,6 +6988,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6924,6 +7003,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6938,6 +7018,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6952,6 +7033,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6966,6 +7048,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6980,6 +7063,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -6994,6 +7078,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -7008,6 +7093,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -7022,6 +7108,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -7036,6 +7123,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="R" constant="no"/>
 </technology>
 </technologies>
@@ -7048,7 +7136,7 @@ Source: AVX .. aphvc.pdf</description>
 </pinmapping>
 </spice>
 </deviceset>
-<deviceset name="C-US" urn="urn:adsk.eagle:component:23794/43" prefix="C" uservalue="yes" library_version="10">
+<deviceset name="C-US" urn="urn:adsk.eagle:component:23794/44" prefix="C" uservalue="yes" library_version="11">
 <description>&lt;B&gt;CAPACITOR&lt;/B&gt;, American symbol</description>
 <gates>
 <gate name="G$1" symbol="C-US" x="0" y="0"/>
@@ -7064,6 +7152,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="16" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7078,6 +7167,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7092,6 +7182,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="37" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7106,6 +7197,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="63" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7120,6 +7212,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="24" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7134,6 +7227,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="6" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7148,6 +7242,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7162,6 +7257,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7176,6 +7272,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7190,6 +7287,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7204,6 +7302,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7218,6 +7317,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7232,6 +7332,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7246,6 +7347,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7260,6 +7362,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7274,6 +7377,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="17" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7288,6 +7392,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7302,6 +7407,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7316,6 +7422,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7330,6 +7437,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="7" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7344,6 +7452,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7358,6 +7467,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7372,6 +7482,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7386,6 +7497,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7400,6 +7512,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7414,6 +7527,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7428,6 +7542,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="14" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7442,6 +7557,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7456,6 +7572,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7470,6 +7587,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="5" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7484,6 +7602,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7498,6 +7617,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7512,6 +7632,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7526,6 +7647,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7540,6 +7662,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="7" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7554,6 +7677,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7568,6 +7692,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7582,6 +7707,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7596,6 +7722,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7610,6 +7737,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7624,6 +7752,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7638,6 +7767,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7652,6 +7782,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7666,6 +7797,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7680,6 +7812,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7694,6 +7827,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7708,6 +7842,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7722,6 +7857,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7736,6 +7872,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7750,6 +7887,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7764,6 +7902,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7778,6 +7917,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7792,6 +7932,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7806,6 +7947,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7820,6 +7962,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7834,6 +7977,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7848,6 +7992,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7862,6 +8007,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7876,6 +8022,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7890,6 +8037,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7904,6 +8052,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7918,6 +8067,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7932,6 +8082,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7946,6 +8097,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7960,6 +8112,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7974,6 +8127,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="4" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -7988,6 +8142,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="5" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8002,6 +8157,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="19" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8016,6 +8172,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8030,6 +8187,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8044,6 +8202,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8058,6 +8217,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8072,6 +8232,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8086,6 +8247,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8100,6 +8262,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8114,6 +8277,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8128,6 +8292,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8142,6 +8307,7 @@ Source: AVX .. aphvc.pdf</description>
 </package3dinstances>
 <technologies>
 <technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
 <attribute name="SPICEPREFIX" value="C" constant="no"/>
 </technology>
 </technologies>
@@ -8296,15 +8462,17 @@ In this library you will find switches and other mechanical assisted circuit ele
 &lt;/p&gt;</description>
 <packages>
 <package name="PTS645">
-<smd name="P$1" x="-3.975" y="2.25" dx="1.55" dy="1.3" layer="1"/>
-<smd name="P$2" x="3.975" y="2.25" dx="1.55" dy="1.3" layer="1"/>
-<smd name="P$3" x="-3.975" y="-2.25" dx="1.55" dy="1.3" layer="1"/>
-<smd name="P$4" x="4.025" y="-2.25" dx="1.55" dy="1.3" layer="1"/>
+<smd name="1" x="-3.975" y="2.25" dx="1.55" dy="1.3" layer="1"/>
+<smd name="2" x="3.975" y="2.25" dx="1.55" dy="1.3" layer="1"/>
+<smd name="3" x="-3.975" y="-2.25" dx="1.55" dy="1.3" layer="1"/>
+<smd name="4" x="4.025" y="-2.25" dx="1.55" dy="1.3" layer="1"/>
 <wire x1="-5" y1="3" x2="5" y2="3" width="0.127" layer="21"/>
 <wire x1="5" y1="3" x2="5" y2="-3" width="0.127" layer="21"/>
 <wire x1="5" y1="-3" x2="-5" y2="-3" width="0.127" layer="21"/>
 <wire x1="-5" y1="-3" x2="-5" y2="3" width="0.127" layer="21"/>
 <circle x="0" y="0" radius="1.8183625" width="0.127" layer="21"/>
+<rectangle x1="-5" y1="-3" x2="5" y2="3" layer="39"/>
+<text x="-5.08" y="3.81" size="1.778" layer="25" font="vector" ratio="10">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -8315,12 +8483,11 @@ In this library you will find switches and other mechanical assisted circuit ele
 <wire x1="-2.54" y1="0" x2="1.905" y2="1.27" width="0.254" layer="94"/>
 <circle x="-2.54" y="0" radius="0.127" width="0.4064" layer="94"/>
 <circle x="2.54" y="0" radius="0.127" width="0.4064" layer="94"/>
-<text x="-5.08" y="3.81" size="2.54" layer="95" font="vector">&gt;NAME</text>
-<text x="0" y="-1.27" size="2.54" layer="96" font="vector" ratio="15" align="top-center">&gt;VALUE</text>
+<text x="-5.08" y="3.81" size="2.54" layer="95">&gt;NAME</text>
 <pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
 <pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <wire x1="0" y1="0.762" x2="0" y2="3.302" width="0.254" layer="94" style="shortdash"/>
-<text x="0" y="-4.318" size="1.27" layer="97" ratio="10" align="top-center">&gt;FUNCTION</text>
+<text x="0" y="-1.27" size="2.54" layer="96" ratio="10" align="top-center">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -8331,8 +8498,8 @@ In this library you will find switches and other mechanical assisted circuit ele
 <devices>
 <device name="" package="PTS645">
 <connects>
-<connect gate="G$1" pin="1" pad="P$1 P$2"/>
-<connect gate="G$1" pin="2" pad="P$3 P$4"/>
+<connect gate="G$1" pin="1" pad="1 2"/>
+<connect gate="G$1" pin="2" pad="3 4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -9812,7 +9979,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0092.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED" urn="urn:adsk.eagle:component:15916/9" prefix="LED" uservalue="yes" library_version="4">
+<deviceset name="LED" urn="urn:adsk.eagle:component:15916/10" prefix="LED" uservalue="yes" library_version="5">
 <description>&lt;b&gt;LED&lt;/b&gt;&lt;p&gt;
 &lt;u&gt;OSRAM&lt;/u&gt;:&lt;br&gt;
 
@@ -9901,7 +10068,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15796/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="20" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="LD260" package="LD260">
@@ -9913,7 +10082,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15794/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SQR2X5" package="LED2X5">
@@ -9925,7 +10096,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15800/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="3MM" package="LED3MM">
@@ -9937,7 +10110,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15797/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="97" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="5MM" package="LED5MM">
@@ -9949,7 +10124,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15799/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="93" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="LSU260" package="LSU260">
@@ -9961,7 +10138,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15805/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="LZR181" package="LZR181">
@@ -9973,7 +10152,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15808/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="1" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="B152" package="Q62902-B152">
@@ -9985,7 +10166,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15803/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="B153" package="Q62902-B153">
@@ -9997,7 +10180,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15804/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="B155" package="Q62902-B155">
@@ -10009,7 +10194,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15807/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="B156" package="Q62902-B156">
@@ -10021,7 +10208,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15806/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SFH480" package="SFH480">
@@ -10033,7 +10222,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15809/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SFH482" package="SFH482">
@@ -10045,7 +10236,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15795/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SQR5.7X3.2" package="U57X32">
@@ -10057,7 +10250,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15789/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="IRL80A" package="IRL80A">
@@ -10069,7 +10264,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15810/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="P-LCC-2" package="P-LCC-2">
@@ -10081,7 +10278,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15817/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="MINI-TOP" package="OSRAM-MINI-TOP-LED">
@@ -10093,7 +10292,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15811/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SIDELED" package="OSRAM-SIDELED">
@@ -10105,7 +10306,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15812/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SMART-LED" package="SMART-LED">
@@ -10117,7 +10320,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15814/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="P-LCC-2-BACK" package="P-LCC-2-TOPLED-RG">
@@ -10129,7 +10334,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15813/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="MICRO-SIDELED" package="MICRO-SIDELED">
@@ -10141,7 +10348,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15815/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="P-LCC-4" package="P-LCC-4">
@@ -10153,7 +10362,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15816/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="CHIP-LED0603" package="CHIP-LED0603">
@@ -10165,7 +10376,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15819/3"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="26" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="CHIP-LED0805" package="CHIP-LED0805">
@@ -10177,7 +10390,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15818/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="68" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="TOPLED-SANTANA" package="MINI-TOPLED-SANTANA">
@@ -10189,7 +10404,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15820/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="CHIPLED_0805" package="CHIPLED_0805">
@@ -10201,7 +10418,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15821/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="52" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="CHIPLED_1206" package="CHIPLED_1206">
@@ -10213,7 +10432,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15823/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="28" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="CHIPLED_0603" package="CHIPLED_0603">
@@ -10225,7 +10446,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15822/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="28" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="CHIPLED-0603-TTW" package="CHIPLED-0603-TTW">
@@ -10237,7 +10460,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15824/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="" package="SMARTLED-TTW">
@@ -10249,7 +10474,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15825/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="3" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="-LUMILED+" package="LUMILED+">
@@ -10261,7 +10488,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15826/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="-LUMILED" package="LUMILED">
@@ -10273,7 +10502,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15827/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="10MM" package="LED10MM">
@@ -10285,7 +10516,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15828/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="KA-3528ASYC" package="KA-3528ASYC">
@@ -10297,7 +10530,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15831/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SML0805" package="SML0805">
@@ -10309,7 +10544,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15830/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="17" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SML1206" package="SML1206">
@@ -10321,7 +10558,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15829/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="6" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SML0603" package="SML0603">
@@ -10333,7 +10572,9 @@ Source: www.kingbright.com</description>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:15832/1"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="POPULARITY" value="17" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -13745,7 +13986,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 </classes>
 <parts>
 <part name="Q1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT" package3d_urn="urn:adsk.eagle:package:6240888/1"/>
-<part name="U1" library="RoboJackets-ICs" deviceset="ZXBM5210-S-13" device=""/>
+<part name="U1" library="RoboJackets-ICs" deviceset="DRV8871" device="HSOP-8" package3d_urn="urn:adsk.eagle:package:16996349/1"/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="PJ-037A" device="" value="MAIN_PWR"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -13787,13 +14028,16 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="EG1218" device="S" package3d_urn="urn:adsk.eagle:package:6240649/1"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="128K"/>
+<part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="58.42" y="86.36" size="1.27" layer="97" font="vector" ratio="7">From Adafruit Library</text>
 <wire x1="173.99" y1="43.18" x2="173.99" y2="127.254" width="0.1524" layer="97"/>
-<wire x1="4.064" y1="127.254" x2="173.99" y2="127.254" width="0.1524" layer="97"/>
+<wire x1="-6.096" y1="127.254" x2="173.99" y2="127.254" width="0.1524" layer="97"/>
 <text x="15.24" y="203.2" size="3.81" layer="97" ratio="7">Barrel Jack and 12V Power Indicator</text>
 <text x="7.62" y="116.84" size="3.81" layer="97" ratio="7">Arduino Uno Microcontroller</text>
 <text x="180.34" y="200.66" size="3.81" layer="97" ratio="7">Motor Driver Chips</text>
@@ -13809,13 +14053,12 @@ levels in the circuit.</text>
 common anode configuration. Sending a 
 logic '1' to these pins will cause the LED to
 turn on.</text>
-<text x="236.22" y="149.86" size="1.27" layer="97" ratio="7">Motor Driver chips are powered directly
-from the 12V supply.  V_REF is connected
-to 12V so speed can be controlled by
+<text x="157.48" y="132.08" size="1.27" layer="97" ratio="7">Motor Driver chips are powered directly
+from the 12V supply.  Speed can be controlled by
 applying a PWM signal to the M1_FWD or
 M1_REV pins.  The output of the internal H
 Bridge is applied across OUT1 and OUT2.</text>
-<text x="187.96" y="180.34" size="1.27" layer="97" ratio="7">350mA fuse specced for Sparkfun Gearmotors
+<text x="160.02" y="185.42" size="1.27" layer="97" ratio="7">350mA fuse specced for Sparkfun Gearmotors
 with .35A no-load current and 1.3A stall current
 No intended mechanism for this motor so should be fine.</text>
 <text x="27.94" y="154.94" size="1.27" layer="97" font="vector" ratio="7">The top part of this symbol represents the pin inside the 
@@ -13825,19 +14068,23 @@ that contacts the outside (usually negative).  </text>
 <text x="88.9" y="182.88" size="1.27" layer="97" font="vector" ratio="7">Decoupling capacitors help ensure a
 relatively constant output voltage even in
 the event of current spikes</text>
-<text x="220.98" y="116.84" size="1.27" layer="97" ratio="7">Switch controls the gate of an N-MOSFET in a
+<text x="231.14" y="104.14" size="1.27" layer="97" ratio="7">Switch controls the gate of an N-MOSFET in a
 low-side switch configuration.  When the
 switch is On and the gate is connected to 12V,
 the transistor conducts electricity and allows
 the motor driver chip to turn on.  When the
 switch is off, the pulldown resistor discharges
 the transistor's gate and shuts the chip down.</text>
+<text x="238.76" y="142.24" size="1.27" layer="97" ratio="7">Based on the formula on pg 9 of the 
+datasheet, this limits current to 0.5A
+before enabling the internal current limit</text>
+<wire x1="149.86" y1="127.254" x2="149.86" y2="211.328" width="0.1524" layer="97"/>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="83.82" y="50.8" smashed="yes" rot="R270"/>
-<instance part="U1" gate="G$1" x="198.12" y="157.48" smashed="yes">
-<attribute name="NAME" x="187.96" y="167.64" size="1.778" layer="95"/>
-<attribute name="VALUE" x="187.96" y="144.78" size="1.778" layer="96"/>
+<instance part="U1" gate="G$1" x="208.28" y="157.48" smashed="yes">
+<attribute name="NAME" x="198.12" y="167.64" size="1.778" layer="95"/>
+<attribute name="VALUE" x="198.12" y="144.78" size="1.778" layer="96"/>
 </instance>
 <instance part="J1" gate="G$1" x="68.58" y="170.18" smashed="yes">
 <attribute name="NAME" x="58.42" y="177.8" size="1.778" layer="96" font="vector"/>
@@ -13860,17 +14107,17 @@ the transistor's gate and shuts the chip down.</text>
 <instance part="SUPPLY8" gate="GND" x="15.24" y="53.34" smashed="yes">
 <attribute name="VALUE" x="13.335" y="50.165" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY10" gate="GND" x="215.9" y="109.22" smashed="yes">
-<attribute name="VALUE" x="213.995" y="106.045" size="1.778" layer="96"/>
+<instance part="SUPPLY10" gate="GND" x="226.06" y="96.52" smashed="yes">
+<attribute name="VALUE" x="224.155" y="93.345" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY11" gate="+12V" x="180.34" y="177.8" smashed="yes">
 <attribute name="VALUE" x="177.8" y="180.975" size="1.778" layer="96"/>
 </instance>
-<instance part="F1" gate="G$1" x="198.12" y="172.72" smashed="yes">
-<attribute name="NAME" x="195.58" y="175.26" size="1.778" layer="95"/>
-<attribute name="VALUE" x="195.58" y="170.18" size="1.778" layer="96" align="top-left"/>
+<instance part="F1" gate="G$1" x="180.34" y="170.18" smashed="yes" rot="R270">
+<attribute name="NAME" x="182.88" y="172.72" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="177.8" y="172.72" size="1.778" layer="96" rot="R270" align="top-left"/>
 </instance>
-<instance part="OUT" gate="G$1" x="228.6" y="157.48" smashed="yes"/>
+<instance part="OUT" gate="G$1" x="233.68" y="165.1" smashed="yes" rot="MR180"/>
 <instance part="LED1" gate="G$1" x="149.86" y="63.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="154.432" y="67.056" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="154.432" y="69.215" size="1.778" layer="96" rot="R180"/>
@@ -13920,16 +14167,16 @@ the transistor's gate and shuts the chip down.</text>
 <attribute name="TEAM" x="175.26" y="31.75" size="3.048" layer="94" ratio="10" align="top-left"/>
 <attribute name="REVISION" x="246.38" y="6.35" size="2.54" layer="94"/>
 </instance>
-<instance part="LED4" gate="G$1" x="233.68" y="172.72" smashed="yes" rot="R90">
-<attribute name="NAME" x="238.252" y="176.276" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="238.252" y="178.435" size="1.778" layer="96" rot="R180"/>
+<instance part="LED4" gate="G$1" x="208.28" y="175.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="212.852" y="178.816" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="212.852" y="180.975" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="223.52" y="172.72" smashed="yes" rot="R180">
-<attribute name="NAME" x="227.33" y="171.2214" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="227.33" y="176.022" size="1.778" layer="96" rot="R180"/>
+<instance part="R1" gate="G$1" x="195.58" y="175.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="199.39" y="173.7614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="199.39" y="178.562" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY2" gate="GND" x="241.3" y="167.64" smashed="yes">
-<attribute name="VALUE" x="239.395" y="164.465" size="1.778" layer="96"/>
+<instance part="SUPPLY2" gate="GND" x="218.44" y="175.26" smashed="yes" rot="R90">
+<attribute name="VALUE" x="221.615" y="173.355" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="SUPPLY4" gate="GND" x="160.02" y="45.72" smashed="yes">
 <attribute name="VALUE" x="158.115" y="42.545" size="1.778" layer="96"/>
@@ -13946,23 +14193,33 @@ the transistor's gate and shuts the chip down.</text>
 <attribute name="NAME" x="39.116" y="59.055" size="1.778" layer="95"/>
 <attribute name="VALUE" x="31.496" y="54.229" size="1.778" layer="96"/>
 </instance>
-<instance part="Q2" gate="G$1" x="215.9" y="132.08" smashed="yes">
-<attribute name="VALUE" x="218.44" y="132.08" size="1.778" layer="95" font="vector"/>
-<attribute name="NAME" x="218.44" y="134.62" size="1.778" layer="95" font="vector"/>
+<instance part="Q2" gate="G$1" x="226.06" y="119.38" smashed="yes">
+<attribute name="VALUE" x="228.6" y="119.38" size="1.778" layer="95" font="vector"/>
+<attribute name="NAME" x="228.6" y="121.92" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="R6" gate="G$1" x="208.28" y="121.92" smashed="yes" rot="R270">
-<attribute name="NAME" x="209.7786" y="125.73" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="204.978" y="125.73" size="1.778" layer="96" rot="R270"/>
+<instance part="R6" gate="G$1" x="218.44" y="109.22" smashed="yes" rot="R270">
+<attribute name="NAME" x="219.9386" y="113.03" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="215.138" y="113.03" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="S1" gate="1" x="198.12" y="134.62" smashed="yes" rot="R270">
-<attribute name="NAME" x="196.215" y="128.27" size="1.778" layer="95"/>
-<attribute name="VALUE" x="201.295" y="138.43" size="1.778" layer="96"/>
+<instance part="S1" gate="1" x="208.28" y="121.92" smashed="yes" rot="R270">
+<attribute name="NAME" x="206.375" y="115.57" size="1.778" layer="95"/>
+<attribute name="VALUE" x="211.455" y="125.73" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY3" gate="+12V" x="190.5" y="137.16" smashed="yes">
-<attribute name="VALUE" x="187.96" y="140.335" size="1.778" layer="96"/>
+<instance part="SUPPLY3" gate="+12V" x="200.66" y="124.46" smashed="yes">
+<attribute name="VALUE" x="198.12" y="127.635" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY5" gate="+5V" x="50.8" y="81.28" smashed="yes">
 <attribute name="VALUE" x="48.895" y="84.455" size="1.778" layer="96"/>
+</instance>
+<instance part="R7" gate="G$1" x="236.22" y="147.32" smashed="yes" rot="R270">
+<attribute name="NAME" x="237.7186" y="151.13" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="232.918" y="151.13" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="SUPPLY12" gate="GND" x="236.22" y="137.16" smashed="yes">
+<attribute name="VALUE" x="234.315" y="133.985" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY13" gate="GND" x="190.5" y="144.78" smashed="yes">
+<attribute name="VALUE" x="188.595" y="141.605" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -14013,8 +14270,7 @@ the transistor's gate and shuts the chip down.</text>
 <segment>
 <pinref part="LED4" gate="G$1" pin="C"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
-<wire x1="238.76" y1="172.72" x2="241.3" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="172.72" x2="241.3" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="175.26" x2="215.9" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
@@ -14029,13 +14285,24 @@ the transistor's gate and shuts the chip down.</text>
 <segment>
 <pinref part="Q2" gate="G$1" pin="S"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
-<wire x1="215.9" y1="127" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="114.3" x2="215.9" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="109.22" x2="215.9" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="114.3" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="101.6" x2="226.06" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="96.52" x2="226.06" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="116.84" x2="208.28" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="114.3" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
-<junction x="215.9" y="114.3"/>
+<wire x1="218.44" y1="104.14" x2="218.44" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="101.6" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
+<junction x="226.06" y="101.6"/>
+</segment>
+<segment>
+<pinref part="SUPPLY12" gate="GND" pin="GND"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="236.22" y1="139.7" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SUPPLY13" gate="GND" pin="GND"/>
+<wire x1="190.5" y1="147.32" x2="190.5" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="190.5" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -14056,18 +14323,9 @@ the transistor's gate and shuts the chip down.</text>
 <junction x="93.98" y="177.8"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="V_DD"/>
-<wire x1="182.88" y1="165.1" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="SUPPLY11" gate="+12V" pin="+12V"/>
-<wire x1="180.34" y1="165.1" x2="180.34" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="V_REF"/>
 <wire x1="180.34" y1="172.72" x2="180.34" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="160.02" x2="180.34" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="160.02" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
-<junction x="180.34" y="165.1"/>
 <pinref part="F1" gate="G$1" pin="1"/>
-<wire x1="195.58" y1="172.72" x2="180.34" y2="172.72" width="0.1524" layer="91"/>
-<junction x="180.34" y="172.72"/>
 </segment>
 <segment>
 <pinref part="SUPPLY17" gate="+12V" pin="+12V"/>
@@ -14084,9 +14342,9 @@ the transistor's gate and shuts the chip down.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY3" gate="+12V" pin="+12V"/>
-<wire x1="190.5" y1="134.62" x2="190.5" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="121.92" x2="200.66" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="P"/>
-<wire x1="190.5" y1="132.08" x2="193.04" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="119.38" x2="203.2" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -14104,26 +14362,26 @@ the transistor's gate and shuts the chip down.</text>
 </net>
 <net name="M1_FWD" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="FWD"/>
-<wire x1="182.88" y1="154.94" x2="180.34" y2="154.94" width="0.1524" layer="91"/>
-<label x="180.34" y="154.94" size="1.27" layer="95" ratio="7" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="Q1" gate="G$1" pin="D10"/>
 <wire x1="114.3" y1="58.42" x2="116.84" y2="58.42" width="0.1524" layer="91"/>
 <label x="116.84" y="58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="IN2"/>
+<wire x1="193.04" y1="154.94" x2="190.5" y2="154.94" width="0.1524" layer="91"/>
+<label x="190.5" y="154.94" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="M1_REV" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="REV"/>
-<wire x1="182.88" y1="149.86" x2="180.34" y2="149.86" width="0.1524" layer="91"/>
-<label x="180.34" y="149.86" size="1.27" layer="95" ratio="7" rot="R180" xref="yes"/>
-</segment>
 <segment>
 <pinref part="Q1" gate="G$1" pin="D11"/>
 <wire x1="114.3" y1="60.96" x2="116.84" y2="60.96" width="0.1524" layer="91"/>
 <label x="116.84" y="60.96" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="IN1"/>
+<wire x1="193.04" y1="160.02" x2="190.5" y2="160.02" width="0.1524" layer="91"/>
+<label x="190.5" y="160.02" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -14147,20 +14405,11 @@ the transistor's gate and shuts the chip down.</text>
 <wire x1="134.62" y1="172.72" x2="134.62" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="OUT" gate="G$1" pin="2"/>
-<wire x1="223.52" y1="157.48" x2="218.44" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="157.48" x2="218.44" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="OUT2"/>
-<wire x1="218.44" y1="154.94" x2="213.36" y2="154.94" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="LED4" gate="G$1" pin="A"/>
-<wire x1="228.6" y1="172.72" x2="231.14" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="175.26" x2="205.74" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -14179,42 +14428,23 @@ the transistor's gate and shuts the chip down.</text>
 <wire x1="114.3" y1="53.34" x2="134.62" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="M1+_SW" class="0">
-<segment>
-<pinref part="OUT" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="OUT1"/>
-<wire x1="213.36" y1="160.02" x2="223.52" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="V_M"/>
-<wire x1="213.36" y1="165.1" x2="215.9" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="F1" gate="G$1" pin="2"/>
-<wire x1="200.66" y1="172.72" x2="215.9" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="215.9" y1="172.72" x2="218.44" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="215.9" y1="165.1" x2="215.9" y2="172.72" width="0.1524" layer="91"/>
-<junction x="215.9" y="172.72"/>
-</segment>
-</net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="213.36" y1="149.86" x2="215.9" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="PGND"/>
+<wire x1="223.52" y1="149.86" x2="226.06" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="215.9" y1="149.86" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="149.86" x2="226.06" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="R6" gate="G$1" pin="1"/>
 <pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="208.28" y1="127" x2="208.28" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="129.54" x2="210.82" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="114.3" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="116.84" x2="220.98" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="S"/>
-<wire x1="203.2" y1="129.54" x2="208.28" y2="129.54" width="0.1524" layer="91"/>
-<junction x="208.28" y="129.54"/>
+<wire x1="213.36" y1="116.84" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
+<junction x="218.44" y="116.84"/>
 </segment>
 </net>
 <net name="RESET" class="0">
@@ -14232,6 +14462,43 @@ the transistor's gate and shuts the chip down.</text>
 <wire x1="33.02" y1="63.5" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
 <junction x="43.18" y="63.5"/>
 <wire x1="48.26" y1="63.5" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="F1" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="167.64" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="VM"/>
+<wire x1="180.34" y1="165.1" x2="187.96" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="165.1" x2="193.04" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="175.26" x2="187.96" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="175.26" x2="187.96" y2="165.1" width="0.1524" layer="91"/>
+<junction x="187.96" y="165.1"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="ILIM"/>
+<wire x1="223.52" y1="154.94" x2="236.22" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="154.94" x2="236.22" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="OUT1"/>
+<pinref part="OUT" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="165.1" x2="228.6" y2="165.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="OUT" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="162.56" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="162.56" x2="226.06" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="160.02" x2="223.52" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="OUT2"/>
 </segment>
 </net>
 </nets>

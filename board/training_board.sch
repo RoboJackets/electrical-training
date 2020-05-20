@@ -456,7 +456,7 @@
 In this library you will find the larger circuit elements that are used to control many areas of a system. This usually includes microcontrollers, but ICs usually cover a wide range of chips.
 &lt;/p&gt;</description>
 <packages>
-<package name="SOIC127P600X170-9T240X310N" urn="urn:adsk.eagle:footprint:16996358/1">
+<package name="HSOP-8">
 <description>8-SOIC, 1.27 mm pitch, 6.00 mm span, 4.90 X 3.90 X 1.70 mm body, 3.10 X 2.40 mm thermal pad
 &lt;p&gt;8-pin SOIC package with 1.27 mm pitch, 6.00 mm span with body size 4.90 X 3.90 X 1.70 mm and thermal pad size 3.10 X 2.40 mm&lt;/p&gt;</description>
 <circle x="-2.7288" y="2.7086" radius="0.25" width="0" layer="21"/>
@@ -479,19 +479,10 @@ In this library you will find the larger circuit elements that are used to contr
 <smd name="7" x="2.4734" y="0.635" dx="1.9685" dy="0.5991" layer="1"/>
 <smd name="8" x="2.4734" y="1.905" dx="1.9685" dy="0.5991" layer="1"/>
 <smd name="9" x="0" y="0" dx="2.4" dy="3.1" layer="1" thermals="no"/>
-<text x="0" y="3.5936" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-3.135" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="3" size="1" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-3" size="1" layer="27" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
-<packages3d>
-<package3d name="SOIC127P600X170-9T240X310N" urn="urn:adsk.eagle:package:16996349/1" type="model">
-<description>8-SOIC, 1.27 mm pitch, 6.00 mm span, 4.90 X 3.90 X 1.70 mm body, 3.10 X 2.40 mm thermal pad
-&lt;p&gt;8-pin SOIC package with 1.27 mm pitch, 6.00 mm span with body size 4.90 X 3.90 X 1.70 mm and thermal pad size 3.10 X 2.40 mm&lt;/p&gt;</description>
-<packageinstances>
-<packageinstance name="SOIC127P600X170-9T240X310N"/>
-</packageinstances>
-</package3d>
-</packages3d>
 <symbols>
 <symbol name="DRV8871">
 <pin name="VM" x="-15.24" y="7.62" length="middle" direction="pwr"/>
@@ -506,7 +497,7 @@ In this library you will find the larger circuit elements that are used to contr
 <wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
 <wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
-<text x="-10.16" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="12.7" size="1.778" layer="95" align="top-left">&gt;NAME</text>
 <text x="-10.16" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
@@ -517,7 +508,7 @@ In this library you will find the larger circuit elements that are used to contr
 <gate name="G$1" symbol="DRV8871" x="0" y="0"/>
 </gates>
 <devices>
-<device name="HSOP-8" package="SOIC127P600X170-9T240X310N">
+<device name="HSOP-8" package="HSOP-8">
 <connects>
 <connect gate="G$1" pin="GND" pad="1 9"/>
 <connect gate="G$1" pin="ILIM" pad="4"/>
@@ -528,9 +519,6 @@ In this library you will find the larger circuit elements that are used to contr
 <connect gate="G$1" pin="PGND" pad="7"/>
 <connect gate="G$1" pin="VM" pad="5"/>
 </connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:16996349/1"/>
-</package3dinstances>
 <technologies>
 <technology name="">
 <attribute name="DKPN" value="296-43024-1-ND"/>
@@ -13986,7 +13974,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 </classes>
 <parts>
 <part name="Q1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT" package3d_urn="urn:adsk.eagle:package:6240888/1"/>
-<part name="U1" library="RoboJackets-ICs" deviceset="DRV8871" device="HSOP-8" package3d_urn="urn:adsk.eagle:package:16996349/1"/>
+<part name="U1" library="RoboJackets-ICs" deviceset="DRV8871" device="HSOP-8"/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="PJ-037A" device="" value="MAIN_PWR"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>

@@ -171,9 +171,9 @@
 <wire x1="66.1" y1="51.8" x2="64.5" y2="53.4" width="0" layer="20"/>
 <wire x1="64.5" y1="53.4" x2="0" y2="53.4" width="0" layer="20"/>
 <wire x1="0" y1="53.4" x2="0" y2="0" width="0" layer="20"/>
-<text x="37" y="22" size="1.5" layer="51" font="vector" ratio="15">2020 Training Board
+<text x="37" y="22" size="1.5" layer="21" font="vector" ratio="15">2020 Training Board
 V2.0</text>
-<polygon width="0.1524" layer="51">
+<polygon width="0.1524" layer="21">
 <vertex x="42" y="22"/>
 <vertex x="67" y="22"/>
 <vertex x="67" y="15"/>
@@ -201,6 +201,12 @@ V2.0</text>
 <wire x1="14" y1="13" x2="14" y2="8" width="0.6" layer="21"/>
 <wire x1="14" y1="13" x2="5" y2="13" width="0.6" layer="21"/>
 <wire x1="14" y1="8" x2="5" y2="8" width="0.6" layer="21"/>
+<polygon width="0.1524" layer="21">
+<vertex x="32" y="21"/>
+<vertex x="33" y="22"/>
+<vertex x="33" y="20"/>
+</polygon>
+<text x="34" y="20" size="1.778" layer="21" font="vector" ratio="10">5V</text>
 </plain>
 <libraries>
 <library name="adafruit" urn="urn:adsk.eagle:library:420">
@@ -6015,11 +6021,11 @@ design rules under a new name.</description>
 <wire x1="25.45" y1="18" x2="28.425" y2="20.975" width="0.2" layer="1"/>
 <wire x1="30.025" y1="20.975" x2="30.11" y2="21.06" width="0.2" layer="1"/>
 <wire x1="38.1" y1="2.54" x2="38.1" y2="13" width="0.2" layer="1"/>
-<wire x1="38.1" y1="13" x2="38.1" y2="14.9" width="0.2" layer="1"/>
-<wire x1="32.025" y1="20.975" x2="30.025" y2="20.975" width="0.2" layer="1"/>
+<wire x1="38.1" y1="13" x2="38.1" y2="15.9" width="0.2" layer="1"/>
+<wire x1="33.025" y1="20.975" x2="30.025" y2="20.975" width="0.2" layer="1"/>
 <wire x1="30.025" y1="20.975" x2="28.425" y2="20.975" width="0.2" layer="1"/>
-<wire x1="38.1" y1="14.9" x2="33.5" y2="19.5" width="0.2" layer="1"/>
-<wire x1="33.5" y1="19.5" x2="32.025" y2="20.975" width="0.2" layer="1"/>
+<wire x1="38.1" y1="15.9" x2="35.5" y2="18.5" width="0.2" layer="1"/>
+<wire x1="35.5" y1="18.5" x2="33.025" y2="20.975" width="0.2" layer="1"/>
 <wire x1="35.85" y1="12.49" x2="37.59" y2="12.49" width="0.2" layer="16"/>
 <wire x1="37.59" y1="12.49" x2="38.1" y2="13" width="0.2" layer="16"/>
 <via x="38.1" y="13" extent="1-16" drill="0.35"/>
@@ -6030,9 +6036,9 @@ design rules under a new name.</description>
 <wire x1="51" y1="32" x2="45" y2="26" width="0.2" layer="1"/>
 <via x="45" y="26" extent="1-16" drill="0.35"/>
 <wire x1="45" y1="26" x2="41" y2="26" width="0.2" layer="16"/>
-<wire x1="41" y1="26" x2="34.5" y2="19.5" width="0.2" layer="16"/>
-<wire x1="33.5" y1="19.5" x2="34.5" y2="19.5" width="0.2" layer="16"/>
-<via x="33.5" y="19.5" extent="1-16" drill="0.35"/>
+<wire x1="41" y1="26" x2="35.5" y2="20.5" width="0.2" layer="16"/>
+<wire x1="35.5" y1="18.5" x2="35.5" y2="20.5" width="0.2" layer="16"/>
+<via x="35.5" y="18.5" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="D2_CNTRL">
 <contactref element="A1" pad="D6"/>

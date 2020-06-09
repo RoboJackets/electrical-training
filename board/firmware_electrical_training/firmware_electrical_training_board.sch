@@ -15164,9 +15164,12 @@ SW1 is also connected to an interrupt pin.</text>
 <text x="180.34" y="127" size="1.27" layer="97" ratio="7">SW2 is pulled low with a normally open momentary pushbutton. 
 When you push on the button, the digital value will be a 0.
 When you do not push on the button, the digital value will be a 1.</text>
-<text x="198.12" y="154.94" size="1.27" layer="97" ratio="7">A RC circuit is present to provide debouncing.</text>
-<text x="180.34" y="121.92" size="1.27" layer="97" ratio="7">A RC circuit is present to provide debouncing.</text>
-<text x="180.34" y="73.66" size="1.27" layer="97" ratio="7">A RC circuit is present to provide debouncing.</text>
+<text x="236.22" y="190.5" size="1.27" layer="97" ratio="7">A RC circuit is present for all buttons to 
+provide debouncing.
+
+Debouncing is so that the function will not 
+be triggered more than once per press due 
+to noise.</text>
 <text x="76.2" y="132.08" size="1.27" layer="97" ratio="7">GY-521-MPU-6050 has XDA and XCL. 
 These are external I2C bus. This allows 
 for an external magnetometer.</text>
@@ -15184,6 +15187,8 @@ MPU_INT - interrupt for new packet</text>
 <wire x1="3.81" y1="175.514" x2="107.95" y2="175.514" width="0.1524" layer="97" style="longdash"/>
 <text x="10.16" y="165.1" size="3.81" layer="97" ratio="7">Magnetometer Sensor
 (DO NOT POPULATE)</text>
+<text x="248.92" y="170.18" size="1.27" layer="97" ratio="7">Connects to Pin D3 of Arduino</text>
+<text x="248.92" y="119.38" size="1.27" layer="97" ratio="7">Connects to Pin D4 of Arduino</text>
 </plain>
 <instances>
 <instance part="A1" gate="G$1" x="83.82" y="50.8" smashed="yes" rot="R270"/>
@@ -15629,9 +15634,9 @@ MPU_INT - interrupt for new packet</text>
 <junction x="233.68" y="165.1"/>
 <wire x1="233.68" y1="165.1" x2="243.84" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<label x="251.46" y="165.1" size="1.778" layer="95" xref="yes"/>
+<label x="248.92" y="165.1" size="1.778" layer="95" xref="yes"/>
 <pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="243.84" y1="165.1" x2="251.46" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="165.1" x2="248.92" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="162.56" x2="243.84" y2="165.1" width="0.1524" layer="91"/>
 <junction x="243.84" y="165.1"/>
 </segment>
@@ -15655,10 +15660,10 @@ MPU_INT - interrupt for new packet</text>
 <wire x1="233.68" y1="114.3" x2="233.68" y2="111.76" width="0.1524" layer="91"/>
 <junction x="233.68" y="114.3"/>
 <wire x1="233.68" y1="116.84" x2="233.68" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="114.3" x2="238.76" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="114.3" x2="248.92" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="R10" gate="G$1" pin="1"/>
-<label x="238.76" y="114.3" size="1.778" layer="95" xref="yes"/>
+<label x="248.92" y="114.3" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="A1" gate="G$1" pin="D4"/>
@@ -15671,10 +15676,10 @@ MPU_INT - interrupt for new packet</text>
 <wire x1="233.68" y1="66.04" x2="233.68" y2="63.5" width="0.1524" layer="91"/>
 <junction x="233.68" y="66.04"/>
 <wire x1="233.68" y1="68.58" x2="233.68" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="66.04" x2="238.76" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="66.04" x2="248.92" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="R13" gate="G$1" pin="1"/>
-<label x="238.76" y="66.04" size="1.778" layer="95" xref="yes"/>
+<label x="248.92" y="66.04" size="1.778" layer="95" xref="yes"/>
 <pinref part="SW3" gate="G$1" pin="2"/>
 <wire x1="210.82" y1="66.04" x2="233.68" y2="66.04" width="0.1524" layer="91"/>
 </segment>

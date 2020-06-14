@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.0">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14627,84 +14627,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <rectangle x1="-0.25" y1="0.85" x2="0.25" y2="1.5" layer="51"/>
 <rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
 </package>
-</packages>
-<symbols>
-<symbol name="TLE493DA2B6HTSA1">
-<description>&lt;h3&gt;TLE493DA2B6HTSA1&lt;/h3&gt;
-&lt;p&gt;Hall Effect Sensor X, Y, Z Axis. I2C&lt;/p&gt;</description>
-<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.1524" layer="94"/>
-<pin name="VDD" x="-15.24" y="2.54" length="middle" direction="pas"/>
-<pin name="GND" x="-15.24" y="-2.54" length="middle" direction="pas"/>
-<pin name="SCL/INT" x="15.24" y="-2.54" length="middle" direction="pas" rot="R180"/>
-<pin name="SDA" x="15.24" y="2.54" length="middle" direction="pas" rot="R180"/>
-<text x="-10.16" y="6.096" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TLE493DA2B6HTSA1" prefix="U">
-<description>Hall Effect Sensor X, Y, Z Axis, 
-I2C, 3.3V</description>
-<gates>
-<gate name="G$1" symbol="TLE493DA2B6HTSA1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT-23-6">
-<connects>
-<connect gate="G$1" pin="GND" pad="2 3 5"/>
-<connect gate="G$1" pin="SCL/INT" pad="1"/>
-<connect gate="G$1" pin="SDA" pad="6"/>
-<connect gate="G$1" pin="VDD" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DKPN" value="TLE493DA2B6HTSA1CT-ND"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="RoboJackets-Supplies">
-<packages>
-</packages>
-<symbols>
-<symbol name="+3.3V">
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
-<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+3.3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="+3.3V" prefix="SUPPLY">
-<description>+3.3V Supply Symbol</description>
-<gates>
-<gate name="P" symbol="+3.3V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="RoboJackets-Resistors">
-<description>&lt;img src="http://www.robojackets.org/wp-content/themes/RoboJackets-3.0/img/banner.png" width="600"&gt;
-&lt;hr&gt;
-&lt;h1&gt;RoboJackets EAGLE Libraries - Resistors&lt;/h1&gt;&lt;/br&gt;
-&lt;p&gt;
-In this library you will find resistors. If you are looking for a common package, use the default &lt;b&gt;rcl &lt;/b&gt;library provided with EAGLE instead of looking here.
-&lt;/p&gt;</description>
-<packages>
 <package name="RA-8_2506">
 <description>&lt;a href="http://www.ctscorp.com/components/Datasheets/CTSChipArrayDs.pdf"&gt;Chip Resistor Array&lt;/a&gt;</description>
 <wire x1="-3.15" y1="0.75" x2="-3.05" y2="0.75" width="0.1016" layer="51"/>
@@ -14930,6 +14852,20 @@ In this library you will find resistors. If you are looking for a common package
 </package>
 </packages>
 <symbols>
+<symbol name="TLE493DA2B6HTSA1">
+<description>&lt;h3&gt;TLE493DA2B6HTSA1&lt;/h3&gt;
+&lt;p&gt;Hall Effect Sensor X, Y, Z Axis. I2C&lt;/p&gt;</description>
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.1524" layer="94"/>
+<pin name="VDD" x="-15.24" y="2.54" length="middle" direction="pas"/>
+<pin name="GND" x="-15.24" y="-2.54" length="middle" direction="pas"/>
+<pin name="SCL/INT" x="15.24" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="SDA" x="15.24" y="2.54" length="middle" direction="pas" rot="R180"/>
+<text x="-10.16" y="6.096" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
 <symbol name="RA-8">
 <wire x1="-2.54" y1="2.54" x2="-2.159" y2="3.556" width="0.1524" layer="94"/>
 <wire x1="-2.159" y1="3.556" x2="-1.524" y2="1.524" width="0.1524" layer="94"/>
@@ -15013,17 +14949,39 @@ In this library you will find resistors. If you are looking for a common package
 <wire x1="1.016" y1="-16.256" x2="1.651" y2="-14.224" width="0.1524" layer="94"/>
 <wire x1="1.651" y1="-14.224" x2="2.286" y2="-16.256" width="0.1524" layer="94"/>
 <wire x1="2.286" y1="-16.256" x2="2.54" y2="-15.24" width="0.1524" layer="94"/>
-<pin name="9" x="5.08" y="-7.62" visible="off" length="short" direction="pas" rot="R180"/>
-<pin name="10" x="-5.08" y="-7.62" visible="off" length="short" direction="pas"/>
-<pin name="11" x="5.08" y="-10.16" visible="off" length="short" direction="pas" rot="R180"/>
-<pin name="12" x="-5.08" y="-10.16" visible="off" length="short" direction="pas"/>
-<pin name="13" x="5.08" y="-12.7" visible="off" length="short" direction="pas" rot="R180"/>
-<pin name="14" x="-5.08" y="-12.7" visible="off" length="short" direction="pas"/>
-<pin name="15" x="5.08" y="-15.24" visible="off" length="short" direction="pas" rot="R180"/>
-<pin name="16" x="-5.08" y="-15.24" visible="off" length="short" direction="pas"/>
+<pin name="9" x="-5.08" y="-7.62" visible="off" length="short" direction="pas"/>
+<pin name="10" x="5.08" y="-7.62" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="11" x="-5.08" y="-10.16" visible="off" length="short" direction="pas"/>
+<pin name="12" x="5.08" y="-10.16" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="13" x="-5.08" y="-12.7" visible="off" length="short" direction="pas"/>
+<pin name="14" x="5.08" y="-12.7" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="15" x="-5.08" y="-15.24" visible="off" length="short" direction="pas"/>
+<pin name="16" x="5.08" y="-15.24" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
+<deviceset name="TLE493DA2B6HTSA1" prefix="U">
+<description>Hall Effect Sensor X, Y, Z Axis, 
+I2C, 3.3V</description>
+<gates>
+<gate name="G$1" symbol="TLE493DA2B6HTSA1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-6">
+<connects>
+<connect gate="G$1" pin="GND" pad="2 3 5"/>
+<connect gate="G$1" pin="SCL/INT" pad="1"/>
+<connect gate="G$1" pin="SDA" pad="6"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DKPN" value="TLE493DA2B6HTSA1CT-ND"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="RA-8" prefix="RN" uservalue="yes">
 <description>Isolated Network Resistor Array x8</description>
 <gates>
@@ -15033,21 +14991,21 @@ In this library you will find resistors. If you are looking for a common package
 <device name="2506" package="RA-8_2506">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="10" pad="10"/>
-<connect gate="G$1" pin="11" pad="11"/>
-<connect gate="G$1" pin="12" pad="12"/>
-<connect gate="G$1" pin="13" pad="13"/>
-<connect gate="G$1" pin="14" pad="14"/>
-<connect gate="G$1" pin="15" pad="15"/>
-<connect gate="G$1" pin="16" pad="16"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
+<connect gate="G$1" pin="10" pad="12"/>
+<connect gate="G$1" pin="11" pad="6"/>
+<connect gate="G$1" pin="12" pad="11"/>
+<connect gate="G$1" pin="13" pad="7"/>
+<connect gate="G$1" pin="14" pad="10"/>
+<connect gate="G$1" pin="15" pad="8"/>
+<connect gate="G$1" pin="16" pad="9"/>
+<connect gate="G$1" pin="2" pad="16"/>
+<connect gate="G$1" pin="3" pad="2"/>
+<connect gate="G$1" pin="4" pad="15"/>
+<connect gate="G$1" pin="5" pad="3"/>
+<connect gate="G$1" pin="6" pad="14"/>
+<connect gate="G$1" pin="7" pad="4"/>
+<connect gate="G$1" pin="8" pad="13"/>
+<connect gate="G$1" pin="9" pad="5"/>
 </connects>
 <technologies>
 <technology name="">
@@ -15055,6 +15013,34 @@ In this library you will find resistors. If you are looking for a common package
 <attribute name="POWER" value="" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="RoboJackets-Supplies">
+<packages>
+</packages>
+<symbols>
+<symbol name="+3.3V">
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
+<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+3.3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="+3.3V" prefix="SUPPLY">
+<description>+3.3V Supply Symbol</description>
+<gates>
+<gate name="P" symbol="+3.3V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -15128,7 +15114,7 @@ In this library you will find resistors. If you are looking for a common package
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2K"/>
 <part name="SUPPLY20" library="RoboJackets-Supplies" deviceset="+3.3V" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="RN1" library="RoboJackets-Resistors" deviceset="RA-8" device="2506" value="330">
+<part name="RN1" library="firmware_electrical_training_board" deviceset="RA-8" device="2506" value="330">
 <attribute name="DKPN" value="742C163331JPCT-ND"/>
 <attribute name="POWER" value="62.5mW"/>
 <attribute name="TOLERANCE" value="5%"/>
@@ -15472,33 +15458,33 @@ MPU_INT - interrupt for new packet</text>
 <pinref part="SUPPLY16" gate="+5V" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="RN1" gate="G$1" pin="16"/>
+<pinref part="RN1" gate="G$1" pin="15"/>
 <wire x1="142.24" y1="175.26" x2="134.62" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY15" gate="+5V" pin="+5V"/>
 </segment>
 </net>
-<net name="D2_CNTRL" class="0">
-<segment>
-<pinref part="A1" gate="G$1" pin="D6"/>
-<wire x1="114.3" y1="45.72" x2="119.38" y2="45.72" width="0.1524" layer="91"/>
-<label x="119.38" y="45.72" size="1.778" layer="95" xref="yes"/>
-</segment>
+<net name="D2_CTRL" class="0">
 <segment>
 <pinref part="RN1" gate="G$1" pin="3"/>
 <wire x1="142.24" y1="190.5" x2="139.7" y2="190.5" width="0.1524" layer="91"/>
 <label x="139.7" y="190.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="D1_CNTRL" class="0">
 <segment>
-<wire x1="142.24" y1="193.04" x2="124.46" y2="193.04" width="0.1524" layer="91"/>
-<label x="124.46" y="193.04" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="RN1" gate="G$1" pin="1"/>
+<pinref part="A1" gate="G$1" pin="D10"/>
+<wire x1="114.3" y1="58.42" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
+<label x="137.16" y="58.42" size="1.778" layer="95" xref="yes"/>
 </segment>
+</net>
+<net name="D5_CTRL" class="0">
 <segment>
 <pinref part="A1" gate="G$1" pin="D5"/>
 <wire x1="114.3" y1="43.18" x2="137.16" y2="43.18" width="0.1524" layer="91"/>
 <label x="137.16" y="43.18" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="182.88" x2="124.46" y2="182.88" width="0.1524" layer="91"/>
+<label x="124.46" y="182.88" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="RN1" gate="G$1" pin="9"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -15564,40 +15550,16 @@ MPU_INT - interrupt for new packet</text>
 <label x="25.4" y="198.12" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="D3_CNTRL" class="0">
-<segment>
-<wire x1="142.24" y1="187.96" x2="124.46" y2="187.96" width="0.1524" layer="91"/>
-<label x="124.46" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="RN1" gate="G$1" pin="5"/>
-</segment>
-<segment>
-<pinref part="A1" gate="G$1" pin="D9"/>
-<wire x1="114.3" y1="55.88" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
-<label x="119.38" y="55.88" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="D4_CNTRL" class="0">
+<net name="D4_CTRL" class="0">
 <segment>
 <wire x1="142.24" y1="185.42" x2="139.7" y2="185.42" width="0.1524" layer="91"/>
 <label x="139.7" y="185.42" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="RN1" gate="G$1" pin="7"/>
 </segment>
 <segment>
-<pinref part="A1" gate="G$1" pin="D10"/>
-<wire x1="114.3" y1="58.42" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
-<label x="137.16" y="58.42" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="D5_CNTRL" class="0">
-<segment>
-<wire x1="142.24" y1="182.88" x2="124.46" y2="182.88" width="0.1524" layer="91"/>
-<label x="124.46" y="182.88" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="RN1" gate="G$1" pin="10"/>
-</segment>
-<segment>
-<pinref part="A1" gate="G$1" pin="D11"/>
-<wire x1="114.3" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
-<label x="119.38" y="60.96" size="1.778" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="D6"/>
+<wire x1="114.3" y1="45.72" x2="119.38" y2="45.72" width="0.1524" layer="91"/>
+<label x="119.38" y="45.72" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -15744,7 +15706,7 @@ MPU_INT - interrupt for new packet</text>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="RN1" gate="G$1" pin="9"/>
+<pinref part="RN1" gate="G$1" pin="10"/>
 <wire x1="152.4" y1="182.88" x2="154.94" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="182.88" x2="154.94" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="D5" gate="G$1" pin="A"/>
@@ -15753,10 +15715,34 @@ MPU_INT - interrupt for new packet</text>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="RN1" gate="G$1" pin="15"/>
+<pinref part="RN1" gate="G$1" pin="16"/>
 <wire x1="152.4" y1="175.26" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="142.24" x2="162.56" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="D6" gate="G$1" pin="A"/>
+</segment>
+</net>
+<net name="D1_CTRL" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="D11"/>
+<wire x1="114.3" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
+<label x="119.38" y="60.96" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="193.04" x2="124.46" y2="193.04" width="0.1524" layer="91"/>
+<label x="124.46" y="193.04" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="RN1" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="D3_CTRL" class="0">
+<segment>
+<pinref part="A1" gate="G$1" pin="D9"/>
+<wire x1="114.3" y1="55.88" x2="119.38" y2="55.88" width="0.1524" layer="91"/>
+<label x="119.38" y="55.88" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="187.96" x2="124.46" y2="187.96" width="0.1524" layer="91"/>
+<label x="124.46" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="RN1" gate="G$1" pin="5"/>
 </segment>
 </net>
 </nets>

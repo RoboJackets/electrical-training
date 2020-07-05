@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -15082,7 +15082,6 @@ I2C, 3.3V</description>
 <part name="SW1" library="RoboJackets-Switches" deviceset="PTS645" device="">
 <attribute name="FUNCTION" value="IN-1"/>
 </part>
-<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
@@ -15090,7 +15089,6 @@ I2C, 3.3V</description>
 <part name="SW2" library="RoboJackets-Switches" deviceset="PTS645" device="">
 <attribute name="FUNCTION" value="!IN-2"/>
 </part>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
@@ -15231,10 +15229,6 @@ MPU_INT - interrupt for new packet</text>
 <attribute name="VALUE" x="208.28" y="163.83" size="1.778" layer="96" align="top-center"/>
 <attribute name="FUNCTION" x="208.28" y="160.782" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R6" gate="G$1" x="223.52" y="165.1" smashed="yes" rot="R180">
-<attribute name="NAME" x="224.79" y="168.6814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="224.79" y="163.322" size="1.778" layer="96" rot="R180"/>
-</instance>
 <instance part="SUPPLY3" gate="+5V" x="198.12" y="182.88" smashed="yes">
 <attribute name="VALUE" x="196.215" y="186.055" size="1.778" layer="96"/>
 </instance>
@@ -15253,10 +15247,6 @@ MPU_INT - interrupt for new packet</text>
 <attribute name="NAME" x="203.2" y="118.11" size="1.778" layer="96"/>
 <attribute name="VALUE" x="205.74" y="113.03" size="1.778" layer="96" align="top-center"/>
 <attribute name="FUNCTION" x="205.74" y="109.982" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="R9" gate="G$1" x="223.52" y="114.3" smashed="yes" rot="R180">
-<attribute name="NAME" x="224.79" y="117.8814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="224.79" y="112.522" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C2" gate="G$1" x="233.68" y="109.22" smashed="yes">
 <attribute name="NAME" x="234.696" y="109.855" size="1.778" layer="95"/>
@@ -15581,19 +15571,9 @@ MPU_INT - interrupt for new packet</text>
 <label x="119.38" y="35.56" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="SW1" gate="G$1" pin="2"/>
-<wire x1="213.36" y1="165.1" x2="218.44" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="SW1_INT" class="0">
 <segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="165.1" x2="233.68" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="165.1" x2="233.68" y2="162.56" width="0.1524" layer="91"/>
-<junction x="233.68" y="165.1"/>
 <wire x1="233.68" y1="165.1" x2="243.84" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <label x="248.92" y="165.1" size="1.778" layer="95" xref="yes"/>
@@ -15601,6 +15581,9 @@ MPU_INT - interrupt for new packet</text>
 <wire x1="243.84" y1="165.1" x2="248.92" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="162.56" x2="243.84" y2="165.1" width="0.1524" layer="91"/>
 <junction x="243.84" y="165.1"/>
+<pinref part="SW1" gate="G$1" pin="2"/>
+<wire x1="213.36" y1="165.1" x2="233.68" y2="165.1" width="0.1524" layer="91"/>
+<junction x="233.68" y="165.1"/>
 </segment>
 <segment>
 <pinref part="A1" gate="G$1" pin="D3"/>
@@ -15608,17 +15591,8 @@ MPU_INT - interrupt for new packet</text>
 <label x="137.16" y="38.1" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="SW2" gate="G$1" pin="2"/>
-<wire x1="210.82" y1="114.3" x2="218.44" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-</segment>
-</net>
 <net name="!SW2_INPUT" class="0">
 <segment>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="114.3" x2="233.68" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="114.3" x2="233.68" y2="111.76" width="0.1524" layer="91"/>
 <junction x="233.68" y="114.3"/>
 <wire x1="233.68" y1="116.84" x2="233.68" y2="114.3" width="0.1524" layer="91"/>
@@ -15626,6 +15600,8 @@ MPU_INT - interrupt for new packet</text>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <label x="248.92" y="114.3" size="1.778" layer="95" xref="yes"/>
+<pinref part="SW2" gate="G$1" pin="2"/>
+<wire x1="233.68" y1="114.3" x2="210.82" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="A1" gate="G$1" pin="D4"/>

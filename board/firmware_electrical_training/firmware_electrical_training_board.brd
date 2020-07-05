@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5865,12 +5865,6 @@ Your Eurocircuits Team
 <attribute name="FUNCTION" value="IN-1" x="7.24" y="9.875" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="5.26" y="13.485" size="1.778" layer="25" font="vector" ratio="10"/>
 </element>
-<element name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K" x="53.69" y="46.49" smashed="yes" rot="MR0">
-<attribute name="NAME" x="55.375" y="46.975" size="1" layer="26" font="vector" ratio="10" rot="MR180"/>
-<attribute name="POPULARITY" value="77" x="53.69" y="46.49" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="53.69" y="46.49" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="54.325" y="44.585" size="1.27" layer="28" rot="MR0"/>
-</element>
 <element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF" x="55.61" y="43.63" smashed="yes" rot="MR180">
 <attribute name="NAME" x="57.64" y="44.16" size="1" layer="26" font="vector" ratio="10" rot="MR180"/>
 <attribute name="POPULARITY" value="63" x="55.61" y="43.63" size="1.778" layer="28" rot="MR180" display="off"/>
@@ -5886,12 +5880,6 @@ Your Eurocircuits Team
 <element name="SW2" library="RoboJackets-Switches" package="PTS645" value="PTS645" x="23.2" y="9.875" smashed="yes" rot="R180">
 <attribute name="FUNCTION" value="!IN-2" x="23.2" y="9.875" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="25.58" y="15.365" size="1.778" layer="25" font="vector" ratio="10" rot="R180"/>
-</element>
-<element name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K" x="48.99" y="46.67" smashed="yes" rot="MR0">
-<attribute name="NAME" x="47.125" y="46.305" size="1" layer="26" font="vector" ratio="10" rot="MR0"/>
-<attribute name="POPULARITY" value="77" x="48.99" y="52.83" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="48.99" y="52.83" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="49.625" y="44.765" size="1.27" layer="28" rot="MR0"/>
 </element>
 <element name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF" x="48.89" y="43.89" smashed="yes" rot="MR0">
 <attribute name="NAME" x="45.44" y="44.14" size="1" layer="26" font="vector" ratio="10" rot="MR180"/>
@@ -6073,7 +6061,7 @@ Your Eurocircuits Team
 <wire x1="32.09" y1="47.23" x2="23.7" y2="38.84" width="0.2" layer="16"/>
 <wire x1="23.7" y1="38.84" x2="23.7" y2="26.64" width="0.2" layer="16"/>
 <wire x1="18.8" y1="24.03" x2="21.76" y2="24.03" width="0.2" layer="16"/>
-<wire x1="23.7" y1="25.97" x2="23.7" y2="26.64" width="0.1524" layer="16"/>
+<wire x1="23.7" y1="25.97" x2="23.7" y2="26.64" width="0.2" layer="16"/>
 <wire x1="21.76" y1="24.03" x2="23.7" y2="25.97" width="0.2" layer="16"/>
 </signal>
 <signal name="VIN">
@@ -6157,12 +6145,14 @@ Your Eurocircuits Team
 <wire x1="58.42" y1="50.8" x2="58.42" y2="47.42" width="0.2" layer="1"/>
 <wire x1="58.42" y1="47.42" x2="53" y2="42" width="0.2" layer="1"/>
 </signal>
-<signal name="N$7">
+<signal name="SW1_INT">
+<contactref element="C1" pad="1"/>
+<contactref element="A1" pad="D3"/>
+<contactref element="R8" pad="1"/>
+<wire x1="54.54" y1="43.75" x2="54.66" y2="43.63" width="0.2" layer="16"/>
+<wire x1="54.66" y1="43.63" x2="54.66" y2="40.85" width="0.2" layer="16"/>
 <contactref element="SW1" pad="3"/>
 <contactref element="SW1" pad="4"/>
-<contactref element="R6" pad="2"/>
-<wire x1="52.84" y1="46.49" x2="51.65" y2="45.3" width="0.2" layer="16"/>
-<wire x1="51.65" y1="45.3" x2="51.5" y2="45.3" width="0.2" layer="16"/>
 <via x="51.5" y="45.3" extent="1-16" drill="0.35"/>
 <wire x1="49.7" y1="43.5" x2="51.5" y2="45.3" width="0.2" layer="1"/>
 <wire x1="11.305" y1="7.665" x2="11.265" y2="7.625" width="0.2" layer="1"/>
@@ -6177,49 +6167,23 @@ Your Eurocircuits Team
 <via x="31.71" y="43.5" extent="1-16" drill="0.35"/>
 <wire x1="24.37" y1="38.4" x2="29.47" y2="43.5" width="0.2" layer="16"/>
 <wire x1="31.71" y1="43.5" x2="49.7" y2="43.5" width="0.2" layer="1"/>
-</signal>
-<signal name="SW1_INT">
-<contactref element="R6" pad="1"/>
-<contactref element="C1" pad="1"/>
-<contactref element="A1" pad="D3"/>
-<contactref element="R8" pad="1"/>
-<wire x1="55.88" y1="50.8" x2="54.54" y2="49.46" width="0.2" layer="16"/>
-<wire x1="54.54" y1="49.46" x2="54.54" y2="46.49" width="0.2" layer="16"/>
-<wire x1="54.54" y1="46.49" x2="54.54" y2="43.75" width="0.2" layer="16"/>
-<wire x1="54.54" y1="43.75" x2="54.66" y2="43.63" width="0.2" layer="16"/>
-<wire x1="54.66" y1="43.63" x2="54.66" y2="40.85" width="0.2" layer="16"/>
-</signal>
-<signal name="N$1">
-<contactref element="SW2" pad="3"/>
-<contactref element="SW2" pad="4"/>
-<contactref element="R9" pad="2"/>
-<wire x1="48.14" y1="46.67" x2="44.67" y2="46.67" width="0.2" layer="16"/>
-<wire x1="44.67" y1="46.67" x2="44" y2="46" width="0.2" layer="16"/>
-<via x="44" y="46" extent="1-16" drill="0.35"/>
-<wire x1="19.175" y1="12.125" x2="27.175" y2="12.125" width="0.2" layer="1"/>
-<wire x1="44" y1="46" x2="43.3" y2="45.3" width="0.2" layer="1"/>
-<wire x1="43.3" y1="45.3" x2="32.26" y2="45.3" width="0.2" layer="1"/>
-<wire x1="32.26" y1="45.3" x2="25.51" y2="38.55" width="0.2" layer="1"/>
-<wire x1="25.51" y1="38.55" x2="25.51" y2="37.76" width="0.2" layer="1"/>
-<wire x1="25.51" y1="37.76" x2="25.520903125" y2="37.770903125" width="0.2" layer="1"/>
-<wire x1="25.520903125" y1="37.770903125" x2="25.520903125" y2="37.830903125" width="0.2" layer="1"/>
-<via x="25.520903125" y="37.830903125" extent="1-16" drill="0.35"/>
-<wire x1="25.520903125" y1="37.830903125" x2="25.520903125" y2="16.479096875" width="0.2" layer="16"/>
-<wire x1="25.520903125" y1="16.479096875" x2="26.9" y2="15.1" width="0.2" layer="16"/>
-<via x="26.9" y="15.1" extent="1-16" drill="0.35"/>
-<wire x1="26.9" y1="15.1" x2="26.9" y2="12.4" width="0.2" layer="1"/>
-<wire x1="26.9" y1="12.4" x2="27.175" y2="12.125" width="0.2" layer="1"/>
+<wire x1="51.5" y1="46.42" x2="51.5" y2="45.3" width="0.2" layer="16"/>
+<wire x1="55.88" y1="50.8" x2="51.5" y2="46.42" width="0.2" layer="16"/>
+<wire x1="54.66" y1="43.63" x2="52.99" y2="45.3" width="0.2" layer="16"/>
+<wire x1="52.99" y1="45.3" x2="51.5" y2="45.3" width="0.2" layer="16"/>
 </signal>
 <signal name="!SW2_INPUT">
-<contactref element="R9" pad="1"/>
 <contactref element="C2" pad="1"/>
 <contactref element="R10" pad="1"/>
 <contactref element="A1" pad="D4"/>
 <wire x1="53.34" y1="50.8" x2="49.84" y2="47.3" width="0.2" layer="16"/>
-<wire x1="49.84" y1="47.3" x2="49.84" y2="46.67" width="0.2" layer="16"/>
 <wire x1="49.84" y1="43.89" x2="49.84" y2="40.84" width="0.2" layer="16"/>
 <wire x1="49.84" y1="40.84" x2="49.83" y2="40.83" width="0.2" layer="16"/>
-<wire x1="49.84" y1="46.67" x2="49.84" y2="43.89" width="0.2" layer="16"/>
+<contactref element="SW2" pad="3"/>
+<contactref element="SW2" pad="4"/>
+<wire x1="49.84" y1="47.3" x2="49.84" y2="43.89" width="0.2" layer="16"/>
+<wire x1="19.175" y1="12.125" x2="27.175" y2="12.125" width="0.2" layer="1"/>
+<wire x1="27.175" y1="12.125" x2="49.83" y2="40.83" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="!RESET">
 <contactref element="C4" pad="1"/>

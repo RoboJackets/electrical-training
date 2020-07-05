@@ -14627,6 +14627,84 @@ This footprint was designed to help hold the alignment of a through-hole compone
 <rectangle x1="-0.25" y1="0.85" x2="0.25" y2="1.5" layer="51"/>
 <rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
 </package>
+</packages>
+<symbols>
+<symbol name="TLE493DA2B6HTSA1">
+<description>&lt;h3&gt;TLE493DA2B6HTSA1&lt;/h3&gt;
+&lt;p&gt;Hall Effect Sensor X, Y, Z Axis. I2C&lt;/p&gt;</description>
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.1524" layer="94"/>
+<pin name="VDD" x="-15.24" y="2.54" length="middle" direction="pas"/>
+<pin name="GND" x="-15.24" y="-2.54" length="middle" direction="pas"/>
+<pin name="SCL/INT" x="15.24" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="SDA" x="15.24" y="2.54" length="middle" direction="pas" rot="R180"/>
+<text x="-10.16" y="6.096" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TLE493DA2B6HTSA1" prefix="U">
+<description>Hall Effect Sensor X, Y, Z Axis, 
+I2C, 3.3V</description>
+<gates>
+<gate name="G$1" symbol="TLE493DA2B6HTSA1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT-23-6">
+<connects>
+<connect gate="G$1" pin="GND" pad="2 3 5"/>
+<connect gate="G$1" pin="SCL/INT" pad="1"/>
+<connect gate="G$1" pin="SDA" pad="6"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DKPN" value="TLE493DA2B6HTSA1CT-ND"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="RoboJackets-Supplies">
+<packages>
+</packages>
+<symbols>
+<symbol name="+3.3V">
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
+<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
+<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+3.3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="+3.3V" prefix="SUPPLY">
+<description>+3.3V Supply Symbol</description>
+<gates>
+<gate name="P" symbol="+3.3V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="RoboJackets-Resistors">
+<description>&lt;img src="http://www.robojackets.org/wp-content/themes/RoboJackets-3.0/img/banner.png" width="600"&gt;
+&lt;hr&gt;
+&lt;h1&gt;RoboJackets EAGLE Libraries - Resistors&lt;/h1&gt;&lt;/br&gt;
+&lt;p&gt;
+In this library you will find resistors. If you are looking for a common package, use the default &lt;b&gt;rcl &lt;/b&gt;library provided with EAGLE instead of looking here.
+&lt;/p&gt;</description>
+<packages>
 <package name="RA-8_2506">
 <description>&lt;a href="http://www.ctscorp.com/components/Datasheets/CTSChipArrayDs.pdf"&gt;Chip Resistor Array&lt;/a&gt;</description>
 <wire x1="-3.15" y1="0.75" x2="-3.05" y2="0.75" width="0.1016" layer="51"/>
@@ -14852,20 +14930,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </package>
 </packages>
 <symbols>
-<symbol name="TLE493DA2B6HTSA1">
-<description>&lt;h3&gt;TLE493DA2B6HTSA1&lt;/h3&gt;
-&lt;p&gt;Hall Effect Sensor X, Y, Z Axis. I2C&lt;/p&gt;</description>
-<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="5.08" width="0.1524" layer="94"/>
-<pin name="VDD" x="-15.24" y="2.54" length="middle" direction="pas"/>
-<pin name="GND" x="-15.24" y="-2.54" length="middle" direction="pas"/>
-<pin name="SCL/INT" x="15.24" y="-2.54" length="middle" direction="pas" rot="R180"/>
-<pin name="SDA" x="15.24" y="2.54" length="middle" direction="pas" rot="R180"/>
-<text x="-10.16" y="6.096" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
 <symbol name="RA-8">
 <wire x1="-2.54" y1="2.54" x2="-2.159" y2="3.556" width="0.1524" layer="94"/>
 <wire x1="-2.159" y1="3.556" x2="-1.524" y2="1.524" width="0.1524" layer="94"/>
@@ -14960,28 +15024,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="TLE493DA2B6HTSA1" prefix="U">
-<description>Hall Effect Sensor X, Y, Z Axis, 
-I2C, 3.3V</description>
-<gates>
-<gate name="G$1" symbol="TLE493DA2B6HTSA1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT-23-6">
-<connects>
-<connect gate="G$1" pin="GND" pad="2 3 5"/>
-<connect gate="G$1" pin="SCL/INT" pad="1"/>
-<connect gate="G$1" pin="SDA" pad="6"/>
-<connect gate="G$1" pin="VDD" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DKPN" value="TLE493DA2B6HTSA1CT-ND"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="RA-8" prefix="RN" uservalue="yes">
 <description>Isolated Network Resistor Array x8</description>
 <gates>
@@ -15013,34 +15055,6 @@ I2C, 3.3V</description>
 <attribute name="POWER" value="" constant="no"/>
 <attribute name="TOLERANCE" value="" constant="no"/>
 </technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="RoboJackets-Supplies">
-<packages>
-</packages>
-<symbols>
-<symbol name="+3.3V">
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
-<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+3.3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="+3.3V" prefix="SUPPLY">
-<description>+3.3V Supply Symbol</description>
-<gates>
-<gate name="P" symbol="+3.3V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -15112,7 +15126,7 @@ I2C, 3.3V</description>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1.2K"/>
 <part name="SUPPLY20" library="RoboJackets-Supplies" deviceset="+3.3V" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="RN1" library="firmware_electrical_training_board" deviceset="RA-8" device="2506" value="330">
+<part name="RN1" library="RoboJackets-Resistors" deviceset="RA-8" device="2506" value="330">
 <attribute name="DKPN" value="742C163331JPCT-ND"/>
 <attribute name="POWER" value="62.5mW"/>
 <attribute name="TOLERANCE" value="5%"/>

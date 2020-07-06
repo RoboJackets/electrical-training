@@ -1,0 +1,1 @@
+This folder contains all the resources for the Week 3 lab for Electrical Training - Schematics

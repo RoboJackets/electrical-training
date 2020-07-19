@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14691,8 +14691,7 @@ Debouncing is so that the function will not
 be triggered more than once per press due 
 to noise.</text>
 <text x="185.42" y="248.92" size="1.27" layer="97" ratio="7">SCL and SDA - main I2C bus to MCU
-AD0 - sets I2C address. (Not Connected)
-MPU_INT - interrupt for new packet</text>
+AD0 - sets I2C address. (Not Connected)</text>
 <text x="81.28" y="152.4" size="1.27" layer="97" ratio="7">Connects to Pin D3 of Arduino</text>
 <text x="81.28" y="96.52" size="1.27" layer="97" ratio="7">Connects to Pin D4 of Arduino</text>
 <wire x1="298.45" y1="180.594" x2="298.45" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
@@ -14981,18 +14980,6 @@ MPU_INT - interrupt for new packet</text>
 <pinref part="RN1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="MPU_INT" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="8"/>
-<wire x1="152.4" y1="254" x2="167.64" y2="254" width="0.1524" layer="91"/>
-<label x="167.64" y="254" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="A1" gate="G$1" pin="D3"/>
-<wire x1="76.2" y1="223.52" x2="99.06" y2="223.52" width="0.1524" layer="91"/>
-<label x="99.06" y="223.52" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="SW1_INT" class="0">
 <segment>
 <wire x1="66.04" y1="147.32" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
@@ -15026,9 +15013,9 @@ MPU_INT - interrupt for new packet</text>
 <wire x1="66.04" y1="91.44" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="A1" gate="G$1" pin="D4"/>
-<wire x1="76.2" y1="226.06" x2="81.28" y2="226.06" width="0.1524" layer="91"/>
-<label x="81.28" y="226.06" size="1.778" layer="95" xref="yes"/>
+<label x="99.06" y="223.52" size="1.778" layer="95" xref="yes"/>
+<wire x1="76.2" y1="223.52" x2="99.06" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="A1" gate="G$1" pin="D3"/>
 </segment>
 </net>
 <net name="!RESET" class="0">

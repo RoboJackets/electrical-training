@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -162,9 +162,7 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="54" y2="0" width="0" layer="20"/>
-<wire x1="54" y1="45.4" x2="0" y2="45.4" width="0" layer="20"/>
-<wire x1="0" y1="45.4" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="2" y1="0" x2="51" y2="0" width="0" layer="20"/>
 <text x="30" y="24" size="1.5" layer="22" font="vector" ratio="15" rot="MR270">2020 Training Board
 V2.0</text>
 <polygon width="0.1524" layer="22">
@@ -174,12 +172,18 @@ V2.0</text>
 <vertex x="32" y="30"/>
 </polygon>
 <polygon width="0.1524" layer="21">
-<vertex x="6" y="3"/>
-<vertex x="5" y="2"/>
-<vertex x="5" y="4"/>
+<vertex x="8" y="3"/>
+<vertex x="7" y="2"/>
+<vertex x="7" y="4"/>
 </polygon>
-<text x="1" y="2" size="1.778" layer="21" font="vector" ratio="10">5V</text>
-<wire x1="54" y1="45.4" x2="54" y2="0" width="0" layer="20"/>
+<text x="4" y="2" size="1.778" layer="21" font="vector" ratio="10">5V</text>
+<wire x1="52" y1="45" x2="2" y2="45" width="0" layer="20"/>
+<wire x1="0" y1="43" x2="0" y2="2" width="0" layer="20"/>
+<wire x1="54" y1="43" x2="54" y2="3" width="0" layer="20"/>
+<wire x1="54" y1="3" x2="51" y2="0" width="0" layer="20" curve="-90"/>
+<wire x1="2" y1="45" x2="0" y2="43" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="2" x2="2" y2="0" width="0" layer="20" curve="90"/>
+<wire x1="52" y1="45" x2="54" y2="43" width="0" layer="20" curve="-90"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -5800,10 +5804,10 @@ Your Eurocircuits Team
 <elements>
 <element name="U$3" library="RoboJackets-Aesthetics" package="ROBOJACKETS" value="" x="17" y="2" smashed="yes" rot="R90"/>
 <element name="U$4" library="RoboJackets-Aesthetics" package="ROBOBUZZ_0.8X" value="" x="8" y="29" smashed="yes" rot="MR0"/>
-<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X08" package3d_urn="urn:adsk.eagle:package:38138/1" value="GY-521-MPU-6050" x="8.11" y="3.06" smashed="yes" rot="R90">
-<attribute name="NAME" x="8.513" y="0.19" size="1" layer="25" font="vector" ratio="10" rot="R90"/>
-<attribute name="PROD_ID" value="CONN-08438" x="8.11" y="3.06" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="10.142" y="1.79" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
+<element name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" package="1X08" package3d_urn="urn:adsk.eagle:package:38138/1" value="GY-521-MPU-6050" x="10.11" y="3.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="8.133" y="20.27" size="1" layer="25" font="vector" ratio="10" rot="R90"/>
+<attribute name="PROD_ID" value="CONN-08438" x="10.11" y="3.06" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="12.142" y="1.79" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
 <element name="D3" library="firmware_training_board" package="LED5MM" package3d_urn="urn:adsk.eagle:package:6240538/1" value="RED" x="49" y="25" smashed="yes">
 <attribute name="NAME" x="45" y="25" size="1.27" layer="25" font="vector" ratio="10" align="center-right"/>
@@ -5865,16 +5869,16 @@ Your Eurocircuits Team
 <attribute name="VALUE" x="37" y="32.73" size="1.27" layer="27" font="vector" ratio="10" rot="R270"/>
 </element>
 <element name="A1" library="firmware_training_board" package="NANO" value="NANO" x="28" y="22" smashed="yes">
-<attribute name="NAME" x="20" y="44" size="1" layer="25" font="vector" ratio="10"/>
+<attribute name="NAME" x="17" y="42" size="1" layer="25" font="vector" ratio="10"/>
 </element>
 </elements>
 <signals>
 <signal name="GND">
 <polygon width="0.2" layer="16" thermals="no">
 <vertex x="0" y="0"/>
-<vertex x="54.201765625" y="0"/>
-<vertex x="54.201765625" y="45.4"/>
-<vertex x="0" y="45.4"/>
+<vertex x="54" y="0"/>
+<vertex x="54" y="45"/>
+<vertex x="0" y="45"/>
 </polygon>
 <contactref element="J1" pad="2"/>
 <contactref element="D1" pad="K"/>
@@ -5889,12 +5893,8 @@ Your Eurocircuits Team
 <contactref element="R8" pad="2"/>
 <contactref element="A1" pad="GND"/>
 <contactref element="A1" pad="GND1"/>
-<wire x1="2.025" y1="24.75" x2="9.975" y2="24.75" width="0.2" layer="1"/>
-<wire x1="9.975" y1="24.75" x2="11" y2="23.725" width="0.2" layer="1"/>
-<wire x1="11" y1="23.725" x2="11" y2="23" width="0.2" layer="1"/>
-<wire x1="9.975" y1="24.75" x2="11" y2="23.725" width="0.2" layer="1"/>
-<wire x1="11" y1="23.725" x2="11" y2="23" width="0.2" layer="1"/>
-<via x="11" y="23" extent="1-16" drill="0.35"/>
+<wire x1="2.025" y1="24.75" x2="9.975" y2="24.75" width="0" layer="19" extent="1-1"/>
+<wire x1="14.95" y1="31" x2="9.975" y2="24.75" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="+5V">
 <contactref element="J1" pad="1"/>
@@ -5903,7 +5903,7 @@ Your Eurocircuits Team
 <contactref element="R10" pad="2"/>
 <contactref element="A1" pad="5V"/>
 <wire x1="2.025" y1="40.25" x2="9.975" y2="40.25" width="0.2" layer="1"/>
-<wire x1="8.11" y1="3.06" x2="11.06" y2="3.06" width="0.254" layer="1"/>
+<wire x1="10.11" y1="3.06" x2="11.06" y2="3.06" width="0.254" layer="1"/>
 <wire x1="19.3" y1="11.3" x2="20.38" y2="11.3" width="0.254" layer="1"/>
 <wire x1="11.06" y1="3.06" x2="19.3" y2="11.3" width="0.254" layer="1"/>
 <wire x1="23" y1="13.92" x2="20.38" y2="11.3" width="0.254" layer="1"/>
@@ -5941,14 +5941,14 @@ Your Eurocircuits Team
 <signal name="SCL">
 <contactref element="J1" pad="3"/>
 <contactref element="A1" pad="A5"/>
-<wire x1="8.11" y1="8.14" x2="18.89" y2="18.92" width="0.2" layer="1"/>
-<wire x1="18.89" y1="18.92" x2="20.38" y2="18.92" width="0.2" layer="1"/>
+<wire x1="20.38" y1="18.92" x2="20.38" y2="18.41" width="0.2" layer="1"/>
+<wire x1="20.38" y1="18.41" x2="10.11" y2="8.14" width="0.2" layer="1"/>
 </signal>
 <signal name="SDA">
 <contactref element="J1" pad="4"/>
 <contactref element="A1" pad="A4"/>
-<wire x1="8.11" y1="10.68" x2="18.89" y2="21.46" width="0.2" layer="1"/>
-<wire x1="18.89" y1="21.46" x2="20.38" y2="21.46" width="0.2" layer="1"/>
+<wire x1="20.38" y1="21.46" x2="20.38" y2="20.95" width="0.2" layer="1"/>
+<wire x1="20.38" y1="20.95" x2="10.11" y2="10.68" width="0.2" layer="1"/>
 </signal>
 <signal name="AD0">
 <contactref element="J1" pad="7"/>

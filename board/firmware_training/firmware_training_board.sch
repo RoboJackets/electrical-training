@@ -9167,34 +9167,6 @@ This footprint was designed to help hold the alignment of a through-hole compone
 </deviceset>
 </devicesets>
 </library>
-<library name="RoboJackets-Supplies">
-<packages>
-</packages>
-<symbols>
-<symbol name="+3.3V">
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="94"/>
-<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
-<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
-<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="+3.3V" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="+3.3V" prefix="SUPPLY">
-<description>+3.3V Supply Symbol</description>
-<gates>
-<gate name="P" symbol="+3.3V" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="RoboJackets-Resistors">
 <description>&lt;img src="http://www.robojackets.org/wp-content/themes/RoboJackets-3.0/img/banner.png" width="600"&gt;
 &lt;hr&gt;
@@ -14639,17 +14611,16 @@ Source: http://www.osram.convergy.de/</description>
 </part>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SW2" library="RoboJackets-Switches" deviceset="PTS645" device="">
 <attribute name="FUNCTION" value="!IN-2"/>
 </part>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF"/>
-<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY8" library="RoboJackets-Supplies" deviceset="+3.3V" device=""/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="RN1" library="RoboJackets-Resistors" deviceset="RA-8" device="2506" value="330">
 <attribute name="DKPN" value="742C163331JPCT-ND"/>
@@ -14681,9 +14652,11 @@ SW1 is also connected to an interrupt pin.</text>
 <text x="142.24" y="261.62" size="6.4516" layer="97" ratio="7">6-Axis Sensor</text>
 <text x="12.7" y="185.42" size="6.4516" layer="97" ratio="7">Buttons</text>
 <text x="228.6" y="261.62" size="6.4516" layer="97" ratio="7">LEDs</text>
-<text x="12.7" y="104.14" size="1.27" layer="97" ratio="7">SW2 is pulled low with a normally open momentary pushbutton. 
+<text x="12.7" y="101.6" size="1.27" layer="97" ratio="7">SW2 is pulled low with a normally open momentary pushbutton. 
 When you push on the button, the digital value will be a 0.
-When you do not push on the button, the digital value will be a 1.</text>
+When you do not push on the button, the digital value will be a 1.
+
+SW2 is also connected to an interrupt pin.</text>
 <text x="68.58" y="172.72" size="1.27" layer="97" ratio="7">A RC circuit is present for all buttons to 
 provide debouncing.
 
@@ -14692,8 +14665,8 @@ change more than once per press due
 to an imperfect connection in the switch.</text>
 <text x="185.42" y="248.92" size="1.27" layer="97" ratio="7">SCL and SDA - main I2C bus to MCU
 AD0 - sets I2C address. (Not Connected)</text>
-<text x="81.28" y="152.4" size="1.27" layer="97" ratio="7">Connects to Pin D3 of Arduino</text>
-<text x="81.28" y="96.52" size="1.27" layer="97" ratio="7">Connects to Pin D4 of Arduino</text>
+<text x="81.28" y="152.4" size="1.27" layer="97" ratio="7">Connects to Pin D2 of Arduino</text>
+<text x="81.28" y="96.52" size="1.27" layer="97" ratio="7">Connects to Pin D3 of Arduino</text>
 <wire x1="298.45" y1="180.594" x2="298.45" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="224.79" y1="180.594" x2="224.79" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="224.79" y1="271.78" x2="298.45" y2="271.78" width="0.1524" layer="97" style="shortdash"/>
@@ -14762,7 +14735,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <attribute name="NAME" x="67.056" y="142.875" size="1.778" layer="95"/>
 <attribute name="VALUE" x="67.056" y="138.049" size="1.778" layer="96"/>
 </instance>
-<instance part="R8" gate="G$1" x="76.2" y="139.7" smashed="yes" rot="R270">
+<instance part="R1" gate="G$1" x="76.2" y="139.7" smashed="yes" rot="R270">
 <attribute name="NAME" x="77.978" y="140.6906" size="1.778" layer="95"/>
 <attribute name="VALUE" x="77.978" y="137.922" size="1.778" layer="96"/>
 </instance>
@@ -14778,7 +14751,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <attribute name="NAME" x="67.056" y="86.995" size="1.778" layer="95"/>
 <attribute name="VALUE" x="67.056" y="82.169" size="1.778" layer="96"/>
 </instance>
-<instance part="R10" gate="G$1" x="66.04" y="99.06" smashed="yes" rot="R90">
+<instance part="R2" gate="G$1" x="66.04" y="99.06" smashed="yes" rot="R90">
 <attribute name="NAME" x="67.818" y="100.0506" size="1.778" layer="95"/>
 <attribute name="VALUE" x="67.818" y="97.536" size="1.778" layer="96"/>
 </instance>
@@ -14790,9 +14763,6 @@ AD0 - sets I2C address. (Not Connected)</text>
 </instance>
 <instance part="SUPPLY10" gate="GND" x="30.48" y="76.2" smashed="yes">
 <attribute name="VALUE" x="28.575" y="73.025" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY8" gate="P" x="25.4" y="248.92" smashed="yes">
-<attribute name="VALUE" x="23.495" y="252.095" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY6" gate="GND" x="76.2" y="129.54" smashed="yes">
 <attribute name="VALUE" x="74.295" y="126.365" size="1.778" layer="96"/>
@@ -14866,7 +14836,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <wire x1="30.48" y1="91.44" x2="30.48" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="76.2" y1="134.62" x2="76.2" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 </segment>
@@ -14900,7 +14870,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <pinref part="SUPPLY3" gate="+5V" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="R10" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="104.14" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="SUPPLY11" gate="+5V" pin="+5V"/>
 </segment>
@@ -14953,13 +14923,6 @@ AD0 - sets I2C address. (Not Connected)</text>
 <pinref part="A1" gate="G$1" pin="A4"/>
 </segment>
 </net>
-<net name="AD0" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="7"/>
-<wire x1="152.4" y1="251.46" x2="157.48" y2="251.46" width="0.1524" layer="91"/>
-<label x="157.48" y="251.46" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="D4_CTRL" class="0">
 <segment>
 <wire x1="264.16" y1="243.84" x2="261.62" y2="243.84" width="0.1524" layer="91"/>
@@ -14979,13 +14942,13 @@ AD0 - sets I2C address. (Not Connected)</text>
 <pinref part="RN1" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="SW1_INT" class="0">
+<net name="SW1_INPUT" class="0">
 <segment>
 <wire x1="66.04" y1="147.32" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="147.32" x2="76.2" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <label x="81.28" y="147.32" size="1.27" layer="95" xref="yes"/>
-<pinref part="R8" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="147.32" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="144.78" x2="76.2" y2="147.32" width="0.1524" layer="91"/>
 <junction x="76.2" y="147.32"/>
@@ -15006,7 +14969,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <wire x1="66.04" y1="93.98" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="91.44" x2="81.28" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="R2" gate="G$1" pin="1"/>
 <label x="81.28" y="91.44" size="1.27" layer="95" xref="yes"/>
 <pinref part="SW2" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="91.44" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
@@ -15022,14 +14985,6 @@ AD0 - sets I2C address. (Not Connected)</text>
 <wire x1="43.18" y1="215.9" x2="38.1" y2="215.9" width="0.1524" layer="91"/>
 <label x="38.1" y="215.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="RST"/>
-</segment>
-</net>
-<net name="+3.3V" class="0">
-<segment>
-<wire x1="43.18" y1="243.84" x2="25.4" y2="243.84" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="243.84" x2="25.4" y2="246.38" width="0.1524" layer="91"/>
-<pinref part="SUPPLY8" gate="P" pin="+3.3V"/>
-<pinref part="A1" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="D2_LED" class="0">

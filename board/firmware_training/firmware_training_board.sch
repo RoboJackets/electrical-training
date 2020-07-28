@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14669,7 +14669,7 @@ Source: http://www.osram.convergy.de/</description>
 <plain>
 <text x="12.7" y="261.62" size="6.4516" layer="97" ratio="7">Arduino Nano Microcontroller</text>
 <text x="231.14" y="187.96" size="1.27" layer="97" ratio="7">Five user controlled LEDs are provided in 
-common anode configuration. Sending a 
+common cathode configuration. Sending a 
 logic '1' to these pins will cause the LED to
 turn on. All pins PWM capable.</text>
 <wire x1="224.79" y1="180.594" x2="298.45" y2="180.594" width="0.1524" layer="97" style="shortdash"/>
@@ -14687,9 +14687,9 @@ When you do not push on the button, the digital value will be a 1.</text>
 <text x="68.58" y="172.72" size="1.27" layer="97" ratio="7">A RC circuit is present for all buttons to 
 provide debouncing.
 
-Debouncing is so that the function will not 
-be triggered more than once per press due 
-to noise.</text>
+Debouncing is so that the signal will not 
+change more than once per press due 
+to an imperfect connection in the switch.</text>
 <text x="185.42" y="248.92" size="1.27" layer="97" ratio="7">SCL and SDA - main I2C bus to MCU
 AD0 - sets I2C address. (Not Connected)</text>
 <text x="81.28" y="152.4" size="1.27" layer="97" ratio="7">Connects to Pin D3 of Arduino</text>
@@ -14724,11 +14724,11 @@ AD0 - sets I2C address. (Not Connected)</text>
 <attribute name="VALUE" x="142.24" y="231.394" size="1.778" layer="96"/>
 <attribute name="NAME" x="142.24" y="257.048" size="1.778" layer="95"/>
 </instance>
-<instance part="SUPPLY1" gate="+5V" x="160.02" y="236.22" smashed="yes" rot="R270">
-<attribute name="VALUE" x="163.195" y="238.125" size="1.778" layer="96" rot="R270"/>
+<instance part="SUPPLY1" gate="+5V" x="167.64" y="236.22" smashed="yes" rot="R270">
+<attribute name="VALUE" x="170.815" y="238.125" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="SUPPLY2" gate="GND" x="170.18" y="238.76" smashed="yes" rot="R90">
-<attribute name="VALUE" x="173.355" y="236.855" size="1.778" layer="96" rot="R90"/>
+<instance part="SUPPLY2" gate="GND" x="175.26" y="238.76" smashed="yes" rot="R90">
+<attribute name="VALUE" x="178.435" y="236.855" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="D3" gate="G$1" x="287.02" y="231.14" smashed="yes" rot="R90">
 <attribute name="NAME" x="291.592" y="234.696" size="1.778" layer="95" rot="R180"/>
@@ -14824,7 +14824,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="152.4" y1="238.76" x2="167.64" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="238.76" x2="172.72" y2="238.76" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 </segment>
 <segment>
@@ -14890,7 +14890,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="152.4" y1="236.22" x2="157.48" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="236.22" x2="165.1" y2="236.22" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="+5V" pin="+5V"/>
 </segment>
 <segment>
@@ -14909,23 +14909,23 @@ AD0 - sets I2C address. (Not Connected)</text>
 <segment>
 <pinref part="RN1" gate="G$1" pin="3"/>
 <wire x1="264.16" y1="248.92" x2="261.62" y2="248.92" width="0.1524" layer="91"/>
-<label x="261.62" y="248.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="261.62" y="248.92" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="76.2" y1="241.3" x2="99.06" y2="241.3" width="0.1524" layer="91"/>
-<label x="99.06" y="241.3" size="1.778" layer="95" xref="yes"/>
+<wire x1="76.2" y1="241.3" x2="81.28" y2="241.3" width="0.1524" layer="91"/>
+<label x="81.28" y="241.3" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="D10"/>
 </segment>
 </net>
 <net name="D5_CTRL" class="0">
 <segment>
-<wire x1="76.2" y1="228.6" x2="99.06" y2="228.6" width="0.1524" layer="91"/>
-<label x="99.06" y="228.6" size="1.778" layer="95" xref="yes"/>
+<wire x1="76.2" y1="228.6" x2="81.28" y2="228.6" width="0.1524" layer="91"/>
+<label x="81.28" y="228.6" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="D5"/>
 </segment>
 <segment>
-<wire x1="264.16" y1="241.3" x2="246.38" y2="241.3" width="0.1524" layer="91"/>
-<label x="246.38" y="241.3" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="264.16" y1="241.3" x2="261.62" y2="241.3" width="0.1524" layer="91"/>
+<label x="261.62" y="241.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="RN1" gate="G$1" pin="9"/>
 </segment>
 </net>
@@ -14933,24 +14933,23 @@ AD0 - sets I2C address. (Not Connected)</text>
 <segment>
 <pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="152.4" y1="241.3" x2="157.48" y2="241.3" width="0.1524" layer="91"/>
-<label x="157.48" y="241.3" size="1.778" layer="95" xref="yes"/>
+<label x="157.48" y="241.3" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="43.18" y1="226.06" x2="38.1" y2="226.06" width="0.1524" layer="91"/>
-<label x="38.1" y="226.06" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="38.1" y="226.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="A5"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="152.4" y1="243.84" x2="167.64" y2="243.84" width="0.1524" layer="91"/>
-<label x="167.64" y="243.84" size="1.778" layer="95" xref="yes"/>
+<wire x1="152.4" y1="243.84" x2="157.48" y2="243.84" width="0.1524" layer="91"/>
+<label x="157.48" y="243.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="43.18" y1="228.6" x2="38.1" y2="228.6" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="228.6" x2="38.1" y2="231.14" width="0.1524" layer="91"/>
-<label x="38.1" y="231.14" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="38.1" y="228.6" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="A4"/>
 </segment>
 </net>
@@ -14958,18 +14957,18 @@ AD0 - sets I2C address. (Not Connected)</text>
 <segment>
 <pinref part="J1" gate="G$1" pin="7"/>
 <wire x1="152.4" y1="251.46" x2="157.48" y2="251.46" width="0.1524" layer="91"/>
-<label x="157.48" y="251.46" size="1.778" layer="95" xref="yes"/>
+<label x="157.48" y="251.46" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="D4_CTRL" class="0">
 <segment>
 <wire x1="264.16" y1="243.84" x2="261.62" y2="243.84" width="0.1524" layer="91"/>
-<label x="261.62" y="243.84" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="261.62" y="243.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="RN1" gate="G$1" pin="7"/>
 </segment>
 <segment>
 <wire x1="76.2" y1="231.14" x2="81.28" y2="231.14" width="0.1524" layer="91"/>
-<label x="81.28" y="231.14" size="1.778" layer="95" xref="yes"/>
+<label x="81.28" y="231.14" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="D6"/>
 </segment>
 </net>
@@ -14985,7 +14984,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 <wire x1="66.04" y1="147.32" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="147.32" x2="76.2" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<label x="81.28" y="147.32" size="1.778" layer="95" xref="yes"/>
+<label x="81.28" y="147.32" size="1.27" layer="95" xref="yes"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="76.2" y1="147.32" x2="81.28" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="144.78" x2="76.2" y2="147.32" width="0.1524" layer="91"/>
@@ -14996,7 +14995,7 @@ AD0 - sets I2C address. (Not Connected)</text>
 </segment>
 <segment>
 <wire x1="76.2" y1="220.98" x2="81.28" y2="220.98" width="0.1524" layer="91"/>
-<label x="81.28" y="220.98" size="1.778" layer="95" xref="yes"/>
+<label x="81.28" y="220.98" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="D2"/>
 </segment>
 </net>
@@ -15008,20 +15007,20 @@ AD0 - sets I2C address. (Not Connected)</text>
 <wire x1="66.04" y1="91.44" x2="81.28" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="R10" gate="G$1" pin="1"/>
-<label x="81.28" y="91.44" size="1.778" layer="95" xref="yes"/>
+<label x="81.28" y="91.44" size="1.27" layer="95" xref="yes"/>
 <pinref part="SW2" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="91.44" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="99.06" y="223.52" size="1.778" layer="95" xref="yes"/>
-<wire x1="76.2" y1="223.52" x2="99.06" y2="223.52" width="0.1524" layer="91"/>
+<label x="81.28" y="223.52" size="1.27" layer="95" xref="yes"/>
+<wire x1="76.2" y1="223.52" x2="81.28" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="A1" gate="G$1" pin="D3"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
 <segment>
-<wire x1="43.18" y1="215.9" x2="35.56" y2="215.9" width="0.1524" layer="91"/>
-<label x="35.56" y="215.9" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="43.18" y1="215.9" x2="38.1" y2="215.9" width="0.1524" layer="91"/>
+<label x="38.1" y="215.9" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="RST"/>
 </segment>
 </net>
@@ -15071,24 +15070,24 @@ AD0 - sets I2C address. (Not Connected)</text>
 <net name="D1_CTRL" class="0">
 <segment>
 <wire x1="76.2" y1="243.84" x2="81.28" y2="243.84" width="0.1524" layer="91"/>
-<label x="81.28" y="243.84" size="1.778" layer="95" xref="yes"/>
+<label x="81.28" y="243.84" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="D11"/>
 </segment>
 <segment>
-<wire x1="264.16" y1="251.46" x2="246.38" y2="251.46" width="0.1524" layer="91"/>
-<label x="246.38" y="251.46" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="264.16" y1="251.46" x2="261.62" y2="251.46" width="0.1524" layer="91"/>
+<label x="261.62" y="251.46" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="RN1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="D3_CTRL" class="0">
 <segment>
 <wire x1="76.2" y1="238.76" x2="81.28" y2="238.76" width="0.1524" layer="91"/>
-<label x="81.28" y="238.76" size="1.778" layer="95" xref="yes"/>
+<label x="81.28" y="238.76" size="1.27" layer="95" xref="yes"/>
 <pinref part="A1" gate="G$1" pin="D9"/>
 </segment>
 <segment>
-<wire x1="264.16" y1="246.38" x2="246.38" y2="246.38" width="0.1524" layer="91"/>
-<label x="246.38" y="246.38" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="264.16" y1="246.38" x2="261.62" y2="246.38" width="0.1524" layer="91"/>
+<label x="261.62" y="246.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="RN1" gate="G$1" pin="5"/>
 </segment>
 </net>

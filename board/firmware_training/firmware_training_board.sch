@@ -14980,13 +14980,6 @@ AD0 - sets I2C address. (Not Connected)</text>
 <pinref part="A1" gate="G$1" pin="D3"/>
 </segment>
 </net>
-<net name="!RESET" class="0">
-<segment>
-<wire x1="43.18" y1="215.9" x2="38.1" y2="215.9" width="0.1524" layer="91"/>
-<label x="38.1" y="215.9" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="RST"/>
-</segment>
-</net>
 <net name="D2_LED" class="0">
 <segment>
 <pinref part="RN1" gate="G$1" pin="4"/>

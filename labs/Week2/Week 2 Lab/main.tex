@@ -42,7 +42,7 @@ In today's lab we will be focusing on making a part in EAGLE and adding it to a 
 \section{Objective}
 \subsection{Install EAGLE and other Software}
 \begin{itemize}
-    \item If you have not already installed EAGLE, please install it from \href{https://www.autodesk.com/education/free-software/eagle}{here}. Make sure to install the education version to get all of the features of EAGLE.
+    \item If you have not already installed EAGLE, please install it from \href{https://www.autodesk.com/education/free-software/eagle}{here}. Make sure to install the education version to get all of the features of EAGLE. With this link, create an education account for Autodesk (in Week 1 you already did this step for setting up TinkerCAD). Then navigate to your profile and look at "All Products and Services". There, you should see a download for EAGLE Premium available.
     \item If using Mac/Windows follow instructions to install Github Desktop from \href{https://docs.github.com/en/desktop/getting-started-with-github-desktop/installing-github-desktop}{here}. If you are familiar with Git in terminal you can use this instead and that can be installed \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{here}. If you are using Linux you will need to use Git in terminal. 
     \item Clone the repository eagle-libraries \href{https://github.com/RoboJackets/eagle-libraries}{here} and configure your EAGLE setup using the instructions in the README. Also clone the electrical-training repository \href{https://github.com/RoboJackets/electrical-training/tree/master}{here}
     \item Note: If you are having trouble with any of these steps please let an instructor know
@@ -89,8 +89,8 @@ To make the footprint, we will look for the package information. Generally this 
 \end{itemize}
 \subsubsection{Creating and Defining Pins}
 \begin{itemize}
-    \item Check grid to make sure the dimensions are correct (0.1 inch Size, 0.01 Alt) by clicking the grid icon in the top left
-    \item Based on the pin configuration there are 4 different types of pins - the SCL/INT, SDA, VDD, and GND pins. The chip has multiple GND pins, but for the symbol these can be grouped together
+    \item Check grid to make sure the dimensions are correct (0.1 inch Size, 0.01 Alt) by clicking the grid icon in the top left.
+    \item Based on the pin configuration there are 4 different types of pins - the SCL/INT, SDA, VDD, and GND pins. The chip has multiple GND pins, but for the symbol these can be grouped together.
     \item Add 4 pins with those names to your grid using the "Add Pin" button on the left menu. Set the direction of the pins to passive (check the properties of the pin). This is done versus being more specific to avoid unnecessary design rule check (DRC) errors.
 \end{itemize}
 \subsubsection{Draw Outline}
@@ -114,19 +114,20 @@ To make the footprint, we will look for the package information. Generally this 
 \subsection{Creating Footprint}
 \subsubsection{Adding to Library}
 \begin{itemize}
+    \item To get back to the main library menu, go to Library $\rightarrow$ Table of Contents
     \item Click "Add Footprint" and type in the package name which can be found on page 17 of the datasheet (TSOP6).
 \end{itemize}
-\subsubsection{Creating Pads}
+\subsubsection{Creating SMD Pads}
 \begin{itemize}
     \item For making the footprint, keep the cross in the middle of the footprint so calculations for placement are easier
     \item Check grid to make sure dimensions are correct (1 mm Size, 0.1 mm Alt)
-    \item Begin by adding a pad on the \texttt{1 Top} layer. Specify the dimensions of the pad and it's location by accessing its properties. The numbers for the dimensions and location can be figured out from the diagram on page 17 of the datasheet which is also included earlier in this lab document. The pad tool is on the left menu.
-    \item Continue this process for the remaining pads. As you add pads, you will notice that they are automatically numbered. It is useful to match this numbering to what is in the pin configuration as it makes making the device easier
+    \item Begin by adding a "SMD" on the \texttt{1 Top} layer. Specify the dimensions of the SMD and it's location by accessing its properties. The numbers for the dimensions and location can be figured out from the diagram on page 17 of the datasheet which is also included earlier in this lab document. The position refers to the x and y coordinates on your grid. The SMD size can be adjusted using either the dropdown or by typing in your own values. The SMD tool is on the left menu.
+    \item Continue this process for the remaining SMDs. As you add SMDs, you will notice that they are automatically numbered. It is useful to match this numbering to what is in the pin configuration as it makes making the device easier
 \end{itemize}
 \subsubsection{Adding Silkscreen}
 \begin{itemize}
-    \item Switch your layer to \texttt{21 tPlace} and add a box around the part, on the inside of the pins using the line tool. Make sure your line does not cover the pads. You can easily adjust this by using the move tool while pressing the \texttt{Alt} key which allows you to use the smaller 0.1 mm grid we set earlier. 
-    \item When soldering, it is nice to know the directional of the chip. Thus, it is a common practice to add a dot near pin 1. You can do this by using the polygon tool to draw a small circle, adjusting is size as appropriate, and placing it near pad 1. The polygon tool is located in the left menu. 
+    \item Switch your layer to \texttt{21 tPlace} and add a box around the part, on the inside of the pins using the line tool. Make sure your line does not cover the SMD pads. You can easily adjust this by using the move tool while pressing the \texttt{Alt} key which allows you to use the smaller 0.1 mm grid we set earlier. 
+    \item When soldering, it is nice to know the directional of the chip. Thus, it is a common practice to add a dot near pin 1. You can do this by using the polygon tool to draw a small circle, adjusting is size as appropriate, and placing it near SMD pad 1. The polygon tool is located in the left menu. 
 \end{itemize}
 \subsubsection{Adding Keep Out Boundary}
 \begin{itemize}

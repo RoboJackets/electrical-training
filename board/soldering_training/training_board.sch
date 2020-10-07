@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14016,7 +14016,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="EG1218" device="S" package3d_urn="urn:adsk.eagle:package:6240649/1"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="128K"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120K"/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
@@ -14064,7 +14064,7 @@ the motor driver chip to turn on.  When the
 switch is off, the pulldown resistor discharges
 the transistor's gate and shuts the chip down.</text>
 <text x="238.76" y="142.24" size="1.27" layer="97" ratio="7">Based on the formula on pg 9 of the 
-datasheet, this limits current to 0.5A
+datasheet, this limits current to 0.53A
 before enabling the internal current limit</text>
 <wire x1="149.86" y1="127.254" x2="149.86" y2="211.328" width="0.1524" layer="97"/>
 </plain>

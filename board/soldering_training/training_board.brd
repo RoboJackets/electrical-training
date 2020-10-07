@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.1">
+<eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -5647,7 +5647,7 @@ design rules under a new name.</description>
 <element name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="EG1218" package3d_urn="urn:adsk.eagle:package:6240649/1" value="" x="17.48" y="26.45" smashed="yes" rot="R270">
 <attribute name="NAME" x="14.48" y="26.45" size="1.27" layer="25" font="vector" rot="R270" align="top-center"/>
 </element>
-<element name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="128K" x="27.5" y="16.35" smashed="yes">
+<element name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120K" x="27.5" y="16.35" smashed="yes">
 <attribute name="NAME" x="27.5" y="15.35" size="1.27" layer="27" font="vector" align="top-center"/>
 <attribute name="POPULARITY" value="77" x="27.5" y="16.35" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="27.5" y="16.35" size="1.778" layer="27" display="off"/>

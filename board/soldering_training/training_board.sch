@@ -13973,7 +13973,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 </class>
 </classes>
 <parts>
-<part name="Q1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT" package3d_urn="urn:adsk.eagle:package:6240888/1"/>
+<part name="Q2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT" package3d_urn="urn:adsk.eagle:package:6240888/1"/>
 <part name="U1" library="RoboJackets-ICs" deviceset="DRV8871" device="HSOP-8"/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="PJ-037A" device="" value="MAIN_PWR"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
@@ -13988,13 +13988,13 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="F1" library="RoboJackets-Fuses" deviceset="CHIP_FUSE" device="1812" value="350 mA"/>
 <part name="OUT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="ORANGE"/>
-<part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="ORANGE"/>
-<part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="GREEN"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
+<part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="ORANGE"/>
+<part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="GREEN"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
-<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="1K"/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.4K"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.4K"/>
 <part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY17" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
@@ -14005,18 +14005,18 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <attribute name="TEAM" value="Electrical Training"/>
 </part>
 <part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="GREEN"/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.4K"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.4K"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF 16V"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uF 16V"/>
-<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF 6V"/>
-<part name="Q2" library="RoboJackets-Discrete" deviceset="NMOS" device="SOT-23-3" value="DMN2056U"/>
-<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
+<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF 16V"/>
+<part name="Q1" library="RoboJackets-Discrete" deviceset="NMOS" device="SOT-23-3" value="DMN2056U"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="EG1218" device="S" package3d_urn="urn:adsk.eagle:package:6240649/1" value="EG1903-ND"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120K"/>
+<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120K"/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 </parts>
@@ -14069,7 +14069,7 @@ before enabling the internal current limit</text>
 <wire x1="149.86" y1="127.254" x2="149.86" y2="211.328" width="0.1524" layer="97"/>
 </plain>
 <instances>
-<instance part="Q1" gate="G$1" x="83.82" y="50.8" smashed="yes" rot="R270"/>
+<instance part="Q2" gate="G$1" x="83.82" y="50.8" smashed="yes" rot="R270"/>
 <instance part="U1" gate="G$1" x="208.28" y="157.48" smashed="yes">
 <attribute name="NAME" x="198.12" y="167.64" size="1.778" layer="95"/>
 <attribute name="VALUE" x="198.12" y="144.78" size="1.778" layer="96"/>
@@ -14110,30 +14110,30 @@ before enabling the internal current limit</text>
 <attribute name="NAME" x="154.432" y="67.056" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="154.432" y="69.215" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="LED2" gate="G$1" x="149.86" y="53.34" smashed="yes" rot="R90">
+<instance part="LED3" gate="G$1" x="149.86" y="53.34" smashed="yes" rot="R90">
 <attribute name="NAME" x="154.432" y="56.896" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="154.432" y="59.055" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="LED3" gate="G$1" x="134.62" y="167.64" smashed="yes">
+<instance part="LED2" gate="G$1" x="134.62" y="167.64" smashed="yes">
 <attribute name="NAME" x="138.176" y="163.068" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="140.335" y="163.068" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="139.7" y="53.34" smashed="yes" rot="R180">
+<instance part="R3" gate="G$1" x="139.7" y="53.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="143.51" y="51.8414" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="143.51" y="56.642" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R3" gate="G$1" x="139.7" y="63.5" smashed="yes" rot="R180">
+<instance part="R1" gate="G$1" x="139.7" y="63.5" smashed="yes" rot="R180">
 <attribute name="NAME" x="143.51" y="62.0014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="143.51" y="66.802" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R4" gate="G$1" x="43.18" y="71.12" smashed="yes" rot="R90">
+<instance part="R6" gate="G$1" x="43.18" y="71.12" smashed="yes" rot="R90">
 <attribute name="NAME" x="41.6814" y="67.31" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="46.482" y="67.31" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="SUPPLY14" gate="+5V" x="43.18" y="81.28" smashed="yes">
 <attribute name="VALUE" x="41.275" y="84.455" size="1.778" layer="96"/>
 </instance>
-<instance part="R5" gate="G$1" x="134.62" y="177.8" smashed="yes" rot="R90">
+<instance part="R2" gate="G$1" x="134.62" y="177.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="133.1214" y="173.99" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="137.922" y="173.99" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -14159,7 +14159,7 @@ before enabling the internal current limit</text>
 <attribute name="NAME" x="212.852" y="178.816" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="212.852" y="180.975" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="195.58" y="175.26" smashed="yes" rot="R180">
+<instance part="R7" gate="G$1" x="195.58" y="175.26" smashed="yes" rot="R180">
 <attribute name="NAME" x="199.39" y="173.7614" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="199.39" y="178.562" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -14181,11 +14181,11 @@ before enabling the internal current limit</text>
 <attribute name="NAME" x="39.116" y="59.055" size="1.778" layer="95"/>
 <attribute name="VALUE" x="31.496" y="54.229" size="1.778" layer="96"/>
 </instance>
-<instance part="Q2" gate="G$1" x="226.06" y="119.38" smashed="yes">
+<instance part="Q1" gate="G$1" x="226.06" y="119.38" smashed="yes">
 <attribute name="VALUE" x="228.6" y="119.38" size="1.778" layer="95"/>
 <attribute name="NAME" x="228.6" y="121.92" size="1.778" layer="95"/>
 </instance>
-<instance part="R6" gate="G$1" x="218.44" y="109.22" smashed="yes" rot="R270">
+<instance part="R4" gate="G$1" x="218.44" y="109.22" smashed="yes" rot="R270">
 <attribute name="NAME" x="219.9386" y="113.03" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="215.138" y="113.03" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -14198,7 +14198,7 @@ before enabling the internal current limit</text>
 <instance part="SUPPLY5" gate="+5V" x="50.8" y="81.28" smashed="yes">
 <attribute name="VALUE" x="48.895" y="84.455" size="1.778" layer="96"/>
 </instance>
-<instance part="R7" gate="G$1" x="236.22" y="147.32" smashed="yes" rot="R270">
+<instance part="R5" gate="G$1" x="236.22" y="147.32" smashed="yes" rot="R270">
 <attribute name="NAME" x="237.7186" y="151.13" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="232.918" y="151.13" size="1.778" layer="96" rot="R270"/>
 </instance>
@@ -14230,13 +14230,13 @@ before enabling the internal current limit</text>
 <junction x="93.98" y="165.1"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="GND1"/>
+<pinref part="Q2" gate="G$1" pin="GND1"/>
 <wire x1="35.56" y1="50.8" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="48.26" x2="53.34" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY9" gate="GND" pin="GND"/>
 <wire x1="35.56" y1="48.26" x2="35.56" y2="45.72" width="0.1524" layer="91"/>
 <junction x="35.56" y="48.26"/>
-<pinref part="Q1" gate="G$1" pin="GND2"/>
+<pinref part="Q2" gate="G$1" pin="GND2"/>
 <wire x1="53.34" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="43.18" y1="50.8" x2="35.56" y2="50.8" width="0.1524" layer="91"/>
@@ -14250,7 +14250,7 @@ before enabling the internal current limit</text>
 <pinref part="SUPPLY8" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 <wire x1="134.62" y1="162.56" x2="134.62" y2="160.02" width="0.1524" layer="91"/>
 </segment>
@@ -14263,25 +14263,25 @@ before enabling the internal current limit</text>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="154.94" y1="63.5" x2="160.02" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="63.5" x2="160.02" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="LED3" gate="G$1" pin="C"/>
 <wire x1="160.02" y1="53.34" x2="160.02" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="53.34" x2="160.02" y2="53.34" width="0.1524" layer="91"/>
 <junction x="160.02" y="53.34"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="Q2" gate="G$1" pin="S"/>
+<pinref part="Q1" gate="G$1" pin="S"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="226.06" y1="114.3" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="101.6" x2="226.06" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="104.14" x2="218.44" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="101.6" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
 <junction x="226.06" y="101.6"/>
 </segment>
 <segment>
 <pinref part="SUPPLY12" gate="GND" pin="GND"/>
-<pinref part="R7" gate="G$1" pin="2"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="236.22" y1="139.7" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -14315,11 +14315,11 @@ before enabling the internal current limit</text>
 </segment>
 <segment>
 <pinref part="SUPPLY17" gate="+12V" pin="+12V"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="185.42" x2="134.62" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="VIN"/>
+<pinref part="Q2" gate="G$1" pin="VIN"/>
 <wire x1="53.34" y1="45.72" x2="50.8" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="45.72" x2="50.8" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
@@ -14335,12 +14335,12 @@ before enabling the internal current limit</text>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="SUPPLY14" gate="+5V" pin="+5V"/>
 <wire x1="43.18" y1="78.74" x2="43.18" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="5V"/>
+<pinref part="Q2" gate="G$1" pin="5V"/>
 <wire x1="53.34" y1="53.34" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="53.34" x2="50.8" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="SUPPLY5" gate="+5V" pin="+5V"/>
@@ -14348,9 +14348,9 @@ before enabling the internal current limit</text>
 </net>
 <net name="M1_FWD" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="D10"/>
-<wire x1="114.3" y1="58.42" x2="116.84" y2="58.42" width="0.1524" layer="91"/>
-<label x="116.84" y="58.42" size="1.27" layer="95" xref="yes"/>
+<pinref part="Q2" gate="G$1" pin="D10"/>
+<wire x1="114.3" y1="58.42" x2="119.38" y2="58.42" width="0.1524" layer="91"/>
+<label x="119.38" y="58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="IN2"/>
@@ -14360,9 +14360,9 @@ before enabling the internal current limit</text>
 </net>
 <net name="M1_REV" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="D11"/>
-<wire x1="114.3" y1="60.96" x2="116.84" y2="60.96" width="0.1524" layer="91"/>
-<label x="116.84" y="60.96" size="1.27" layer="95" xref="yes"/>
+<pinref part="Q2" gate="G$1" pin="D11"/>
+<wire x1="114.3" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
+<label x="119.38" y="60.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="IN1"/>
@@ -14373,44 +14373,44 @@ before enabling the internal current limit</text>
 <net name="N$14" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="63.5" x2="144.78" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
 <wire x1="144.78" y1="53.34" x2="147.32" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="LED3" gate="G$1" pin="A"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="134.62" y1="172.72" x2="134.62" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="LED4" gate="G$1" pin="A"/>
 <wire x1="200.66" y1="175.26" x2="205.74" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="63.5" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="D9"/>
+<pinref part="Q2" gate="G$1" pin="D9"/>
 <wire x1="114.3" y1="55.88" x2="132.08" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="55.88" x2="132.08" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="Q1" gate="G$1" pin="D8"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="Q2" gate="G$1" pin="D8"/>
 <wire x1="114.3" y1="53.34" x2="134.62" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -14418,14 +14418,14 @@ before enabling the internal current limit</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="PGND"/>
 <wire x1="223.52" y1="149.86" x2="226.06" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
+<pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="226.06" y1="149.86" x2="226.06" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="Q2" gate="G$1" pin="G"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="Q1" gate="G$1" pin="G"/>
 <wire x1="218.44" y1="114.3" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="116.84" x2="220.98" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="S"/>
@@ -14435,13 +14435,13 @@ before enabling the internal current limit</text>
 </net>
 <net name="RESET" class="0">
 <segment>
-<pinref part="Q1" gate="G$1" pin="/RESET"/>
+<pinref part="Q2" gate="G$1" pin="/RESET"/>
 <wire x1="48.26" y1="58.42" x2="53.34" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="58.42" x2="48.26" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="SW1" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="58.42" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="58.42" x2="33.02" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="66.04" x2="43.18" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="63.5" x2="43.18" y2="60.96" width="0.1524" layer="91"/>
@@ -14456,7 +14456,7 @@ before enabling the internal current limit</text>
 <wire x1="180.34" y1="167.64" x2="180.34" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VM"/>
 <wire x1="180.34" y1="165.1" x2="187.96" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="187.96" y1="165.1" x2="193.04" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="175.26" x2="187.96" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="175.26" x2="187.96" y2="165.1" width="0.1524" layer="91"/>
@@ -14467,7 +14467,7 @@ before enabling the internal current limit</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="ILIM"/>
 <wire x1="223.52" y1="154.94" x2="236.22" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="236.22" y1="154.94" x2="236.22" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -172,12 +172,13 @@
 <wire x1="64.5" y1="53.4" x2="0" y2="53.4" width="0" layer="20"/>
 <wire x1="0" y1="53.4" x2="0" y2="0" width="0" layer="20"/>
 <text x="37" y="22" size="1.5" layer="21" font="vector">2020 Soldering Training Board
-v1.6</text>
+</text>
 <text x="4.61" y="6.61" size="1" layer="27" font="vector" align="bottom-center">FUSE OK</text>
 <text x="6.06" y="42.85" size="1" layer="27" font="vector" rot="R180" align="top-center">POWER</text>
 <text x="17.48" y="19.45" size="1" layer="51" font="vector" align="bottom-center">ON</text>
 <text x="17.48" y="33.45" size="1" layer="51" font="vector" align="top-center">OFF</text>
 <text x="36.5" y="15.65" size="1" layer="25" font="vector" align="bottom-center">Reset</text>
+<text x="37" y="22" size="1.5" layer="21" font="vector">&gt;VERSION</text>
 </plain>
 <libraries>
 <library name="adafruit" urn="urn:adsk.eagle:library:420">
@@ -5353,6 +5354,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 </library>
 </libraries>
 <attributes>
+<attribute name="VERSION" value="v1.5"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -5698,12 +5700,12 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 <vertex x="21.04" y="10.23"/>
 <vertex x="21.04" y="16"/>
 </polygon>
-<via x="20.85" y="8.93" extent="1-16" drill="0.35"/>
-<via x="22.1" y="8.93" extent="1-16" drill="0.35"/>
-<via x="23.35" y="8.93" extent="1-16" drill="0.35"/>
-<via x="23.35" y="7.63" extent="1-16" drill="0.35"/>
-<via x="22.1" y="7.63" extent="1-16" drill="0.35"/>
-<via x="20.85" y="7.63" extent="1-16" drill="0.35"/>
+<via x="20.85" y="8.93" extent="1-16" drill="0.4"/>
+<via x="22.1" y="8.93" extent="1-16" drill="0.4"/>
+<via x="23.35" y="8.93" extent="1-16" drill="0.4"/>
+<via x="23.35" y="7.63" extent="1-16" drill="0.4"/>
+<via x="22.1" y="7.63" extent="1-16" drill="0.4"/>
+<via x="20.85" y="7.63" extent="1-16" drill="0.4"/>
 <wire x1="24.6434" y1="10.825" x2="23.105" y2="10.825" width="0.5" layer="1"/>
 <wire x1="40.475" y1="14.4" x2="43.18" y2="11.695" width="0.5" layer="1"/>
 <wire x1="43.18" y1="11.695" x2="43.18" y2="2.54" width="0.5" layer="1"/>
@@ -5880,7 +5882,7 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 </signal>
 </signals>
 <mfgpreviewcolors>
-<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC80055FF"/>
 <mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
 <mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>

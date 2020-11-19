@@ -3,10 +3,10 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -5550,7 +5550,7 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 <attribute name="VALUE" x="17.725" y="14.635" size="1.27" layer="27" font="vector" rot="R270" display="off"/>
 </element>
 <element name="J1" library="RoboJackets-Connectors" package="PJ-037A" value="MAIN_PWR" x="3.43" y="26.25" smashed="yes"/>
-<element name="SW2" library="RoboJackets-Switches" package="PTS645" value="PTS645" x="36.5" y="12.15" smashed="yes">
+<element name="SW1" library="RoboJackets-Switches" package="PTS645" value="PTS645" x="36.5" y="12.15" smashed="yes">
 <attribute name="FUNCTION" value="RESET" x="36.5" y="12.15" size="1.778" layer="27" font="vector" display="off"/>
 </element>
 <element name="F1" library="RoboJackets-Fuses" package="F1812" value="350 mA" x="25" y="27" smashed="yes" rot="R270">
@@ -5652,8 +5652,8 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 <contactref element="Q1" pad="GND"/>
 <contactref element="J1" pad="P$1"/>
 <contactref element="Q1" pad="GND1"/>
-<contactref element="SW2" pad="2"/>
-<contactref element="SW2" pad="1"/>
+<contactref element="SW1" pad="2"/>
+<contactref element="SW1" pad="1"/>
 <contactref element="LED3" pad="C"/>
 <contactref element="LED4" pad="C"/>
 <wire x1="32.525" y1="14.4" x2="40.475" y2="14.4" width="0.5" layer="1"/>
@@ -5846,8 +5846,8 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 </signal>
 <signal name="RESET">
 <contactref element="Q1" pad="RESET"/>
-<contactref element="SW2" pad="3"/>
-<contactref element="SW2" pad="4"/>
+<contactref element="SW1" pad="3"/>
+<contactref element="SW1" pad="4"/>
 <contactref element="R4" pad="1"/>
 <contactref element="C3" pad="1"/>
 <wire x1="37.34" y1="9.9" x2="32.525" y2="9.9" width="0.5" layer="1"/>

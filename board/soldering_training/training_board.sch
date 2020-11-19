@@ -14000,7 +14000,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device="">
 <attribute name="AUTHOR" value="Varun Madabushi"/>
-<attribute name="REVISION" value="1.3"/>
+<attribute name="REVISION" value="1.5"/>
 <attribute name="SCH_DESC" value="Arduino Motor Control Shield"/>
 <attribute name="TEAM" value="Electrical Training"/>
 </part>
@@ -14013,7 +14013,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF 6V"/>
 <part name="Q2" library="RoboJackets-Discrete" deviceset="NMOS" device="SOT-23-3" value="DMN2056U"/>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
-<part name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="EG1218" device="S" package3d_urn="urn:adsk.eagle:package:6240649/1"/>
+<part name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="EG1218" device="S" package3d_urn="urn:adsk.eagle:package:6240649/1" value="EG1903-ND"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120K"/>
@@ -14023,7 +14023,7 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <sheets>
 <sheet>
 <plain>
-<text x="58.42" y="86.36" size="1.27" layer="97" font="vector" ratio="7">From Adafruit Library</text>
+<text x="58.42" y="86.36" size="1.27" layer="97" ratio="7">From Adafruit Library</text>
 <wire x1="173.99" y1="43.18" x2="173.99" y2="127.254" width="0.1524" layer="97"/>
 <wire x1="-6.096" y1="127.254" x2="173.99" y2="127.254" width="0.1524" layer="97"/>
 <text x="15.24" y="203.2" size="3.81" layer="97" ratio="7">Barrel Jack and 12V Power Indicator</text>
@@ -14049,11 +14049,11 @@ Bridge is applied across OUT1 and OUT2.</text>
 <text x="160.02" y="185.42" size="1.27" layer="97" ratio="7">350mA fuse specced for Sparkfun Gearmotors
 with .35A no-load current and 1.3A stall current
 No intended mechanism for this motor so should be fine.</text>
-<text x="27.94" y="154.94" size="1.27" layer="97" font="vector" ratio="7">The top part of this symbol represents the pin inside the 
+<text x="27.94" y="154.94" size="1.27" layer="97" ratio="7">The top part of this symbol represents the pin inside the 
 barrel jack (usually positive), while the
 bottom represents the spring-loaded tab
 that contacts the outside (usually negative).  </text>
-<text x="88.9" y="182.88" size="1.27" layer="97" font="vector" ratio="7">Decoupling capacitors help ensure a
+<text x="88.9" y="182.88" size="1.27" layer="97" ratio="7">Decoupling capacitors help ensure a
 relatively constant output voltage even in
 the event of current spikes</text>
 <text x="231.14" y="104.14" size="1.27" layer="97" ratio="7">Switch controls the gate of an N-MOSFET in a
@@ -14075,28 +14075,28 @@ before enabling the internal current limit</text>
 <attribute name="VALUE" x="198.12" y="144.78" size="1.778" layer="96"/>
 </instance>
 <instance part="J1" gate="G$1" x="68.58" y="170.18" smashed="yes">
-<attribute name="NAME" x="58.42" y="177.8" size="1.778" layer="96" font="vector"/>
-<attribute name="VALUE" x="58.42" y="165.1" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="58.42" y="177.8" size="1.778" layer="96"/>
+<attribute name="VALUE" x="58.42" y="165.1" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY6" gate="+12V" x="81.28" y="180.34" smashed="yes">
 <attribute name="VALUE" x="78.74" y="183.515" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY7" gate="GND" x="81.28" y="162.56" smashed="yes">
-<attribute name="VALUE" x="79.375" y="159.385" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="79.375" y="159.385" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY9" gate="GND" x="35.56" y="43.18" smashed="yes">
 <attribute name="VALUE" x="33.655" y="40.005" size="1.778" layer="96"/>
 </instance>
 <instance part="SW2" gate="G$1" x="22.86" y="58.42" smashed="yes">
-<attribute name="NAME" x="20.32" y="62.23" size="1.778" layer="96" font="vector"/>
-<attribute name="VALUE" x="22.86" y="57.15" size="1.778" layer="96" font="vector" align="top-center"/>
-<attribute name="FUNCTION" x="22.86" y="54.102" size="1.778" layer="96" font="vector" align="top-center"/>
+<attribute name="NAME" x="20.32" y="62.23" size="1.778" layer="96"/>
+<attribute name="VALUE" x="22.86" y="57.15" size="1.778" layer="96" align="top-center"/>
+<attribute name="FUNCTION" x="22.86" y="54.102" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="SUPPLY8" gate="GND" x="15.24" y="53.34" smashed="yes">
 <attribute name="VALUE" x="13.335" y="50.165" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY10" gate="GND" x="226.06" y="96.52" smashed="yes">
-<attribute name="VALUE" x="224.155" y="93.345" size="1.778" layer="96"/>
+<instance part="SUPPLY10" gate="GND" x="226.06" y="93.98" smashed="yes">
+<attribute name="VALUE" x="224.155" y="90.805" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY11" gate="+12V" x="180.34" y="177.8" smashed="yes">
 <attribute name="VALUE" x="177.8" y="180.975" size="1.778" layer="96"/>
@@ -14148,9 +14148,9 @@ before enabling the internal current limit</text>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="173.99" y="0" smashed="yes">
-<attribute name="LAST_DATE_TIME" x="186.69" y="1.27" size="2.54" layer="94" font="vector"/>
-<attribute name="SHEET" x="260.35" y="1.27" size="2.54" layer="94" font="vector"/>
-<attribute name="DRAWING_NAME" x="186.69" y="19.05" size="2.54" layer="94" font="vector"/>
+<attribute name="LAST_DATE_TIME" x="186.69" y="1.27" size="2.54" layer="94"/>
+<attribute name="SHEET" x="260.35" y="1.27" size="2.54" layer="94"/>
+<attribute name="DRAWING_NAME" x="186.69" y="19.05" size="2.54" layer="94"/>
 <attribute name="SCH_DESC" x="175.26" y="6.35" size="2.54" layer="94"/>
 <attribute name="TEAM" x="175.26" y="31.75" size="3.048" layer="94" ratio="10" align="top-left"/>
 <attribute name="REVISION" x="246.38" y="6.35" size="2.54" layer="94"/>
@@ -14171,19 +14171,19 @@ before enabling the internal current limit</text>
 </instance>
 <instance part="C1" gate="G$1" x="93.98" y="172.72" smashed="yes">
 <attribute name="NAME" x="94.996" y="173.355" size="1.778" layer="95"/>
-<attribute name="VALUE" x="94.996" y="168.529" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="94.996" y="168.529" size="1.778" layer="96"/>
 </instance>
 <instance part="C2" gate="G$1" x="109.22" y="172.72" smashed="yes">
 <attribute name="NAME" x="110.236" y="173.355" size="1.778" layer="95"/>
-<attribute name="VALUE" x="110.236" y="168.529" size="1.778" layer="96" font="vector"/>
+<attribute name="VALUE" x="110.236" y="168.529" size="1.778" layer="96"/>
 </instance>
 <instance part="C3" gate="G$1" x="43.18" y="58.42" smashed="yes">
 <attribute name="NAME" x="39.116" y="59.055" size="1.778" layer="95"/>
 <attribute name="VALUE" x="31.496" y="54.229" size="1.778" layer="96"/>
 </instance>
 <instance part="Q2" gate="G$1" x="226.06" y="119.38" smashed="yes">
-<attribute name="VALUE" x="228.6" y="119.38" size="1.778" layer="95" font="vector"/>
-<attribute name="NAME" x="228.6" y="121.92" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="228.6" y="119.38" size="1.778" layer="95"/>
+<attribute name="NAME" x="228.6" y="121.92" size="1.778" layer="95"/>
 </instance>
 <instance part="R6" gate="G$1" x="218.44" y="109.22" smashed="yes" rot="R270">
 <attribute name="NAME" x="219.9386" y="113.03" size="1.778" layer="95" rot="R270"/>
@@ -14191,7 +14191,6 @@ before enabling the internal current limit</text>
 </instance>
 <instance part="S1" gate="1" x="208.28" y="121.92" smashed="yes" rot="R270">
 <attribute name="NAME" x="206.375" y="115.57" size="1.778" layer="95"/>
-<attribute name="VALUE" x="211.455" y="125.73" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY3" gate="+12V" x="200.66" y="124.46" smashed="yes">
 <attribute name="VALUE" x="198.12" y="127.635" size="1.778" layer="96"/>
@@ -14275,7 +14274,6 @@ before enabling the internal current limit</text>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="226.06" y1="114.3" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="101.6" x2="226.06" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="96.52" x2="226.06" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="104.14" x2="218.44" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="101.6" x2="226.06" y2="101.6" width="0.1524" layer="91"/>
@@ -14498,11 +14496,6 @@ before enabling the internal current limit</text>
 <approved hash="104,1,53.34,50.8,Q1,GND2,GND,,,"/>
 <approved hash="104,1,53.34,53.34,Q1,5V,+5V,,,"/>
 <approved hash="204,1,53.34,55.88,Q1,3V,,,,"/>
-<approved hash="104,1,182.88,165.1,U1,V_DD,+12V,,,"/>
-<approved hash="104,1,213.36,165.1,U1,V_M,N$1,,,"/>
-<approved hash="104,1,213.36,149.86,U1,GND,N$3,,,"/>
-<approved hash="111,1,215.9,110.49,GND,,,,,"/>
-<approved hash="113,1,198.12,133.109,S1,,,,,"/>
 </errors>
 </schematic>
 </drawing>

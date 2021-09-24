@@ -1,1 +1,0 @@
-This folder contains all the resources for the Week 4 lab for Electrical Training - Board Layout

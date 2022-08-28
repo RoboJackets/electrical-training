@@ -480,32 +480,6 @@
 In this library you will find the larger circuit elements that are used to control many areas of a system. This usually includes microcontrollers, but ICs usually cover a wide range of chips.
 &lt;/p&gt;</description>
 <packages>
-<package name="HSOP-8">
-<description>8-SOIC, 1.27 mm pitch, 6.00 mm span, 4.90 X 3.90 X 1.70 mm body, 3.10 X 2.40 mm thermal pad
-&lt;p&gt;8-pin SOIC package with 1.27 mm pitch, 6.00 mm span with body size 4.90 X 3.90 X 1.70 mm and thermal pad size 3.10 X 2.40 mm&lt;/p&gt;</description>
-<circle x="-2.7288" y="2.7086" radius="0.25" width="0" layer="21"/>
-<wire x1="-2" y1="2.4586" x2="-2" y2="2.5" width="0.12" layer="21"/>
-<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.12" layer="21"/>
-<wire x1="2" y1="2.5" x2="2" y2="2.4586" width="0.12" layer="21"/>
-<wire x1="-2" y1="-2.4586" x2="-2" y2="-2.5" width="0.12" layer="21"/>
-<wire x1="-2" y1="-2.5" x2="2" y2="-2.5" width="0.12" layer="21"/>
-<wire x1="2" y1="-2.5" x2="2" y2="-2.4586" width="0.12" layer="21"/>
-<wire x1="2" y1="-2.5" x2="-2" y2="-2.5" width="0.12" layer="51"/>
-<wire x1="-2" y1="-2.5" x2="-2" y2="2.5" width="0.12" layer="51"/>
-<wire x1="-2" y1="2.5" x2="2" y2="2.5" width="0.12" layer="51"/>
-<wire x1="2" y1="2.5" x2="2" y2="-2.5" width="0.12" layer="51"/>
-<smd name="1" x="-2.4734" y="1.905" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="2" x="-2.4734" y="0.635" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="3" x="-2.4734" y="-0.635" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="4" x="-2.4734" y="-1.905" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="5" x="2.4734" y="-1.905" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="6" x="2.4734" y="-0.635" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="7" x="2.4734" y="0.635" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="8" x="2.4734" y="1.905" dx="1.9685" dy="0.5991" layer="1"/>
-<smd name="9" x="0" y="0" dx="2.4" dy="3.1" layer="1" thermals="no"/>
-<text x="0" y="3" size="1" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-3" size="1" layer="27" align="top-center">&gt;VALUE</text>
-</package>
 <package name="PWP0016J_N">
 <smd name="1" x="-2.95" y="2.275" dx="0.45" dy="1.4" layer="1" rot="R90"/>
 <smd name="2" x="-2.95" y="1.624996875" dx="0.45" dy="1.4" layer="1" rot="R90"/>
@@ -1256,22 +1230,6 @@ In this library you will find the larger circuit elements that are used to contr
 </package>
 </packages>
 <symbols>
-<symbol name="DRV8871">
-<pin name="VM" x="-15.24" y="7.62" length="middle" direction="pwr"/>
-<pin name="GND" x="-15.24" y="-7.62" length="middle" direction="pwr"/>
-<pin name="IN1" x="-15.24" y="2.54" length="middle" direction="in"/>
-<pin name="IN2" x="-15.24" y="-2.54" length="middle" direction="in"/>
-<pin name="ILIM" x="15.24" y="-2.54" length="middle" direction="pas" rot="R180"/>
-<pin name="PGND" x="15.24" y="-7.62" length="middle" direction="pwr" rot="R180"/>
-<pin name="OUT2" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
-<pin name="OUT1" x="15.24" y="7.62" length="middle" direction="out" rot="R180"/>
-<wire x1="-10.16" y1="10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
-<text x="-10.16" y="12.7" size="1.778" layer="95" align="top-left">&gt;NAME</text>
-<text x="-10.16" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
 <symbol name="DRV8876PWP">
 <pin name="EN_IN1" x="-20.32" y="10.16" length="middle" direction="in"/>
 <pin name="PH_IN2" x="-20.32" y="5.08" length="middle" direction="in"/>
@@ -1300,31 +1258,6 @@ In this library you will find the larger circuit elements that are used to contr
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DRV8871" prefix="U">
-<description>3.6-A Brushed DC Motor Driver With Internal Current Sense and PWM Control</description>
-<gates>
-<gate name="G$1" symbol="DRV8871" x="0" y="0"/>
-</gates>
-<devices>
-<device name="HSOP-8" package="HSOP-8">
-<connects>
-<connect gate="G$1" pin="GND" pad="1 9"/>
-<connect gate="G$1" pin="ILIM" pad="4"/>
-<connect gate="G$1" pin="IN1" pad="3"/>
-<connect gate="G$1" pin="IN2" pad="2"/>
-<connect gate="G$1" pin="OUT1" pad="6"/>
-<connect gate="G$1" pin="OUT2" pad="8"/>
-<connect gate="G$1" pin="PGND" pad="7"/>
-<connect gate="G$1" pin="VM" pad="5"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DKPN" value="296-43024-1-ND"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="DRV8876PWPR" prefix="U">
 <gates>
 <gate name="A" symbol="DRV8876PWP" x="0" y="0"/>
@@ -14694,110 +14627,6 @@ In this library you will find frames that can be used to help organize a schemat
 </deviceset>
 </devicesets>
 </library>
-<library name="RoboJackets-Discrete">
-<description>&lt;img src="http://www.robojackets.org/wp-content/themes/RoboJackets-3.0/img/banner.png" width="600"&gt;
-&lt;hr&gt;
-&lt;h1&gt;RoboJackets EAGLE Libraries - Discrete&lt;/h1&gt;&lt;/br&gt;
-&lt;p&gt;
-In this library you will find MOSFETs and other circuit elements commonly used for switching signals between HIGH and LOW.
-&lt;/p&gt;</description>
-<packages>
-<package name="SOT-23-3">
-<smd name="3" x="0" y="1.2" dx="1" dy="0.7" layer="1" rot="R90"/>
-<smd name="1" x="-0.95" y="-1.2" dx="1" dy="0.7" layer="1" rot="R90"/>
-<smd name="2" x="0.95" y="-1.2" dx="1" dy="0.7" layer="1" rot="R90"/>
-<wire x1="1.45" y1="0.8" x2="1.45" y2="-0.8" width="0.2" layer="21"/>
-<wire x1="-1.45" y1="-0.8" x2="-1.45" y2="0.8" width="0.2" layer="21"/>
-<wire x1="-1.45" y1="0.8" x2="-0.55" y2="0.8" width="0.2" layer="21"/>
-<wire x1="0.45" y1="-0.8" x2="-0.45" y2="-0.8" width="0.2" layer="21"/>
-<wire x1="0.55" y1="0.8" x2="1.45" y2="0.8" width="0.2" layer="21"/>
-<text x="-2" y="-1" size="1" layer="25" rot="R90">&gt;NAME</text>
-</package>
-<package name="SOT223">
-<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
-<wire x1="3.2766" y1="1.778" x2="3.2766" y2="-1.778" width="0.2032" layer="21"/>
-<wire x1="3.2766" y1="-1.778" x2="-3.2766" y2="-1.778" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="-1.778" x2="-3.2766" y2="1.778" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="1.778" x2="3.2766" y2="1.778" width="0.2032" layer="21"/>
-<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
-<text x="-3.5508" y="-2.04" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="N_MOSFET">
-<wire x1="-0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
-<wire x1="-1.524" y1="-2.159" x2="0" y2="-2.159" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-2.159" width="0.1524" layer="94"/>
-<wire x1="1.397" y1="-0.254" x2="1.397" y2="-3.048" width="0.1524" layer="94"/>
-<wire x1="1.397" y1="-3.048" x2="0" y2="-3.048" width="0.1524" layer="94"/>
-<wire x1="-1.524" y1="2.159" x2="0" y2="2.159" width="0.1524" layer="94"/>
-<wire x1="0" y1="2.159" x2="0" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="3.048" x2="1.397" y2="3.048" width="0.1524" layer="94"/>
-<wire x1="1.397" y1="3.048" x2="1.397" y2="0.762" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.159" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<text x="2.54" y="0" size="1.778" layer="96">&gt;VALUE</text>
-<text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<rectangle x1="-2.032" y1="1.397" x2="-1.524" y2="2.921" layer="94"/>
-<rectangle x1="-2.032" y1="-0.762" x2="-1.524" y2="0.762" layer="94"/>
-<rectangle x1="-2.032" y1="-2.921" x2="-1.524" y2="-1.397" layer="94"/>
-<rectangle x1="0.762" y1="0.762" x2="2.032" y2="0.889" layer="94"/>
-<pin name="D" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="S" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="G" x="-5.08" y="-2.54" visible="off" length="short" direction="pas"/>
-<polygon width="0.1016" layer="94">
-<vertex x="-1.524" y="0"/>
-<vertex x="-0.508" y="0.635"/>
-<vertex x="-0.508" y="-0.635"/>
-</polygon>
-<polygon width="0.1016" layer="94">
-<vertex x="1.397" y="0.762"/>
-<vertex x="2.032" y="-0.254"/>
-<vertex x="0.762" y="-0.254"/>
-</polygon>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="NMOS" prefix="Q" uservalue="yes">
-<gates>
-<gate name="G$1" symbol="N_MOSFET" x="0" y="0"/>
-</gates>
-<devices>
-<device name="SOT-23-3" package="SOT-23-3">
-<connects>
-<connect gate="G$1" pin="D" pad="3"/>
-<connect gate="G$1" pin="G" pad="1"/>
-<connect gate="G$1" pin="S" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="SOT223" package="SOT223">
-<connects>
-<connect gate="G$1" pin="D" pad="2 4"/>
-<connect gate="G$1" pin="G" pad="1"/>
-<connect gate="G$1" pin="S" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="Capacitor" urn="urn:adsk.eagle:library:16290819">
 <description>&lt;B&gt;Capacitors - Fixed, Variable, Trimmers</description>
 <packages>
@@ -15556,7 +15385,6 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 </classes>
 <parts>
 <part name="Q2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ARDUINOR3-NOIOREF" device="-NOTEXT" package3d_urn="urn:adsk.eagle:package:6240888/1"/>
-<part name="U1" library="RoboJackets-ICs" deviceset="DRV8871" device="HSOP-8"/>
 <part name="J1" library="RoboJackets-Connectors" deviceset="PJ-037A" device="" value="MAIN_PWR"/>
 <part name="SUPPLY6" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY7" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -15565,7 +15393,6 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <attribute name="FUNCTION" value="RESET"/>
 </part>
 <part name="SUPPLY8" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="OUT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X2" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240635/1"/>
 <part name="LED1" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="ORANGE"/>
 <part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="ORANGE"/>
@@ -15588,14 +15415,8 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF 16V"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uF 16V"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="0.1uF 16V"/>
-<part name="Q1" library="RoboJackets-Discrete" deviceset="NMOS" device="SOT-23-3" value="DMN2056U"/>
-<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10K"/>
 <part name="S1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="EG1218" device="S" package3d_urn="urn:adsk.eagle:package:6240649/1" value="EG1903-ND"/>
-<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="SUPPLY5" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
-<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="120K"/>
-<part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="U2" library="RoboJackets-ICs" deviceset="DRV8876PWPR" device="PWP0016J_NV"/>
 <part name="C4" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C-US" device="CHIP-0603(1608-METRIC)" package3d_urn="urn:adsk.eagle:package:16290898/2" technology="_" value="0.1 uF"/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
@@ -15609,6 +15430,11 @@ In this library you will find MOSFETs and other circuit elements commonly used f
 <part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:15819/3" value="GREEN"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="2.4K"/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY18" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/3" value="10k"/>
+<part name="SUPPLY10" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15631,11 +15457,14 @@ levels in the circuit.</text>
 common anode configuration. Sending a 
 logic '1' to these pins will cause the LED to
 turn on.</text>
-<text x="223.52" y="162.56" size="1.27" layer="97" ratio="7">Motor Driver chips are powered directly
+<text x="223.52" y="160.02" size="1.27" layer="97" ratio="7">Motor Driver chips are powered directly
 from the 12V supply.  Speed can be controlled by
 applying a PWM signal to the M1_FWD or
 M1_REV pins.  The output of the internal H
-Bridge is applied across OUT1 and OUT2.</text>
+Bridge is applied across OUT1 and OUT2.
+PMode is configured in this way, but
+can be configured for other settings.
+Refer to datasheet to see other options.</text>
 <text x="175.26" y="172.72" size="1.27" layer="97" ratio="7">350mA fuse specced for Sparkfun Gearmotors
 with .35A no-load current and 1.3A stall current
 No intended mechanism for this motor so should be fine.</text>
@@ -15646,22 +15475,12 @@ that contacts the outside (usually negative).  </text>
 <text x="88.9" y="182.88" size="1.27" layer="97" ratio="7">Decoupling capacitors help ensure a
 relatively constant output voltage even in
 the event of current spikes</text>
-<text x="233.68" y="76.2" size="1.27" layer="97" ratio="7">Switch controls the gate of an N-MOSFET in a
-low-side switch configuration.  When the
-switch is On and the gate is connected to 12V,
-the transistor conducts electricity and allows
-the motor driver chip to turn on.  When the
-switch is off, the pulldown resistor discharges
-the transistor's gate and shuts the chip down.</text>
-<text x="464.82" y="137.16" size="1.27" layer="97" ratio="7">Based on the formula on pg 9 of the 
-datasheet, this limits current to 0.53A
-before enabling the internal current limit</text>
 <wire x1="149.86" y1="127.254" x2="149.86" y2="211.328" width="0.1524" layer="97"/>
 <text x="154.94" y="182.88" size="1.27" layer="97" ratio="7">Datasheet recommends a low ESR, 
 VM rated bypass capacitor between
 VM and GND. It also recommends a 
 16V capacitor between VCP and VM</text>
-<text x="215.9" y="109.22" size="1.778" layer="97">Cap needs to be rated for
+<text x="215.9" y="109.22" size="1.27" layer="97">Cap needs to be rated for
 VM acc. to datasheet</text>
 <text x="162.56" y="66.04" size="1.27" layer="97">From datasheet:
 "The internal current regulation can be disabled 
@@ -15670,13 +15489,11 @@ pin voltage greater than GND."
 
 Current regulation isn't necessary here, 
 so we can go ahead and disable it.</text>
+<text x="248.92" y="121.92" size="1.27" layer="97">Device is disabled until nSleep
+input is pulled high</text>
 </plain>
 <instances>
 <instance part="Q2" gate="G$1" x="76.2" y="50.8" smashed="yes" rot="R270"/>
-<instance part="U1" gate="G$1" x="431.8" y="152.4" smashed="yes">
-<attribute name="NAME" x="421.64" y="162.56" size="1.778" layer="95"/>
-<attribute name="VALUE" x="421.64" y="139.7" size="1.778" layer="96"/>
-</instance>
 <instance part="J1" gate="G$1" x="68.58" y="170.18" smashed="yes">
 <attribute name="NAME" x="58.42" y="177.8" size="1.778" layer="96"/>
 <attribute name="VALUE" x="58.42" y="165.1" size="1.778" layer="96"/>
@@ -15697,9 +15514,6 @@ so we can go ahead and disable it.</text>
 </instance>
 <instance part="SUPPLY8" gate="GND" x="7.62" y="53.34" smashed="yes">
 <attribute name="VALUE" x="5.715" y="50.165" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY10" gate="GND" x="261.62" y="93.98" smashed="yes">
-<attribute name="VALUE" x="259.715" y="90.805" size="1.778" layer="96"/>
 </instance>
 <instance part="OUT" gate="G$1" x="241.3" y="152.4" smashed="yes" rot="MR180"/>
 <instance part="LED1" gate="G$1" x="142.24" y="63.5" smashed="yes" rot="R90">
@@ -15766,32 +15580,11 @@ so we can go ahead and disable it.</text>
 <attribute name="NAME" x="31.496" y="59.055" size="1.778" layer="95"/>
 <attribute name="VALUE" x="23.876" y="54.229" size="1.778" layer="96"/>
 </instance>
-<instance part="Q1" gate="G$1" x="261.62" y="119.38" smashed="yes">
-<attribute name="VALUE" x="264.16" y="119.38" size="1.778" layer="95"/>
-<attribute name="NAME" x="264.16" y="121.92" size="1.778" layer="95"/>
-</instance>
-<instance part="R4" gate="G$1" x="254" y="109.22" smashed="yes" rot="R270">
-<attribute name="NAME" x="255.4986" y="113.03" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="250.698" y="113.03" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="S1" gate="1" x="243.84" y="121.92" smashed="yes" rot="R270">
-<attribute name="NAME" x="241.935" y="115.57" size="1.778" layer="95"/>
-</instance>
-<instance part="SUPPLY3" gate="+12V" x="236.22" y="124.46" smashed="yes">
-<attribute name="VALUE" x="233.68" y="127.635" size="1.778" layer="96"/>
+<instance part="S1" gate="1" x="259.08" y="114.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="257.175" y="107.95" size="1.778" layer="95"/>
 </instance>
 <instance part="SUPPLY5" gate="+5V" x="43.18" y="81.28" smashed="yes">
 <attribute name="VALUE" x="41.275" y="84.455" size="1.778" layer="96"/>
-</instance>
-<instance part="R5" gate="G$1" x="459.74" y="142.24" smashed="yes" rot="R270">
-<attribute name="NAME" x="461.2386" y="146.05" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="456.438" y="146.05" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="SUPPLY12" gate="GND" x="459.74" y="132.08" smashed="yes">
-<attribute name="VALUE" x="457.835" y="128.905" size="1.778" layer="96"/>
-</instance>
-<instance part="SUPPLY13" gate="GND" x="414.02" y="139.7" smashed="yes">
-<attribute name="VALUE" x="412.115" y="136.525" size="1.778" layer="96"/>
 </instance>
 <instance part="U2" gate="A" x="198.12" y="124.46" smashed="yes">
 <attribute name="NAME" x="185.7756" y="158.9786" size="2.0828" layer="95" ratio="6" rot="SR0"/>
@@ -15838,6 +15631,22 @@ so we can go ahead and disable it.</text>
 </instance>
 <instance part="SUPPLY2" gate="GND" x="205.74" y="165.1" smashed="yes" rot="R90">
 <attribute name="VALUE" x="208.915" y="163.195" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY18" gate="GND" x="220.98" y="91.44" smashed="yes">
+<attribute name="VALUE" x="219.075" y="88.265" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY22" gate="GND" x="223.52" y="142.24" smashed="yes">
+<attribute name="VALUE" x="221.615" y="139.065" size="1.778" layer="96"/>
+</instance>
+<instance part="R8" gate="G$1" x="243.84" y="121.92" smashed="yes" rot="R90">
+<attribute name="NAME" x="242.3414" y="118.11" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="247.142" y="118.11" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY10" gate="GND" x="264.16" y="104.14" smashed="yes">
+<attribute name="VALUE" x="262.255" y="100.965" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY3" gate="+5V" x="243.84" y="132.08" smashed="yes">
+<attribute name="VALUE" x="241.935" y="135.255" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -15896,27 +15705,6 @@ so we can go ahead and disable it.</text>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="Q1" gate="G$1" pin="S"/>
-<pinref part="SUPPLY10" gate="GND" pin="GND"/>
-<wire x1="261.62" y1="114.3" x2="261.62" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="101.6" x2="261.62" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="254" y1="104.14" x2="254" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="254" y1="101.6" x2="261.62" y2="101.6" width="0.1524" layer="91"/>
-<junction x="261.62" y="101.6"/>
-</segment>
-<segment>
-<pinref part="SUPPLY12" gate="GND" pin="GND"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="459.74" y1="134.62" x2="459.74" y2="137.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="SUPPLY13" gate="GND" pin="GND"/>
-<wire x1="414.02" y1="142.24" x2="414.02" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="414.02" y1="144.78" x2="416.56" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="157.48" y1="144.78" x2="157.48" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="SUPPLY15" gate="GND" pin="GND"/>
@@ -15934,6 +15722,26 @@ so we can go ahead and disable it.</text>
 <pinref part="LED4" gate="G$1" pin="C"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <wire x1="200.66" y1="165.1" x2="203.2" y2="165.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="PAD"/>
+<wire x1="218.44" y1="99.06" x2="220.98" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="99.06" x2="220.98" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="SUPPLY18" gate="GND" pin="GND"/>
+<pinref part="U2" gate="A" pin="GND"/>
+<wire x1="220.98" y1="96.52" x2="220.98" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="96.52" x2="220.98" y2="96.52" width="0.1524" layer="91"/>
+<junction x="220.98" y="96.52"/>
+</segment>
+<segment>
+<pinref part="U2" gate="A" pin="PGND"/>
+<pinref part="SUPPLY22" gate="GND" pin="GND"/>
+<wire x1="218.44" y1="144.78" x2="223.52" y2="144.78" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="S1" gate="1" pin="S"/>
+<wire x1="264.16" y1="109.22" x2="264.16" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="SUPPLY10" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -15967,12 +15775,6 @@ so we can go ahead and disable it.</text>
 <wire x1="38.1" y1="38.1" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SUPPLY3" gate="+12V" pin="+12V"/>
-<wire x1="236.22" y1="121.92" x2="236.22" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="S1" gate="1" pin="P"/>
-<wire x1="236.22" y1="119.38" x2="238.76" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="SUPPLY11" gate="+12V" pin="+12V"/>
 <wire x1="170.18" y1="165.1" x2="170.18" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="F1" gate="G$1" pin="1"/>
@@ -16001,17 +15803,17 @@ so we can go ahead and disable it.</text>
 <wire x1="162.56" y1="114.3" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="SUPPLY21" gate="+5V" pin="+5V"/>
 </segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<pinref part="SUPPLY3" gate="+5V" pin="+5V"/>
+<wire x1="243.84" y1="127" x2="243.84" y2="129.54" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="M1_FWD" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="D10"/>
 <wire x1="106.68" y1="58.42" x2="111.76" y2="58.42" width="0.1524" layer="91"/>
 <label x="111.76" y="58.42" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="IN2"/>
-<wire x1="416.56" y1="149.86" x2="414.02" y2="149.86" width="0.1524" layer="91"/>
-<label x="414.02" y="149.86" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="PH_IN2"/>
@@ -16024,11 +15826,6 @@ so we can go ahead and disable it.</text>
 <pinref part="Q2" gate="G$1" pin="D11"/>
 <wire x1="106.68" y1="60.96" x2="111.76" y2="60.96" width="0.1524" layer="91"/>
 <label x="111.76" y="60.96" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="IN1"/>
-<wire x1="416.56" y1="154.94" x2="414.02" y2="154.94" width="0.1524" layer="91"/>
-<label x="414.02" y="154.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="EN_IN1"/>
@@ -16073,23 +15870,6 @@ so we can go ahead and disable it.</text>
 <wire x1="106.68" y1="53.34" x2="127" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PGND"/>
-<wire x1="447.04" y1="144.78" x2="449.58" y2="144.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="Q1" gate="G$1" pin="G"/>
-<wire x1="254" y1="114.3" x2="254" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="254" y1="116.84" x2="256.54" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="S1" gate="1" pin="S"/>
-<wire x1="248.92" y1="116.84" x2="254" y2="116.84" width="0.1524" layer="91"/>
-<junction x="254" y="116.84"/>
-</segment>
-</net>
 <net name="RESET" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="/RESET"/>
@@ -16107,28 +15887,14 @@ so we can go ahead and disable it.</text>
 <wire x1="40.64" y1="63.5" x2="35.56" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="VM"/>
-<wire x1="411.48" y1="160.02" x2="416.56" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="ILIM"/>
-<wire x1="447.04" y1="149.86" x2="459.74" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="459.74" y1="149.86" x2="459.74" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
+<net name="OUT1" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="OUT1"/>
 <pinref part="OUT" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="152.4" x2="236.22" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="OUT2" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="OUT2"/>
 <wire x1="218.44" y1="137.16" x2="236.22" y2="137.16" width="0.1524" layer="91"/>
@@ -16136,45 +15902,42 @@ so we can go ahead and disable it.</text>
 <wire x1="236.22" y1="137.16" x2="236.22" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U2" gate="A" pin="PGND"/>
-<wire x1="218.44" y1="144.78" x2="261.62" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="Q1" gate="G$1" pin="D"/>
-<wire x1="261.62" y1="144.78" x2="261.62" y2="124.46" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
+<net name="VCP" class="0">
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="U2" gate="A" pin="VCP"/>
 <wire x1="170.18" y1="144.78" x2="177.8" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="CPH" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="CPH"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="121.92" x2="223.52" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
+<net name="CPL" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="CPL"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="218.44" y1="114.3" x2="223.52" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$18" class="0">
+<net name="VM" class="0">
 <segment>
 <pinref part="U2" gate="A" pin="VM"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="177.8" y1="152.4" x2="170.18" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="152.4" x2="175.26" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="152.4" x2="170.18" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="152.4" x2="157.48" y2="152.4" width="0.1524" layer="91"/>
 <junction x="170.18" y="152.4"/>
 <pinref part="F1" gate="G$1" pin="2"/>
 <wire x1="170.18" y1="160.02" x2="170.18" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="177.8" y1="165.1" x2="175.26" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="165.1" x2="175.26" y2="152.4" width="0.1524" layer="91"/>
+<junction x="175.26" y="152.4"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -16184,11 +15947,20 @@ so we can go ahead and disable it.</text>
 <wire x1="187.96" y1="165.1" x2="193.04" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="!SLEEP!" class="0">
 <segment>
-<pinref part="R7" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="165.1" x2="175.26" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="165.1" x2="175.26" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="U2" gate="A" pin="SLEEP_N"/>
+<wire x1="177.8" y1="124.46" x2="175.26" y2="124.46" width="0.1524" layer="91"/>
+<label x="175.26" y="124.46" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="116.84" x2="243.84" y2="111.76" width="0.1524" layer="91"/>
+<label x="243.84" y="106.68" size="1.27" layer="95" xref="yes"/>
+<pinref part="S1" gate="1" pin="P"/>
+<wire x1="243.84" y1="111.76" x2="243.84" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="254" y1="111.76" x2="243.84" y2="111.76" width="0.1524" layer="91"/>
+<junction x="243.84" y="111.76"/>
 </segment>
 </net>
 </nets>

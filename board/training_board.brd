@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -34,7 +34,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -195,15 +195,16 @@
 <wire x1="66.1" y1="51.8" x2="64.5" y2="53.4" width="0" layer="20"/>
 <wire x1="64.5" y1="53.4" x2="0" y2="53.4" width="0" layer="20"/>
 <wire x1="0" y1="53.4" x2="0" y2="0" width="0" layer="20"/>
-<text x="37" y="22" size="1.5" layer="21" font="vector">2020 Soldering Training Board
+<text x="37" y="22" size="1.5" layer="21" font="vector">2022 Soldering Training Board
 </text>
 <text x="4.61" y="6.61" size="1" layer="27" font="vector" align="bottom-center">FUSE OK</text>
 <text x="6.06" y="42.85" size="1" layer="27" font="vector" rot="R180" align="top-center">POWER</text>
 <text x="17.48" y="19.45" size="1" layer="51" font="vector" ratio="15" align="bottom-center">OFF</text>
 <text x="17.48" y="33.45" size="1" layer="51" font="vector" ratio="15" align="top-center">ON</text>
 <text x="36.5" y="15.65" size="1" layer="25" font="vector" align="bottom-center">Reset</text>
-<text x="37" y="22" size="1.5" layer="21" font="vector">&gt;VERSION</text>
+<text x="37" y="22" size="1.5" layer="21" font="vector">v1.6</text>
 <text x="6.223" y="1.778" size="1.27" layer="21" font="vector" ratio="15">PON</text>
+<text x="31.75" y="3.81" size="1" layer="21" font="vector" ratio="15">RST</text>
 </plain>
 <libraries>
 <library name="adafruit" urn="urn:adsk.eagle:library:420">

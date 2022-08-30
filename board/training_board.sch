@@ -15407,7 +15407,7 @@ In this library you will find frames that can be used to help organize a schemat
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+12V" device=""/>
 <part name="FRAME1" library="RoboJackets-Frames" deviceset="FRAME_A_L" device="">
 <attribute name="AUTHOR" value="Varun Madabushi"/>
-<attribute name="REVISION" value="1.5"/>
+<attribute name="REVISION" value="1.6"/>
 <attribute name="SCH_DESC" value="Arduino Motor Control Shield"/>
 <attribute name="TEAM" value="Electrical Training"/>
 </part>

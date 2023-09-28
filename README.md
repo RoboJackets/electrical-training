@@ -30,4 +30,3 @@ NOTE: Weeks 0, 1, will be joint sessions between electrical and firmware. Week 5
 ```presentations/```: A pdf version of the lecture slides. These will be posted when they're finalized and feel free to review them whenever you need to recall something from training.
 
 ```references/```: Useful resources such as a reference of various electrical components in ```electricity_basics/``` and good electronics-related youtubers in ```miscellaneous/```
-

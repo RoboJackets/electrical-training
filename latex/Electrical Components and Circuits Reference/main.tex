@@ -14,8 +14,8 @@
 \graphicspath{{./img}}
 
 \title{Electrical Components and Circuits Reference}
-\author{Marine Maisonneuve, Devaughn Menezes, Andrew Rocco, Eugene Min }
-\date{September 2020}
+\author{Jackie Mac Hale}
+\date{September 2023}
 
 
 \begin{document}
@@ -131,9 +131,11 @@ Resistors are used to reduce current and/or drop voltage.\\
     \label{fig:res-thru}
 \end{figure}
 
-A \textbf{resistor} is a two-terminal \textbf{passive} (requires no external energy to operate) component that \textbf{implements electrical resistance} between the two terminals. Resistors are used to reduce current flow, adjust signal levels, divide voltage, etc.
+A \textbf{resistor} is a two-terminal \textbf{passive} (requires no external energy to operate) component that \textbf{resists current flow}
+between the two terminals. Resistors are used to reduce current flow, adjust signal levels, divide voltage, etc. 
 
-The power dissipated by a resistor is calculated by multiplying voltage and current, $P =V \times I$, this may further expand to $P =V^{2}/R$ and $P= I^2R$. The first equation applies to the power dissipation of all electrical components, while the other two are for the case of resistors.
+Resistors are made of a ceramic material that dissipates electric potential energy by converting it to heat.
+The voltage drop (reduction in potential energy) across a resistor is calculated by Ohm's Law, $V=IR$.
 
 \begin{figure}[h]
     \centering
@@ -142,12 +144,12 @@ The power dissipated by a resistor is calculated by multiplying voltage and curr
     \label{fig:res-smd}
 \end{figure}
 
-Tip: The resistance of a wire is calculated with the formula R=pl/A (p=resistivity of the material, l=length of the wire, A=cross sectional area of the wire).
+It is worth noting that in schematics and most analysis, we consider ``ideal'' wires with no resistance. In real life, all electrical connections have some degree
+of resistance, as well as capacitance and inductance. Appropriately sized wires should have R, C, and L values small enough to be ignored.
 
 
 \subsection{Capacitor}
 
-In short, capacitors store energy. \\
 \begin{figure} [h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Capacitors.png}
@@ -155,22 +157,31 @@ In short, capacitors store energy. \\
     \label{fig:capacitor}
 \end{figure}
 
-A \textbf{capacitor} is a \textbf{passive} two-terminal component that \textbf{stores energy in an electric field}. The larger the capacitance (which is noted as C), the more energy a capacitor can store and the longer it takes to charge and discharge.\\
+A \textbf{capacitor} is a \textbf{passive} two-terminal component that \textbf{stores energy in an electric field}. Capacitors are made up of parallel conductive
+plates, separated by a dielectric material. As current flows into the capacitor, electrons accumulate on the plates, generating an electric field from one
+to the other. This results in electric potential energy storage.
+The larger the capacitance (which is noted as C), the more energy a capacitor can store and the longer it takes to charge and discharge.\\
 
+There are primarily two kinds of capacitors: ceramic and electrolytic. In our scope of application, we need to know that electrolytic 
+capacitors easily obtain high capacitance values with low cost and electrolytic ones are usually much larger compared to ceramics,
+so most capacitors on Printed Circuit Boards (PCBs) are ceramic. Electrolytic capacitors have polarity, so when inserting them into circuits, the
+positive terminal of the component must be connected to a higher potential than the negative terminal. \\
 
-There are primarily two kinds of capacitors: ceramic and electrolytic. In our scope of application, we need to know that electrolytic capacitors easily obtain high capacitance values with low cost and electrolytic ones are usually much larger compared to ceramics, rendering most capacitors on Printed Circuit Board (PCBs) to be ceramic. Electrolytic capacitors have polarity or a direction they must be in, in circuits. \\
-
-Capacitors act as energy sources when discharging, so they’re often placed in parallel with voltage sources to maintain voltage levels during sudden load changes to prevent spikes. This application is known as “decoupling capacitance.”
+Capacitors act as energy sources when discharging, so they’re often placed in parallel with voltage sources to maintain voltage levels during 
+sudden load changes to maintain a stable power source. This application is known as “decoupling capacitance.”
 
 
 \subsection{Inductor}
 
-In short, an inductor limits current.
-An \textbf{inductor}, also known as a coil, is a \textbf{passive} two-terminal component that stores energy in a \textbf{magnetic field}. An inductor, which has inductance noted as L, can help smooth sudden current spikes in the circuit as it stores current temporarily. Thus, they are commonly placed in series with power supplies. \\
+An \textbf{inductor}, is a \textbf{passive} two-terminal component that stores energy in a \textbf{magnetic field}. The property of inductors is Inductance,
+noted with L.
 
-Unlike a Capacitor which opposes a change of voltage across their plates, an inductor opposes the rate of change of current flowing through it due to the build up of self-induced energy within its magnetic field. In other words, inductors resist or oppose changes of current but will easily pass a constant current.\\
+Unlike a Capacitor which opposes a change of voltage across their plates, an inductor opposes a change of current flowing through 
+it due to the build up of an opposing magnetic field. In other words, inductors resist or oppose changes of current but allow a constant current.
+As a result, they can help smooth sudden current spikes in the circuit as it stores current temporarily. They are commonly used in power supplies for this reason. \\
 
-Inductors are also a primary component in electromechanical actuators such as relays (switches that use electromagnets), solenoids (values that use electromagnets), and motors (rotating devices that use electromagnets). 
+Many useful electromechanical components (such as relays, motors, and solenoids) contain electromagnetic coils. Therefore they can be modeled as inductors for 
+the purpose of circuit design.
 
 \subsection{Diode}
 
@@ -196,21 +207,30 @@ Most diodes have a maximum \textbf{reverse voltage}: the breakdown voltage. Any 
 
 \subsection{Transistor}
 
-In short, transistors are simple \textbf{electronic switches}. \\
+In short, transistors are \textbf{electronic switches}.
 
-There are primarily two types of transistors: Bipolar Junction Transistors (BJTs) and Metal Oxide-Semiconductor Field-Effect Transistors (MOSFETs). 
+There are primarily two types of transistors: Bipolar Junction Transistors (BJTs) and Metal-Oxide-Semiconductor Field-Effect Transistors (MOSFETs). 
+\subsubsection{Bipolar Junction Transistor}
 
-They typically have three terminals, the base or gate being the ‘controller’, and the other two being the collector or source and emitter or drain. There exist two types of BJT: NPN and PNP. NPN is normally OFF and conducts current when there is positive voltage at its base. PNP works in the exact opposite way, it is normally ON and conducts when there is zero voltage at its base. nFET and pFET MOSFETS work in a similar fashion to NPN and PNP respectively. Transistors are used to switch on other parts of the circuit.
+BJTs have three terminals, a Base, a Collector, and an Emitter. In a BJT, the current flow into the base determines
+the amount of current that can flow between the Collector and Emitter. For NPN BJTs, a current flowing into the base allows a larger current
+to flow between the Collector and Emitter. For PNP BJTs, a current flowing out of the base allows a large current to flow from the Emitter to the
+Collector.
+
+\subsubsection{MOSFET}
+In contrast to BJTs which operate based on current, MOSFETs operate based on voltage. MOSFETs come in two types: N-type and P-type, which are analogous
+to NPN and PNP BJTs. MOSFETs have a parameter called threshold voltage ($V_{th}$). 
+
+For an N-Type MOSFET, a large voltage (greater than $V_{th}$) between the Gate and the Source results in the formation of a low-resistance channel, allowing
+current to flow from Drain to Source. For a P-Type, a small voltage (less than $V_{th}$) between the Gate and Source results in current flow from the Source
+to the Drain.
 
 \begin{figure} [h]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/TransistorSignal.png}
+    \includegraphics[width=0.7\textwidth]{img/TransistorSignal.jpg}
     \caption{Function of transistors based on gate logic levels}
     \label{fig:TranSignal}
 \end{figure}
-
-VDD (Voltage Drain Drain) is the power source of the system, or the ON voltage. GND is “the reference point in an electrical circuit from which voltages are measured” or the 0 voltage. For our applications, 3.3V or 5V are usually the logical operating levels of printed circuit boards with 12V or 24V are usually the voltage level that power the robot. 
-Never directly connect 5V directly to 0V, as this is called a short circuit. 
 
 \begin{figure} [h]
     \centering
@@ -311,19 +331,32 @@ V_{out} = \frac{R_{2}}{R_{1} + R_{2}}
 $$
 
 \subsection{High/Low Side Switch}
-High/low side switches two different ways to configure a circuit. A low side switch connects the load (the portion of the circuit that consumes power, shown as a box below) to ground using an N-type MOSFET. On the other hand, a high side switch connects power to the load using a P-type MOSFET.
+
+One use of a transistor is to allow a low voltage signal to control power flow in another circuit. Low and High Side switches are two
+designs used to switch a load on and off, based on the voltage of the transistor's gate. These circuit designs are shown in Figure \ref{fig:sideswitch}.
 
 \begin{figure} [h]
     \centering
     \includegraphics[width=0.4\textwidth]{img/high_low_switch.png}
     \caption{A high-side switch, using a PFET, and a low-side switch, using an NFET }
-    \label{fig:my_label}
+    \label{fig:sideswitch}
 \end{figure}
 
-So how do you decide which one to use? In most scenarios, a low-side switch would work. Low-side switches are especially useful when dealing with high voltage circuits. If you are delivering power to an entire circuit or a voltage-sensitive device, a high-side switch may be applicable.
+In a Low-side switch, an N-type transistor is wired in series \textbf{after} the load. Sending a High signal ($V > V_{th}$) allows current to flow through the
+transistor and powers the load.
+
+The opposite works for the high-side switch, which uses a P-type transistor wired \textbf{before} the load. Sending a Low signal ($V < V_{dd} - V_{th}$) 
+allows current to flow.
+
+Low-side switches are more common (and often preferred) since the input voltage range must only swing between 0 and $V_{th}$. For a High-side switch, the 
+voltage must swing between $V_{dd}$ and $V_{dd} - V_{th}$. If $V_{dd}$ is large (e.g. 24V), a small signal (e.g. 0-3.3V) would not be able to switch
+a high-side circuit. Additionally, N-type MOSFETs are easier to manufacture, so these circuits are lower cost.
 
 \subsection{Pull Up/Pull Down Resistor}
 In a digital logic circuit, there must only be a Low state (GND or 0) or a High state (Vcc or 1) and a Pull-Up and Pull-Down resistor ensures this. 
+
+
+In figure \ref{fig:PullUpDown} for a Pull-Up Resistor, we see a +5V source, resistor, ground, switch, and an input to a microcontroller. When the switch is opened, the 5V source provides an input current to the microcontroller which is a logic of 1. When the switch is closed, the resistor causes a small amount of current to flow to ground thus making the microcontroller input a logic of 0. 
 
 \begin{figure} [h]
     \centering
@@ -331,8 +364,6 @@ In a digital logic circuit, there must only be a Low state (GND or 0) or a High 
     \caption{Pull up and pull down resistors on a Microcontroller's input pins}
     \label{fig:PullUpDown}
 \end{figure}
-
-In figure \ref{fig:PullUpDown} for a Pull-Up Resistor, we see a +5V source, resistor, ground, switch, and an input to a microcontroller. When the switch is opened, the 5V source provides an input current to the microcontroller which is a logic of 1. When the switch is closed, the resistor causes a small amount of current to flow to ground thus making the microcontroller input a logic of 0. 
 
 A similar process applies to a Pull-Down Resistor as well. When the switch is closed in this circuit, the input of the microcontroller with get 5V or a logic of 1. When it is open, it receives a logic 0.
 

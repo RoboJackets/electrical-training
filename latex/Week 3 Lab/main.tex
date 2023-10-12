@@ -1,0 +1,230 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{flafter}
+\geometry{letterpaper, portrait, margin=1in}
+
+\usepackage{listings}
+\lstdefinestyle{bashstyle}{
+  language=bash,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green},
+  numberstyle=\tiny\color{gray},
+  numbers=left,
+  breaklines=true
+}
+
+\usepackage{cprotect}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{tcolorbox}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{indentfirst}
+\usepackage{romannum}
+
+\usepackage{float}
+
+\newcommand{\ans}{$\rule{1.5cm}{0.15mm}$}
+
+\title{RoboJackets Electrical Training Week 3 Lab Guide}
+\author{Jackie Mac Hale}
+\date{\today\\v2.1}
+
+\begin{document}
+\pagenumbering{arabic}
+\maketitle{}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\pagebreak
+
+%Everything below is for you to edit. Code above sets up the general formatting for the document
+
+
+\section{Background}
+
+This week's lecture topic was on designing schematics with KiCAD. A majority of RoboJackets will use KiCAD to design printed circuit boards (PCBs) for their robots. For this reason, it's important to feel comfortable using this software and learn about the many different features KiCAD offers for PCB design.
+
+In this lab, you will be given a partially built schematic for a PCB. Your objective is to complete this PCB using the parts list given below. You will need to use some RoboJackets libraries to add these parts to the schematic.
+
+\section{Objective}
+
+\subsection{Task 1}
+
+\begin{itemize}
+    \item Find the desired parts in the RoboJackets library. This step will be required for the parts of the lab that ask you to insert parts into the schematic
+\end{itemize}
+
+\subsection{Task 2}
+
+\begin{itemize}
+    \item Place parts from the parts list into their respective places in the schematic
+\end{itemize}
+
+\subsection{Task 3}
+
+\begin{itemize}
+    \item Create connections between different components in the schematic where they're needed
+\end{itemize}
+
+\section{Materials}
+
+\begin{itemize}
+    \item KiCAD
+    \item Cloned repository of \href{https://github.com/RoboJackets/electrical-training}{electrical-training}
+\end{itemize}
+
+\section{Relevant Information}
+
+\subsection{Adding libraries to KiCAD}
+
+To add the symbol library to KiCAD, make sure you have cloned the electrical-training repository linked above under Materials. Upon opening KiCAD, go to Preferences $>$ Manage Symbol Libraries. Click on the folder icon which says ``Add existing library to table". Locate the .kicad\_sym in the kicad-libraries directory of the electrical-training directory and open it. Make sure this library is added to the ``Global Libraries" section of your symbol libraries to be able to use it with any KiCAD project you create.
+
+\subsection{Adding parts to your schematic}
+
+You can click the ``Add a symbol" button located in the right menu of the schematic editor or press ``A" to open the part selection menu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/add-symbol-menu.png}
+    \caption{Add Symbol Menu}
+    
+\end{figure}
+
+\subsection{Adding global labels}
+
+If there are connections that need to be made far away from each other, you can use the ``Add a global label" button in the right menu to do this.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/labels.png}
+    \caption{Adding labels}
+    
+\end{figure}
+
+\subsection{Changing your grid size}
+
+If you encounter any difficulties trying to connect pins in the schematic editor, you can press your CTRL key to get more precise placement. Alternatively, you can change your grid size. This can be done by going to View $>$ Grid Properties and changing the size under ``Current Grid". A grid size of 2.54 mm (0.1 in) is recommended because most if not all symbols should have pins separated by 0.1". However, if this is too large, then 0.254 mm (0.01 in) is recommended so that the grid is simply divided by 10.
+
+You can also define your own grid size under the ``User Defined Grid" section. Remember to set the current grid to User grid to actually use the custom grid size. Lastly, the Fast Switching section allows you to quickly switch between two different grid sizes which may be handy if you need to zoom in to any part of your schematic and have more gridlines (for Windows, you press Alt+1 or Alt+2 to switch to the corresponding grid size).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/grid.png}
+    \caption{Grid Settings Menu}
+\end{figure}
+
+\section{Guided Lab}
+
+Open the file named ``week-3-schematic.kicad\_sch" in the labs directory of electrical-training with KiCAD.
+
+\subsection{Add a pull-down resistor to the SW1 Buttons circuit}
+
+\begin{itemize}
+    \item Select ``Add a symbol" in the right bar and search for a resistor in the Device library. It should be called R\_US.
+    \item Place the resistor in the correct place in the circuit. Orientation of resistors is not important.
+    \item Create connections on both sides of the resistor.
+    \item Give the resistor the value ``10K" (10,000 ohms). This can be done by clicking on the part, pressing ``E", and typing the value into the ``Value" field.
+\end{itemize}
+
+\noindent Purpose: This resistor is needed in the circuit to ensure that when switch "SW1" is open, the "SW1\_INT" signal is not floating but 0V.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/sw1-circuit.png}
+    \caption{Adding resistor}
+\end{figure}
+
+\subsection{Add a PTS645 button to the SW2 Buttons circuit}
+
+\begin{itemize}
+    \item Select ``Add a symbol" and search for PTS645 button in the RoboJackets library. This part is a normally open pushbutton. When pushed, the circuit is closed, otherwise it's open.
+    \item Place the button in the correct place in the circuit.
+    \item Create connections on both sides of the button as shown in the picture.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/sw2-circuit.png}
+    \caption{Adding switch}
+\end{figure}
+
+\subsection{Add a 5V supply for the pull-up resistor in the "!RESET" circuit}
+
+\begin{itemize}
+    \item Select ``Add a symbol" and search for a +5V supply. This will signify a connection to the 5V source on the board to this point of the circuit.
+    \item Place the part in the correct place in the circuit.
+    \item Create a connection from the +5V supply to resistor R4.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/5V-circuit.png}
+    \caption{Adding 5V supply}
+\end{figure}
+
+\subsection{Create a connection for the signal ``D2\_CTRL" using global labels}
+
+\begin{itemize}
+    \item Create a net from pin D10 on the Arduino Uno Microcontroller to a label.
+    \item Name the label ``D2\_CTRL". The name you give a label corresponds to the name of its signal. In this case, the D10 pin is controlling the D2 LED, so naming the signal ``D2\_CTRL" is a good way to signify what the signal controls.
+    \item Create another label and net that connect to the second resistor from the top in the ``LEDs" section. Give this label the same name as the signal from D10.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/arduino-pin.png}
+    \caption{Adding D2\_CTRL label on D10}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/led-pin.png}
+    \caption{Adding D2\_CTRL label on second LED}
+\end{figure}
+
+\noindent Purpose: This method of connecting different parts that are far apart will make the schematic cleaner and
+easier to read. But, a physical connection will need to be made when you are designing the board itself. This will be the topic of next week’s training.
+
+\subsection{Use the pictures and parts list to design the circuit shown in the picture}
+
+\begin{itemize}
+    \item Parts List:
+    \begin{itemize}
+        \item Sensor: TLE493DA2B6HTSA1 (in the RoboJackets symbol library)
+        \item Resistors: R\_US (in Device library)
+        \item Capacitor: C\_Polarized\_US (in Device library)
+        \item +3.3V (in power library)
+        \item GND (in power library)
+    \end{itemize}
+    \item Connect the XDA signal to pin 6 on the axis sensor.
+    \item Connect the XCL signal to pin 1 on the axis sensor.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/sensor.png}
+    \caption{Adding magnetometer circuit}
+\end{figure}
+
+\subsection{Running ERC}
+
+To check if there are any issues with your schematic, run ERC by clicking on the checklist icon in the top bar. It's recommended to run ERC while your grid size is on 0.1 in to ensure all of the wires and parts are spaced appropriately. For this lab, there should be no errors and only one warning for the unconnected AD0 label since it's not used elsewhere in the schematic.
+
+\section{Troubleshooting}
+
+\begin{itemize}
+    \item \href{https://docs.kicad.org/7.0/en/getting_started_in_kicad/getting_started_in_kicad.html}{KiCAD Getting Started Guide} - Includes how to use the schematic editor
+\end{itemize}
+
+
+\end{document}

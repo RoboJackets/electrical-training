@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{flafter}
+\geometry{letterpaper, portrait, margin=1in}
+
+\usepackage{listings}
+\lstdefinestyle{bashstyle}{
+  language=bash,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green},
+  numberstyle=\tiny\color{gray},
+  numbers=left,
+  breaklines=true
+}
+
+\usepackage{cprotect}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{tcolorbox}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{indentfirst}
+\usepackage{romannum}
+
+\usepackage{float}
+
+\newcommand{\ans}{$\rule{1.5cm}{0.15mm}$}
+
+\title{RoboJackets Electrical Training Week 2 Lab Guide}
+\author{Jackie Mac Hale}
+\date{\today\\v2.0}
+
+\begin{document}
+\pagenumbering{arabic}
+\maketitle{}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\pagebreak
+
+%Everything below is for you to edit. Code above sets up the general formatting for the document
+
+
+\section{Background}
+
+In the Week 2 Electrical Training lecture, you learned about PCBs, KiCAD, Libraries, and Parts.
+In RoboJackets, PCB design is an integral part of our autonomous teams’ electrical stack, thus if you are
+interested in PCB development for RoboJackets and hardware design in general, learning how to use KiCAD
+is essential.
+
+In today’s lab we will be focusing on making a part in KiCAD and adding it to a library. Oftentimes,
+we have to make or modify a part as a CAD file for it is not always available or it is insufficient.
+
+\section{Objective}
+
+\subsection{Install KiCAD and Other Software}
+
+\begin{itemize}
+    \item If you have not already installed KiCAD, please download it \href{https://kicad.org/download}{here}.
+    \item If using Mac/Windows follow instructions to install GitHub Desktop from \href{https://desktop.github.com/}{here}. If you are familiar
+    with Git in terminal you can use this instead and that can be installed \href{https://git-scm.com/downloads}{here}. If you are using Linux
+    you will need to use Git in terminal.
+    \item Clone the electrical-training repository \href{https://github.com/RoboJackets/electrical-training}{here}.
+    \item Note: If you are having trouble with any of these steps please let a trainer know.
+\end{itemize}
+
+\subsection{Create a Part in KiCAD}
+
+\begin{itemize}
+    \item  Create a new KiCAD library called ``week2" and add a symbol and footprint for a 3D Hall Sensor. Detailed steps on how to do this are outlined in the Guided Lab section of this document.
+\end{itemize}
+
+
+\section{Materials}
+
+\begin{itemize}
+    \item \href{https://kicad.org}{KiCAD}
+    \item \href{https://desktop.github.com/}{GitHub Desktop} or \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{Git} in Terminal
+    \item Cloned repository \href{https://github.com/RoboJackets/electrical-training}{electrical-training}
+    \item TLE493DA2B6HTSA1 3D Hall Sensor \href{https://media.digikey.com/pdf/Data%20Sheets/Infineon%20PDFs/TLE493D-A2B6_V1.3_4-9-19.pdf}{Datasheet}
+    \item Recommended: An external mouse
+\end{itemize}
+
+\section{Relevant Information}
+
+\subsection{Reading a Pin Configuration}
+
+When making parts in KiCAD, the component’s datasheet will be your best friend. It should tell you
+all the information you need to create the symbol and footprint. To make a symbol, you will often look for
+a pin configuration (also called a pinout) to see what individual pins/pads on a part actually do. For our
+use case, page 5 of the datasheet gives the pin configuration which is also pictured below. Usually the pins
+are numbered and their names and descriptions are given below. These are usually the same names you will
+give your pins in your symbol. For example, when we make the symbol, we will have a pin called SDA/INT
+to represent the function of pin 1 of the sensor.
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width = \textwidth]{img/3d-hall-sensor.png}
+        \cprotect\caption{Pin configuration for sensor}
+    \end{figure}
+
+
+\subsection{Reading Package Information}
+To make the footprint, we will look for the package information. Generally this will look like a drawing of
+the chip with several measurements, including basic length and width, size of pins, and the distance between
+pins. For this component, page 17 and 18 has information about the package. Figure 8 from that datasheet
+is included below as it contains sufficient information to make the footprint.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 0.8\textwidth]{img/sensor-pads.png}
+        \cprotect\caption{Sensor pad sizes and distances}
+    \end{figure}
+
+\section{Guided Lab}
+
+In the project manager of KiCAD, click on File $\rightarrow$ New Project and choose whatever project name you want. Make sure the \textbf{Create a new folder for the project} checkbox is ticked, then click Save. This will create your project files in a new subfolder with the same name as your project.
+
+\subsection{Creating the Symbol}
+
+\subsubsection{Adding to Library}
+
+\begin{itemize}
+    \item Click on the icon for the Symbol Editor.
+    \item Click File $\rightarrow$ New Library and select Project.
+    \item Give your library the name ``week2" and save it in the project directory.
+    \item With the ``week2" library selected in the Libraries pane, click File $\rightarrow$ New Symbol. In the Symbol name field, enter the part number for this sensor  (TLE493DA2B6HTSA1).
+
+\end{itemize}
+
+\subsubsection{Creating and Defining Pins}
+
+\begin{itemize}
+    \item Based on the pin configuration there are 4 different types of pins - the SCL/INT, SDA, VDD, and
+    GND pins. The chip has multiple GND pins, but for the symbol these can be grouped together.
+    \item Add 4 pins with those names to your grid using the ”Add a pin” button in the right menu. Set the
+    electrical type of the pins to passive. This is done versus being more
+    specific to avoid unnecessary design rule check (DRC) errors
+\end{itemize}
+
+\subsubsection{Draw Outline}
+
+\begin{itemize}
+    \item Using the rectangle tool located in the right menu, create a box, centered on the origin (the cross). Arrange the pins in a way that they attach to this box. Using the grid to create equal spacing is a good practice.
+\end{itemize}
+
+\subsubsection{Adding Value (Part Name)}
+\begin{itemize}
+    \item Click File $\rightarrow$ Symbol Properties and change the Value field to TLE493DA2B6HTSA1.
+\end{itemize}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 0.8\textwidth]{img/finished-symbol.png}
+        \caption{Finished symbol for the 3D Hall Sensor}
+    \end{figure}
+
+\subsection{Creating the Footprint}
+
+\subsubsection{Adding to Library}
+
+\begin{itemize}
+    \item Return to the project manager and click on the icon for the footprint editor
+    \item Click on File $\rightarrow$ New Library and name it ``week2".
+    \item With the new library selected in the Libraries pane, create a new footprint (File $\rightarrow$ New Footprint).
+    \item Set the name to TSOP6\_TLE493DA2B6HTSA1 and the Footprint type to SMD.
+\end{itemize}
+
+\subsubsection{Creating SMD Pads}
+\begin{itemize}
+    \item Begin by clicking on the Add a pad button in the right menu. You can place all 6 pads at once and stop adding by hitting Escape on your keyboard. The numbers for the dimensions and location can be figured out from
+    the diagram on page 17 of the datasheet which is also included earlier in this lab document. You can change the size of the pads by double clicking on them. You will need to change the pad shape to Rectangular and modify the Pad size X and Y as needed.
+    \item To be able to move the pads around more precisely, you can decrease the Grid Size in the top menu (one recommendation is to use a grid size of 0.025 mm).
+    \end{itemize}
+\subsubsection{Adding Silkscreen}
+    \begin{itemize}
+    \item When you're arranging the pins, select the F.Silkscreen layer in the right menu and draw a rectangle which indicates where the chip goes in the footprint.
+    \item When soldering, it is nice to know the directional of the chip. Thus, it is a common practice to add a
+dot near pin 1. You can do this by using the circle tool to draw a small circle, adjusting its size as
+appropriate, and placing it near SMD pad 1. The circle tool is located in the right menu.
+\end{itemize}
+
+\subsubsection{Adding Courtyard Boundary}
+
+\begin{itemize}
+    \item To make sure that parts do not overlap later when we route them, it is useful to set a boundary around
+the entire part
+    \item Switch your layer to F.Courtyard and draw a rectangle around the entire part. The courtyard outline should surround the part with a 0.25 mm clearance. Like earlier, you can make this more precise by changing the Grid Size.
+\end{itemize}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width = 0.8\textwidth]{img/footprint.png}
+        \caption{Finished footprint for the 3D Hall Sensor}
+    \end{figure}
+
+\section{Troubleshooting}
+
+For any problems with your KiCAD or GitHub Desktop/Git installations please reach out to a trainer
+who can help with your specific issue. Below are some KiCAD Resources you will find useful as you complete
+this lab and in general during your time in RoboJackets.
+
+\begin{itemize}
+    \item \href{https://docs.kicad.org/7.0/en/getting_started_in_kicad/getting_started_in_kicad.html}{KiCAD Getting Started Guide} - Includes how to create a custom symbol and footprint for any part
+\end{itemize}
+
+
+\end{document}

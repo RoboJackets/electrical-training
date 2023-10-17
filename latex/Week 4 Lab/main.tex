@@ -90,12 +90,13 @@ You thought that you only would need to analyze datasheets while doing the schem
 the components for your board? Nope! The datasheet has very useful information on how to do the layout.
 It will suggest the positioning of certain supportive discrete components (like resistors and capacitors) and
 how should the polygons and traces around the main component look like. In fact, it will commonly show
-you an example of a working Board Layout like in Figure 1.
+you an example of a working Board Layout like in Figure \ref{datasheet}.
 
 \begin{figure}[H]
     \centering
     \includegraphics{img/datasheet-layout.png}
     \caption{Layout example from a component's (DRV8303) datasheet. Note it suggests the positing of capacitors and the width of certain traces.}
+    \label{datasheet}
 \end{figure}
 
 \subsection{Terminology}
@@ -108,6 +109,12 @@ Here are some terms you should be comfortable with:
     \item Polygon: Region of board designated to be entirely filled with copper and thus can be used to connect
 pins.
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/layers.png}
+    \caption{Quick explanation of layers you're most likely to use.}
+\end{figure}
 
 \section{Guided Lab}
 \subsection{Update your footprint library}
@@ -154,7 +161,7 @@ First, adjust the grid size to 1 mm in the top bar.\\
 
 Since this board will be attached to the top of an Arduino Uno by connecting to all of its exposed pins,
 our main constraint is going to be those predefined pins. Then, we will preferably want to make the board
-smaller or the same size as the Arduino Uno board like the example on Figure 3. For that, you can also use
+smaller or the same size as the Arduino Uno board like the example in Figure \ref{arduino}. For that, you can also use
 the Arc tool to shape the corners.
 
 Click on the Edge.Cuts layer and draw the board outline with any of the drawing tools in the right menu.
@@ -163,6 +170,7 @@ Click on the Edge.Cuts layer and draw the board outline with any of the drawing 
     \centering
     \includegraphics[width=0.6\textwidth]{img/arduino-shape.png}
     \caption{This would be a good board shape.}
+    \label{arduino}
 \end{figure}
 
 \subsection{Positioning the Components}

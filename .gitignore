@@ -52,6 +52,10 @@ eagle.epf
 *.GTP
 *.GTS
 
+# Ignore list for KiCAD, another PCB layout tool
+*backups
+*.kicad_prl
+
 
 # MATLAB autosave file
 *.asv

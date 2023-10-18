@@ -1,0 +1,258 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{flafter}
+\geometry{letterpaper, portrait, margin=1in}
+
+\usepackage{listings}
+\lstdefinestyle{bashstyle}{
+  language=bash,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green},
+  numberstyle=\tiny\color{gray},
+  numbers=left,
+  breaklines=true
+}
+
+\usepackage{cprotect}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{tcolorbox}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{indentfirst}
+\usepackage{romannum}
+
+\usepackage{float}
+
+\newcommand{\ans}{$\rule{1.5cm}{0.15mm}$}
+
+\title{RoboJackets Electrical Training Week 4 Lab Guide}
+\author{Jackie Mac Hale}
+\date{\today\\v2.0}
+
+\begin{document}
+\pagenumbering{arabic}
+\maketitle{}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\pagebreak
+
+%Everything below is for you to edit. Code above sets up the general formatting for the document
+
+
+\section{Background}
+
+This week, we are addressing how to create the Board Layout design of a PCB. There are many specific
+details to the art of designing a PCB, but our main intention is to introduce you to the basics of it all. Every
+time that you want to make a PCB for attending your specific application, you need to go through some
+steps and that’s not different in RoboJackets. Every team has several different boards that support either
+their main robots or parallel projects that are relevant for the team. On this lab, we will design the PCB
+Layout of the Firmware Training Board. This is the same board which you all have made the schematic last
+week.
+
+
+\section{Objective}
+
+\subsection{Board dimensions}
+The board size depends a lot on the application and on the constraints set by the components that will
+go on the board. For example, smaller boards are preferable if you want to put your board inside a tight
+system like a robot (and in most cases actually), however if the end-application don’t have many physical
+constraints, you can make your board bigger and thus make it easier to routing traces on it and soldering
+the components after the PCB is manufactured.
+
+\subsection{Optimize User Experience}
+In the end, you want your board to look good and to be informative enough for the end-user.
+
+\subsubsection{Silkscreen}
+Use the Silkscreen layers to put information for people assembling or using your board. In general, people
+tend to put less information than it would be helpful, however, don’t put too much unnecessary silkscreen
+to a point of polluting the board view.
+
+\subsubsection{Space between components}
+Especially if your board is going to be soldered, remember to put some space between components so that
+if it needs to be assembled or debugged, the user can easily take out or put components.
+
+
+\section{Relevant Information}
+
+\subsection{Datasheet!}
+You thought that you only would need to analyze datasheets while doing the schematics and choosing
+the components for your board? Nope! The datasheet has very useful information on how to do the layout.
+It will suggest the positioning of certain supportive discrete components (like resistors and capacitors) and
+how should the polygons and traces around the main component look like. In fact, it will commonly show
+you an example of a working Board Layout like in Figure \ref{datasheet}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/datasheet-layout.png}
+    \caption{Layout example from a component's (DRV8303) datasheet. Note it suggests the positing of capacitors and the width of certain traces.}
+    \label{datasheet}
+\end{figure}
+
+\subsection{Terminology}
+Here are some terms you should be comfortable with:
+
+\begin{itemize}
+    \item Layers: Different categories for elements in the board. The KiCAD PCB editor documentation has some details on some of the important KiCad layers: \url{https://docs.kicad.org/7.0/en/pcbnew/pcbnew.html}
+    \item Trace: The filament of copper that connects pins around your board.
+    \item Via: Copper platted hole that goes from top to bottom layers and passes by all the other layers.
+    \item Polygon: Region of board designated to be entirely filled with copper and thus can be used to connect
+pins.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/layers.png}
+    \caption{Quick explanation of layers you're most likely to use.}
+\end{figure}
+
+\section{Guided Lab}
+\subsection{Update your footprint library}
+In the KiCAD Project Manager Window, go to Preferences $>$ Manage Footprint Libraries to add the necessary footprints for this library. Make sure the Global Libraries tab is selected and click on the folder button to add the RoboJackets.pretty and SparkFun-Connector.pretty folders which can be found in electrical-training $>$ kicad-libraries $>$ footprints.
+
+\subsection{Open the file}
+\subsubsection{Find Week 4 project}
+In your KiCad project manager window, open the ``week-4-schematic.kicad\_pro" which can be found in the labs folder of the electrical-training repository. Then, open the schematic editor.
+
+\subsubsection{Switch to Board Layout view}
+Click the ``Open PCB in board editor" button to create a board layout file. Click yes to create the board file.
+
+It's recommended to switch your grid style to ``small crosses" in Preferences $>$ Preferences $>$ Display Options under PCB Editor since lines look really dense in the PCB editor.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/open-pcb.png}
+    \caption{This is what the button looks like!}
+\end{figure}
+
+\subsubsection{Page Settings}
+Change the size of the paper you're drawing to US Letter in File $>$ Page Settings. Add today's date, assign a revision number of 1.0, and write a descriptive title for the board you're creating.
+
+\subsubsection{Add footprints}
+Click the update PCB button in the top bar to add the footprints to your editor. Make sure to select the second and third options to import all of the footprints.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{img/update-pcb.png}
+    \caption{This is the button you should press!}
+\end{figure}
+
+\subsection{Set the Design Rules}
+You will need to set the constraints for the board layout you want to create. Those constraints are
+commonly set due to limitations of the PCB manufacturers. For instance, some manufacturers can drill 0.1
+mm holes on your PCB, but some others are only able to do holes bigger than 0.3 mm.
+
+So, for this lab, you should load the design rules of JLCPCB which you can find in the kicad-libraries folder of the electrical-training repository that you should have cloned previously (remember to pull to get the most recent files!).
+
+To load it, go to File $>$ Board Settings. In the window that pops up, go to Custom Rules under Design Rules and copy + paste the JLCPCB design rules text file into the DRC rules text input section with line numbers.
+
+\subsection{Shape the board}
+First, adjust the grid size to 1 mm in the top bar.\\
+
+Since this board will be attached to the top of an Arduino Uno by connecting to all of its exposed pins,
+our main constraint is going to be those predefined pins. Then, we will preferably want to make the board
+smaller or the same size as the Arduino Uno board like the example in Figure \ref{arduino}. For that, you can also use
+the Arc tool to shape the corners.
+
+Click on the Edge.Cuts layer and draw the board outline with any of the drawing tools in the right menu.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/arduino-shape.png}
+    \caption{This would be a good board shape.}
+    \label{arduino}
+\end{figure}
+
+\subsection{Positioning the Components}
+You have a lot of space for positioning your components and there’s no specific component
+that has strict positioning constraints so just try making the least amount of crossings between airwires. For
+that, select a footprint and then drag it to where you want to place it. You
+can rotate by pressing the 'R' button.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/bad-crossings.png}
+    \caption{BAD - Many crossings.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/good-crossings.png}
+    \caption{GOOD - No crossings.}
+\end{figure}
+
+\subsection{Ground Plane}
+A polygon plane is important for minimizing the number of traces used for ground and for giving an easy
+return path for the current current that comes our from your circuitry. Doing it is fairly simple:
+
+\begin{itemize}
+    \item First, select the layer you want the plane on.
+    \item Then, click on the ``Add a filled zone" button in the right menu. Click on a point in the layout editing area you want to start creating a plane from to open a menu. Select the signal you want to make a plane for. Hit OK and draw the polygon to create a plane. Double click for the last line to finish the polygon.
+    \item To fill the plane, you can go to Edit $>$ Fill All Zones.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/ground-plane.png}
+    \caption{A ground plane example.}
+\end{figure}
+
+\subsection{Routing}
+
+Use the ”Route tracks” tool to connect all of the airwires. If you need to cross any two traces, you can
+route a trace underneath the other by putting a via, going to the bottom plane and then, putting another
+via for the trace to return to the top layer.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/via-cross-wire.png}
+    \caption{You can route the same signal on different layers.}
+\end{figure}
+
+\subsection{Silkscreen}
+Add text on the F.Silkscreen layer with the Tex tool to label the LEDs as well as the buttons and the 5V on the 8-pin connector.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/silkscreen.png}
+    \caption{Silkscreen on a PCB.}
+\end{figure}
+
+\subsection{Check how your PCB looks}
+After you've finished laying out your PCB, you can generate Gerber files for it to see if everything looks good. You should check if there's no silkscreen
+names or labels under components and see if everything seems informative enough.
+
+To do this, go to File $>$ Plot. Specify/create an output directory so that the gerber files can be contained in its directory instead of the just the project directory which is the default. Click ``Plot" to generate the files.
+
+Open the Gerber Viewer from the Project Manager window and open the generated files in File $>$ Open Autodetected Files. Select all of the files except the .gbrjob file and open them. Your board layout should show up.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/gerber-viewer.png}
+    \caption{Example of a finished board in the Gerber Viewer.}
+\end{figure}
+
+\section{Troubleshooting}
+To make sure that your board layout design abides by the Design Rules that you have established in the
+beginning of this guide, press the DRC tool (looks like a checklist) in the top bar and a screen should appear. After you click ``Run DRC", it should describe the infractions you
+have committed. Thus, you can press on the errors and warnings and the screen will take you to them. Make
+sure you solve every complaint until you don’t see any warnings/errors in the DRC tool.
+
+
+\begin{itemize}
+    \item \href{https://docs.kicad.org/7.0/en/getting_started_in_kicad/getting_started_in_kicad.html}{KiCAD Getting Started Guide} - Includes how to use the schematic editor
+    \item \href{https://github.com/RoboJackets/robocup-firmware/blob/master/doc/Git.md}{Git Guide}
+\end{itemize}
+
+
+\end{document}

@@ -390,7 +390,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "week-4-schematic.kicad_pro",
+    "filename": "week-4.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -465,6 +465,11 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "178f16c9-3e89-45d8-be24-9f88c2bb0880",
+      ""
+    ]
+  ],
   "text_variables": {}
 }

@@ -55,6 +55,7 @@ eagle.epf
 # Ignore list for KiCAD, another PCB layout tool
 *backups
 *.kicad_prl
+fp-info-cache
 
 
 # MATLAB autosave file

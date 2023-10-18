@@ -1449,63 +1449,63 @@
           (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -10.16 180) (length 3.81)
+        (pin passive line (at 7.62 -15.24 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "10" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -12.7 0) (length 3.81)
+        (pin passive line (at 7.62 -12.7 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "11" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -12.7 180) (length 3.81)
+        (pin passive line (at 7.62 -10.16 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "12" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -15.24 0) (length 3.81)
+        (pin passive line (at 7.62 -7.62 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "13" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -15.24 180) (length 3.81)
+        (pin passive line (at 7.62 -5.08 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "14" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -17.78 0) (length 3.81)
+        (pin passive line (at 7.62 -2.54 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "15" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -17.78 180) (length 3.81)
+        (pin passive line (at 7.62 0 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "16" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 0 180) (length 3.81)
+        (pin passive line (at -5.08 -2.54 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -2.54 0) (length 3.81)
+        (pin passive line (at -5.08 -5.08 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -2.54 180) (length 3.81)
+        (pin passive line (at -5.08 -7.62 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -5.08 0) (length 3.81)
+        (pin passive line (at -5.08 -10.16 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "5" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -5.08 180) (length 3.81)
+        (pin passive line (at -5.08 -12.7 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "6" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -7.62 0) (length 3.81)
+        (pin passive line (at -5.08 -15.24 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "7" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 7.62 -7.62 180) (length 3.81)
+        (pin passive line (at -5.08 -17.78 0) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "8" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -10.16 0) (length 3.81)
+        (pin passive line (at 7.62 -17.78 180) (length 3.81)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "9" (effects (font (size 1.27 1.27))))
         )
@@ -2561,7 +2561,7 @@
     )
     (pin "1" (uuid 3b0487bb-88ab-4461-92c3-077be3935e41))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR07") (unit 1)
         )
@@ -2586,7 +2586,7 @@
     )
     (pin "1" (uuid c1f96e35-fa15-48bb-a5c3-788c38cffc96))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR03") (unit 1)
         )
@@ -2611,7 +2611,7 @@
     )
     (pin "1" (uuid c2bd0773-9a08-4dfb-bbf2-13c807a808e9))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#FLG03") (unit 1)
         )
@@ -2637,7 +2637,7 @@
     (pin "1" (uuid 4610f184-2859-499a-a34b-b2a314effa2d))
     (pin "2" (uuid 542f9974-f4d9-4b3e-99d3-d271f5b94d3e))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R4") (unit 1)
         )
@@ -2662,7 +2662,7 @@
     )
     (pin "1" (uuid 46b7990c-f287-46e1-9353-5c4fb0ddcd26))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR020") (unit 1)
         )
@@ -2687,7 +2687,7 @@
     )
     (pin "1" (uuid bc97af1f-60cd-4ed5-8573-a771b270f2fe))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#FLG01") (unit 1)
         )
@@ -2713,7 +2713,7 @@
     (pin "1" (uuid d0f3533c-d10f-40b0-8c47-74ed8daffa66))
     (pin "2" (uuid 318aa603-c406-4aad-be95-0bd4cb0ffb8e))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "D1") (unit 1)
         )
@@ -2739,7 +2739,7 @@
     (pin "1" (uuid 1d21fd2c-bc06-44fe-b49f-da144578e240))
     (pin "2" (uuid a17e4165-2be0-4b3d-b7e9-3dd49a8554cb))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "C4") (unit 1)
         )
@@ -2765,7 +2765,7 @@
     (pin "1" (uuid a337dd4c-1c7b-41ed-9f31-08b79508c40c))
     (pin "2" (uuid 4860fe85-94a6-4148-999a-58d15c973de1))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "C2") (unit 1)
         )
@@ -2791,7 +2791,7 @@
     (pin "1" (uuid 9eddf4c1-38dd-4926-ba3a-f3b5007800ef))
     (pin "2" (uuid 77a3c1da-8ddb-42e7-bee9-e090ede687ed))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "D4") (unit 1)
         )
@@ -2849,7 +2849,7 @@
     (pin "3" (uuid f146b656-94c2-44bc-a35f-977eee72f914))
     (pin "4" (uuid 4fe3f20c-b9b9-4512-9e45-bd5e35bfa0bf))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "SW1") (unit 1)
         )
@@ -2874,7 +2874,7 @@
     )
     (pin "1" (uuid d90e27d2-c0af-4e84-87ea-81d2445d493a))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR013") (unit 1)
         )
@@ -2954,7 +2954,7 @@
     (pin "VIN" (uuid 878d2a44-2871-4444-948f-7d44953476f3))
     (pin "3V3" (uuid b0f35987-5d45-4970-a609-a532757d497d))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "MOD1") (unit 1)
         )
@@ -3012,7 +3012,7 @@
     (pin "3" (uuid c8f1b54e-a85c-412b-b92a-c5c5cc6bf474))
     (pin "4" (uuid 251de994-bc85-425d-b4fb-85959b43f0f3))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "SW2") (unit 1)
         )
@@ -3037,7 +3037,7 @@
     )
     (pin "1" (uuid a89ab538-6a48-40ae-9eff-7d2717db5823))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR08") (unit 1)
         )
@@ -3063,7 +3063,7 @@
     (pin "1" (uuid d5a495ff-52dc-4344-9752-53c64962c1bd))
     (pin "2" (uuid 014fd4f8-3ac7-45f2-9c16-7c340d2ab0e1))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R6") (unit 1)
         )
@@ -3089,7 +3089,7 @@
     (pin "1" (uuid 52d5b9d7-c04a-427f-be8b-bc219dfed974))
     (pin "2" (uuid 29791647-7860-4e75-8495-1ccabcb7cf1d))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "D5") (unit 1)
         )
@@ -3115,7 +3115,7 @@
     (pin "1" (uuid ccb80658-7021-41e2-99d9-f9d387794848))
     (pin "2" (uuid 58419c59-1601-4327-93e3-0cc40d090a25))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "C3") (unit 1)
         )
@@ -3140,7 +3140,7 @@
     )
     (pin "1" (uuid f50904d1-a843-48a8-9db5-69116e4afbd4))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR019") (unit 1)
         )
@@ -3165,7 +3165,7 @@
     )
     (pin "1" (uuid c979a9fc-a1f5-40a0-8909-6e2a878cb2bf))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR04") (unit 1)
         )
@@ -3191,7 +3191,7 @@
     (pin "1" (uuid f866d4bd-8fbf-42ee-a5e1-9c5b1804e08c))
     (pin "2" (uuid b44c844f-04e1-48b0-9adf-09dc05ffc929))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "D2") (unit 1)
         )
@@ -3216,9 +3216,49 @@
     )
     (pin "1" (uuid 9e7dd01e-126b-4f39-8c3d-507110158822))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR014") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "RoboJackets:R_Pack8_US") (at 132.08 22.86 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 85d3c28c-66ad-4c52-9dd5-2cc31c3596da)
+    (property "Reference" "RN1" (at 133.35 16.51 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "R_Pack8_US" (at 133.35 19.05 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 133.4135 22.9235 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 133.4135 22.9235 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 0e9a707d-f13b-4b91-b296-321d6826641a))
+    (pin "10" (uuid 5c1b2b00-a8c1-43bc-943b-c0a6ef41645a))
+    (pin "11" (uuid dfeddeeb-d8fe-45d0-82dc-6ef87ea5b757))
+    (pin "12" (uuid a7afd882-c753-4cd5-949a-007667b1b190))
+    (pin "13" (uuid 8b9f2613-52e3-4fd0-a28f-8dbde045cb6b))
+    (pin "14" (uuid 5defd133-b303-4156-a3cd-f72b01933b49))
+    (pin "15" (uuid 1edcd690-909f-48c7-90bf-57e84a4b2cdd))
+    (pin "16" (uuid 51b5ccc8-9f70-4d9b-818d-22ed8603c3ba))
+    (pin "2" (uuid 5db80636-9812-4f19-8c34-2002e843ead4))
+    (pin "3" (uuid a53d842a-f410-4234-80ac-af38ff9c64e0))
+    (pin "4" (uuid b1b8ce88-0b65-4b3e-8ebe-2afa8af14633))
+    (pin "5" (uuid 920f1881-35b1-40ac-83a3-eecdd96cbfc2))
+    (pin "6" (uuid 688b54d3-45cf-44f9-a2fc-a144b4c7a601))
+    (pin "7" (uuid 30853d01-efed-408d-9f95-95898c01c1c8))
+    (pin "8" (uuid f63c7824-6eff-4c9a-8b9f-13273b6d8e33))
+    (pin "9" (uuid 40199dfe-af03-41a7-9268-2af5ffd90ce7))
+    (instances
+      (project "week-4"
+        (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
+          (reference "RN1") (unit 1)
         )
       )
     )
@@ -3242,7 +3282,7 @@
     (pin "1" (uuid 9d4b5dc5-1410-4ae5-8a4a-b4faf2a00acf))
     (pin "2" (uuid 68936e3d-09b3-44be-bd15-2211ee8b15ad))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "D6") (unit 1)
         )
@@ -3268,7 +3308,7 @@
     (pin "1" (uuid 29461898-e9a6-4419-a69b-02bbc8a74def))
     (pin "2" (uuid 01dc6336-d3d2-4ce7-a2a5-bbcd2731da57))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "D3") (unit 1)
         )
@@ -3293,7 +3333,7 @@
     )
     (pin "1" (uuid 9032cef7-05d4-4ba8-ab43-776837c81258))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR01") (unit 1)
         )
@@ -3319,7 +3359,7 @@
     (pin "1" (uuid 4496e613-82da-49c9-b260-81fafe78ea20))
     (pin "2" (uuid fa0c514d-497b-43a2-80a6-8f03bce1f328))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R3") (unit 1)
         )
@@ -3344,49 +3384,9 @@
     )
     (pin "1" (uuid 78249ea8-ccfa-4e11-8fff-f735dc00dc15))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "RoboJackets:R_Pack8_US") (at 132.08 22.86 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 937b91d6-6959-4c89-95a6-9dbd5b71c7e5)
-    (property "Reference" "RN1" (at 133.4924 19.5373 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "330" (at 133.2637 44.2317 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "RoboJackets:742C163331JP" (at 133.4135 22.9235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 133.4135 22.9235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f6216037-5d96-4f24-af24-08d42dbc4b6d))
-    (pin "10" (uuid 4733ff96-2825-4a30-8769-05e9b62d90a9))
-    (pin "11" (uuid 1a58ddd7-02e5-45a4-acc1-fe239d002165))
-    (pin "12" (uuid da40f3c7-03b3-4e6d-b66b-6f94320b1176))
-    (pin "13" (uuid f464257f-900a-45b3-ba2a-db4af9556645))
-    (pin "14" (uuid 45ed5e5c-b118-4d07-80bd-f34892cb153c))
-    (pin "15" (uuid f8b68f08-2135-4e34-a52b-0873740466ec))
-    (pin "16" (uuid 0faa2ed2-334b-4e3d-9039-9acdec14e6e3))
-    (pin "2" (uuid 22a856fc-f7c1-43ab-96d9-72163c5edf7f))
-    (pin "3" (uuid 5090c1da-1fa4-4d29-91ce-2eb80d9f458f))
-    (pin "4" (uuid 36c7cd92-c4c4-46f0-99cf-90e84729601a))
-    (pin "5" (uuid 95962e97-e92e-4a7e-90fd-34640833daf8))
-    (pin "6" (uuid 9bd8af48-1dbf-441e-8d61-1e2b1e26fade))
-    (pin "7" (uuid b0bd243e-27a3-4843-b790-2fcd5f388050))
-    (pin "8" (uuid 2b44c730-503a-40db-bf3e-fca6abec2ac7))
-    (pin "9" (uuid 6bada3dd-0afb-4817-8dbe-7fc4566c01f5))
-    (instances
-      (project "week-4-schematic"
-        (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
-          (reference "RN1") (unit 1)
         )
       )
     )
@@ -3409,7 +3409,7 @@
     )
     (pin "1" (uuid 403ad378-f5c9-4816-9431-ebcd3afab683))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR09") (unit 1)
         )
@@ -3435,7 +3435,7 @@
     (pin "1" (uuid 01dec78e-8437-40b9-94b6-071f633d6c30))
     (pin "2" (uuid d8e54314-8d48-4733-a28c-ad0da7aa58c2))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R1") (unit 1)
         )
@@ -3493,7 +3493,7 @@
     (pin "3" (uuid ae45bb73-fc32-4565-9ec1-6a03290b42eb))
     (pin "4" (uuid 35f54f76-4954-4c42-910c-d8c1b56bef90))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "SW3") (unit 1)
         )
@@ -3518,7 +3518,7 @@
     )
     (pin "1" (uuid c04d7caa-9078-48d4-93b6-2d0e17273033))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR017") (unit 1)
         )
@@ -3544,7 +3544,7 @@
     (pin "1" (uuid 79b161b0-0da3-458a-a8f9-426cb7c1f285))
     (pin "2" (uuid 74caeb4a-ee89-45f6-a734-fe46301f978f))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R5") (unit 1)
         )
@@ -3569,7 +3569,7 @@
     )
     (pin "1" (uuid 460aba33-460d-4c1b-bf27-0085f97eb25e))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR012") (unit 1)
         )
@@ -3601,7 +3601,7 @@
     (pin "7" (uuid 38dee943-5f85-4d80-b757-406c77c5e80b))
     (pin "8" (uuid b2af59bc-ce0a-458c-b7df-12f5d5757455))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "J1") (unit 1)
         )
@@ -3627,7 +3627,7 @@
     (pin "1" (uuid 65b72ddc-24aa-463b-a640-40e0864e2d2e))
     (pin "2" (uuid 87b57288-db3b-4b68-b069-e19740df0b8e))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "C1") (unit 1)
         )
@@ -3652,7 +3652,7 @@
     )
     (pin "1" (uuid 0464aa74-53c5-4210-b35f-85b753fe4ea3))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR010") (unit 1)
         )
@@ -3677,7 +3677,7 @@
     )
     (pin "1" (uuid 10816497-b173-4476-a4f1-88d642c2fe6b))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR015") (unit 1)
         )
@@ -3702,7 +3702,7 @@
     )
     (pin "1" (uuid 75f987c9-0493-497e-8ad9-27fd2f350132))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR016") (unit 1)
         )
@@ -3732,7 +3732,7 @@
     (pin "5" (uuid b21dd88f-1dc8-4e7b-a2b5-140c7bf75147))
     (pin "6" (uuid 7f89bc9f-0840-47a3-8d12-847f98a24351))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "U1") (unit 1)
         )
@@ -3757,7 +3757,7 @@
     )
     (pin "1" (uuid 678e1a34-8d2a-437e-9b8f-6e8fb25b273b))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR018") (unit 1)
         )
@@ -3783,7 +3783,7 @@
     (pin "1" (uuid a1ebc032-1fee-42ab-ac44-a267a82a7bf0))
     (pin "2" (uuid c71afa39-6f1f-4b82-b308-e3e7bccf9a44))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R2") (unit 1)
         )
@@ -3808,7 +3808,7 @@
     )
     (pin "1" (uuid b541196c-87d5-4fb5-91ed-d89e35e7d2c8))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR011") (unit 1)
         )
@@ -3833,7 +3833,7 @@
     )
     (pin "1" (uuid d2843a5f-3a12-47c2-ae8c-0d7775f533f5))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR02") (unit 1)
         )
@@ -3859,7 +3859,7 @@
     (pin "1" (uuid c80a2b1c-2ccf-4aa6-bd61-69ac6e4f3615))
     (pin "2" (uuid 61427450-1df4-47c7-b1f3-36a27016cc45))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "R7") (unit 1)
         )
@@ -3884,7 +3884,7 @@
     )
     (pin "1" (uuid 0ff07f8c-099b-4d9b-9636-07a1d9186f1f))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#FLG02") (unit 1)
         )
@@ -3909,7 +3909,7 @@
     )
     (pin "1" (uuid 14b554bd-a52c-4102-867c-9c019544169e))
     (instances
-      (project "week-4-schematic"
+      (project "week-4"
         (path "/178f16c9-3e89-45d8-be24-9f88c2bb0880"
           (reference "#PWR06") (unit 1)
         )

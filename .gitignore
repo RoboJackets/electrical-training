@@ -56,6 +56,7 @@ eagle.epf
 *backups
 *.kicad_prl
 fp-info-cache
+*.bak
 
 
 # MATLAB autosave file

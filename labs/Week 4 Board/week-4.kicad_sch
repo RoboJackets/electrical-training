@@ -3233,7 +3233,7 @@
     (property "Value" "R_Pack8_US" (at 133.35 19.05 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 133.4135 22.9235 0)
+    (property "Footprint" "RoboJackets:742C163331JP" (at 133.4135 22.9235 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 133.4135 22.9235 0)

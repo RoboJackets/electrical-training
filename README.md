@@ -27,4 +27,4 @@ Location:
 * Week 2 (9/23 and 9/27): Skiles 169
 * Week 3 (9/30 and 10/4): Skiles 169
 * Week 4 (10/7 and 10/11): Skiles 169
-* Week 5 (Date TBD): The Hive
+* Week 5 (10/16): The Hive

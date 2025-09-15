@@ -40,7 +40,7 @@ Note<sup>*3*</sup>: Week 6 <ins>most likely *won't*</ins> be taking place, but w
     * Monday (October 13th): **Skiles 254**
     * Tuesday (October 14th): **Skiles 171**
 * Solder Training:
-    * Friday (October 17th): **The Hive Makerspace: The Interdisciplinary Design Commons (IDC)**
+    * TBD: **The Hive Makerspace: The Interdisciplinary Design Commons (IDC)**
 * Week 6 (Overflow):
     * Monday (October 20th): **Skiles 254**
     * Tuesday (October 21st): **Skiles 171**
